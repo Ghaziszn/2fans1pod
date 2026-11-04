@@ -1,0 +1,244 @@
+{
+  "cfp": [
+    {
+      "teamId": "miami",
+      "rank": 1
+    },
+    {
+      "teamId": "georgia",
+      "rank": 2
+    },
+    {
+      "teamId": "utah",
+      "rank": 3
+    },
+    {
+      "teamId": "indiana",
+      "rank": 4
+    },
+    {
+      "teamId": "alabama",
+      "rank": 5
+    },
+    {
+      "teamId": "kentucky",
+      "rank": 6
+    },
+    {
+      "teamId": "texas",
+      "rank": 7
+    },
+    {
+      "teamId": "ucla",
+      "rank": 8
+    },
+    {
+      "teamId": "byu",
+      "rank": 9
+    },
+    {
+      "teamId": "ole-miss",
+      "rank": 10
+    },
+    {
+      "teamId": "notre-dame",
+      "rank": 11
+    },
+    {
+      "teamId": "ohio-state",
+      "rank": 12
+    },
+    {
+      "teamId": "tennessee",
+      "rank": 13
+    },
+    {
+      "teamId": "lsu",
+      "rank": 14
+    },
+    {
+      "teamId": "texas-tech",
+      "rank": 15
+    },
+    {
+      "teamId": "wake-forest",
+      "rank": 16
+    },
+    {
+      "teamId": "houston",
+      "rank": 17
+    },
+    {
+      "teamId": "missouri",
+      "rank": 18
+    },
+    {
+      "teamId": "iowa",
+      "rank": 19
+    },
+    {
+      "teamId": "usc",
+      "rank": 20
+    },
+    {
+      "teamId": "south-carolina",
+      "rank": 21
+    },
+    {
+      "teamId": "arizona",
+      "rank": 22
+    },
+    {
+      "teamId": "oregon",
+      "rank": 23
+    },
+    {
+      "teamId": "florida",
+      "rank": 24
+    },
+    {
+      "teamId": "boise-state",
+      "rank": 25
+    }
+  ],
+  "order": [
+    "miami",
+    "georgia",
+    "utah",
+    "indiana",
+    "alabama",
+    "kentucky",
+    "texas",
+    "ucla",
+    "byu",
+    "ole-miss",
+    "notre-dame",
+    "ohio-state",
+    "tennessee",
+    "lsu",
+    "texas-tech",
+    "wake-forest",
+    "houston",
+    "missouri",
+    "iowa",
+    "usc",
+    "south-carolina",
+    "arizona",
+    "oregon",
+    "florida",
+    "boise-state",
+    "utsa",
+    "new-mexico",
+    "liberty",
+    "ohio",
+    "memphis",
+    "north-dakota-state",
+    "james-madison",
+    "jacksonville-state",
+    "louisiana-tech",
+    "north-texas",
+    "virginia-tech",
+    "toledo",
+    "air-force",
+    "duke",
+    "northwestern",
+    "smu",
+    "south-florida",
+    "western-michigan",
+    "pittsburgh",
+    "unlv",
+    "wyoming",
+    "fresno-state",
+    "army",
+    "wisconsin",
+    "miami-oh",
+    "oklahoma-state",
+    "marshall",
+    "oregon-state",
+    "minnesota",
+    "clemson",
+    "washington",
+    "baylor",
+    "florida-atlantic",
+    "louisville",
+    "illinois",
+    "app-state",
+    "louisiana",
+    "west-virginia",
+    "michigan",
+    "buffalo",
+    "cincinnati",
+    "nebraska",
+    "tulane",
+    "oklahoma",
+    "syracuse",
+    "auburn",
+    "georgia-southern",
+    "boston-college",
+    "arkansas-state",
+    "mississippi-state",
+    "uab",
+    "delaware",
+    "north-carolina",
+    "iowa-state",
+    "arizona-state",
+    "east-carolina",
+    "uconn",
+    "ucf",
+    "troy",
+    "penn-state",
+    "nc-state",
+    "texas-state",
+    "south-alabama",
+    "tcu",
+    "texas-am",
+    "middle-tennessee",
+    "georgia-state",
+    "tulsa",
+    "kansas-state",
+    "eastern-michigan",
+    "massachusetts",
+    "stanford",
+    "san-diego-state",
+    "san-jos-state",
+    "virginia",
+    "ball-state",
+    "western-kentucky",
+    "utah-state",
+    "nevada",
+    "colorado",
+    "coastal-carolina",
+    "southern-miss",
+    "florida-international",
+    "kansas",
+    "new-mexico-state",
+    "arkansas",
+    "missouri-state",
+    "purdue",
+    "florida-state",
+    "central-michigan",
+    "vanderbilt",
+    "colorado-state",
+    "california",
+    "kent-state",
+    "navy",
+    "hawai-i",
+    "kennesaw-state",
+    "michigan-state",
+    "rutgers",
+    "georgia-tech",
+    "maryland",
+    "temple",
+    "bowling-green",
+    "sacramento-state",
+    "old-dominion",
+    "charlotte",
+    "ul-monroe",
+    "rice",
+    "utep",
+    "sam-houston",
+    "washington-state",
+    "akron",
+    "northern-illinois"
+  ]
+}

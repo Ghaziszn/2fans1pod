@@ -1,0 +1,14 @@
+{
+  "name": "2fans1pod",
+  "season": 2026,
+  "siteUrl": "https://2fans1pod.vercel.app",
+  "description": "A college football companion: playoff scenarios, matchup rankings, and a page for every FBS team.",
+  "accent": "#ef7516",
+  "social": [
+    { "name": "X", "url": "https://x.com/REPLACE_ME" },
+    { "name": "YouTube", "url": "https://youtube.com/@REPLACE_ME" },
+    { "name": "Instagram", "url": "https://instagram.com/REPLACE_ME" },
+    { "name": "Spotify", "url": "https://open.spotify.com/show/REPLACE_ME" },
+    { "name": "Apple Podcasts", "url": "https://podcasts.apple.com/podcast/REPLACE_ME" }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "season": "2026-27",
+  "teamCount": 12,
+  "powerConferences": ["ACC", "Big Ten", "Big 12", "SEC"],
+  "groupConferences": ["American", "Conference USA", "MAC", "Mountain West", "Pac-12", "Sun Belt"],
+  "notreDame": "Notre Dame",
+  "notreDameAutoBidMaxRank": 12,
+  "atLargeBids": 7,
+  "atLargeBidsIfNotreDameAuto": 6,
+  "byeSeeds": [1, 2, 3, 4],
+  "firstRound": [[5, 12], [6, 11], [7, 10], [8, 9]],
+  "quarterfinals": [[1, "8/9"], [2, "7/10"], [3, "6/11"], [4, "5/12"]],
+  "seedAutoQualifiersOutsideTop12AtBottom": true,
+  "notes": "Automatic qualifiers ranked outside the top 12 are seeded at the bottom, in rank order. Bowl-site selection is not simulated."
+}

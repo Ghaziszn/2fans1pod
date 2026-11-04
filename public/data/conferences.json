@@ -1,0 +1,217 @@
+[
+  {
+    "id": "acc",
+    "name": "ACC",
+    "tier": "power",
+    "teams": [
+      "miami",
+      "wake-forest",
+      "smu",
+      "virginia-tech",
+      "duke",
+      "pittsburgh",
+      "louisville",
+      "clemson",
+      "boston-college",
+      "nc-state",
+      "north-carolina",
+      "syracuse",
+      "virginia",
+      "stanford",
+      "florida-state",
+      "california",
+      "georgia-tech"
+    ]
+  },
+  {
+    "id": "big-ten",
+    "name": "Big Ten",
+    "tier": "power",
+    "teams": [
+      "ucla",
+      "indiana",
+      "usc",
+      "ohio-state",
+      "iowa",
+      "northwestern",
+      "illinois",
+      "minnesota",
+      "oregon",
+      "wisconsin",
+      "washington",
+      "michigan",
+      "nebraska",
+      "penn-state",
+      "purdue",
+      "rutgers",
+      "maryland",
+      "michigan-state"
+    ]
+  },
+  {
+    "id": "big-12",
+    "name": "Big 12",
+    "tier": "power",
+    "teams": [
+      "utah",
+      "byu",
+      "texas-tech",
+      "houston",
+      "arizona",
+      "baylor",
+      "oklahoma-state",
+      "west-virginia",
+      "cincinnati",
+      "iowa-state",
+      "ucf",
+      "arizona-state",
+      "tcu",
+      "kansas-state",
+      "colorado",
+      "kansas"
+    ]
+  },
+  {
+    "id": "sec",
+    "name": "SEC",
+    "tier": "power",
+    "teams": [
+      "georgia",
+      "kentucky",
+      "alabama",
+      "ole-miss",
+      "texas",
+      "lsu",
+      "missouri",
+      "tennessee",
+      "south-carolina",
+      "florida",
+      "oklahoma",
+      "auburn",
+      "mississippi-state",
+      "texas-am",
+      "arkansas",
+      "vanderbilt"
+    ]
+  },
+  {
+    "id": "american",
+    "name": "American",
+    "tier": "group",
+    "teams": [
+      "utsa",
+      "memphis",
+      "north-texas",
+      "south-florida",
+      "army",
+      "florida-atlantic",
+      "uab",
+      "east-carolina",
+      "tulane",
+      "tulsa",
+      "temple",
+      "navy",
+      "charlotte",
+      "rice"
+    ]
+  },
+  {
+    "id": "conference-usa",
+    "name": "Conference USA",
+    "tier": "group",
+    "teams": [
+      "liberty",
+      "jacksonville-state",
+      "delaware",
+      "middle-tennessee",
+      "new-mexico-state",
+      "western-kentucky",
+      "missouri-state",
+      "florida-international",
+      "kennesaw-state",
+      "sam-houston"
+    ]
+  },
+  {
+    "id": "mac",
+    "name": "MAC",
+    "tier": "group",
+    "teams": [
+      "ohio",
+      "toledo",
+      "western-michigan",
+      "buffalo",
+      "miami-oh",
+      "massachusetts",
+      "eastern-michigan",
+      "ball-state",
+      "central-michigan",
+      "kent-state",
+      "bowling-green",
+      "sacramento-state",
+      "akron"
+    ]
+  },
+  {
+    "id": "mountain-west",
+    "name": "Mountain West",
+    "tier": "group",
+    "teams": [
+      "new-mexico",
+      "north-dakota-state",
+      "air-force",
+      "wyoming",
+      "unlv",
+      "san-jos-state",
+      "nevada",
+      "hawai-i",
+      "utep",
+      "northern-illinois"
+    ]
+  },
+  {
+    "id": "pac-12",
+    "name": "Pac-12",
+    "tier": "group",
+    "teams": [
+      "boise-state",
+      "oregon-state",
+      "fresno-state",
+      "texas-state",
+      "san-diego-state",
+      "utah-state",
+      "colorado-state",
+      "washington-state"
+    ]
+  },
+  {
+    "id": "sun-belt",
+    "name": "Sun Belt",
+    "tier": "group",
+    "teams": [
+      "james-madison",
+      "app-state",
+      "marshall",
+      "georgia-southern",
+      "georgia-state",
+      "coastal-carolina",
+      "old-dominion",
+      "louisiana-tech",
+      "louisiana",
+      "south-alabama",
+      "arkansas-state",
+      "troy",
+      "southern-miss",
+      "ul-monroe"
+    ]
+  },
+  {
+    "id": "fbs-independents",
+    "name": "FBS Independents",
+    "tier": "independent",
+    "teams": [
+      "notre-dame",
+      "uconn"
+    ]
+  }
+]

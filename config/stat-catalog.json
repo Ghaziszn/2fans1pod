@@ -1,0 +1,150 @@
+{
+  "points": {
+    "label": "Points per game",
+    "help": "Average points scored (offense) or allowed (defense) per game. A lower defensive rank means fewer points allowed.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1
+  },
+  "totalYards": {
+    "label": "Total yards per game",
+    "help": "Scrimmage yards per game. Offense wants more. Defense wants fewer yards allowed.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1
+  },
+  "passYards": {
+    "label": "Pass yards per game",
+    "help": "Net passing yards per game. The defensive number is yards allowed through the air.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1
+  },
+  "rushYards": {
+    "label": "Rush yards per game",
+    "help": "Rushing yards per game. The defensive number is rushing yards allowed.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1
+  },
+  "yardsPerRush": {
+    "label": "Yards per rush",
+    "help": "Average yards gained each rushing attempt. Efficiency, not volume.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 2
+  },
+  "thirdDown": {
+    "label": "3rd down %",
+    "help": "Share of third downs converted. Defense is the share allowed to opponents.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1,
+    "suffix": "%"
+  },
+  "fourthDown": {
+    "label": "4th down %",
+    "help": "Share of fourth downs converted. Defense is the share allowed to opponents.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1,
+    "suffix": "%"
+  },
+  "redZone": {
+    "label": "Red zone scoring %",
+    "help": "How often a team scores once it reaches the opponent's 20-yard line. Defense is how often opponents score.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1,
+    "suffix": "%"
+  },
+  "giveaways": {
+    "label": "Giveaways per game",
+    "help": "Turnovers lost per game. Fewer is better.",
+    "offense": true,
+    "defense": false,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": false,
+    "digits": 2
+  },
+  "takeaways": {
+    "label": "Takeaways per game",
+    "help": "Turnovers created per game. More is better.",
+    "offense": false,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 2
+  },
+  "sacks": {
+    "label": "Sacks per game",
+    "help": "Sacks recorded by the defense per game.",
+    "offense": false,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 2
+  },
+  "tfl": {
+    "label": "Tackles for loss per game",
+    "help": "Tackles for loss by the defense per game.",
+    "offense": false,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 2
+  },
+  "top": {
+    "label": "Time of possession",
+    "help": "Minutes of possession per game. This is the offense's share of the clock, shown as minutes.",
+    "offense": true,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1,
+    "suffix": " min"
+  },
+  "penalties": {
+    "label": "Penalties per game",
+    "help": "Penalties called on the team per game. Fewer is better.",
+    "offense": true,
+    "defense": false,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": false,
+    "digits": 2
+  },
+  "sos": {
+    "label": "Strength of schedule",
+    "help": "Average winning percentage of opponents so far. An FCS opponent counts as a .400 win percentage. Higher means a harder schedule. This is record-based, not an SP+ rating.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 3
+  },
+  "ats": {
+    "label": "ATS record",
+    "help": "Against the spread: wins, losses, and pushes versus the closing line. The rank uses cover percentage, pushes excluded. A line appears only when these two teams are scheduled to play.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 0
+  }
+}

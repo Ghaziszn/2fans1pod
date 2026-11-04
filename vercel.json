@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/matchup/:slug", "destination": "/matchup/index.html" }
+  ]
+}
