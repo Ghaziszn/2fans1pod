@@ -266,6 +266,24 @@ def fetch_espn(fmt: dict) -> dict:
     }
 
 
+CFBSTATS_NAMES = {
+    "App State": "Appalachian State",
+    "Florida International": "FIU",
+    "Hawai'i": "Hawaii",
+    "Miami": "Miami (FL)",
+    "Middle Tennessee": "Middle Tennessee State",
+    "Sam Houston": "Sam Houston State",
+    "San José State": "San Jose State",
+    "South Florida": "USF",
+    "UConn": "Connecticut",
+    "UL Monroe": "Louisiana-Monroe",
+}
+
+
+def cfbstats_name(school: str) -> str:
+    return CFBSTATS_NAMES.get(school, school)
+
+
 def percent(value: float | None) -> float | None:
     if value is None:
         return None
@@ -340,7 +358,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             "top": None if raw.get("possessionTimeSeconds") is None or games_played == 0 else round(raw["possessionTimeSeconds"] / games_played / 60, 1),
             "penalties": per_game(raw.get("totalPenalties"), games_played),
         }
-        scraped_off = redzone.get("offense", {}).get(team["school"])
+        scraped_off = redzone.get("offense", {}).get(cfbstats_name(team["school"]))
         if scraped_off is not None:
             offense["redZone"] = round(float(scraped_off), 1)
         defense = {
@@ -356,7 +374,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             "sacks": per_game(raw.get("sacks"), games_played),
             "tfl": per_game(raw.get("tacklesForLoss"), games_played),
         }
-        scraped_def = redzone.get("defense", {}).get(team["school"])
+        scraped_def = redzone.get("defense", {}).get(cfbstats_name(team["school"]))
         if scraped_def is not None:
             defense["redZone"] = round(float(scraped_def), 1)
         stat_rows[team["id"]] = {"games": games_played, "offense": offense, "defense": defense}
