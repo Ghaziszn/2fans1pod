@@ -11196,42 +11196,6 @@
     "spread": null
   },
   {
-    "id": "401866454",
-    "week": 10,
-    "seasonType": "regular",
-    "startDate": "2026-11-04T01:00Z",
-    "homeId": "miami-oh",
-    "awayId": "buffalo",
-    "homeName": "Miami (OH)",
-    "awayName": "Buffalo",
-    "homePoints": null,
-    "awayPoints": null,
-    "completed": false,
-    "conferenceGame": true,
-    "championship": false,
-    "neutralSite": false,
-    "venue": "Yager Stadium",
-    "spread": null
-  },
-  {
-    "id": "401866453",
-    "week": 10,
-    "seasonType": "regular",
-    "startDate": "2026-11-04T00:00Z",
-    "homeId": "akron",
-    "awayId": "ohio",
-    "homeName": "Akron",
-    "awayName": "Ohio",
-    "homePoints": 20,
-    "awayPoints": 28,
-    "completed": true,
-    "conferenceGame": true,
-    "championship": false,
-    "neutralSite": false,
-    "venue": "InfoCision Stadium",
-    "spread": null
-  },
-  {
     "id": "401866455",
     "week": 10,
     "seasonType": "regular",
@@ -11247,7 +11211,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Warren McGuirk Alumni Stadium",
-    "spread": "MASS -3.5"
+    "spread": "MASS -2.5"
   },
   {
     "id": "401866457",
@@ -11284,6 +11248,42 @@
     "neutralSite": true,
     "venue": "Ford Field",
     "spread": "EMU -1.5"
+  },
+  {
+    "id": "401866453",
+    "week": 10,
+    "seasonType": "regular",
+    "startDate": "2026-11-04T00:00Z",
+    "homeId": "akron",
+    "awayId": "ohio",
+    "homeName": "Akron",
+    "awayName": "Ohio",
+    "homePoints": 20,
+    "awayPoints": 28,
+    "completed": true,
+    "conferenceGame": true,
+    "championship": false,
+    "neutralSite": false,
+    "venue": "InfoCision Stadium",
+    "spread": null
+  },
+  {
+    "id": "401866454",
+    "week": 10,
+    "seasonType": "regular",
+    "startDate": "2026-11-04T01:00Z",
+    "homeId": "miami-oh",
+    "awayId": "buffalo",
+    "homeName": "Miami (OH)",
+    "awayName": "Buffalo",
+    "homePoints": 31,
+    "awayPoints": 34,
+    "completed": true,
+    "conferenceGame": true,
+    "championship": false,
+    "neutralSite": false,
+    "venue": "Yager Stadium",
+    "spread": null
   },
   {
     "id": "401862817",
@@ -11355,7 +11355,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Dowdy-Ficklen Stadium",
-    "spread": "ECU -1.5"
+    "spread": "ECU -2.5"
   },
   {
     "id": "401858510",
@@ -11409,7 +11409,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Casino Del Sol Stadium",
-    "spread": "ARIZ -9.5"
+    "spread": "ARIZ -8.5"
   },
   {
     "id": "401856849",
@@ -11625,7 +11625,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Bill Snyder Family Stadium",
-    "spread": "OKST -4.5"
+    "spread": "OKST -5.5"
   },
   {
     "id": "401869945",
@@ -11787,7 +11787,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "TDECU Stadium",
-    "spread": "HOU -11.5"
+    "spread": "HOU -10.5"
   },
   {
     "id": "401858516",
@@ -11877,7 +11877,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Johnny \"Red\" Floyd Stadium",
-    "spread": "MTSU -1.5"
+    "spread": "WKU -1.5"
   },
   {
     "id": "401856850",
@@ -11895,7 +11895,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "David Booth Kansas Memorial Stadium",
-    "spread": "KU -2.5"
+    "spread": "KU -3"
   },
   {
     "id": "401862821",
@@ -11913,7 +11913,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "DATCU Stadium",
-    "spread": "UNT -16.5"
+    "spread": "UNT -17.5"
   },
   {
     "id": "401864534",
@@ -12003,7 +12003,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Camp Randall Stadium",
-    "spread": "WIS -16.5"
+    "spread": "WIS -17.5"
   },
   {
     "id": "401869968",
@@ -12021,7 +12021,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Our Lady of Lourdes Stadium",
-    "spread": "UL -8.5"
+    "spread": "UL -7.5"
   },
   {
     "id": "401860911",
@@ -12093,7 +12093,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Notre Dame Stadium",
-    "spread": "ND -6"
+    "spread": "ND -7"
   },
   {
     "id": "401856741",
@@ -12129,7 +12129,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Ryan Field",
-    "spread": "NU -2.5"
+    "spread": "NU -3"
   },
   {
     "id": "401856852",
@@ -12219,7 +12219,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Ben Hill Griffin Stadium",
-    "spread": "FLA -6"
+    "spread": "FLA -6.5"
   },
   {
     "id": "401870795",
@@ -12255,7 +12255,7 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Galaxy Stadium",
-    "spread": "TTU -16.5"
+    "spread": "TTU -17.5"
   },
   {
     "id": "401860913",
@@ -12384,24 +12384,6 @@
     "spread": null
   },
   {
-    "id": "401866461",
-    "week": 11,
-    "seasonType": "regular",
-    "startDate": "2026-11-11T05:00Z",
-    "homeId": "ball-state",
-    "awayId": "buffalo",
-    "homeName": "Ball State",
-    "awayName": "Buffalo",
-    "homePoints": null,
-    "awayPoints": null,
-    "completed": false,
-    "conferenceGame": true,
-    "championship": false,
-    "neutralSite": false,
-    "venue": "Scheumann Stadium",
-    "spread": null
-  },
-  {
     "id": "401866463",
     "week": 11,
     "seasonType": "regular",
@@ -12417,6 +12399,24 @@
     "championship": false,
     "neutralSite": false,
     "venue": "Glass Bowl",
+    "spread": null
+  },
+  {
+    "id": "401866461",
+    "week": 11,
+    "seasonType": "regular",
+    "startDate": "2026-11-12T00:30Z",
+    "homeId": "ball-state",
+    "awayId": "buffalo",
+    "homeName": "Ball State",
+    "awayName": "Buffalo",
+    "homePoints": null,
+    "awayPoints": null,
+    "completed": false,
+    "conferenceGame": true,
+    "championship": false,
+    "neutralSite": false,
+    "venue": "Scheumann Stadium",
     "spread": null
   },
   {
@@ -14904,6 +14904,24 @@
     "spread": null
   },
   {
+    "id": "401862840",
+    "week": 13,
+    "seasonType": "regular",
+    "startDate": "2026-11-27T05:00Z",
+    "homeId": "utsa",
+    "awayId": "tulsa",
+    "homeName": "UTSA",
+    "awayName": "Tulsa",
+    "homePoints": null,
+    "awayPoints": null,
+    "completed": false,
+    "conferenceGame": true,
+    "championship": false,
+    "neutralSite": false,
+    "venue": "Alamodome",
+    "spread": null
+  },
+  {
     "id": "401856762",
     "week": 13,
     "seasonType": "regular",
@@ -15639,24 +15657,6 @@
     "championship": false,
     "neutralSite": false,
     "venue": "War Memorial Stadium",
-    "spread": null
-  },
-  {
-    "id": "401862840",
-    "week": 13,
-    "seasonType": "regular",
-    "startDate": "2026-11-28T05:00Z",
-    "homeId": "utsa",
-    "awayId": "tulsa",
-    "homeName": "UTSA",
-    "awayName": "Tulsa",
-    "homePoints": null,
-    "awayPoints": null,
-    "completed": false,
-    "conferenceGame": true,
-    "championship": false,
-    "neutralSite": false,
-    "venue": "Alamodome",
     "spread": null
   },
   {

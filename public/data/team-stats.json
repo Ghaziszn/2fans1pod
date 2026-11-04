@@ -32,11 +32,11 @@
       },
       "fourthDown": {
         "value": 69.2,
-        "rank": 19
+        "rank": 21
       },
       "redZone": {
-        "value": 87.1,
-        "rank": 53
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -54,7 +54,7 @@
     "defense": {
       "points": {
         "value": 26.0,
-        "rank": 89
+        "rank": 87
       },
       "totalYards": {
         "value": null,
@@ -81,12 +81,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.8,
-        "rank": 66
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 1.12,
@@ -99,7 +99,7 @@
     },
     "sos": {
       "value": 0.496,
-      "rank": 92
+      "rank": 93
     },
     "ats": {
       "wins": 0,
@@ -144,8 +144,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 84.1,
-        "rank": 82
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.44,
@@ -157,7 +157,7 @@
       },
       "penalties": {
         "value": 5.0,
-        "rank": 20
+        "rank": 19
       }
     },
     "defense": {
@@ -190,8 +190,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 72.4,
-        "rank": 12
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
@@ -238,7 +238,7 @@
       },
       "rushYards": {
         "value": 190.8,
-        "rank": 32
+        "rank": 31
       },
       "yardsPerRush": {
         "value": 5.4,
@@ -253,8 +253,8 @@
         "rank": 75
       },
       "redZone": {
-        "value": 92.9,
-        "rank": 15
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -262,7 +262,7 @@
       },
       "top": {
         "value": 31.1,
-        "rank": 39
+        "rank": 38
       },
       "penalties": {
         "value": 8.5,
@@ -299,12 +299,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.8,
-        "rank": 66
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.12,
@@ -335,7 +335,7 @@
     "offense": {
       "points": {
         "value": 27.0,
-        "rank": 75
+        "rank": 76
       },
       "totalYards": {
         "value": 314.6,
@@ -343,7 +343,7 @@
       },
       "passYards": {
         "value": 166.62,
-        "rank": 128
+        "rank": 129
       },
       "rushYards": {
         "value": 148.0,
@@ -351,19 +351,19 @@
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 40.2,
-        "rank": 64
+        "rank": 65
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 96.2,
-        "rank": 6
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.5,
@@ -375,7 +375,7 @@
       },
       "penalties": {
         "value": 4.88,
-        "rank": 18
+        "rank": 17
       }
     },
     "defense": {
@@ -408,12 +408,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 2.5,
@@ -464,15 +464,15 @@
       },
       "thirdDown": {
         "value": 47.9,
-        "rank": 20
+        "rank": 19
       },
       "fourthDown": {
         "value": 82.4,
         "rank": 2
       },
       "redZone": {
-        "value": 92.9,
-        "rank": 15
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.5,
@@ -490,7 +490,7 @@
     "defense": {
       "points": {
         "value": 25.5,
-        "rank": 83
+        "rank": 82
       },
       "totalYards": {
         "value": null,
@@ -517,8 +517,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.9,
-        "rank": 116
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.75,
@@ -580,8 +580,8 @@
         "rank": 36
       },
       "redZone": {
-        "value": 80.7,
-        "rank": 103
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -626,12 +626,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 89.3,
-        "rank": 109
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 1.0,
@@ -670,7 +670,7 @@
       },
       "passYards": {
         "value": 169.62,
-        "rank": 125
+        "rank": 126
       },
       "rushYards": {
         "value": 149.1,
@@ -689,8 +689,8 @@
         "rank": 123
       },
       "redZone": {
-        "value": 81.8,
-        "rank": 96
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -735,8 +735,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 100.0,
-        "rank": 138
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -748,7 +748,7 @@
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
@@ -775,7 +775,7 @@
       },
       "totalYards": {
         "value": 351.0,
-        "rank": 102
+        "rank": 103
       },
       "passYards": {
         "value": 186.5,
@@ -798,8 +798,8 @@
         "rank": 75
       },
       "redZone": {
-        "value": 76.7,
-        "rank": 118
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.75,
@@ -844,8 +844,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 93.1,
-        "rank": 124
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -862,7 +862,7 @@
     },
     "sos": {
       "value": 0.443,
-      "rank": 119
+      "rank": 120
     },
     "ats": {
       "wins": 0,
@@ -892,7 +892,7 @@
       },
       "rushYards": {
         "value": 145.5,
-        "rank": 87
+        "rank": 88
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -907,8 +907,8 @@
         "rank": 124
       },
       "redZone": {
-        "value": 90.0,
-        "rank": 29
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -920,7 +920,7 @@
       },
       "penalties": {
         "value": 6.88,
-        "rank": 84
+        "rank": 83
       }
     },
     "defense": {
@@ -953,8 +953,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 69.4,
-        "rank": 6
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -997,7 +997,7 @@
       },
       "passYards": {
         "value": 211.62,
-        "rank": 87
+        "rank": 86
       },
       "rushYards": {
         "value": 158.1,
@@ -1016,8 +1016,8 @@
         "rank": 5
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -1029,7 +1029,7 @@
       },
       "penalties": {
         "value": 5.0,
-        "rank": 20
+        "rank": 19
       }
     },
     "defense": {
@@ -1062,8 +1062,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 76.7,
-        "rank": 29
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -1075,7 +1075,7 @@
       },
       "tfl": {
         "value": 3.62,
-        "rank": 97
+        "rank": 98
       }
     },
     "sos": {
@@ -1098,15 +1098,15 @@
     "offense": {
       "points": {
         "value": 23.62,
-        "rank": 97
+        "rank": 98
       },
       "totalYards": {
         "value": 368.6,
-        "rank": 82
+        "rank": 81
       },
       "passYards": {
         "value": 176.62,
-        "rank": 122
+        "rank": 123
       },
       "rushYards": {
         "value": 192.0,
@@ -1122,11 +1122,11 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -1144,7 +1144,7 @@
     "defense": {
       "points": {
         "value": 26.6,
-        "rank": 92
+        "rank": 91
       },
       "totalYards": {
         "value": null,
@@ -1171,8 +1171,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 78
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -1189,7 +1189,7 @@
     },
     "sos": {
       "value": 0.479,
-      "rank": 101
+      "rank": 102
     },
     "ats": {
       "wins": 0,
@@ -1234,12 +1234,12 @@
         "rank": 28
       },
       "redZone": {
-        "value": 92.3,
-        "rank": 19
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 32.1,
@@ -1280,8 +1280,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.8,
-        "rank": 59
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.38,
@@ -1289,11 +1289,11 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.12,
-        "rank": 73
+        "rank": 74
       }
     },
     "sos": {
@@ -1332,7 +1332,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 33.3,
@@ -1340,11 +1340,11 @@
       },
       "fourthDown": {
         "value": 28.6,
-        "rank": 130
+        "rank": 131
       },
       "redZone": {
-        "value": 79.0,
-        "rank": 109
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 2.0,
@@ -1389,8 +1389,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 94.6,
-        "rank": 127
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.75,
@@ -1402,7 +1402,7 @@
       },
       "tfl": {
         "value": 3.62,
-        "rank": 97
+        "rank": 98
       }
     },
     "sos": {
@@ -1449,11 +1449,11 @@
       },
       "fourthDown": {
         "value": 54.5,
-        "rank": 69
+        "rank": 68
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -1461,7 +1461,7 @@
       },
       "top": {
         "value": 30.0,
-        "rank": 66
+        "rank": 65
       },
       "penalties": {
         "value": 5.25,
@@ -1498,8 +1498,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.8,
-        "rank": 43
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.62,
@@ -1507,7 +1507,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 5.12,
@@ -1561,8 +1561,8 @@
         "rank": 101
       },
       "redZone": {
-        "value": 92.9,
-        "rank": 15
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.38,
@@ -1607,12 +1607,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 68.4,
-        "rank": 4
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 3.0,
@@ -1655,7 +1655,7 @@
       },
       "rushYards": {
         "value": 174.8,
-        "rank": 47
+        "rank": 46
       },
       "yardsPerRush": {
         "value": 4.8,
@@ -1670,8 +1670,8 @@
         "rank": 6
       },
       "redZone": {
-        "value": 94.9,
-        "rank": 7
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.38,
@@ -1716,8 +1716,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.62,
@@ -1764,7 +1764,7 @@
       },
       "rushYards": {
         "value": 146.1,
-        "rank": 86
+        "rank": 87
       },
       "yardsPerRush": {
         "value": 4.2,
@@ -1776,11 +1776,11 @@
       },
       "fourthDown": {
         "value": 68.8,
-        "rank": 21
+        "rank": 23
       },
       "redZone": {
-        "value": 86.8,
-        "rank": 55
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -1792,7 +1792,7 @@
       },
       "penalties": {
         "value": 7.38,
-        "rank": 102
+        "rank": 103
       }
     },
     "defense": {
@@ -1825,12 +1825,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.5,
-        "rank": 113
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.88,
@@ -1888,12 +1888,12 @@
         "rank": 11
       },
       "redZone": {
-        "value": 85.3,
-        "rank": 68
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 32.0,
@@ -1901,7 +1901,7 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -1934,8 +1934,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.0,
-        "rank": 75
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.62,
@@ -1994,11 +1994,11 @@
       },
       "fourthDown": {
         "value": 56.2,
-        "rank": 60
+        "rank": 59
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -2043,8 +2043,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 79.0,
-        "rank": 44
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -2061,7 +2061,7 @@
     },
     "sos": {
       "value": 0.479,
-      "rank": 101
+      "rank": 102
     },
     "ats": {
       "wins": 0,
@@ -2091,7 +2091,7 @@
       },
       "rushYards": {
         "value": 167.7,
-        "rank": 52
+        "rank": 51
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -2106,8 +2106,8 @@
         "rank": 108
       },
       "redZone": {
-        "value": 80.6,
-        "rank": 104
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.22,
@@ -2115,7 +2115,7 @@
       },
       "top": {
         "value": 31.1,
-        "rank": 39
+        "rank": 38
       },
       "penalties": {
         "value": 8.56,
@@ -2152,12 +2152,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 74.1,
-        "rank": 15
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.11,
-        "rank": 110
+        "rank": 109
       },
       "sacks": {
         "value": 2.78,
@@ -2169,8 +2169,8 @@
       }
     },
     "sos": {
-      "value": 0.584,
-      "rank": 43
+      "value": 0.574,
+      "rank": 45
     },
     "ats": {
       "wins": 0,
@@ -2215,12 +2215,12 @@
         "rank": 137
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 88
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 28.4,
@@ -2261,12 +2261,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.38,
@@ -2274,12 +2274,12 @@
       },
       "tfl": {
         "value": 3.88,
-        "rank": 88
+        "rank": 89
       }
     },
     "sos": {
       "value": 0.595,
-      "rank": 36
+      "rank": 37
     },
     "ats": {
       "wins": 0,
@@ -2297,11 +2297,11 @@
     "offense": {
       "points": {
         "value": 23.25,
-        "rank": 100
+        "rank": 101
       },
       "totalYards": {
         "value": 335.4,
-        "rank": 114
+        "rank": 115
       },
       "passYards": {
         "value": 183.38,
@@ -2324,8 +2324,8 @@
         "rank": 44
       },
       "redZone": {
-        "value": 85.2,
-        "rank": 72
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -2337,7 +2337,7 @@
       },
       "penalties": {
         "value": 7.0,
-        "rank": 89
+        "rank": 88
       }
     },
     "defense": {
@@ -2370,8 +2370,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.0,
-        "rank": 83
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -2388,7 +2388,7 @@
     },
     "sos": {
       "value": 0.597,
-      "rank": 35
+      "rank": 36
     },
     "ats": {
       "wins": 0,
@@ -2418,7 +2418,7 @@
       },
       "rushYards": {
         "value": 168.1,
-        "rank": 51
+        "rank": 50
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -2433,8 +2433,8 @@
         "rank": 128
       },
       "redZone": {
-        "value": 64.3,
-        "rank": 135
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -2442,7 +2442,7 @@
       },
       "top": {
         "value": 30.2,
-        "rank": 59
+        "rank": 58
       },
       "penalties": {
         "value": 8.25,
@@ -2452,7 +2452,7 @@
     "defense": {
       "points": {
         "value": 26.5,
-        "rank": 91
+        "rank": 90
       },
       "totalYards": {
         "value": null,
@@ -2479,8 +2479,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.6,
-        "rank": 115
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -2488,7 +2488,7 @@
       },
       "sacks": {
         "value": 2.0,
-        "rank": 74
+        "rank": 75
       },
       "tfl": {
         "value": 5.88,
@@ -2531,7 +2531,7 @@
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 51.3,
@@ -2542,12 +2542,12 @@
         "rank": 49
       },
       "redZone": {
-        "value": 87.9,
-        "rank": 45
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 31.8,
@@ -2561,7 +2561,7 @@
     "defense": {
       "points": {
         "value": 25.9,
-        "rank": 87
+        "rank": 85
       },
       "totalYards": {
         "value": null,
@@ -2588,8 +2588,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.0,
-        "rank": 75
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -2597,7 +2597,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 3.0,
@@ -2606,7 +2606,7 @@
     },
     "sos": {
       "value": 0.512,
-      "rank": 87
+      "rank": 86
     },
     "ats": {
       "wins": 0,
@@ -2651,8 +2651,8 @@
         "rank": 14
       },
       "redZone": {
-        "value": 93.1,
-        "rank": 14
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -2697,8 +2697,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.1,
-        "rank": 63
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -2706,7 +2706,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 3.0,
@@ -2760,12 +2760,12 @@
         "rank": 47
       },
       "redZone": {
-        "value": 82.9,
-        "rank": 93
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 33.5,
@@ -2779,7 +2779,7 @@
     "defense": {
       "points": {
         "value": 26.4,
-        "rank": 90
+        "rank": 89
       },
       "totalYards": {
         "value": null,
@@ -2806,8 +2806,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 87
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -2846,15 +2846,15 @@
       },
       "totalYards": {
         "value": 357.4,
-        "rank": 94
+        "rank": 93
       },
       "passYards": {
         "value": 212.0,
-        "rank": 86
+        "rank": 85
       },
       "rushYards": {
         "value": 145.4,
-        "rank": 88
+        "rank": 89
       },
       "yardsPerRush": {
         "value": 3.7,
@@ -2869,8 +2869,8 @@
         "rank": 41
       },
       "redZone": {
-        "value": 72.7,
-        "rank": 128
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.67,
@@ -2882,7 +2882,7 @@
       },
       "penalties": {
         "value": 4.78,
-        "rank": 16
+        "rank": 15
       }
     },
     "defense": {
@@ -2915,8 +2915,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 92.0,
-        "rank": 120
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.67,
@@ -2924,11 +2924,11 @@
       },
       "sacks": {
         "value": 1.89,
-        "rank": 80
+        "rank": 79
       },
       "tfl": {
         "value": 3.89,
-        "rank": 84
+        "rank": 85
       }
     },
     "sos": {
@@ -2978,8 +2978,8 @@
         "rank": 91
       },
       "redZone": {
-        "value": 76.0,
-        "rank": 122
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.89,
@@ -3024,12 +3024,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 94.4,
-        "rank": 126
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 0.67,
@@ -3080,15 +3080,15 @@
       },
       "thirdDown": {
         "value": 38.6,
-        "rank": 83
+        "rank": 84
       },
       "fourthDown": {
         "value": 47.1,
         "rank": 92
       },
       "redZone": {
-        "value": 83.9,
-        "rank": 85
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.75,
@@ -3133,8 +3133,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.5,
-        "rank": 57
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -3193,11 +3193,11 @@
       },
       "fourthDown": {
         "value": 29.2,
-        "rank": 129
+        "rank": 130
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -3242,8 +3242,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.8,
-        "rank": 59
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.22,
@@ -3251,7 +3251,7 @@
       },
       "sacks": {
         "value": 1.67,
-        "rank": 99
+        "rank": 100
       },
       "tfl": {
         "value": 3.44,
@@ -3305,8 +3305,8 @@
         "rank": 113
       },
       "redZone": {
-        "value": 79.3,
-        "rank": 107
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -3351,8 +3351,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 79.0,
-        "rank": 44
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -3360,7 +3360,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 4.75,
@@ -3414,12 +3414,12 @@
         "rank": 122
       },
       "redZone": {
-        "value": 85.0,
-        "rank": 74
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 33.0,
@@ -3460,12 +3460,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 70.0,
-        "rank": 7
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.12,
@@ -3508,7 +3508,7 @@
       },
       "rushYards": {
         "value": 175.4,
-        "rank": 45
+        "rank": 44
       },
       "yardsPerRush": {
         "value": 5.0,
@@ -3523,8 +3523,8 @@
         "rank": 109
       },
       "redZone": {
-        "value": 85.3,
-        "rank": 68
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -3532,7 +3532,7 @@
       },
       "top": {
         "value": 30.0,
-        "rank": 66
+        "rank": 65
       },
       "penalties": {
         "value": 5.5,
@@ -3569,12 +3569,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 68
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.25,
@@ -3587,7 +3587,7 @@
     },
     "sos": {
       "value": 0.604,
-      "rank": 30
+      "rank": 31
     },
     "ats": {
       "wins": 0,
@@ -3632,8 +3632,8 @@
         "rank": 29
       },
       "redZone": {
-        "value": 83.9,
-        "rank": 85
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -3678,12 +3678,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.6,
-        "rank": 65
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 3.25,
@@ -3738,11 +3738,11 @@
       },
       "fourthDown": {
         "value": 66.7,
-        "rank": 24
+        "rank": 26
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 88
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -3787,20 +3787,20 @@
         "rank": null
       },
       "redZone": {
-        "value": 86.4,
-        "rank": 92
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
@@ -3847,11 +3847,11 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 47
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -3896,8 +3896,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 70.0,
-        "rank": 7
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -3959,8 +3959,8 @@
         "rank": 48
       },
       "redZone": {
-        "value": 77.1,
-        "rank": 117
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -4005,8 +4005,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 70.8,
-        "rank": 9
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.75,
@@ -4023,7 +4023,7 @@
     },
     "sos": {
       "value": 0.496,
-      "rank": 92
+      "rank": 93
     },
     "ats": {
       "wins": 0,
@@ -4068,8 +4068,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 89.1,
-        "rank": 35
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -4114,8 +4114,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.8,
-        "rank": 53
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -4123,7 +4123,7 @@
       },
       "sacks": {
         "value": 2.0,
-        "rank": 74
+        "rank": 75
       },
       "tfl": {
         "value": 4.38,
@@ -4170,15 +4170,15 @@
       },
       "thirdDown": {
         "value": 47.9,
-        "rank": 20
+        "rank": 19
       },
       "fourthDown": {
         "value": 50.0,
         "rank": 79
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -4223,12 +4223,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 76.7,
-        "rank": 29
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.25,
@@ -4286,8 +4286,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 77
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -4299,7 +4299,7 @@
       },
       "penalties": {
         "value": 6.88,
-        "rank": 84
+        "rank": 83
       }
     },
     "defense": {
@@ -4332,12 +4332,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.0,
-        "rank": 47
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.25,
@@ -4349,8 +4349,8 @@
       }
     },
     "sos": {
-      "value": 0.693,
-      "rank": 4
+      "value": 0.682,
+      "rank": 6
     },
     "ats": {
       "wins": 0,
@@ -4395,12 +4395,12 @@
         "rank": 97
       },
       "redZone": {
-        "value": 100.0,
+        "value": 0.0,
         "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 30.4,
@@ -4441,8 +4441,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 68
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -4497,15 +4497,15 @@
       },
       "thirdDown": {
         "value": 35.6,
-        "rank": 103
+        "rank": 102
       },
       "fourthDown": {
         "value": 35.3,
         "rank": 125
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 47
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -4550,8 +4550,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.7,
-        "rank": 50
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -4559,16 +4559,16 @@
       },
       "sacks": {
         "value": 2.0,
-        "rank": 74
+        "rank": 75
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
       "value": 0.628,
-      "rank": 21
+      "rank": 20
     },
     "ats": {
       "wins": 0,
@@ -4586,7 +4586,7 @@
     "offense": {
       "points": {
         "value": 29.5,
-        "rank": 60
+        "rank": 59
       },
       "totalYards": {
         "value": 395.0,
@@ -4613,8 +4613,8 @@
         "rank": 78
       },
       "redZone": {
-        "value": 85.2,
-        "rank": 72
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -4622,11 +4622,11 @@
       },
       "top": {
         "value": 30.0,
-        "rank": 66
+        "rank": 65
       },
       "penalties": {
         "value": 5.0,
-        "rank": 20
+        "rank": 19
       }
     },
     "defense": {
@@ -4659,20 +4659,20 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.9,
-        "rank": 73
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 3.88,
-        "rank": 88
+        "rank": 89
       }
     },
     "sos": {
@@ -4695,7 +4695,7 @@
     "offense": {
       "points": {
         "value": 23.25,
-        "rank": 100
+        "rank": 101
       },
       "totalYards": {
         "value": 390.5,
@@ -4722,8 +4722,8 @@
         "rank": 93
       },
       "redZone": {
-        "value": 76.7,
-        "rank": 118
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -4731,11 +4731,11 @@
       },
       "top": {
         "value": 30.8,
-        "rank": 46
+        "rank": 47
       },
       "penalties": {
         "value": 7.0,
-        "rank": 89
+        "rank": 88
       }
     },
     "defense": {
@@ -4768,8 +4768,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 65.2,
-        "rank": 3
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.75,
@@ -4831,8 +4831,8 @@
         "rank": 136
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 47
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -4877,12 +4877,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 76.9,
-        "rank": 31
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.38,
@@ -4940,8 +4940,8 @@
         "rank": 116
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 112
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 2.12,
@@ -4986,8 +4986,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.6,
-        "rank": 58
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -5004,7 +5004,7 @@
     },
     "sos": {
       "value": 0.621,
-      "rank": 23
+      "rank": 22
     },
     "ats": {
       "wins": 0,
@@ -5049,8 +5049,8 @@
         "rank": 90
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 77
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -5062,7 +5062,7 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -5095,8 +5095,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.6,
-        "rank": 39
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -5104,7 +5104,7 @@
       },
       "sacks": {
         "value": 1.62,
-        "rank": 100
+        "rank": 101
       },
       "tfl": {
         "value": 4.75,
@@ -5155,11 +5155,11 @@
       },
       "fourthDown": {
         "value": 25.0,
-        "rank": 132
+        "rank": 133
       },
       "redZone": {
-        "value": 78.4,
-        "rank": 111
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -5204,8 +5204,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 73.7,
-        "rank": 13
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
@@ -5260,15 +5260,15 @@
       },
       "thirdDown": {
         "value": 40.2,
-        "rank": 64
+        "rank": 65
       },
       "fourthDown": {
         "value": 50.0,
         "rank": 79
       },
       "redZone": {
-        "value": 85.3,
-        "rank": 68
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.67,
@@ -5313,8 +5313,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.89,
@@ -5373,11 +5373,11 @@
       },
       "fourthDown": {
         "value": 68.4,
-        "rank": 23
+        "rank": 25
       },
       "redZone": {
-        "value": 81.8,
-        "rank": 96
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -5422,8 +5422,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.3,
-        "rank": 86
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.22,
@@ -5435,7 +5435,7 @@
       },
       "tfl": {
         "value": 4.11,
-        "rank": 76
+        "rank": 77
       }
     },
     "sos": {
@@ -5474,7 +5474,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 44.2,
@@ -5482,11 +5482,11 @@
       },
       "fourthDown": {
         "value": 70.6,
-        "rank": 17
+        "rank": 18
       },
       "redZone": {
-        "value": 86.5,
-        "rank": 57
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -5531,8 +5531,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 68
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.12,
@@ -5544,7 +5544,7 @@
       },
       "tfl": {
         "value": 3.62,
-        "rank": 97
+        "rank": 98
       }
     },
     "sos": {
@@ -5579,7 +5579,7 @@
       },
       "rushYards": {
         "value": 174.3,
-        "rank": 48
+        "rank": 47
       },
       "yardsPerRush": {
         "value": 5.3,
@@ -5594,8 +5594,8 @@
         "rank": 126
       },
       "redZone": {
-        "value": 88.5,
-        "rank": 37
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -5640,12 +5640,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 3.0,
@@ -5703,8 +5703,8 @@
         "rank": 16
       },
       "redZone": {
-        "value": 97.1,
-        "rank": 2
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.38,
@@ -5716,7 +5716,7 @@
       },
       "penalties": {
         "value": 7.0,
-        "rank": 89
+        "rank": 88
       }
     },
     "defense": {
@@ -5749,25 +5749,25 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 1.62,
-        "rank": 100
+        "rank": 101
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
       "value": 0.481,
-      "rank": 99
+      "rank": 100
     },
     "ats": {
       "wins": 0,
@@ -5812,8 +5812,8 @@
         "rank": 109
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 112
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -5858,12 +5858,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 96.5,
-        "rank": 136
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 1.12,
@@ -5876,7 +5876,7 @@
     },
     "sos": {
       "value": 0.496,
-      "rank": 92
+      "rank": 93
     },
     "ats": {
       "wins": 0,
@@ -5921,8 +5921,8 @@
         "rank": 31
       },
       "redZone": {
-        "value": 92.6,
-        "rank": 18
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -5967,8 +5967,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 79.2,
-        "rank": 46
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.75,
@@ -6019,7 +6019,7 @@
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 36.0,
@@ -6027,11 +6027,11 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 94.3,
-        "rank": 8
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -6076,12 +6076,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.6,
-        "rank": 80
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 2.38,
@@ -6089,7 +6089,7 @@
       },
       "tfl": {
         "value": 3.88,
-        "rank": 88
+        "rank": 89
       }
     },
     "sos": {
@@ -6112,7 +6112,7 @@
     "offense": {
       "points": {
         "value": 23.62,
-        "rank": 97
+        "rank": 98
       },
       "totalYards": {
         "value": 318.3,
@@ -6120,7 +6120,7 @@
       },
       "passYards": {
         "value": 179.88,
-        "rank": 118
+        "rank": 119
       },
       "rushYards": {
         "value": 138.4,
@@ -6136,11 +6136,11 @@
       },
       "fourthDown": {
         "value": 57.1,
-        "rank": 55
+        "rank": 54
       },
       "redZone": {
-        "value": 90.9,
-        "rank": 25
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -6185,8 +6185,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.6,
-        "rank": 80
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -6194,7 +6194,7 @@
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 4.38,
@@ -6245,11 +6245,11 @@
       },
       "fourthDown": {
         "value": 69.2,
-        "rank": 19
+        "rank": 21
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 39
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -6294,8 +6294,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.0,
-        "rank": 98
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -6303,7 +6303,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 5.0,
@@ -6354,11 +6354,11 @@
       },
       "fourthDown": {
         "value": 70.0,
-        "rank": 18
+        "rank": 19
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 124
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -6366,11 +6366,11 @@
       },
       "top": {
         "value": 30.1,
-        "rank": 61
+        "rank": 60
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -6403,8 +6403,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 94.7,
-        "rank": 128
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -6466,12 +6466,12 @@
         "rank": 97
       },
       "redZone": {
-        "value": 89.3,
-        "rank": 33
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 32.8,
@@ -6512,12 +6512,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.3,
-        "rank": 64
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.88,
@@ -6530,7 +6530,7 @@
     },
     "sos": {
       "value": 0.514,
-      "rank": 85
+      "rank": 84
     },
     "ats": {
       "wins": 0,
@@ -6564,7 +6564,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 36.1,
@@ -6575,12 +6575,12 @@
         "rank": 4
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 47
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 32.0,
@@ -6621,8 +6621,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 95.0,
-        "rank": 129
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -6638,8 +6638,8 @@
       }
     },
     "sos": {
-      "value": 0.594,
-      "rank": 37
+      "value": 0.598,
+      "rank": 35
     },
     "ats": {
       "wins": 0,
@@ -6657,7 +6657,7 @@
     "offense": {
       "points": {
         "value": 29.5,
-        "rank": 60
+        "rank": 59
       },
       "totalYards": {
         "value": 379.9,
@@ -6684,8 +6684,8 @@
         "rank": 93
       },
       "redZone": {
-        "value": 94.1,
-        "rank": 9
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -6730,8 +6730,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 93.8,
-        "rank": 125
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -6793,8 +6793,8 @@
         "rank": 49
       },
       "redZone": {
-        "value": 81.2,
-        "rank": 99
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.75,
@@ -6839,8 +6839,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.8,
-        "rank": 71
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -6899,11 +6899,11 @@
       },
       "fourthDown": {
         "value": 56.2,
-        "rank": 60
+        "rank": 59
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -6948,8 +6948,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 95.8,
-        "rank": 130
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -7008,11 +7008,11 @@
       },
       "fourthDown": {
         "value": 57.9,
-        "rank": 54
+        "rank": 53
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 88
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -7030,7 +7030,7 @@
     "defense": {
       "points": {
         "value": 25.8,
-        "rank": 85
+        "rank": 84
       },
       "totalYards": {
         "value": null,
@@ -7057,8 +7057,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.0,
-        "rank": 111
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -7066,7 +7066,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 3.0,
@@ -7120,8 +7120,8 @@
         "rank": 101
       },
       "redZone": {
-        "value": 91.9,
-        "rank": 22
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -7166,12 +7166,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 76.5,
-        "rank": 28
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 2.25,
@@ -7184,7 +7184,7 @@
     },
     "sos": {
       "value": 0.429,
-      "rank": 126
+      "rank": 127
     },
     "ats": {
       "wins": 0,
@@ -7214,11 +7214,11 @@
       },
       "rushYards": {
         "value": 171.9,
-        "rank": 49
+        "rank": 48
       },
       "yardsPerRush": {
         "value": 4.9,
-        "rank": 37
+        "rank": 38
       },
       "thirdDown": {
         "value": 46.2,
@@ -7229,8 +7229,8 @@
         "rank": 37
       },
       "redZone": {
-        "value": 82.8,
-        "rank": 94
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -7242,7 +7242,7 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -7275,16 +7275,16 @@
         "rank": null
       },
       "redZone": {
-        "value": 77.3,
-        "rank": 32
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 1.62,
-        "rank": 100
+        "rank": 101
       },
       "tfl": {
         "value": 4.62,
@@ -7338,12 +7338,12 @@
         "rank": 37
       },
       "redZone": {
-        "value": 89.7,
-        "rank": 30
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 29.0,
@@ -7384,8 +7384,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.7,
-        "rank": 50
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.12,
@@ -7420,7 +7420,7 @@
     "offense": {
       "points": {
         "value": 23.88,
-        "rank": 95
+        "rank": 96
       },
       "totalYards": {
         "value": 344.6,
@@ -7432,11 +7432,11 @@
       },
       "rushYards": {
         "value": 146.3,
-        "rank": 85
+        "rank": 86
       },
       "yardsPerRush": {
         "value": 4.9,
-        "rank": 37
+        "rank": 38
       },
       "thirdDown": {
         "value": 31.0,
@@ -7444,11 +7444,11 @@
       },
       "fourthDown": {
         "value": 53.8,
-        "rank": 72
+        "rank": 71
       },
       "redZone": {
-        "value": 84.2,
-        "rank": 81
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -7493,8 +7493,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 92.6,
-        "rank": 122
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -7511,7 +7511,7 @@
     },
     "sos": {
       "value": 0.443,
-      "rank": 119
+      "rank": 120
     },
     "ats": {
       "wins": 0,
@@ -7533,7 +7533,7 @@
       },
       "totalYards": {
         "value": 352.5,
-        "rank": 100
+        "rank": 101
       },
       "passYards": {
         "value": 195.75,
@@ -7556,8 +7556,8 @@
         "rank": 120
       },
       "redZone": {
-        "value": 81.0,
-        "rank": 100
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.75,
@@ -7602,8 +7602,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 101
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -7642,7 +7642,7 @@
       },
       "totalYards": {
         "value": 369.0,
-        "rank": 81
+        "rank": 80
       },
       "passYards": {
         "value": 221.0,
@@ -7654,7 +7654,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 39.1,
@@ -7665,8 +7665,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 79.2,
-        "rank": 108
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -7678,7 +7678,7 @@
       },
       "penalties": {
         "value": 4.75,
-        "rank": 15
+        "rank": 14
       }
     },
     "defense": {
@@ -7711,12 +7711,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 95.8,
-        "rank": 130
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 1.25,
@@ -7724,7 +7724,7 @@
       },
       "tfl": {
         "value": 3.75,
-        "rank": 92
+        "rank": 93
       }
     },
     "sos": {
@@ -7774,8 +7774,8 @@
         "rank": 120
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 60
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -7820,8 +7820,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.8,
-        "rank": 71
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -7829,7 +7829,7 @@
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 3.25,
@@ -7883,8 +7883,8 @@
         "rank": 116
       },
       "redZone": {
-        "value": 84.0,
-        "rank": 83
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -7929,8 +7929,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.6,
-        "rank": 80
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -7938,7 +7938,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.75,
@@ -7946,8 +7946,8 @@
       }
     },
     "sos": {
-      "value": 0.604,
-      "rank": 30
+      "value": 0.608,
+      "rank": 29
     },
     "ats": {
       "wins": 0,
@@ -7965,11 +7965,11 @@
     "offense": {
       "points": {
         "value": 23.0,
-        "rank": 102
+        "rank": 103
       },
       "totalYards": {
         "value": 354.3,
-        "rank": 99
+        "rank": 100
       },
       "passYards": {
         "value": 224.75,
@@ -7989,15 +7989,15 @@
       },
       "fourthDown": {
         "value": 25.0,
-        "rank": 132
+        "rank": 133
       },
       "redZone": {
-        "value": 92.3,
-        "rank": 19
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 26.8,
@@ -8038,8 +8038,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 96.5,
-        "rank": 136
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -8101,8 +8101,8 @@
         "rank": 137
       },
       "redZone": {
-        "value": 72.2,
-        "rank": 130
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -8147,8 +8147,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.9,
-        "rank": 116
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -8156,7 +8156,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.25,
@@ -8165,7 +8165,7 @@
     },
     "sos": {
       "value": 0.479,
-      "rank": 101
+      "rank": 102
     },
     "ats": {
       "wins": 0,
@@ -8210,8 +8210,8 @@
         "rank": 10
       },
       "redZone": {
-        "value": 86.1,
-        "rank": 59
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.25,
@@ -8256,8 +8256,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.9,
-        "rank": 107
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -8265,11 +8265,11 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
@@ -8304,7 +8304,7 @@
       },
       "rushYards": {
         "value": 190.8,
-        "rank": 32
+        "rank": 31
       },
       "yardsPerRush": {
         "value": 5.3,
@@ -8319,12 +8319,12 @@
         "rank": 113
       },
       "redZone": {
-        "value": 89.3,
-        "rank": 33
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 27.7,
@@ -8365,8 +8365,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 89.3,
-        "rank": 109
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -8374,16 +8374,16 @@
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 3.75,
-        "rank": 92
+        "rank": 93
       }
     },
     "sos": {
-      "value": 0.443,
-      "rank": 119
+      "value": 0.434,
+      "rank": 125
     },
     "ats": {
       "wins": 0,
@@ -8393,55 +8393,55 @@
     }
   },
   "ohio": {
-    "games": 8,
+    "games": 9,
     "wins": 7,
     "losses": 2,
     "conferenceWins": 5,
     "conferenceLosses": 0,
     "offense": {
       "points": {
-        "value": 29.62,
-        "rank": 59
+        "value": 29.44,
+        "rank": 61
       },
       "totalYards": {
-        "value": 369.5,
-        "rank": 80
+        "value": 368.2,
+        "rank": 83
       },
       "passYards": {
-        "value": 178.62,
-        "rank": 119
+        "value": 180.67,
+        "rank": 118
       },
       "rushYards": {
-        "value": 190.9,
-        "rank": 30
+        "value": 187.6,
+        "rank": 34
       },
       "yardsPerRush": {
-        "value": 4.9,
-        "rank": 37
+        "value": 5.0,
+        "rank": 33
       },
       "thirdDown": {
-        "value": 48.5,
-        "rank": 19
+        "value": 47.3,
+        "rank": 22
       },
       "fourthDown": {
-        "value": 58.3,
-        "rank": 49
+        "value": 53.8,
+        "rank": 71
       },
       "redZone": {
-        "value": 88.0,
-        "rank": 43
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
-        "value": 1.25,
-        "rank": 65
+        "value": 1.22,
+        "rank": 62
       },
       "top": {
-        "value": 31.2,
-        "rank": 38
+        "value": 30.2,
+        "rank": 58
       },
       "penalties": {
-        "value": 4.62,
-        "rank": 12
+        "value": 5.0,
+        "rank": 19
       }
     },
     "defense": {
@@ -8474,20 +8474,20 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 36
+        "value": null,
+        "rank": null
       },
       "takeaways": {
-        "value": 0.88,
-        "rank": 122
+        "value": 0.89,
+        "rank": 121
       },
       "sacks": {
-        "value": 2.0,
-        "rank": 74
+        "value": 2.11,
+        "rank": 72
       },
       "tfl": {
-        "value": 5.38,
-        "rank": 19
+        "value": 5.33,
+        "rank": 20
       }
     },
     "sos": {
@@ -8537,12 +8537,12 @@
         "rank": 116
       },
       "redZone": {
-        "value": 94.1,
-        "rank": 9
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 29.3,
@@ -8583,12 +8583,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.0,
-        "rank": 98
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.88,
@@ -8600,8 +8600,8 @@
       }
     },
     "sos": {
-      "value": 0.447,
-      "rank": 118
+      "value": 0.454,
+      "rank": 115
     },
     "ats": {
       "wins": 0,
@@ -8627,7 +8627,7 @@
       },
       "passYards": {
         "value": 161.78,
-        "rank": 129
+        "rank": 130
       },
       "rushYards": {
         "value": 165.2,
@@ -8646,8 +8646,8 @@
         "rank": 74
       },
       "redZone": {
-        "value": 90.3,
-        "rank": 27
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.89,
@@ -8659,7 +8659,7 @@
       },
       "penalties": {
         "value": 5.11,
-        "rank": 25
+        "rank": 24
       }
     },
     "defense": {
@@ -8692,8 +8692,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.33,
@@ -8705,12 +8705,12 @@
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
-      "value": 0.495,
-      "rank": 95
+      "value": 0.499,
+      "rank": 92
     },
     "ats": {
       "wins": 0,
@@ -8720,61 +8720,61 @@
     }
   },
   "buffalo": {
-    "games": 8,
-    "wins": 5,
+    "games": 9,
+    "wins": 6,
     "losses": 3,
-    "conferenceWins": 3,
+    "conferenceWins": 4,
     "conferenceLosses": 1,
     "offense": {
       "points": {
-        "value": 22.62,
-        "rank": 106
+        "value": 23.89,
+        "rank": 95
       },
       "totalYards": {
-        "value": 330.3,
-        "rank": 117
+        "value": 344.6,
+        "rank": 108
       },
       "passYards": {
-        "value": 154.62,
-        "rank": 130
+        "value": 177.22,
+        "rank": 121
       },
       "rushYards": {
-        "value": 175.6,
-        "rank": 44
+        "value": 167.3,
+        "rank": 53
       },
       "yardsPerRush": {
-        "value": 4.2,
-        "rank": 80
+        "value": 4.1,
+        "rank": 86
       },
       "thirdDown": {
-        "value": 38.6,
-        "rank": 83
+        "value": 39.0,
+        "rank": 82
       },
       "fourthDown": {
-        "value": 66.7,
-        "rank": 24
+        "value": 71.4,
+        "rank": 16
       },
       "redZone": {
-        "value": 86.7,
-        "rank": 56
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
-        "value": 1.5,
-        "rank": 103
+        "value": 1.56,
+        "rank": 111
       },
       "top": {
-        "value": 30.3,
-        "rank": 55
+        "value": 30.0,
+        "rank": 65
       },
       "penalties": {
-        "value": 5.0,
-        "rank": 20
+        "value": 5.11,
+        "rank": 24
       }
     },
     "defense": {
       "points": {
-        "value": 25.4,
-        "rank": 79
+        "value": 26.0,
+        "rank": 87
       },
       "totalYards": {
         "value": null,
@@ -8801,25 +8801,25 @@
         "rank": null
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 95
+        "value": null,
+        "rank": null
       },
       "takeaways": {
-        "value": 1.38,
-        "rank": 55
+        "value": 1.44,
+        "rank": 54
       },
       "sacks": {
-        "value": 1.5,
-        "rank": 104
+        "value": 1.89,
+        "rank": 79
       },
       "tfl": {
-        "value": 3.62,
-        "rank": 97
+        "value": 4.22,
+        "rank": 73
       }
     },
     "sos": {
-      "value": 0.477,
-      "rank": 105
+      "value": 0.494,
+      "rank": 97
     },
     "ats": {
       "wins": 0,
@@ -8829,61 +8829,61 @@
     }
   },
   "miami-oh": {
-    "games": 8,
+    "games": 9,
     "wins": 5,
-    "losses": 3,
+    "losses": 4,
     "conferenceWins": 3,
-    "conferenceLosses": 1,
+    "conferenceLosses": 2,
     "offense": {
       "points": {
-        "value": 27.0,
+        "value": 27.44,
         "rank": 75
       },
       "totalYards": {
-        "value": 358.1,
-        "rank": 92
+        "value": 357.2,
+        "rank": 94
       },
       "passYards": {
-        "value": 217.0,
-        "rank": 82
+        "value": 210.0,
+        "rank": 89
       },
       "rushYards": {
-        "value": 141.1,
-        "rank": 91
+        "value": 147.2,
+        "rank": 83
       },
       "yardsPerRush": {
-        "value": 4.4,
-        "rank": 67
+        "value": 4.3,
+        "rank": 73
       },
       "thirdDown": {
-        "value": 35.9,
-        "rank": 101
+        "value": 35.5,
+        "rank": 103
       },
       "fourthDown": {
-        "value": 66.7,
-        "rank": 24
-      },
-      "redZone": {
-        "value": 92.3,
+        "value": 70.0,
         "rank": 19
       },
+      "redZone": {
+        "value": 0.0,
+        "rank": 1
+      },
       "giveaways": {
-        "value": 0.88,
+        "value": 0.78,
         "rank": 25
       },
       "top": {
-        "value": 30.7,
-        "rank": 47
+        "value": 30.9,
+        "rank": 44
       },
       "penalties": {
-        "value": 6.62,
-        "rank": 73
+        "value": 7.33,
+        "rank": 102
       }
     },
     "defense": {
       "points": {
-        "value": 25.8,
-        "rank": 85
+        "value": 26.7,
+        "rank": 93
       },
       "totalYards": {
         "value": null,
@@ -8910,25 +8910,25 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.5,
-        "rank": 113
+        "value": null,
+        "rank": null
       },
       "takeaways": {
-        "value": 1.12,
-        "rank": 97
+        "value": 1.0,
+        "rank": 110
       },
       "sacks": {
-        "value": 2.0,
-        "rank": 74
+        "value": 1.89,
+        "rank": 79
       },
       "tfl": {
-        "value": 3.0,
-        "rank": 118
+        "value": 2.89,
+        "rank": 122
       }
     },
     "sos": {
-      "value": 0.427,
-      "rank": 127
+      "value": 0.449,
+      "rank": 119
     },
     "ats": {
       "wins": 0,
@@ -8950,7 +8950,7 @@
       },
       "totalYards": {
         "value": 334.6,
-        "rank": 115
+        "rank": 116
       },
       "passYards": {
         "value": 187.88,
@@ -8958,7 +8958,7 @@
       },
       "rushYards": {
         "value": 146.8,
-        "rank": 84
+        "rank": 85
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -8970,11 +8970,11 @@
       },
       "fourthDown": {
         "value": 53.8,
-        "rank": 72
+        "rank": 71
       },
       "redZone": {
-        "value": 91.3,
-        "rank": 24
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -9019,8 +9019,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.9,
-        "rank": 107
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -9036,7 +9036,7 @@
       }
     },
     "sos": {
-      "value": 0.41,
+      "value": 0.408,
       "rank": 133
     },
     "ats": {
@@ -9063,7 +9063,7 @@
       },
       "passYards": {
         "value": 213.0,
-        "rank": 85
+        "rank": 84
       },
       "rushYards": {
         "value": 105.6,
@@ -9075,15 +9075,15 @@
       },
       "thirdDown": {
         "value": 38.6,
-        "rank": 83
+        "rank": 84
       },
       "fourthDown": {
         "value": 50.0,
         "rank": 79
       },
       "redZone": {
-        "value": 84.0,
-        "rank": 83
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.22,
@@ -9091,17 +9091,17 @@
       },
       "top": {
         "value": 31.0,
-        "rank": 42
+        "rank": 41
       },
       "penalties": {
         "value": 4.78,
-        "rank": 16
+        "rank": 15
       }
     },
     "defense": {
       "points": {
         "value": 25.7,
-        "rank": 84
+        "rank": 83
       },
       "totalYards": {
         "value": null,
@@ -9128,8 +9128,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.0,
-        "rank": 75
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.33,
@@ -9137,7 +9137,7 @@
       },
       "sacks": {
         "value": 1.56,
-        "rank": 103
+        "rank": 104
       },
       "tfl": {
         "value": 3.22,
@@ -9146,7 +9146,7 @@
     },
     "sos": {
       "value": 0.433,
-      "rank": 125
+      "rank": 126
     },
     "ats": {
       "wins": 0,
@@ -9168,7 +9168,7 @@
       },
       "totalYards": {
         "value": 337.5,
-        "rank": 110
+        "rank": 111
       },
       "passYards": {
         "value": 196.25,
@@ -9176,11 +9176,11 @@
       },
       "rushYards": {
         "value": 141.3,
-        "rank": 90
+        "rank": 91
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 33.7,
@@ -9191,8 +9191,8 @@
         "rank": 11
       },
       "redZone": {
-        "value": 77.3,
-        "rank": 115
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -9237,8 +9237,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 92.9,
-        "rank": 123
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -9246,7 +9246,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.25,
@@ -9285,7 +9285,7 @@
       },
       "rushYards": {
         "value": 169.3,
-        "rank": 50
+        "rank": 49
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -9293,15 +9293,15 @@
       },
       "thirdDown": {
         "value": 35.5,
-        "rank": 104
+        "rank": 103
       },
       "fourthDown": {
         "value": 61.9,
         "rank": 40
       },
       "redZone": {
-        "value": 84.6,
-        "rank": 76
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -9319,7 +9319,7 @@
     "defense": {
       "points": {
         "value": 25.9,
-        "rank": 87
+        "rank": 85
       },
       "totalYards": {
         "value": null,
@@ -9346,8 +9346,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 83.9,
-        "rank": 73
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -9355,7 +9355,7 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 2.88,
@@ -9363,8 +9363,8 @@
       }
     },
     "sos": {
-      "value": 0.63,
-      "rank": 20
+      "value": 0.621,
+      "rank": 22
     },
     "ats": {
       "wins": 0,
@@ -9409,16 +9409,16 @@
         "rank": 109
       },
       "redZone": {
-        "value": 59.3,
-        "rank": 136
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.89,
-        "rank": 134
+        "rank": 133
       },
       "top": {
         "value": 30.1,
-        "rank": 61
+        "rank": 60
       },
       "penalties": {
         "value": 8.22,
@@ -9455,8 +9455,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 78
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.56,
@@ -9473,7 +9473,7 @@
     },
     "sos": {
       "value": 0.495,
-      "rank": 95
+      "rank": 96
     },
     "ats": {
       "wins": 0,
@@ -9499,7 +9499,7 @@
       },
       "passYards": {
         "value": 176.33,
-        "rank": 123
+        "rank": 124
       },
       "rushYards": {
         "value": 109.9,
@@ -9518,8 +9518,8 @@
         "rank": 101
       },
       "redZone": {
-        "value": 77.3,
-        "rank": 115
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.44,
@@ -9564,8 +9564,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 96.4,
-        "rank": 135
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.11,
@@ -9577,11 +9577,11 @@
       },
       "tfl": {
         "value": 3.89,
-        "rank": 84
+        "rank": 85
       }
     },
     "sos": {
-      "value": 0.507,
+      "value": 0.503,
       "rank": 89
     },
     "ats": {
@@ -9627,8 +9627,8 @@
         "rank": 101
       },
       "redZone": {
-        "value": 76.2,
-        "rank": 121
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.67,
@@ -9673,8 +9673,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.2,
-        "rank": 56
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.56,
@@ -9691,7 +9691,7 @@
     },
     "sos": {
       "value": 0.451,
-      "rank": 116
+      "rank": 117
     },
     "ats": {
       "wins": 0,
@@ -9701,55 +9701,55 @@
     }
   },
   "akron": {
-    "games": 8,
+    "games": 9,
     "wins": 1,
     "losses": 8,
     "conferenceWins": 0,
     "conferenceLosses": 5,
     "offense": {
       "points": {
-        "value": 19.0,
+        "value": 19.11,
         "rank": 127
       },
       "totalYards": {
-        "value": 349.9,
-        "rank": 103
+        "value": 354.6,
+        "rank": 99
       },
       "passYards": {
-        "value": 215.38,
-        "rank": 84
+        "value": 217.22,
+        "rank": 82
       },
       "rushYards": {
-        "value": 134.5,
-        "rank": 102
+        "value": 137.3,
+        "rank": 98
       },
       "yardsPerRush": {
         "value": 4.0,
         "rank": 94
       },
       "thirdDown": {
-        "value": 40.2,
+        "value": 40.3,
         "rank": 64
       },
       "fourthDown": {
-        "value": 25.0,
-        "rank": 132
+        "value": 30.0,
+        "rank": 129
       },
       "redZone": {
-        "value": 87.0,
-        "rank": 54
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
-        "value": 1.88,
-        "rank": 131
+        "value": 1.89,
+        "rank": 133
       },
       "top": {
-        "value": 30.2,
-        "rank": 59
+        "value": 31.0,
+        "rank": 41
       },
       "penalties": {
-        "value": 7.38,
-        "rank": 102
+        "value": 7.11,
+        "rank": 93
       }
     },
     "defense": {
@@ -9782,25 +9782,25 @@
         "rank": null
       },
       "redZone": {
-        "value": 86.7,
-        "rank": 93
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
         "rank": 6
       },
       "sacks": {
-        "value": 0.5,
-        "rank": 138
+        "value": 0.67,
+        "rank": 136
       },
       "tfl": {
-        "value": 1.88,
+        "value": 2.11,
         "rank": 136
       }
     },
     "sos": {
-      "value": 0.515,
-      "rank": 84
+      "value": 0.507,
+      "rank": 88
     },
     "ats": {
       "wins": 0,
@@ -9845,8 +9845,8 @@
         "rank": 6
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 77
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -9858,7 +9858,7 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -9891,8 +9891,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.6,
-        "rank": 39
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
@@ -9931,7 +9931,7 @@
       },
       "totalYards": {
         "value": 351.8,
-        "rank": 101
+        "rank": 102
       },
       "passYards": {
         "value": 194.33,
@@ -9954,8 +9954,8 @@
         "rank": 33
       },
       "redZone": {
-        "value": 89.7,
-        "rank": 30
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -10000,8 +10000,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 62.5,
-        "rank": 1
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.56,
@@ -10009,11 +10009,11 @@
       },
       "sacks": {
         "value": 1.89,
-        "rank": 80
+        "rank": 79
       },
       "tfl": {
         "value": 3.89,
-        "rank": 84
+        "rank": 85
       }
     },
     "sos": {
@@ -10063,12 +10063,12 @@
         "rank": 1
       },
       "redZone": {
-        "value": 85.3,
-        "rank": 68
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 36.7,
@@ -10109,8 +10109,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 36
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.75,
@@ -10118,7 +10118,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 2.5,
@@ -10169,11 +10169,11 @@
       },
       "fourthDown": {
         "value": 57.1,
-        "rank": 55
+        "rank": 54
       },
       "redZone": {
-        "value": 80.0,
-        "rank": 105
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -10218,12 +10218,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.38,
@@ -10266,7 +10266,7 @@
       },
       "rushYards": {
         "value": 175.4,
-        "rank": 45
+        "rank": 44
       },
       "yardsPerRush": {
         "value": 4.6,
@@ -10281,8 +10281,8 @@
         "rank": 93
       },
       "redZone": {
-        "value": 70.8,
-        "rank": 132
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -10327,12 +10327,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 87
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 2.12,
@@ -10340,12 +10340,12 @@
       },
       "tfl": {
         "value": 3.75,
-        "rank": 92
+        "rank": 93
       }
     },
     "sos": {
       "value": 0.48,
-      "rank": 100
+      "rank": 101
     },
     "ats": {
       "wins": 0,
@@ -10390,8 +10390,8 @@
         "rank": 97
       },
       "redZone": {
-        "value": 88.5,
-        "rank": 37
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.11,
@@ -10436,8 +10436,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.9,
-        "rank": 26
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.22,
@@ -10454,7 +10454,7 @@
     },
     "sos": {
       "value": 0.485,
-      "rank": 97
+      "rank": 98
     },
     "ats": {
       "wins": 0,
@@ -10472,15 +10472,15 @@
     "offense": {
       "points": {
         "value": 23.0,
-        "rank": 102
+        "rank": 103
       },
       "totalYards": {
         "value": 336.0,
-        "rank": 113
+        "rank": 114
       },
       "passYards": {
         "value": 169.0,
-        "rank": 126
+        "rank": 127
       },
       "rushYards": {
         "value": 167.0,
@@ -10499,8 +10499,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 88.0,
-        "rank": 43
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 2.0,
@@ -10545,8 +10545,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 95.8,
-        "rank": 130
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.75,
@@ -10605,11 +10605,11 @@
       },
       "fourthDown": {
         "value": 57.1,
-        "rank": 55
+        "rank": 54
       },
       "redZone": {
-        "value": 70.0,
-        "rank": 133
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -10654,8 +10654,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 95
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -10663,7 +10663,7 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 3.5,
@@ -10672,7 +10672,7 @@
     },
     "sos": {
       "value": 0.451,
-      "rank": 117
+      "rank": 118
     },
     "ats": {
       "wins": 0,
@@ -10702,7 +10702,7 @@
       },
       "rushYards": {
         "value": 136.0,
-        "rank": 100
+        "rank": 101
       },
       "yardsPerRush": {
         "value": 3.8,
@@ -10717,8 +10717,8 @@
         "rank": 33
       },
       "redZone": {
-        "value": 52.9,
-        "rank": 138
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -10763,8 +10763,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 91.4,
-        "rank": 119
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -10823,11 +10823,11 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 55.0,
-        "rank": 137
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -10872,8 +10872,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.8,
-        "rank": 59
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -10935,8 +10935,8 @@
         "rank": 15
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 39
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -10981,8 +10981,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 76.2,
-        "rank": 27
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.62,
@@ -11041,11 +11041,11 @@
       },
       "fourthDown": {
         "value": 54.5,
-        "rank": 69
+        "rank": 68
       },
       "redZone": {
-        "value": 87.2,
-        "rank": 52
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -11090,8 +11090,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.6,
-        "rank": 39
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.75,
@@ -11134,11 +11134,11 @@
       },
       "passYards": {
         "value": 210.88,
-        "rank": 88
+        "rank": 87
       },
       "rushYards": {
         "value": 145.4,
-        "rank": 88
+        "rank": 89
       },
       "yardsPerRush": {
         "value": 4.4,
@@ -11150,11 +11150,11 @@
       },
       "fourthDown": {
         "value": 28.6,
-        "rank": 130
+        "rank": 131
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 88
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -11199,8 +11199,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 73.9,
-        "rank": 14
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -11262,8 +11262,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 72.2,
-        "rank": 130
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -11308,8 +11308,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.0,
-        "rank": 47
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -11321,7 +11321,7 @@
       },
       "tfl": {
         "value": 4.12,
-        "rank": 73
+        "rank": 74
       }
     },
     "sos": {
@@ -11352,7 +11352,7 @@
       },
       "passYards": {
         "value": 168.33,
-        "rank": 127
+        "rank": 128
       },
       "rushYards": {
         "value": 156.2,
@@ -11371,8 +11371,8 @@
         "rank": 116
       },
       "redZone": {
-        "value": 83.9,
-        "rank": 85
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.44,
@@ -11384,7 +11384,7 @@
       },
       "penalties": {
         "value": 4.89,
-        "rank": 19
+        "rank": 18
       }
     },
     "defense": {
@@ -11417,8 +11417,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 82.0,
-        "rank": 62
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.44,
@@ -11430,7 +11430,7 @@
       },
       "tfl": {
         "value": 3.89,
-        "rank": 84
+        "rank": 85
       }
     },
     "sos": {
@@ -11473,15 +11473,15 @@
       },
       "thirdDown": {
         "value": 38.7,
-        "rank": 82
+        "rank": 83
       },
       "fourthDown": {
         "value": 33.3,
         "rank": 126
       },
       "redZone": {
-        "value": 68.2,
-        "rank": 134
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -11526,8 +11526,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.0,
-        "rank": 83
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
@@ -11535,11 +11535,11 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.12,
-        "rank": 73
+        "rank": 74
       }
     },
     "sos": {
@@ -11589,8 +11589,8 @@
         "rank": 43
       },
       "redZone": {
-        "value": 86.2,
-        "rank": 58
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -11635,8 +11635,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 87.2,
-        "rank": 94
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -11653,7 +11653,7 @@
     },
     "sos": {
       "value": 0.577,
-      "rank": 45
+      "rank": 44
     },
     "ats": {
       "wins": 0,
@@ -11671,7 +11671,7 @@
     "offense": {
       "points": {
         "value": 19.0,
-        "rank": 127
+        "rank": 128
       },
       "totalYards": {
         "value": 307.1,
@@ -11695,15 +11695,15 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 81.0,
-        "rank": 100
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.56,
-        "rank": 112
+        "rank": 111
       },
       "top": {
         "value": 29.4,
@@ -11711,7 +11711,7 @@
       },
       "penalties": {
         "value": 6.67,
-        "rank": 76
+        "rank": 75
       }
     },
     "defense": {
@@ -11744,8 +11744,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.6,
-        "rank": 105
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.22,
@@ -11807,8 +11807,8 @@
         "rank": 44
       },
       "redZone": {
-        "value": 89.7,
-        "rank": 30
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.12,
@@ -11853,8 +11853,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 101
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -11916,8 +11916,8 @@
         "rank": 37
       },
       "redZone": {
-        "value": 81.6,
-        "rank": 98
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -11962,12 +11962,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 90.0,
-        "rank": 111
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.62,
@@ -11980,7 +11980,7 @@
     },
     "sos": {
       "value": 0.604,
-      "rank": 30
+      "rank": 31
     },
     "ats": {
       "wins": 0,
@@ -12025,8 +12025,8 @@
         "rank": 6
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 39
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -12071,8 +12071,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 96.3,
-        "rank": 134
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -12131,11 +12131,11 @@
       },
       "fourthDown": {
         "value": 55.6,
-        "rank": 62
+        "rank": 61
       },
       "redZone": {
-        "value": 96.8,
-        "rank": 3
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -12180,8 +12180,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.1,
-        "rank": 35
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -12198,7 +12198,7 @@
     },
     "sos": {
       "value": 0.607,
-      "rank": 29
+      "rank": 30
     },
     "ats": {
       "wins": 0,
@@ -12228,7 +12228,7 @@
       },
       "rushYards": {
         "value": 135.4,
-        "rank": 101
+        "rank": 102
       },
       "yardsPerRush": {
         "value": 3.6,
@@ -12243,8 +12243,8 @@
         "rank": 49
       },
       "redZone": {
-        "value": 93.3,
-        "rank": 12
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -12289,8 +12289,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -12352,8 +12352,8 @@
         "rank": 3
       },
       "redZone": {
-        "value": 88.9,
-        "rank": 36
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -12398,8 +12398,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 16
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -12446,7 +12446,7 @@
       },
       "rushYards": {
         "value": 167.5,
-        "rank": 53
+        "rank": 52
       },
       "yardsPerRush": {
         "value": 4.6,
@@ -12461,8 +12461,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 75.8,
-        "rank": 123
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.62,
@@ -12507,8 +12507,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.0,
-        "rank": 47
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.12,
@@ -12570,8 +12570,8 @@
         "rank": 11
       },
       "redZone": {
-        "value": 96.3,
-        "rank": 5
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -12579,7 +12579,7 @@
       },
       "top": {
         "value": 31.0,
-        "rank": 42
+        "rank": 41
       },
       "penalties": {
         "value": 7.62,
@@ -12616,8 +12616,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 77.3,
-        "rank": 32
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -12634,7 +12634,7 @@
     },
     "sos": {
       "value": 0.514,
-      "rank": 85
+      "rank": 84
     },
     "ats": {
       "wins": 0,
@@ -12672,15 +12672,15 @@
       },
       "thirdDown": {
         "value": 47.8,
-        "rank": 22
+        "rank": 21
       },
       "fourthDown": {
         "value": 61.1,
         "rank": 42
       },
       "redZone": {
-        "value": 93.5,
-        "rank": 11
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -12692,7 +12692,7 @@
       },
       "penalties": {
         "value": 7.0,
-        "rank": 89
+        "rank": 88
       }
     },
     "defense": {
@@ -12725,8 +12725,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 91.3,
-        "rank": 118
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -12785,11 +12785,11 @@
       },
       "fourthDown": {
         "value": 66.7,
-        "rank": 24
+        "rank": 26
       },
       "redZone": {
-        "value": 91.4,
-        "rank": 23
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -12834,8 +12834,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 86.2,
-        "rank": 91
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.0,
@@ -12874,7 +12874,7 @@
       },
       "totalYards": {
         "value": 336.9,
-        "rank": 111
+        "rank": 112
       },
       "passYards": {
         "value": 230.12,
@@ -12897,8 +12897,8 @@
         "rank": 101
       },
       "redZone": {
-        "value": 75.0,
-        "rank": 124
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.88,
@@ -12906,11 +12906,11 @@
       },
       "top": {
         "value": 30.1,
-        "rank": 61
+        "rank": 60
       },
       "penalties": {
         "value": 6.88,
-        "rank": 84
+        "rank": 83
       }
     },
     "defense": {
@@ -12943,8 +12943,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 71.4,
-        "rank": 10
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -12983,7 +12983,7 @@
       },
       "totalYards": {
         "value": 368.4,
-        "rank": 83
+        "rank": 82
       },
       "passYards": {
         "value": 215.75,
@@ -13003,11 +13003,11 @@
       },
       "fourthDown": {
         "value": 68.8,
-        "rank": 21
+        "rank": 23
       },
       "redZone": {
-        "value": 74.1,
-        "rank": 126
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -13052,12 +13052,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 96.2,
-        "rank": 133
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.12,
@@ -13104,7 +13104,7 @@
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 41.5,
@@ -13115,8 +13115,8 @@
         "rank": 113
       },
       "redZone": {
-        "value": 80.8,
-        "rank": 102
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -13161,12 +13161,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.2,
-        "rank": 85
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.62,
@@ -13179,7 +13179,7 @@
     },
     "sos": {
       "value": 0.625,
-      "rank": 22
+      "rank": 21
     },
     "ats": {
       "wins": 0,
@@ -13213,7 +13213,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 41.6,
@@ -13224,8 +13224,8 @@
         "rank": 79
       },
       "redZone": {
-        "value": 83.3,
-        "rank": 88
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -13270,8 +13270,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 63.2,
-        "rank": 2
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -13288,7 +13288,7 @@
     },
     "sos": {
       "value": 0.604,
-      "rank": 30
+      "rank": 31
     },
     "ats": {
       "wins": 0,
@@ -13310,7 +13310,7 @@
       },
       "totalYards": {
         "value": 336.1,
-        "rank": 112
+        "rank": 113
       },
       "passYards": {
         "value": 231.12,
@@ -13333,8 +13333,8 @@
         "rank": 93
       },
       "redZone": {
-        "value": 82.8,
-        "rank": 94
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.5,
@@ -13379,8 +13379,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 95
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -13415,11 +13415,11 @@
     "offense": {
       "points": {
         "value": 22.75,
-        "rank": 105
+        "rank": 106
       },
       "totalYards": {
         "value": 342.8,
-        "rank": 109
+        "rank": 110
       },
       "passYards": {
         "value": 236.62,
@@ -13442,8 +13442,8 @@
         "rank": 33
       },
       "redZone": {
-        "value": 87.5,
-        "rank": 47
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.75,
@@ -13488,16 +13488,16 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.5,
-        "rank": 103
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 2.0,
-        "rank": 74
+        "rank": 75
       },
       "tfl": {
         "value": 3.38,
@@ -13551,8 +13551,8 @@
         "rank": 6
       },
       "redZone": {
-        "value": 93.2,
-        "rank": 13
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.22,
@@ -13597,8 +13597,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.0,
-        "rank": 98
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.33,
@@ -13660,12 +13660,12 @@
         "rank": 49
       },
       "redZone": {
-        "value": 88.2,
-        "rank": 39
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 28.4,
@@ -13706,12 +13706,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 92.0,
-        "rank": 120
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 0.88,
-        "rank": 122
+        "rank": 123
       },
       "sacks": {
         "value": 1.12,
@@ -13719,7 +13719,7 @@
       },
       "tfl": {
         "value": 3.75,
-        "rank": 92
+        "rank": 93
       }
     },
     "sos": {
@@ -13742,7 +13742,7 @@
     "offense": {
       "points": {
         "value": 23.5,
-        "rank": 99
+        "rank": 100
       },
       "totalYards": {
         "value": 388.1,
@@ -13758,7 +13758,7 @@
       },
       "yardsPerRush": {
         "value": 4.3,
-        "rank": 74
+        "rank": 73
       },
       "thirdDown": {
         "value": 36.4,
@@ -13769,8 +13769,8 @@
         "rank": 106
       },
       "redZone": {
-        "value": 76.5,
-        "rank": 120
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.88,
@@ -13778,11 +13778,11 @@
       },
       "top": {
         "value": 30.1,
-        "rank": 61
+        "rank": 60
       },
       "penalties": {
         "value": 7.0,
-        "rank": 89
+        "rank": 88
       }
     },
     "defense": {
@@ -13815,8 +13815,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.6,
-        "rank": 39
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -13851,7 +13851,7 @@
     "offense": {
       "points": {
         "value": 23.75,
-        "rank": 96
+        "rank": 97
       },
       "totalYards": {
         "value": 401.6,
@@ -13867,7 +13867,7 @@
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 40.7,
@@ -13878,12 +13878,12 @@
         "rank": 29
       },
       "redZone": {
-        "value": 80.0,
-        "rank": 105
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.88,
-        "rank": 25
+        "rank": 26
       },
       "top": {
         "value": 33.1,
@@ -13924,8 +13924,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 36
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.5,
@@ -13984,11 +13984,11 @@
       },
       "fourthDown": {
         "value": 57.1,
-        "rank": 55
+        "rank": 54
       },
       "redZone": {
-        "value": 87.9,
-        "rank": 45
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -14000,13 +14000,13 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
       "points": {
         "value": 26.6,
-        "rank": 92
+        "rank": 91
       },
       "totalYards": {
         "value": null,
@@ -14033,8 +14033,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 77.4,
-        "rank": 34
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -14081,7 +14081,7 @@
       },
       "rushYards": {
         "value": 137.0,
-        "rank": 98
+        "rank": 99
       },
       "yardsPerRush": {
         "value": 3.9,
@@ -14089,15 +14089,15 @@
       },
       "thirdDown": {
         "value": 35.7,
-        "rank": 102
+        "rank": 101
       },
       "fourthDown": {
         "value": 57.1,
-        "rank": 55
+        "rank": 54
       },
       "redZone": {
-        "value": 73.7,
-        "rank": 127
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.62,
@@ -14142,8 +14142,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 68.8,
-        "rank": 5
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.88,
@@ -14155,7 +14155,7 @@
       },
       "tfl": {
         "value": 3.88,
-        "rank": 88
+        "rank": 89
       }
     },
     "sos": {
@@ -14186,7 +14186,7 @@
       },
       "passYards": {
         "value": 172.33,
-        "rank": 124
+        "rank": 125
       },
       "rushYards": {
         "value": 96.3,
@@ -14205,8 +14205,8 @@
         "rank": 135
       },
       "redZone": {
-        "value": 85.0,
-        "rank": 74
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 2.22,
@@ -14251,8 +14251,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.6,
-        "rank": 105
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.11,
@@ -14299,7 +14299,7 @@
       },
       "rushYards": {
         "value": 146.9,
-        "rank": 83
+        "rank": 84
       },
       "yardsPerRush": {
         "value": 4.0,
@@ -14314,8 +14314,8 @@
         "rank": 106
       },
       "redZone": {
-        "value": 78.8,
-        "rank": 110
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -14323,7 +14323,7 @@
       },
       "top": {
         "value": 30.1,
-        "rank": 61
+        "rank": 60
       },
       "penalties": {
         "value": 6.38,
@@ -14360,12 +14360,12 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.8,
-        "rank": 53
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.0,
-        "rank": 111
+        "rank": 110
       },
       "sacks": {
         "value": 2.75,
@@ -14378,7 +14378,7 @@
     },
     "sos": {
       "value": 0.51,
-      "rank": 88
+      "rank": 87
     },
     "ats": {
       "wins": 0,
@@ -14408,7 +14408,7 @@
       },
       "rushYards": {
         "value": 190.0,
-        "rank": 34
+        "rank": 33
       },
       "yardsPerRush": {
         "value": 4.5,
@@ -14420,11 +14420,11 @@
       },
       "fourthDown": {
         "value": 54.5,
-        "rank": 69
+        "rank": 68
       },
       "redZone": {
-        "value": 96.7,
-        "rank": 4
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -14469,8 +14469,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 81.0,
-        "rank": 55
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 2.12,
@@ -14478,11 +14478,11 @@
       },
       "sacks": {
         "value": 1.5,
-        "rank": 104
+        "rank": 105
       },
       "tfl": {
         "value": 3.75,
-        "rank": 92
+        "rank": 93
       }
     },
     "sos": {
@@ -14532,8 +14532,8 @@
         "rank": 44
       },
       "redZone": {
-        "value": 90.3,
-        "rank": 27
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 0.75,
@@ -14545,7 +14545,7 @@
       },
       "penalties": {
         "value": 6.88,
-        "rank": 84
+        "rank": 83
       }
     },
     "defense": {
@@ -14578,8 +14578,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 87
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -14587,7 +14587,7 @@
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 2.75,
@@ -14626,11 +14626,11 @@
       },
       "rushYards": {
         "value": 136.4,
-        "rank": 99
+        "rank": 100
       },
       "yardsPerRush": {
         "value": 4.1,
-        "rank": 87
+        "rank": 86
       },
       "thirdDown": {
         "value": 41.5,
@@ -14641,8 +14641,8 @@
         "rank": 31
       },
       "redZone": {
-        "value": 84.4,
-        "rank": 77
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.0,
@@ -14650,11 +14650,11 @@
       },
       "top": {
         "value": 31.1,
-        "rank": 39
+        "rank": 38
       },
       "penalties": {
         "value": 5.0,
-        "rank": 20
+        "rank": 19
       }
     },
     "defense": {
@@ -14687,25 +14687,25 @@
         "rank": null
       },
       "redZone": {
-        "value": 88.5,
-        "rank": 103
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.38,
-        "rank": 55
+        "rank": 56
       },
       "sacks": {
         "value": 0.62,
-        "rank": 137
+        "rank": 138
       },
       "tfl": {
         "value": 1.88,
-        "rank": 136
+        "rank": 137
       }
     },
     "sos": {
       "value": 0.483,
-      "rank": 98
+      "rank": 99
     },
     "ats": {
       "wins": 0,
@@ -14723,7 +14723,7 @@
     "offense": {
       "points": {
         "value": 23.0,
-        "rank": 102
+        "rank": 103
       },
       "totalYards": {
         "value": 370.6,
@@ -14731,7 +14731,7 @@
       },
       "passYards": {
         "value": 176.75,
-        "rank": 121
+        "rank": 122
       },
       "rushYards": {
         "value": 193.9,
@@ -14750,12 +14750,12 @@
         "rank": 100
       },
       "redZone": {
-        "value": 90.9,
-        "rank": 25
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.25,
-        "rank": 65
+        "rank": 66
       },
       "top": {
         "value": 32.6,
@@ -14763,7 +14763,7 @@
       },
       "penalties": {
         "value": 6.88,
-        "rank": 84
+        "rank": 83
       }
     },
     "defense": {
@@ -14796,8 +14796,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 71.4,
-        "rank": 10
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -14805,16 +14805,16 @@
       },
       "sacks": {
         "value": 1.88,
-        "rank": 82
+        "rank": 83
       },
       "tfl": {
         "value": 4.0,
-        "rank": 77
+        "rank": 78
       }
     },
     "sos": {
       "value": 0.427,
-      "rank": 127
+      "rank": 128
     },
     "ats": {
       "wins": 0,
@@ -14859,8 +14859,8 @@
         "rank": 109
       },
       "redZone": {
-        "value": 72.4,
-        "rank": 129
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -14872,7 +14872,7 @@
       },
       "penalties": {
         "value": 6.75,
-        "rank": 77
+        "rank": 76
       }
     },
     "defense": {
@@ -14905,8 +14905,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 80.7,
-        "rank": 50
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.62,
@@ -14945,11 +14945,11 @@
       },
       "totalYards": {
         "value": 332.1,
-        "rank": 116
+        "rank": 117
       },
       "passYards": {
         "value": 210.38,
-        "rank": 89
+        "rank": 88
       },
       "rushYards": {
         "value": 121.8,
@@ -14968,8 +14968,8 @@
         "rank": 77
       },
       "redZone": {
-        "value": 78.3,
-        "rank": 112
+        "value": 0.0,
+        "rank": 1
       },
       "giveaways": {
         "value": 1.38,
@@ -15014,8 +15014,8 @@
         "rank": null
       },
       "redZone": {
-        "value": 85.7,
-        "rank": 87
+        "value": null,
+        "rank": null
       },
       "takeaways": {
         "value": 1.25,
@@ -15023,7 +15023,7 @@
       },
       "sacks": {
         "value": 1.75,
-        "rank": 93
+        "rank": 94
       },
       "tfl": {
         "value": 3.38,
@@ -15032,7 +15032,7 @@
     },
     "sos": {
       "value": 0.479,
-      "rank": 101
+      "rank": 102
     },
     "ats": {
       "wins": 0,
