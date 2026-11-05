@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-05 (phone menu)
+
+- Under 768px the nav is a full-screen list. The header blur was trapping that list inside the bar, so the menu now sits beside the header and covers the page. Tapping Schedule closes it. At a wide width the text links return.
+
 ## 2026-11-05 (check)
 
 - Browser check on the current season: Ole Miss wins out rewrote the sentence and the share link. Search for “bama” opened Alabama. The Iron Bowl title is still Iron Bowl. A filled contact form shows the missing Web3Forms key message.

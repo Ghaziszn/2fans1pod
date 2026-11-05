@@ -27,13 +27,22 @@ export function Header() {
         event.preventDefault();
         setSearchOpen(true);
       }
+      if (event.key === "Escape") setOpen(false);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur">
+    <>
+      <header className="sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-3 px-[clamp(16px,4vw,40px)]">
         <Link href="/" className="flex min-h-11 items-center gap-2" onClick={() => setOpen(false)}>
           <img src="/brand/logo.jpg" alt="" width={36} height={36} className="h-9 w-9 rounded-sm" />
@@ -71,21 +80,30 @@ export function Header() {
           </button>
         </div>
       </div>
-      {open ? (
-        <nav className="border-t border-line px-[clamp(16px,4vw,40px)] py-3 md:hidden" aria-label="Mobile">
-          {links.map((link) => (
-            <Link key={link.href} href={link.href} className="flex min-h-11 items-center text-lg" onClick={() => setOpen(false)}>
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-      ) : null}
       <div className="border-t border-line">
         <div className="mx-auto flex max-w-[1440px] items-center px-[clamp(16px,4vw,40px)]">
           <GarbageTimeToggle />
         </div>
       </div>
+      </header>
+      {open ? (
+      <nav className="fixed inset-0 z-50 flex flex-col bg-paper px-[clamp(16px,4vw,40px)] py-4 md:hidden" aria-label="Mobile">
+        <div className="flex h-16 items-center justify-between">
+          <span className="display text-2xl">{siteConfig.name}</span>
+          <button type="button" className="inline-flex h-11 w-11 items-center justify-center" aria-label="Close menu" onClick={() => setOpen(false)}>
+            <X size={22} />
+          </button>
+        </div>
+        <div className="mt-4 flex flex-col">
+          {links.map((link) => (
+            <Link key={link.href} href={link.href} className="flex min-h-11 items-center border-b border-line text-2xl" onClick={() => setOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      </nav>
+      ) : null}
       <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} />
-    </header>
+    </>
   );
 }
