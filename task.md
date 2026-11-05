@@ -13,7 +13,7 @@ How we use this file:
 
 The full Phase 1 build is in progress. Keep going through this list.
 
-- [ ] Keep the site on a lasting Vercel address. The temporary preview from 2026-11-03 has expired. The static export in `out/` has 186 pages. Log in with `npx vercel login`, then deploy again so the project can use https://2fans1pod.vercel.app.
+- [ ] Keep the site on a lasting Vercel address. The static export was rebuilt on 2026-11-05: 186 pages, including the schedule, the team ratings, and the College Football Data season. `npx vercel whoami` is still logged out. Log in with `npx vercel login`, then deploy so the project can use https://2fans1pod.vercel.app.
 
 ## Later, do not build yet
 
