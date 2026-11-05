@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-05 (title ties)
+
+- **“Title is tied” only lists teams that share the best conference record, and only when three or more do.** A team a game back is not in that list. Two teams with the best record play the projected title game, and the higher rank wins it until the visitor flips that game. The row says Projected.
+
 ## 2026-11-05 (team page)
 
 - **The free key is the one to keep using.** Weather stays skipped until the account is Tier 1.

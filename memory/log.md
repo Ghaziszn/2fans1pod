@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-05 (title ties)
+
+- A clear conference leader was lumped in with the teams tied for second, so the page asked who won a title that was not tied. The question now stays on a real three-or-more tie. The made-up title game is labeled Projected.
+
 ## 2026-11-05 (phone menu)
 
 - Under 768px the nav is a full-screen list. The header blur was trapping that list inside the bar, so the menu now sits beside the header and covers the page. Tapping Schedule closes it. At a wide width the text links return.

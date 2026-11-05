@@ -129,12 +129,12 @@ function championForConference(
     return { champ: { teamId: real.winnerId, tied: [] }, projected: null };
   }
   if (ordered.length === 0) return { champ: { teamId: "", tied: [] }, projected: null };
-  const second = ordered[Math.min(1, ordered.length - 1)];
-  const line = recordKey(records.get(second));
-  const cluster = ordered.filter((id) => recordKey(records.get(id)) === line || recordKey(records.get(id)) === recordKey(records.get(ordered[0])));
-  const tied = cluster.length > 2 ? cluster : [];
+  const best = recordKey(records.get(ordered[0]));
+  const leaders = ordered.filter((id) => recordKey(records.get(id)) === best);
+  // Two teams with the best record play the projected title game. Ask the visitor only when three or more share that record.
+  const tied = leaders.length > 2 ? leaders : [];
   const override = scenario.champPicks[conference];
-  if (override && (tied.includes(override) || cluster.includes(override))) {
+  if (override && tied.includes(override)) {
     return { champ: { teamId: override, tied }, projected: null };
   }
   const homeId = ordered[0];

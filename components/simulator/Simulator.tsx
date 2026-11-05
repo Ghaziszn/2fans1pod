@@ -447,7 +447,7 @@ function ScenarioBuilder({
               const teamWon = game.winnerId === team.id;
               return (
                 <li key={game.id} className="flex min-h-12 items-center gap-3 border-b border-line py-2">
-                  <span className="w-16 shrink-0 text-xs uppercase tracking-wide text-muted">{game.projected ? "Title" : game.homeId === team.id ? "Home" : "Away"}</span>
+                  <span className="w-24 shrink-0 text-xs uppercase tracking-wide text-muted">{game.projected ? "Projected" : game.homeId === team.id ? "Home" : "Away"}</span>
                   <span className="min-w-0 flex-1">
                     {opponent ? (
                       <Link href={`/matchup/${matchupSlug(team.id, opponent.id)}/`} className="inline-flex max-w-full">
