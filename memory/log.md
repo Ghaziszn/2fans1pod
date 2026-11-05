@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-05 (check)
+
+- Browser check on the current season: Ole Miss wins out rewrote the sentence and the share link. Search for “bama” opened Alabama. The Iron Bowl title is still Iron Bowl. A filled contact form shows the missing Web3Forms key message.
+
 ## 2026-11-05 (export)
 
 - Rebuilt the static site. 186 pages exported, including Alabama's ratings and the schedule. 10 playoff tests and 24 Python tests passed. Vercel CLI is still logged out, so the lasting address is unchanged.
