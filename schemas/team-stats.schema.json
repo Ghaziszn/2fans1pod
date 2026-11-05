@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "minProperties": 120,
+  "additionalProperties": {
+    "type": "object",
+    "required": ["games", "wins", "losses", "offense", "defense", "sos", "ats"],
+    "properties": {
+      "games": { "type": "integer" },
+      "wins": { "type": "integer" },
+      "losses": { "type": "integer" },
+      "sos": {
+        "type": "object",
+        "required": ["value", "rank"],
+        "properties": {
+          "value": { "type": ["number", "null"] },
+          "rank": { "type": ["integer", "null"] }
+        }
+      },
+      "ats": {
+        "type": "object",
+        "required": ["wins", "losses", "pushes", "rank"]
+      }
+    }
+  }
+}

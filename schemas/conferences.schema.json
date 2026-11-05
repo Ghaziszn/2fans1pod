@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "minItems": 10,
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "tier", "teams"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "tier": { "enum": ["power", "group", "independent"] },
+      "teams": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}

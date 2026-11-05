@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/load";
 
 const links = [
   { href: "/", label: "Simulator" },
+  { href: "/schedule", label: "Schedule" },
   { href: "/matchup", label: "Matchup" },
   { href: "/rankings", label: "Rankings" },
   { href: "/conferences", label: "Conferences" },
@@ -33,7 +34,7 @@ export function Footer() {
           ))}
         </nav>
         <p className="max-w-3xl text-sm leading-6 text-muted md:col-span-2">
-          Lines and against-the-spread records are for information. Data from CollegeFootballData.com when a key is configured, otherwise the public ESPN feed, plus red-zone scoring from cfbstats.com.
+          Lines and against-the-spread records are for information. Data from CollegeFootballData.com when a key is configured, otherwise the public ESPN feed, plus red-zone scoring from cfbstats.com. Public bet and handle percentages come from Cleatz.
         </p>
       </div>
     </footer>

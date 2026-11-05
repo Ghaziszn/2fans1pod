@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["season", "updatedAt", "week", "provider", "eloSource", "rankingLabel", "fieldLocked", "teamCount"],
+  "properties": {
+    "season": { "type": "integer" },
+    "updatedAt": { "type": "string", "minLength": 8 },
+    "week": { "type": "integer" },
+    "provider": { "type": "string", "minLength": 1 },
+    "eloSource": { "enum": ["cfbd", "computed"] },
+    "rankingLabel": { "type": "string", "minLength": 1 },
+    "fieldLocked": { "type": "boolean" },
+    "teamCount": { "type": "integer", "minimum": 120, "maximum": 150 }
+  }
+}

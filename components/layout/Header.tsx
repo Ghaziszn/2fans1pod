@@ -5,10 +5,12 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SearchDialog } from "@/components/search/SearchDialog";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { GarbageTimeToggle } from "@/components/stats/GarbageTime";
 import { siteConfig } from "@/lib/load";
 
 const links = [
   { href: "/", label: "Simulator" },
+  { href: "/schedule", label: "Schedule" },
   { href: "/matchup", label: "Matchup" },
   { href: "/rankings", label: "Rankings" },
   { href: "/conferences", label: "Conferences" },
@@ -78,6 +80,11 @@ export function Header() {
           ))}
         </nav>
       ) : null}
+      <div className="border-t border-line">
+        <div className="mx-auto flex max-w-[1440px] items-center px-[clamp(16px,4vw,40px)]">
+          <GarbageTimeToggle />
+        </div>
+      </div>
       <SearchDialog open={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );

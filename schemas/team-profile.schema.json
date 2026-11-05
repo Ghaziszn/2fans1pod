@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["season", "source", "teams", "fpiRank1IsToughest"],
+  "properties": {
+    "season": { "type": "integer" },
+    "source": { "const": "cfbd" },
+    "spSosHigherIsHarder": { "type": ["boolean", "null"] },
+    "fpiRank1IsToughest": { "type": "boolean" },
+    "teams": {
+      "type": "object",
+      "minProperties": 130,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["coach", "sp", "srs", "fpi", "talent", "returning"],
+        "properties": {
+          "coach": { "type": ["string", "null"] },
+          "sp": { "type": "object", "required": ["rating", "rank", "sos", "sosRank"] },
+          "srs": { "type": "object", "required": ["rating", "rank"] },
+          "fpi": {
+            "type": "object",
+            "required": ["rating", "rank", "strengthOfSchedule", "remainingStrengthOfSchedule", "strengthOfRecord"]
+          },
+          "talent": { "type": "object", "required": ["rating", "rank"] },
+          "returning": { "type": "object", "required": ["percent", "rank"] }
+        }
+      }
+    }
+  }
+}

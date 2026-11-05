@@ -9,14 +9,34 @@ import rankings from "@/public/data/rankings.json";
 import season from "@/public/data/season.json";
 import searchIndex from "@/public/data/search-index.json";
 import stats from "@/public/data/team-stats.json";
+import advanced from "@/public/data/team-advanced.json";
+import gameEpa from "@/public/data/game-epa.json";
+import profile from "@/public/data/team-profile.json";
+import splits from "@/public/data/splits.json";
 import teams from "@/public/data/teams.json";
-import type { CfpFormat, Conference, Game, RankingConfig, SeasonData, SeasonMeta, Team, TeamSeason } from "@/lib/cfp/types";
+import type { AdvancedFile, CfpFormat, Conference, Game, GameEpaFile, ProfileFile, RankingConfig, SeasonData, SeasonMeta, SplitFile, Team, TeamSeason } from "@/lib/cfp/types";
 
 export const siteConfig = site;
 export const statCatalog = catalog;
 export const cfpFormat = format as CfpFormat;
 export const rankingConfig = ranking as RankingConfig;
 export const rivalryList = rivalries as { name: string; home: string; away: string }[];
+
+export function loadSplits() {
+  return splits as SplitFile;
+}
+
+export function loadAdvanced() {
+  return advanced as AdvancedFile;
+}
+
+export function loadProfile() {
+  return profile as ProfileFile;
+}
+
+export function loadGameEpa() {
+  return gameEpa as GameEpaFile;
+}
 
 export function loadSeason(): SeasonData {
   return {

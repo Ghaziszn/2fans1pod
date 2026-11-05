@@ -67,12 +67,8 @@ def team_links(year: int) -> list[tuple[str, str]]:
     return found
 
 
-def score_pct(team_url: str, side: str) -> float | None:
-    url = team_url.replace("index.html", f"redzone/{side}/split.html")
-    response = requests.get(url, timeout=20)
-    if response.status_code != 200:
-        return None
-    soup = BeautifulSoup(response.text, "html.parser")
+def parse_score_pct(html: str) -> float | None:
+    soup = BeautifulSoup(html, "html.parser")
     table = soup.find("table")
     if not table:
         return None
@@ -94,6 +90,14 @@ def score_pct(team_url: str, side: str) -> float | None:
         except ValueError:
             return None
     return None
+
+
+def score_pct(team_url: str, side: str) -> float | None:
+    url = team_url.replace("index.html", f"redzone/{side}/split.html")
+    response = requests.get(url, timeout=20)
+    if response.status_code != 200:
+        return None
+    return parse_score_pct(response.text)
 
 
 def main() -> None:

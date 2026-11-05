@@ -2,6 +2,26 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-05 (team page)
+
+- **The free key is the one to keep using.** Weather stays skipped until the account is Tier 1.
+- **SP+ schedule strength is blank** for 2025 and 2026. The field comes back, and every team is null, so it is not ranked and the card says not posted. The direction was not guessed.
+- **FPI rank 1 is the strong end.** Schedule rank 1 is the hardest slate, remaining-schedule rank 1 is the hardest road left, and strength of record 1 is the most impressive record. Checked on this season: the SEC and Big Ten rank ahead of the MAC and Conference USA on all three.
+- **The season file now says `cfbd`.** Red-zone percentages and defensive yards are still filled, and the build refuses to publish if either one drops below 120 teams. The games request's `division` parameter is ignored, so the script keeps a game only when one side is FBS.
+- **The daily GitHub job is paused until this code is pushed.** The secret is stored in GitHub. The copy of the script already on GitHub would pull every division and replace the defensive numbers, so the scheduled job stays off.
+
+## 2026-11-05
+
+- **College Football Data key** lives only in `.env.local` and, for the daily job, in the GitHub secret `CFBD_API_KEY`. It is not written into the site or these notes.
+- **The key on the account today is the free tier**, not Tier 1. Weather requests come back unauthorized. Advanced season stats do work.
+- **Garbage time is excluded by default.** `?gt=1` includes it and the choice is remembered in the browser. Box-score totals always include every play.
+- **Starting field position:** a lower number is better for the offense. Alabama's offense starts with about 67 yards to go, Kent State's with about 73. Defense wants the higher number.
+- **The season file still says ESPN** for this step. Switching the whole season to CFBD would replace the red-zone and box-score defense numbers already on the site. That switch waits for a yes.
+
+## 2026-11-04
+
+- **Public betting splits** on the schedule come from the Cleatz college football board. Bet % is the share of tickets. Handle % is the share of dollars. The three markets are spread, moneyline, and total. This does not bring back the old VSIN scraper.
+
 ## 2026-11-03
 
 - **Rivalry pages to prebuild:** a starter set Brandon can edit later in `config/rivalries.json`. Iron Bowl (Alabama-Auburn), Auburn-Georgia, Red River (Texas-Oklahoma), Michigan-Ohio State, Army-Navy, Oregon-Washington, Florida-Georgia, Texas-Texas A&M, USC-Notre Dame, Florida-Florida State, Florida State-Miami, Georgia-Georgia Tech, Egg Bowl (Ole Miss-Mississippi State), Clemson-South Carolina, BYU-Utah, Oregon-Oregon State, UCLA-USC, Pitt-West Virginia, Iowa-Iowa State, Indiana-Purdue, Minnesota-Wisconsin, Michigan-Michigan State, Alabama-Tennessee, Bedlam (Oklahoma-Oklahoma State), Alabama-LSU. Any other pair still works from the calculator.

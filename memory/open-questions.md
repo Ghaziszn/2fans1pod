@@ -7,6 +7,10 @@ Ask these as we go. Do not save them up for a single quiz. When Brandon answers,
 - What email address should listener, guest, and sponsor messages arrive at?
 - Do you want a short note on the contact page about what it is for (listeners, guests, sponsors), or just the form?
 
+## After the team page
+
+- The next section in the directions is rosters, recruiting, and the transfer portal. Should that be the next build?
+
 ## Before the shell is styled
 
 - After we open the logo together, which color should be the one accent? If the logo has several, which one feels like the show?

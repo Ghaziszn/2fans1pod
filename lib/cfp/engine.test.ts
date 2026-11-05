@@ -179,6 +179,17 @@ describe("ranking adjustment", () => {
     expect(result.formulaOrder.indexOf("T1")).toBeGreaterThan(result.formulaOrder.indexOf("T8"));
   });
 
+  it("does not count a postseason game as a regular-season loss", () => {
+    const teams = Array.from({ length: 8 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
+    const order = teams.map((item) => item.id);
+    const bowl = { ...future("bowl", "T1", "T8"), seasonType: "postseason" as const, week: 1 };
+    const scenario = emptyScenario();
+    scenario.picks.bowl = "T8";
+    const result = simulate(season(teams, [bowl], order), scenario, format, ranking);
+    const baseline = simulate(season(teams, [], order), emptyScenario(), format, ranking);
+    expect(result.formulaOrder).toEqual(baseline.formulaOrder);
+  });
+
   it("puts a loser behind a worse team that beat them", () => {
     const teams = Array.from({ length: 6 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
     const order = teams.map((item) => item.id);

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["season", "source", "teams"],
+  "properties": {
+    "season": { "type": "integer" },
+    "source": { "const": "cfbd" },
+    "teams": {
+      "type": "object",
+      "minProperties": 100,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["noGT", "withGT"],
+        "properties": {
+          "noGT": { "type": "array" },
+          "withGT": { "type": "array" }
+        }
+      }
+    }
+  }
+}
