@@ -2,6 +2,12 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-06 (unblock the pull request)
+
+- Brought this branch up to date with main. The only new commit on main was the 2026-11-04 ESPN season update, and it conflicted in four data files.
+- Kept this branch's College Football Data versions of games, rankings, season, and team stats. No application code conflicted.
+- The daily data job stays turned off until this pull request is on main. The lasting Vercel address still needs `npx vercel login`.
+
 ## 2026-11-05 (title ties)
 
 - A clear conference leader was lumped in with the teams tied for second, so the page asked who won a title that was not tied. The question now stays on a real three-or-more tie. The made-up title game is labeled Projected.
