@@ -45,11 +45,11 @@ body {
   min-height: 100vh;
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
 }
 
 h1, h2, h3, .display {
-  font-family: var(--font-display), Impact, sans-serif;
+  font-family: var(--font-barlow), Impact, sans-serif;
   font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 0.95;

@@ -129,12 +129,12 @@ function championForConference(
     return { champ: { teamId: real.winnerId, tied: [] }, projected: null };
   }
   if (ordered.length === 0) return { champ: { teamId: "", tied: [] }, projected: null };
-  const second = ordered[Math.min(1, ordered.length - 1)];
-  const line = recordKey(records.get(second));
-  const cluster = ordered.filter((id) => recordKey(records.get(id)) === line || recordKey(records.get(id)) === recordKey(records.get(ordered[0])));
-  const tied = cluster.length > 2 ? cluster : [];
+  const best = recordKey(records.get(ordered[0]));
+  const leaders = ordered.filter((id) => recordKey(records.get(id)) === best);
+  // Two teams with the best record play the projected title game. Ask the visitor only when three or more share that record.
+  const tied = leaders.length > 2 ? leaders : [];
   const override = scenario.champPicks[conference];
-  if (override && (tied.includes(override) || cluster.includes(override))) {
+  if (override && tied.includes(override)) {
     return { champ: { teamId: override, tied }, projected: null };
   }
   const homeId = ordered[0];
@@ -355,7 +355,7 @@ export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat
   const teams = teamMap(data);
   const known = new Set(teams.keys());
   const { index } = startRanks(data);
-  const resolved: ResolvedGame[] = data.games.map((game) => ({
+  const resolved: ResolvedGame[] = data.games.filter((game) => game.seasonType === "regular").map((game) => ({
     ...game,
     winnerId: resolveScheduled(game, scenario, index, known),
     projected: false,
@@ -406,7 +406,7 @@ export function contenderBoard(data: SeasonData, ranking: RankingConfig): Conten
   const remaining = new Map<string, number>();
   for (const team of data.teams) remaining.set(team.id, 0);
   for (const game of data.games) {
-    if (game.completed || !game.conferenceGame || game.championship) continue;
+    if (game.completed || game.seasonType !== "regular" || !game.conferenceGame || game.championship) continue;
     if (remaining.has(game.homeId)) remaining.set(game.homeId, (remaining.get(game.homeId) ?? 0) + 1);
     if (remaining.has(game.awayId)) remaining.set(game.awayId, (remaining.get(game.awayId) ?? 0) + 1);
   }
@@ -434,6 +434,7 @@ export function isAlive(teamId: string, data: SeasonData) {
   const remaining = (id: string) =>
     data.games.filter(
       (game) =>
+        game.seasonType === "regular" &&
         !game.completed &&
         game.conferenceGame &&
         !game.championship &&

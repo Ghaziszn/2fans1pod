@@ -1,972 +1,9 @@
 [
   {
     "type": "team",
-    "name": "UTSA",
-    "detail": "American",
-    "href": "/teams/utsa",
-    "aliases": [
-      "utsa",
-      "UTSA",
-      "Roadrunners"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Memphis",
-    "detail": "American",
-    "href": "/teams/memphis",
-    "aliases": [
-      "MEM",
-      "Tigers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "North Texas",
-    "detail": "American",
-    "href": "/teams/north-texas",
-    "aliases": [
-      "unt",
-      "UNT",
-      "Mean Green"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "South Florida",
-    "detail": "American",
-    "href": "/teams/south-florida",
-    "aliases": [
-      "USF",
-      "Bulls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Army",
-    "detail": "American",
-    "href": "/teams/army",
-    "aliases": [
-      "black knights",
-      "ARMY",
-      "Black Knights"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Florida Atlantic",
-    "detail": "American",
-    "href": "/teams/florida-atlantic",
-    "aliases": [
-      "fau",
-      "FAU",
-      "Owls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UAB",
-    "detail": "American",
-    "href": "/teams/uab",
-    "aliases": [
-      "blazers",
-      "UAB",
-      "Blazers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "East Carolina",
-    "detail": "American",
-    "href": "/teams/east-carolina",
-    "aliases": [
-      "ecu",
-      "ECU",
-      "Pirates"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Tulane",
-    "detail": "American",
-    "href": "/teams/tulane",
-    "aliases": [
-      "TULN",
-      "Green Wave"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Tulsa",
-    "detail": "American",
-    "href": "/teams/tulsa",
-    "aliases": [
-      "TLSA",
-      "Golden Hurricane"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Temple",
-    "detail": "American",
-    "href": "/teams/temple",
-    "aliases": [
-      "TEM",
-      "Owls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Navy",
-    "detail": "American",
-    "href": "/teams/navy",
-    "aliases": [
-      "midshipmen",
-      "NAVY",
-      "Midshipmen"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Charlotte",
-    "detail": "American",
-    "href": "/teams/charlotte",
-    "aliases": [
-      "CLT",
-      "49ers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Rice",
-    "detail": "American",
-    "href": "/teams/rice",
-    "aliases": [
-      "RICE",
-      "Owls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Miami",
-    "detail": "ACC",
-    "href": "/teams/miami",
-    "aliases": [
-      "the u",
-      "MIA",
-      "Hurricanes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Wake Forest",
-    "detail": "ACC",
-    "href": "/teams/wake-forest",
-    "aliases": [
-      "WAKE",
-      "Demon Deacons"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "SMU",
-    "detail": "ACC",
-    "href": "/teams/smu",
-    "aliases": [
-      "mustangs",
-      "SMU",
-      "Mustangs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Virginia Tech",
-    "detail": "ACC",
-    "href": "/teams/virginia-tech",
-    "aliases": [
-      "vt",
-      "VT",
-      "Hokies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Duke",
-    "detail": "ACC",
-    "href": "/teams/duke",
-    "aliases": [
-      "DUKE",
-      "Blue Devils"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Pittsburgh",
-    "detail": "ACC",
-    "href": "/teams/pittsburgh",
-    "aliases": [
-      "pitt",
-      "pittsburgh",
-      "PITT",
-      "Panthers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Louisville",
-    "detail": "ACC",
-    "href": "/teams/louisville",
-    "aliases": [
-      "LOU",
-      "Cardinals"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Clemson",
-    "detail": "ACC",
-    "href": "/teams/clemson",
-    "aliases": [
-      "CLEM",
-      "Tigers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Boston College",
-    "detail": "ACC",
-    "href": "/teams/boston-college",
-    "aliases": [
-      "bc",
-      "BC",
-      "Eagles"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "NC State",
-    "detail": "ACC",
-    "href": "/teams/nc-state",
-    "aliases": [
-      "north carolina state",
-      "NCSU",
-      "Wolfpack"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "North Carolina",
-    "detail": "ACC",
-    "href": "/teams/north-carolina",
-    "aliases": [
-      "UNC",
-      "Tar Heels"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Syracuse",
-    "detail": "ACC",
-    "href": "/teams/syracuse",
-    "aliases": [
-      "SYR",
-      "Orange"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Virginia",
-    "detail": "ACC",
-    "href": "/teams/virginia",
-    "aliases": [
-      "UVA",
-      "Cavaliers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Stanford",
-    "detail": "ACC",
-    "href": "/teams/stanford",
-    "aliases": [
-      "STAN",
-      "Cardinal"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Florida State",
-    "detail": "ACC",
-    "href": "/teams/florida-state",
-    "aliases": [
-      "fsu",
-      "FSU",
-      "Seminoles"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "California",
-    "detail": "ACC",
-    "href": "/teams/california",
-    "aliases": [
-      "CAL",
-      "Golden Bears"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Georgia Tech",
-    "detail": "ACC",
-    "href": "/teams/georgia-tech",
-    "aliases": [
-      "gt",
-      "GT",
-      "Yellow Jackets"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Utah",
-    "detail": "Big 12",
-    "href": "/teams/utah",
-    "aliases": [
-      "UTAH",
-      "Utes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "BYU",
-    "detail": "Big 12",
-    "href": "/teams/byu",
-    "aliases": [
-      "cougars",
-      "BYU",
-      "Cougars"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Texas Tech",
-    "detail": "Big 12",
-    "href": "/teams/texas-tech",
-    "aliases": [
-      "TTU",
-      "Red Raiders"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Houston",
-    "detail": "Big 12",
-    "href": "/teams/houston",
-    "aliases": [
-      "HOU",
-      "Cougars"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Arizona",
-    "detail": "Big 12",
-    "href": "/teams/arizona",
-    "aliases": [
-      "ARIZ",
-      "Wildcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Baylor",
-    "detail": "Big 12",
-    "href": "/teams/baylor",
-    "aliases": [
-      "BAY",
-      "Bears"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Oklahoma State",
-    "detail": "Big 12",
-    "href": "/teams/oklahoma-state",
-    "aliases": [
-      "okstate",
-      "osu cowboys",
-      "OKST",
-      "Cowboys"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "West Virginia",
-    "detail": "Big 12",
-    "href": "/teams/west-virginia",
-    "aliases": [
-      "wvu",
-      "WVU",
-      "Mountaineers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Cincinnati",
-    "detail": "Big 12",
-    "href": "/teams/cincinnati",
-    "aliases": [
-      "CIN",
-      "Bearcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Iowa State",
-    "detail": "Big 12",
-    "href": "/teams/iowa-state",
-    "aliases": [
-      "isu",
-      "ISU",
-      "Cyclones"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UCF",
-    "detail": "Big 12",
-    "href": "/teams/ucf",
-    "aliases": [
-      "knights",
-      "UCF",
-      "Knights"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Arizona State",
-    "detail": "Big 12",
-    "href": "/teams/arizona-state",
-    "aliases": [
-      "asu",
-      "ASU",
-      "Sun Devils"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "TCU",
-    "detail": "Big 12",
-    "href": "/teams/tcu",
-    "aliases": [
-      "horned frogs",
-      "TCU",
-      "Horned Frogs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Kansas State",
-    "detail": "Big 12",
-    "href": "/teams/kansas-state",
-    "aliases": [
-      "KSU",
-      "Wildcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Colorado",
-    "detail": "Big 12",
-    "href": "/teams/colorado",
-    "aliases": [
-      "COLO",
-      "Buffaloes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Kansas",
-    "detail": "Big 12",
-    "href": "/teams/kansas",
-    "aliases": [
-      "KU",
-      "Jayhawks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UCLA",
-    "detail": "Big Ten",
-    "href": "/teams/ucla",
-    "aliases": [
-      "bruins",
-      "UCLA",
-      "Bruins"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Indiana",
-    "detail": "Big Ten",
-    "href": "/teams/indiana",
-    "aliases": [
-      "IU",
-      "Hoosiers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "USC",
-    "detail": "Big Ten",
-    "href": "/teams/usc",
-    "aliases": [
-      "southern cal",
-      "trojans",
-      "USC",
-      "Trojans"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Ohio State",
-    "detail": "Big Ten",
-    "href": "/teams/ohio-state",
-    "aliases": [
-      "osu",
-      "the ohio state",
-      "OSU",
-      "Buckeyes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Iowa",
-    "detail": "Big Ten",
-    "href": "/teams/iowa",
-    "aliases": [
-      "IOWA",
-      "Hawkeyes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Northwestern",
-    "detail": "Big Ten",
-    "href": "/teams/northwestern",
-    "aliases": [
-      "NU",
-      "Wildcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Illinois",
-    "detail": "Big Ten",
-    "href": "/teams/illinois",
-    "aliases": [
-      "ILL",
-      "Fighting Illini"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Minnesota",
-    "detail": "Big Ten",
-    "href": "/teams/minnesota",
-    "aliases": [
-      "MINN",
-      "Golden Gophers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Oregon",
-    "detail": "Big Ten",
-    "href": "/teams/oregon",
-    "aliases": [
-      "ORE",
-      "Ducks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Wisconsin",
-    "detail": "Big Ten",
-    "href": "/teams/wisconsin",
-    "aliases": [
-      "WIS",
-      "Badgers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Washington",
-    "detail": "Big Ten",
-    "href": "/teams/washington",
-    "aliases": [
-      "WASH",
-      "Huskies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Michigan",
-    "detail": "Big Ten",
-    "href": "/teams/michigan",
-    "aliases": [
-      "MICH",
-      "Wolverines"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Nebraska",
-    "detail": "Big Ten",
-    "href": "/teams/nebraska",
-    "aliases": [
-      "NEB",
-      "Cornhuskers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Penn State",
-    "detail": "Big Ten",
-    "href": "/teams/penn-state",
-    "aliases": [
-      "psu",
-      "PSU",
-      "Nittany Lions"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Purdue",
-    "detail": "Big Ten",
-    "href": "/teams/purdue",
-    "aliases": [
-      "PUR",
-      "Boilermakers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Rutgers",
-    "detail": "Big Ten",
-    "href": "/teams/rutgers",
-    "aliases": [
-      "RUTG",
-      "Scarlet Knights"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Maryland",
-    "detail": "Big Ten",
-    "href": "/teams/maryland",
-    "aliases": [
-      "MD",
-      "Terrapins"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Michigan State",
-    "detail": "Big Ten",
-    "href": "/teams/michigan-state",
-    "aliases": [
-      "msu",
-      "MSU",
-      "Spartans"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Liberty",
-    "detail": "Conference USA",
-    "href": "/teams/liberty",
-    "aliases": [
-      "LIB",
-      "Flames"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Jacksonville State",
-    "detail": "Conference USA",
-    "href": "/teams/jacksonville-state",
-    "aliases": [
-      "jax state",
-      "JXST",
-      "Gamecocks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Delaware",
-    "detail": "Conference USA",
-    "href": "/teams/delaware",
-    "aliases": [
-      "DEL",
-      "Blue Hens"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Middle Tennessee",
-    "detail": "Conference USA",
-    "href": "/teams/middle-tennessee",
-    "aliases": [
-      "mtsu",
-      "MTSU",
-      "Blue Raiders"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "New Mexico State",
-    "detail": "Conference USA",
-    "href": "/teams/new-mexico-state",
-    "aliases": [
-      "NMSU",
-      "Aggies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Western Kentucky",
-    "detail": "Conference USA",
-    "href": "/teams/western-kentucky",
-    "aliases": [
-      "wku",
-      "WKU",
-      "Hilltoppers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Missouri State",
-    "detail": "Conference USA",
-    "href": "/teams/missouri-state",
-    "aliases": [
-      "MOST",
-      "Bears"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Florida International",
-    "detail": "Conference USA",
-    "href": "/teams/florida-international",
-    "aliases": [
-      "fiu",
-      "FIU",
-      "Panthers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Kennesaw State",
-    "detail": "Conference USA",
-    "href": "/teams/kennesaw-state",
-    "aliases": [
-      "ksu owls",
-      "KENN",
-      "Owls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Sam Houston",
-    "detail": "Conference USA",
-    "href": "/teams/sam-houston",
-    "aliases": [
-      "shsu",
-      "SHSU",
-      "Bearkats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Notre Dame",
-    "detail": "FBS Independents",
-    "href": "/teams/notre-dame",
-    "aliases": [
-      "irish",
-      "nd",
-      "ND",
-      "Fighting Irish"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UConn",
-    "detail": "FBS Independents",
-    "href": "/teams/uconn",
-    "aliases": [
-      "connecticut",
-      "huskies",
-      "CONN",
-      "Huskies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Ohio",
-    "detail": "MAC",
-    "href": "/teams/ohio",
-    "aliases": [
-      "OHIO",
-      "Bobcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Toledo",
-    "detail": "MAC",
-    "href": "/teams/toledo",
-    "aliases": [
-      "TOL",
-      "Rockets"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Western Michigan",
-    "detail": "MAC",
-    "href": "/teams/western-michigan",
-    "aliases": [
-      "WMU",
-      "Broncos"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Buffalo",
-    "detail": "MAC",
-    "href": "/teams/buffalo",
-    "aliases": [
-      "BUF",
-      "Bulls"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Miami (OH)",
-    "detail": "MAC",
-    "href": "/teams/miami-oh",
-    "aliases": [
-      "miami ohio",
-      "miami of ohio",
-      "M-OH",
-      "RedHawks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Massachusetts",
-    "detail": "MAC",
-    "href": "/teams/massachusetts",
-    "aliases": [
-      "MASS",
-      "Minutemen"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Eastern Michigan",
-    "detail": "MAC",
-    "href": "/teams/eastern-michigan",
-    "aliases": [
-      "EMU",
-      "Eagles"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Ball State",
-    "detail": "MAC",
-    "href": "/teams/ball-state",
-    "aliases": [
-      "BALL",
-      "Cardinals"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Central Michigan",
-    "detail": "MAC",
-    "href": "/teams/central-michigan",
-    "aliases": [
-      "CMU",
-      "Chippewas"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Kent State",
-    "detail": "MAC",
-    "href": "/teams/kent-state",
-    "aliases": [
-      "KENT",
-      "Golden Flashes"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Bowling Green",
-    "detail": "MAC",
-    "href": "/teams/bowling-green",
-    "aliases": [
-      "BGSU",
-      "Falcons"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Sacramento State",
-    "detail": "MAC",
-    "href": "/teams/sacramento-state",
-    "aliases": [
-      "SAC",
-      "Hornets"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Akron",
-    "detail": "MAC",
-    "href": "/teams/akron",
-    "aliases": [
-      "AKR",
-      "Zips"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "New Mexico",
-    "detail": "Mountain West",
-    "href": "/teams/new-mexico",
-    "aliases": [
-      "UNM",
-      "Lobos"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "North Dakota State",
-    "detail": "Mountain West",
-    "href": "/teams/north-dakota-state",
-    "aliases": [
-      "NDSU",
-      "Bison"
-    ]
-  },
-  {
-    "type": "team",
     "name": "Air Force",
     "detail": "Mountain West",
-    "href": "/teams/air-force",
+    "href": "/teams/air-force/",
     "aliases": [
       "AF",
       "Falcons"
@@ -974,187 +11,19 @@
   },
   {
     "type": "team",
-    "name": "Wyoming",
-    "detail": "Mountain West",
-    "href": "/teams/wyoming",
+    "name": "Akron",
+    "detail": "MAC",
+    "href": "/teams/akron/",
     "aliases": [
-      "WYO",
-      "Cowboys"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UNLV",
-    "detail": "Mountain West",
-    "href": "/teams/unlv",
-    "aliases": [
-      "UNLV",
-      "Rebels"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "San Jos\u00e9 State",
-    "detail": "Mountain West",
-    "href": "/teams/san-jos-state",
-    "aliases": [
-      "SJSU",
-      "Spartans"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Nevada",
-    "detail": "Mountain West",
-    "href": "/teams/nevada",
-    "aliases": [
-      "NEV",
-      "Wolf Pack"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Hawai'i",
-    "detail": "Mountain West",
-    "href": "/teams/hawai-i",
-    "aliases": [
-      "HAW",
-      "Rainbow Warriors"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "UTEP",
-    "detail": "Mountain West",
-    "href": "/teams/utep",
-    "aliases": [
-      "UTEP",
-      "Miners"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Northern Illinois",
-    "detail": "Mountain West",
-    "href": "/teams/northern-illinois",
-    "aliases": [
-      "NIU",
-      "Huskies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Boise State",
-    "detail": "Pac-12",
-    "href": "/teams/boise-state",
-    "aliases": [
-      "boise",
-      "BOIS",
-      "Broncos"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Oregon State",
-    "detail": "Pac-12",
-    "href": "/teams/oregon-state",
-    "aliases": [
-      "beavers",
-      "ORST",
-      "Beavers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Fresno State",
-    "detail": "Pac-12",
-    "href": "/teams/fresno-state",
-    "aliases": [
-      "fresno",
-      "FRES",
-      "Bulldogs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Texas State",
-    "detail": "Pac-12",
-    "href": "/teams/texas-state",
-    "aliases": [
-      "TXST",
-      "Bobcats"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "San Diego State",
-    "detail": "Pac-12",
-    "href": "/teams/san-diego-state",
-    "aliases": [
-      "sdsu",
-      "SDSU",
-      "Aztecs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Utah State",
-    "detail": "Pac-12",
-    "href": "/teams/utah-state",
-    "aliases": [
-      "usu",
-      "USU",
-      "Aggies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Colorado State",
-    "detail": "Pac-12",
-    "href": "/teams/colorado-state",
-    "aliases": [
-      "csu",
-      "CSU",
-      "Rams"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Washington State",
-    "detail": "Pac-12",
-    "href": "/teams/washington-state",
-    "aliases": [
-      "wazzu",
-      "cougs",
-      "WSU",
-      "Cougars"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Georgia",
-    "detail": "SEC",
-    "href": "/teams/georgia",
-    "aliases": [
-      "UGA",
-      "Bulldogs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Kentucky",
-    "detail": "SEC",
-    "href": "/teams/kentucky",
-    "aliases": [
-      "UK",
-      "Wildcats"
+      "AKR",
+      "Zips"
     ]
   },
   {
     "type": "team",
     "name": "Alabama",
     "detail": "SEC",
-    "href": "/teams/alabama",
+    "href": "/teams/alabama/",
     "aliases": [
       "bama",
       "roll tide",
@@ -1164,159 +33,9 @@
   },
   {
     "type": "team",
-    "name": "Ole Miss",
-    "detail": "SEC",
-    "href": "/teams/ole-miss",
-    "aliases": [
-      "ole",
-      "ole miss",
-      "mississippi",
-      "MISS",
-      "Rebels"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Texas",
-    "detail": "SEC",
-    "href": "/teams/texas",
-    "aliases": [
-      "TEX",
-      "Longhorns"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "LSU",
-    "detail": "SEC",
-    "href": "/teams/lsu",
-    "aliases": [
-      "louisiana state",
-      "LSU",
-      "Tigers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Missouri",
-    "detail": "SEC",
-    "href": "/teams/missouri",
-    "aliases": [
-      "MIZ",
-      "Tigers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Tennessee",
-    "detail": "SEC",
-    "href": "/teams/tennessee",
-    "aliases": [
-      "TENN",
-      "Volunteers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "South Carolina",
-    "detail": "SEC",
-    "href": "/teams/south-carolina",
-    "aliases": [
-      "SC",
-      "Gamecocks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Florida",
-    "detail": "SEC",
-    "href": "/teams/florida",
-    "aliases": [
-      "FLA",
-      "Gators"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Oklahoma",
-    "detail": "SEC",
-    "href": "/teams/oklahoma",
-    "aliases": [
-      "OU",
-      "Sooners"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Auburn",
-    "detail": "SEC",
-    "href": "/teams/auburn",
-    "aliases": [
-      "AUB",
-      "Tigers"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Mississippi State",
-    "detail": "SEC",
-    "href": "/teams/mississippi-state",
-    "aliases": [
-      "miss state",
-      "state",
-      "MSST",
-      "Bulldogs"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Texas A&M",
-    "detail": "SEC",
-    "href": "/teams/texas-am",
-    "aliases": [
-      "a&m",
-      "tamu",
-      "aggies",
-      "TA&M",
-      "Aggies"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Arkansas",
-    "detail": "SEC",
-    "href": "/teams/arkansas",
-    "aliases": [
-      "ARK",
-      "Razorbacks"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Vanderbilt",
-    "detail": "SEC",
-    "href": "/teams/vanderbilt",
-    "aliases": [
-      "VAN",
-      "Commodores"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "James Madison",
-    "detail": "Sun Belt",
-    "href": "/teams/james-madison",
-    "aliases": [
-      "jmu",
-      "JMU",
-      "Dukes"
-    ]
-  },
-  {
-    "type": "team",
     "name": "App State",
     "detail": "Sun Belt",
-    "href": "/teams/app-state",
+    "href": "/teams/app-state/",
     "aliases": [
       "APP",
       "Mountaineers"
@@ -1324,19 +43,331 @@
   },
   {
     "type": "team",
-    "name": "Marshall",
-    "detail": "Sun Belt",
-    "href": "/teams/marshall",
+    "name": "Arizona",
+    "detail": "Big 12",
+    "href": "/teams/arizona/",
     "aliases": [
-      "MRSH",
-      "Thundering Herd"
+      "ARIZ",
+      "Wildcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Arizona State",
+    "detail": "Big 12",
+    "href": "/teams/arizona-state/",
+    "aliases": [
+      "asu",
+      "ASU",
+      "Sun Devils"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Arkansas",
+    "detail": "SEC",
+    "href": "/teams/arkansas/",
+    "aliases": [
+      "ARK",
+      "Razorbacks"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Arkansas State",
+    "detail": "Sun Belt",
+    "href": "/teams/arkansas-state/",
+    "aliases": [
+      "ARST",
+      "Red Wolves"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Army",
+    "detail": "American",
+    "href": "/teams/army/",
+    "aliases": [
+      "black knights",
+      "ARMY",
+      "Black Knights"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Auburn",
+    "detail": "SEC",
+    "href": "/teams/auburn/",
+    "aliases": [
+      "AUB",
+      "Tigers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Ball State",
+    "detail": "MAC",
+    "href": "/teams/ball-state/",
+    "aliases": [
+      "BALL",
+      "Cardinals"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Baylor",
+    "detail": "Big 12",
+    "href": "/teams/baylor/",
+    "aliases": [
+      "BAY",
+      "Bears"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Boise State",
+    "detail": "Pac-12",
+    "href": "/teams/boise-state/",
+    "aliases": [
+      "boise",
+      "BOIS",
+      "Broncos"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Boston College",
+    "detail": "ACC",
+    "href": "/teams/boston-college/",
+    "aliases": [
+      "bc",
+      "BC",
+      "Eagles"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Bowling Green",
+    "detail": "MAC",
+    "href": "/teams/bowling-green/",
+    "aliases": [
+      "BGSU",
+      "Falcons"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Buffalo",
+    "detail": "MAC",
+    "href": "/teams/buffalo/",
+    "aliases": [
+      "BUF",
+      "Bulls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "BYU",
+    "detail": "Big 12",
+    "href": "/teams/byu/",
+    "aliases": [
+      "cougars",
+      "BYU",
+      "Cougars"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "California",
+    "detail": "ACC",
+    "href": "/teams/california/",
+    "aliases": [
+      "CAL",
+      "Golden Bears"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Central Michigan",
+    "detail": "MAC",
+    "href": "/teams/central-michigan/",
+    "aliases": [
+      "CMU",
+      "Chippewas"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Charlotte",
+    "detail": "American",
+    "href": "/teams/charlotte/",
+    "aliases": [
+      "CLT",
+      "49ers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Cincinnati",
+    "detail": "Big 12",
+    "href": "/teams/cincinnati/",
+    "aliases": [
+      "CIN",
+      "Bearcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Clemson",
+    "detail": "ACC",
+    "href": "/teams/clemson/",
+    "aliases": [
+      "CLEM",
+      "Tigers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Coastal Carolina",
+    "detail": "Sun Belt",
+    "href": "/teams/coastal-carolina/",
+    "aliases": [
+      "ccu",
+      "CCU",
+      "Chanticleers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Colorado",
+    "detail": "Big 12",
+    "href": "/teams/colorado/",
+    "aliases": [
+      "COLO",
+      "Buffaloes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Colorado State",
+    "detail": "Pac-12",
+    "href": "/teams/colorado-state/",
+    "aliases": [
+      "csu",
+      "CSU",
+      "Rams"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Delaware",
+    "detail": "Conference USA",
+    "href": "/teams/delaware/",
+    "aliases": [
+      "DEL",
+      "Blue Hens"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Duke",
+    "detail": "ACC",
+    "href": "/teams/duke/",
+    "aliases": [
+      "DUKE",
+      "Blue Devils"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "East Carolina",
+    "detail": "American",
+    "href": "/teams/east-carolina/",
+    "aliases": [
+      "ecu",
+      "ECU",
+      "Pirates"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Eastern Michigan",
+    "detail": "MAC",
+    "href": "/teams/eastern-michigan/",
+    "aliases": [
+      "EMU",
+      "Eagles"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Florida",
+    "detail": "SEC",
+    "href": "/teams/florida/",
+    "aliases": [
+      "FLA",
+      "Gators"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Florida Atlantic",
+    "detail": "American",
+    "href": "/teams/florida-atlantic/",
+    "aliases": [
+      "fau",
+      "FAU",
+      "Owls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Florida International",
+    "detail": "Conference USA",
+    "href": "/teams/florida-international/",
+    "aliases": [
+      "fiu",
+      "FIU",
+      "Panthers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Florida State",
+    "detail": "ACC",
+    "href": "/teams/florida-state/",
+    "aliases": [
+      "fsu",
+      "FSU",
+      "Seminoles"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Fresno State",
+    "detail": "Pac-12",
+    "href": "/teams/fresno-state/",
+    "aliases": [
+      "fresno",
+      "FRES",
+      "Bulldogs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Georgia",
+    "detail": "SEC",
+    "href": "/teams/georgia/",
+    "aliases": [
+      "UGA",
+      "Bulldogs"
     ]
   },
   {
     "type": "team",
     "name": "Georgia Southern",
     "detail": "Sun Belt",
-    "href": "/teams/georgia-southern",
+    "href": "/teams/georgia-southern/",
     "aliases": [
       "southern",
       "GASO",
@@ -1347,7 +378,7 @@
     "type": "team",
     "name": "Georgia State",
     "detail": "Sun Belt",
-    "href": "/teams/georgia-state",
+    "href": "/teams/georgia-state/",
     "aliases": [
       "GAST",
       "Panthers"
@@ -1355,40 +386,164 @@
   },
   {
     "type": "team",
-    "name": "Coastal Carolina",
-    "detail": "Sun Belt",
-    "href": "/teams/coastal-carolina",
+    "name": "Georgia Tech",
+    "detail": "ACC",
+    "href": "/teams/georgia-tech/",
     "aliases": [
-      "ccu",
-      "CCU",
-      "Chanticleers"
+      "gt",
+      "GT",
+      "Yellow Jackets"
     ]
   },
   {
     "type": "team",
-    "name": "Old Dominion",
-    "detail": "Sun Belt",
-    "href": "/teams/old-dominion",
+    "name": "Hawai'i",
+    "detail": "Mountain West",
+    "href": "/teams/hawai-i/",
     "aliases": [
-      "ODU",
-      "Monarchs"
+      "HAW",
+      "Rainbow Warriors"
     ]
   },
   {
     "type": "team",
-    "name": "Louisiana Tech",
-    "detail": "Sun Belt",
-    "href": "/teams/louisiana-tech",
+    "name": "Houston",
+    "detail": "Big 12",
+    "href": "/teams/houston/",
     "aliases": [
-      "LT",
-      "Bulldogs"
+      "HOU",
+      "Cougars"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Illinois",
+    "detail": "Big Ten",
+    "href": "/teams/illinois/",
+    "aliases": [
+      "ILL",
+      "Fighting Illini"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Indiana",
+    "detail": "Big Ten",
+    "href": "/teams/indiana/",
+    "aliases": [
+      "IU",
+      "Hoosiers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Iowa",
+    "detail": "Big Ten",
+    "href": "/teams/iowa/",
+    "aliases": [
+      "IOWA",
+      "Hawkeyes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Iowa State",
+    "detail": "Big 12",
+    "href": "/teams/iowa-state/",
+    "aliases": [
+      "isu",
+      "ISU",
+      "Cyclones"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Jacksonville State",
+    "detail": "Conference USA",
+    "href": "/teams/jacksonville-state/",
+    "aliases": [
+      "jax state",
+      "JXST",
+      "Gamecocks"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "James Madison",
+    "detail": "Sun Belt",
+    "href": "/teams/james-madison/",
+    "aliases": [
+      "jmu",
+      "JMU",
+      "Dukes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Kansas",
+    "detail": "Big 12",
+    "href": "/teams/kansas/",
+    "aliases": [
+      "KU",
+      "Jayhawks"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Kansas State",
+    "detail": "Big 12",
+    "href": "/teams/kansas-state/",
+    "aliases": [
+      "KSU",
+      "Wildcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Kennesaw State",
+    "detail": "Conference USA",
+    "href": "/teams/kennesaw-state/",
+    "aliases": [
+      "ksu owls",
+      "KENN",
+      "Owls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Kent State",
+    "detail": "MAC",
+    "href": "/teams/kent-state/",
+    "aliases": [
+      "KENT",
+      "Golden Flashes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Kentucky",
+    "detail": "SEC",
+    "href": "/teams/kentucky/",
+    "aliases": [
+      "UK",
+      "Wildcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Liberty",
+    "detail": "Conference USA",
+    "href": "/teams/liberty/",
+    "aliases": [
+      "LIB",
+      "Flames"
     ]
   },
   {
     "type": "team",
     "name": "Louisiana",
     "detail": "Sun Belt",
-    "href": "/teams/louisiana",
+    "href": "/teams/louisiana/",
     "aliases": [
       "ull",
       "ragin cajuns",
@@ -1398,9 +553,496 @@
   },
   {
     "type": "team",
+    "name": "Louisiana Tech",
+    "detail": "Sun Belt",
+    "href": "/teams/louisiana-tech/",
+    "aliases": [
+      "LT",
+      "Bulldogs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Louisville",
+    "detail": "ACC",
+    "href": "/teams/louisville/",
+    "aliases": [
+      "LOU",
+      "Cardinals"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "LSU",
+    "detail": "SEC",
+    "href": "/teams/lsu/",
+    "aliases": [
+      "louisiana state",
+      "LSU",
+      "Tigers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Marshall",
+    "detail": "Sun Belt",
+    "href": "/teams/marshall/",
+    "aliases": [
+      "MRSH",
+      "Thundering Herd"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Maryland",
+    "detail": "Big Ten",
+    "href": "/teams/maryland/",
+    "aliases": [
+      "MD",
+      "Terrapins"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Massachusetts",
+    "detail": "MAC",
+    "href": "/teams/massachusetts/",
+    "aliases": [
+      "MASS",
+      "Minutemen"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Memphis",
+    "detail": "American",
+    "href": "/teams/memphis/",
+    "aliases": [
+      "MEM",
+      "Tigers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Miami",
+    "detail": "ACC",
+    "href": "/teams/miami/",
+    "aliases": [
+      "the u",
+      "MIA",
+      "Hurricanes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Miami (OH)",
+    "detail": "MAC",
+    "href": "/teams/miami-oh/",
+    "aliases": [
+      "miami ohio",
+      "miami of ohio",
+      "M-OH",
+      "RedHawks"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Michigan",
+    "detail": "Big Ten",
+    "href": "/teams/michigan/",
+    "aliases": [
+      "MICH",
+      "Wolverines"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Michigan State",
+    "detail": "Big Ten",
+    "href": "/teams/michigan-state/",
+    "aliases": [
+      "msu",
+      "MSU",
+      "Spartans"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Middle Tennessee",
+    "detail": "Conference USA",
+    "href": "/teams/middle-tennessee/",
+    "aliases": [
+      "mtsu",
+      "MTSU",
+      "Blue Raiders"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Minnesota",
+    "detail": "Big Ten",
+    "href": "/teams/minnesota/",
+    "aliases": [
+      "MINN",
+      "Golden Gophers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Mississippi State",
+    "detail": "SEC",
+    "href": "/teams/mississippi-state/",
+    "aliases": [
+      "miss state",
+      "state",
+      "MSST",
+      "Bulldogs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Missouri",
+    "detail": "SEC",
+    "href": "/teams/missouri/",
+    "aliases": [
+      "MIZ",
+      "Tigers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Missouri State",
+    "detail": "Conference USA",
+    "href": "/teams/missouri-state/",
+    "aliases": [
+      "MOST",
+      "Bears"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Navy",
+    "detail": "American",
+    "href": "/teams/navy/",
+    "aliases": [
+      "midshipmen",
+      "NAVY",
+      "Midshipmen"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "NC State",
+    "detail": "ACC",
+    "href": "/teams/nc-state/",
+    "aliases": [
+      "north carolina state",
+      "NCSU",
+      "Wolfpack"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Nebraska",
+    "detail": "Big Ten",
+    "href": "/teams/nebraska/",
+    "aliases": [
+      "NEB",
+      "Cornhuskers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Nevada",
+    "detail": "Mountain West",
+    "href": "/teams/nevada/",
+    "aliases": [
+      "NEV",
+      "Wolf Pack"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "New Mexico",
+    "detail": "Mountain West",
+    "href": "/teams/new-mexico/",
+    "aliases": [
+      "UNM",
+      "Lobos"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "New Mexico State",
+    "detail": "Conference USA",
+    "href": "/teams/new-mexico-state/",
+    "aliases": [
+      "NMSU",
+      "Aggies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "North Carolina",
+    "detail": "ACC",
+    "href": "/teams/north-carolina/",
+    "aliases": [
+      "UNC",
+      "Tar Heels"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "North Dakota State",
+    "detail": "Mountain West",
+    "href": "/teams/north-dakota-state/",
+    "aliases": [
+      "NDSU",
+      "Bison"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Northern Illinois",
+    "detail": "Mountain West",
+    "href": "/teams/northern-illinois/",
+    "aliases": [
+      "NIU",
+      "Huskies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "North Texas",
+    "detail": "American",
+    "href": "/teams/north-texas/",
+    "aliases": [
+      "unt",
+      "UNT",
+      "Mean Green"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Northwestern",
+    "detail": "Big Ten",
+    "href": "/teams/northwestern/",
+    "aliases": [
+      "NU",
+      "Wildcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Notre Dame",
+    "detail": "FBS Independents",
+    "href": "/teams/notre-dame/",
+    "aliases": [
+      "irish",
+      "nd",
+      "ND",
+      "Fighting Irish"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Ohio",
+    "detail": "MAC",
+    "href": "/teams/ohio/",
+    "aliases": [
+      "OHIO",
+      "Bobcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Ohio State",
+    "detail": "Big Ten",
+    "href": "/teams/ohio-state/",
+    "aliases": [
+      "osu",
+      "the ohio state",
+      "OSU",
+      "Buckeyes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Oklahoma",
+    "detail": "SEC",
+    "href": "/teams/oklahoma/",
+    "aliases": [
+      "OU",
+      "Sooners"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Oklahoma State",
+    "detail": "Big 12",
+    "href": "/teams/oklahoma-state/",
+    "aliases": [
+      "okstate",
+      "osu cowboys",
+      "OKST",
+      "Cowboys"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Old Dominion",
+    "detail": "Sun Belt",
+    "href": "/teams/old-dominion/",
+    "aliases": [
+      "ODU",
+      "Monarchs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Ole Miss",
+    "detail": "SEC",
+    "href": "/teams/ole-miss/",
+    "aliases": [
+      "ole",
+      "ole miss",
+      "mississippi",
+      "MISS",
+      "Rebels"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Oregon",
+    "detail": "Big Ten",
+    "href": "/teams/oregon/",
+    "aliases": [
+      "ORE",
+      "Ducks"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Oregon State",
+    "detail": "Pac-12",
+    "href": "/teams/oregon-state/",
+    "aliases": [
+      "beavers",
+      "ORST",
+      "Beavers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Penn State",
+    "detail": "Big Ten",
+    "href": "/teams/penn-state/",
+    "aliases": [
+      "psu",
+      "PSU",
+      "Nittany Lions"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Pittsburgh",
+    "detail": "ACC",
+    "href": "/teams/pittsburgh/",
+    "aliases": [
+      "pitt",
+      "pittsburgh",
+      "PITT",
+      "Panthers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Purdue",
+    "detail": "Big Ten",
+    "href": "/teams/purdue/",
+    "aliases": [
+      "PUR",
+      "Boilermakers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Rice",
+    "detail": "American",
+    "href": "/teams/rice/",
+    "aliases": [
+      "RICE",
+      "Owls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Rutgers",
+    "detail": "Big Ten",
+    "href": "/teams/rutgers/",
+    "aliases": [
+      "RUTG",
+      "Scarlet Knights"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Sacramento State",
+    "detail": "MAC",
+    "href": "/teams/sacramento-state/",
+    "aliases": [
+      "SAC",
+      "Hornets"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Sam Houston",
+    "detail": "Conference USA",
+    "href": "/teams/sam-houston/",
+    "aliases": [
+      "shsu",
+      "SHSU",
+      "Bearkats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "San Diego State",
+    "detail": "Pac-12",
+    "href": "/teams/san-diego-state/",
+    "aliases": [
+      "sdsu",
+      "SDSU",
+      "Aztecs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "San Jos\u00e9 State",
+    "detail": "Mountain West",
+    "href": "/teams/san-jos-state/",
+    "aliases": [
+      "SJSU",
+      "Spartans"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "SMU",
+    "detail": "ACC",
+    "href": "/teams/smu/",
+    "aliases": [
+      "mustangs",
+      "SMU",
+      "Mustangs"
+    ]
+  },
+  {
+    "type": "team",
     "name": "South Alabama",
     "detail": "Sun Belt",
-    "href": "/teams/south-alabama",
+    "href": "/teams/south-alabama/",
     "aliases": [
       "usa jaguars",
       "USA",
@@ -1409,29 +1051,19 @@
   },
   {
     "type": "team",
-    "name": "Arkansas State",
-    "detail": "Sun Belt",
-    "href": "/teams/arkansas-state",
+    "name": "South Carolina",
+    "detail": "SEC",
+    "href": "/teams/south-carolina/",
     "aliases": [
-      "ARST",
-      "Red Wolves"
-    ]
-  },
-  {
-    "type": "team",
-    "name": "Troy",
-    "detail": "Sun Belt",
-    "href": "/teams/troy",
-    "aliases": [
-      "TROY",
-      "Trojans"
+      "SC",
+      "Gamecocks"
     ]
   },
   {
     "type": "team",
     "name": "Southern Miss",
     "detail": "Sun Belt",
-    "href": "/teams/southern-miss",
+    "href": "/teams/southern-miss/",
     "aliases": [
       "usm",
       "USM",
@@ -1440,9 +1072,198 @@
   },
   {
     "type": "team",
+    "name": "South Florida",
+    "detail": "American",
+    "href": "/teams/south-florida/",
+    "aliases": [
+      "USF",
+      "Bulls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Stanford",
+    "detail": "ACC",
+    "href": "/teams/stanford/",
+    "aliases": [
+      "STAN",
+      "Cardinal"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Syracuse",
+    "detail": "ACC",
+    "href": "/teams/syracuse/",
+    "aliases": [
+      "SYR",
+      "Orange"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "TCU",
+    "detail": "Big 12",
+    "href": "/teams/tcu/",
+    "aliases": [
+      "horned frogs",
+      "TCU",
+      "Horned Frogs"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Temple",
+    "detail": "American",
+    "href": "/teams/temple/",
+    "aliases": [
+      "TEM",
+      "Owls"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Tennessee",
+    "detail": "SEC",
+    "href": "/teams/tennessee/",
+    "aliases": [
+      "TENN",
+      "Volunteers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Texas",
+    "detail": "SEC",
+    "href": "/teams/texas/",
+    "aliases": [
+      "TEX",
+      "Longhorns"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Texas A&M",
+    "detail": "SEC",
+    "href": "/teams/texas-am/",
+    "aliases": [
+      "a&m",
+      "tamu",
+      "aggies",
+      "TA&M",
+      "Aggies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Texas State",
+    "detail": "Pac-12",
+    "href": "/teams/texas-state/",
+    "aliases": [
+      "TXST",
+      "Bobcats"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Texas Tech",
+    "detail": "Big 12",
+    "href": "/teams/texas-tech/",
+    "aliases": [
+      "TTU",
+      "Red Raiders"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Toledo",
+    "detail": "MAC",
+    "href": "/teams/toledo/",
+    "aliases": [
+      "TOL",
+      "Rockets"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Troy",
+    "detail": "Sun Belt",
+    "href": "/teams/troy/",
+    "aliases": [
+      "TROY",
+      "Trojans"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Tulane",
+    "detail": "American",
+    "href": "/teams/tulane/",
+    "aliases": [
+      "TULN",
+      "Green Wave"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Tulsa",
+    "detail": "American",
+    "href": "/teams/tulsa/",
+    "aliases": [
+      "TLSA",
+      "Golden Hurricane"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UAB",
+    "detail": "American",
+    "href": "/teams/uab/",
+    "aliases": [
+      "blazers",
+      "UAB",
+      "Blazers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UCF",
+    "detail": "Big 12",
+    "href": "/teams/ucf/",
+    "aliases": [
+      "knights",
+      "UCF",
+      "Knights"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UCLA",
+    "detail": "Big Ten",
+    "href": "/teams/ucla/",
+    "aliases": [
+      "bruins",
+      "UCLA",
+      "Bruins"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UConn",
+    "detail": "FBS Independents",
+    "href": "/teams/uconn/",
+    "aliases": [
+      "connecticut",
+      "huskies",
+      "CONN",
+      "Huskies"
+    ]
+  },
+  {
+    "type": "team",
     "name": "UL Monroe",
     "detail": "Sun Belt",
-    "href": "/teams/ul-monroe",
+    "href": "/teams/ul-monroe/",
     "aliases": [
       "ulm",
       "ULM",
@@ -1450,80 +1271,259 @@
     ]
   },
   {
+    "type": "team",
+    "name": "UNLV",
+    "detail": "Mountain West",
+    "href": "/teams/unlv/",
+    "aliases": [
+      "UNLV",
+      "Rebels"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "USC",
+    "detail": "Big Ten",
+    "href": "/teams/usc/",
+    "aliases": [
+      "southern cal",
+      "trojans",
+      "USC",
+      "Trojans"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Utah",
+    "detail": "Big 12",
+    "href": "/teams/utah/",
+    "aliases": [
+      "UTAH",
+      "Utes"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Utah State",
+    "detail": "Pac-12",
+    "href": "/teams/utah-state/",
+    "aliases": [
+      "usu",
+      "USU",
+      "Aggies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UTEP",
+    "detail": "Mountain West",
+    "href": "/teams/utep/",
+    "aliases": [
+      "UTEP",
+      "Miners"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "UTSA",
+    "detail": "American",
+    "href": "/teams/utsa/",
+    "aliases": [
+      "utsa",
+      "UTSA",
+      "Roadrunners"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Vanderbilt",
+    "detail": "SEC",
+    "href": "/teams/vanderbilt/",
+    "aliases": [
+      "VAN",
+      "Commodores"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Virginia",
+    "detail": "ACC",
+    "href": "/teams/virginia/",
+    "aliases": [
+      "UVA",
+      "Cavaliers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Virginia Tech",
+    "detail": "ACC",
+    "href": "/teams/virginia-tech/",
+    "aliases": [
+      "vt",
+      "VT",
+      "Hokies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Wake Forest",
+    "detail": "ACC",
+    "href": "/teams/wake-forest/",
+    "aliases": [
+      "WAKE",
+      "Demon Deacons"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Washington",
+    "detail": "Big Ten",
+    "href": "/teams/washington/",
+    "aliases": [
+      "WASH",
+      "Huskies"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Washington State",
+    "detail": "Pac-12",
+    "href": "/teams/washington-state/",
+    "aliases": [
+      "wazzu",
+      "cougs",
+      "WSU",
+      "Cougars"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Western Kentucky",
+    "detail": "Conference USA",
+    "href": "/teams/western-kentucky/",
+    "aliases": [
+      "wku",
+      "WKU",
+      "Hilltoppers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Western Michigan",
+    "detail": "MAC",
+    "href": "/teams/western-michigan/",
+    "aliases": [
+      "WMU",
+      "Broncos"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "West Virginia",
+    "detail": "Big 12",
+    "href": "/teams/west-virginia/",
+    "aliases": [
+      "wvu",
+      "WVU",
+      "Mountaineers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Wisconsin",
+    "detail": "Big Ten",
+    "href": "/teams/wisconsin/",
+    "aliases": [
+      "WIS",
+      "Badgers"
+    ]
+  },
+  {
+    "type": "team",
+    "name": "Wyoming",
+    "detail": "Mountain West",
+    "href": "/teams/wyoming/",
+    "aliases": [
+      "WYO",
+      "Cowboys"
+    ]
+  },
+  {
     "type": "conference",
     "name": "ACC",
     "detail": "Conference",
-    "href": "/conferences/acc",
+    "href": "/conferences/acc/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Big Ten",
     "detail": "Conference",
-    "href": "/conferences/big-ten",
+    "href": "/conferences/big-ten/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Big 12",
     "detail": "Conference",
-    "href": "/conferences/big-12",
+    "href": "/conferences/big-12/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "SEC",
     "detail": "Conference",
-    "href": "/conferences/sec",
+    "href": "/conferences/sec/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "American",
     "detail": "Conference",
-    "href": "/conferences/american",
+    "href": "/conferences/american/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Conference USA",
     "detail": "Conference",
-    "href": "/conferences/conference-usa",
+    "href": "/conferences/conference-usa/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "MAC",
     "detail": "Conference",
-    "href": "/conferences/mac",
+    "href": "/conferences/mac/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Mountain West",
     "detail": "Conference",
-    "href": "/conferences/mountain-west",
+    "href": "/conferences/mountain-west/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Pac-12",
     "detail": "Conference",
-    "href": "/conferences/pac-12",
+    "href": "/conferences/pac-12/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "Sun Belt",
     "detail": "Conference",
-    "href": "/conferences/sun-belt",
+    "href": "/conferences/sun-belt/",
     "aliases": []
   },
   {
     "type": "conference",
     "name": "FBS Independents",
     "detail": "Conference",
-    "href": "/conferences/fbs-independents",
+    "href": "/conferences/fbs-independents/",
     "aliases": []
   },
   {
@@ -1539,9 +1539,20 @@
   },
   {
     "type": "page",
+    "name": "Schedule",
+    "detail": "Page",
+    "href": "/schedule/",
+    "aliases": [
+      "schedule",
+      "games",
+      "week"
+    ]
+  },
+  {
+    "type": "page",
     "name": "Matchup Calculator",
     "detail": "Page",
-    "href": "/matchup",
+    "href": "/matchup/",
     "aliases": [
       "matchup",
       "compare",
@@ -1552,7 +1563,7 @@
     "type": "page",
     "name": "CFP Rankings",
     "detail": "Page",
-    "href": "/rankings",
+    "href": "/rankings/",
     "aliases": [
       "rankings",
       "poll",
@@ -1563,7 +1574,7 @@
     "type": "page",
     "name": "Conferences",
     "detail": "Page",
-    "href": "/conferences",
+    "href": "/conferences/",
     "aliases": [
       "standings"
     ]
@@ -1572,7 +1583,7 @@
     "type": "page",
     "name": "Contact",
     "detail": "Page",
-    "href": "/contact",
+    "href": "/contact/",
     "aliases": [
       "email",
       "sponsor"

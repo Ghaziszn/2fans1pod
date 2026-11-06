@@ -4,7 +4,9 @@ import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, us
 import { SortableContext, arrayMove, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { ChevronDown, ChevronUp, GripVertical } from "lucide-react";
+import { motion, useReducedMotion } from "motion/react";
 import { useState } from "react";
+import { TeamMark } from "@/components/team/TeamMark";
 import type { Team } from "@/lib/cfp/types";
 
 function Row({
@@ -18,23 +20,30 @@ function Row({
   team: Team | undefined;
   onMove: (id: string, direction: -1 | 1) => void;
 }) {
-  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
-  const style = { transform: CSS.Transform.toString(transform), transition };
+  const reduceMotion = useReducedMotion();
+  const { attributes, listeners, setNodeRef, transform } = useSortable({ id });
+  const style = { transform: CSS.Transform.toString(transform) };
   return (
-    <li ref={setNodeRef} style={style} className="flex items-center gap-2 border-b border-line py-1">
+    <motion.li
+      ref={setNodeRef}
+      style={style}
+      layout
+      transition={{ duration: reduceMotion ? 0 : 0.18 }}
+      className="flex items-center gap-2 border-b border-line py-1"
+    >
       <button type="button" className="inline-flex h-11 w-8 cursor-grab items-center justify-center text-muted" aria-label={`Drag ${team?.school ?? id}`} {...attributes} {...listeners}>
         <GripVertical size={16} />
       </button>
-      <span className="nums w-8 text-sm text-muted">{rank}</span>
-      <span className="h-6 w-1.5 rounded-sm" style={{ background: team?.color ?? "#888" }} />
-      <span className="min-w-0 flex-1 truncate">{team?.school ?? id}</span>
+      <span className="min-w-0 flex-1">
+        <TeamMark team={team} name={team?.school ?? id} seed={rank} size="sm" />
+      </span>
       <button type="button" className="inline-flex h-11 w-11 items-center justify-center" aria-label={`Move ${team?.school} up`} onClick={() => onMove(id, -1)}>
         <ChevronUp size={16} />
       </button>
       <button type="button" className="inline-flex h-11 w-11 items-center justify-center" aria-label={`Move ${team?.school} down`} onClick={() => onMove(id, 1)}>
         <ChevronDown size={16} />
       </button>
-    </li>
+    </motion.li>
   );
 }
 

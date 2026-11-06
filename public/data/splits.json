@@ -1,0 +1,1982 @@
+{
+  "source": "Cleatz",
+  "url": "https://cleatz.com/public-betting/college-football/",
+  "updatedAt": "2026-11-05T06:36:00Z",
+  "label": "Nov. 5, 1:25 AM EST",
+  "games": {
+    "401862817": {
+      "spread": {
+        "sides": [
+          {
+            "label": "UTSA -7",
+            "bet": 19,
+            "handle": 42
+          },
+          {
+            "label": "Florida Atlantic +7",
+            "bet": 81,
+            "handle": 58
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 72.5",
+            "bet": 50,
+            "handle": 23
+          },
+          {
+            "label": "Under 72.5",
+            "bet": 50,
+            "handle": 77
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "UTSA",
+            "bet": 85,
+            "handle": 71
+          },
+          {
+            "label": "Florida Atlantic",
+            "bet": 15,
+            "handle": 29
+          }
+        ]
+      }
+    },
+    "401869964": {
+      "spread": {
+        "sides": [
+          {
+            "label": "James Madison -14.5",
+            "bet": 73,
+            "handle": 70
+          },
+          {
+            "label": "Southern Miss +14.5",
+            "bet": 27,
+            "handle": 30
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 57.5",
+            "bet": 56,
+            "handle": 80
+          },
+          {
+            "label": "Under 57.5",
+            "bet": 44,
+            "handle": 20
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "James Madison",
+            "bet": 86,
+            "handle": 30
+          },
+          {
+            "label": "Southern Miss",
+            "bet": 14,
+            "handle": 70
+          }
+        ]
+      }
+    },
+    "401858288": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Virginia Tech +6",
+            "bet": 45,
+            "handle": 97
+          },
+          {
+            "label": "SMU -6",
+            "bet": 55,
+            "handle": 3
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 56.5",
+            "bet": 90,
+            "handle": 93
+          },
+          {
+            "label": "Under 56.5",
+            "bet": 10,
+            "handle": 7
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Virginia Tech",
+            "bet": 11,
+            "handle": 23
+          },
+          {
+            "label": "SMU",
+            "bet": 89,
+            "handle": 77
+          }
+        ]
+      }
+    },
+    "401862818": {
+      "spread": {
+        "sides": [
+          {
+            "label": "South Florida +2.5",
+            "bet": 42,
+            "handle": 61
+          },
+          {
+            "label": "East Carolina -2.5",
+            "bet": 58,
+            "handle": 39
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 39.5",
+            "bet": 80,
+            "handle": 0
+          },
+          {
+            "label": "Under 39.5",
+            "bet": 20,
+            "handle": 100
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "South Florida",
+            "bet": 43,
+            "handle": 2
+          },
+          {
+            "label": "East Carolina",
+            "bet": 57,
+            "handle": 98
+          }
+        ]
+      }
+    },
+    "401858510": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Nebraska -4.5",
+            "bet": 24,
+            "handle": 16
+          },
+          {
+            "label": "Illinois +4.5",
+            "bet": 76,
+            "handle": 84
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 49.5",
+            "bet": 75,
+            "handle": 7
+          },
+          {
+            "label": "Under 49.5",
+            "bet": 25,
+            "handle": 93
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Nebraska",
+            "bet": 72,
+            "handle": 99
+          },
+          {
+            "label": "Illinois",
+            "bet": 28,
+            "handle": 1
+          }
+        ]
+      }
+    },
+    "401864533": {
+      "spread": null,
+      "total": {
+        "sides": [
+          {
+            "label": "Over 36.5",
+            "bet": 75,
+            "handle": 0
+          },
+          {
+            "label": "Under 36.5",
+            "bet": 25,
+            "handle": 100
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "New Mexico",
+            "bet": 96,
+            "handle": 63
+          },
+          {
+            "label": "Nevada",
+            "bet": 4,
+            "handle": 37
+          }
+        ]
+      }
+    },
+    "401856855": {
+      "spread": {
+        "sides": [
+          {
+            "label": "TCU +7.5",
+            "bet": 64,
+            "handle": 17
+          },
+          {
+            "label": "Arizona -7.5",
+            "bet": 36,
+            "handle": 83
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 45.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 45.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "TCU",
+            "bet": 3,
+            "handle": 5
+          },
+          {
+            "label": "Arizona",
+            "bet": 97,
+            "handle": 95
+          }
+        ]
+      }
+    },
+    "401856743": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Texas -2.5",
+            "bet": 72,
+            "handle": 27
+          },
+          {
+            "label": "Missouri +2.5",
+            "bet": 28,
+            "handle": 73
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 42.5",
+            "bet": 75,
+            "handle": 23
+          },
+          {
+            "label": "Under 42.5",
+            "bet": 25,
+            "handle": 77
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Texas",
+            "bet": 78,
+            "handle": 85
+          },
+          {
+            "label": "Missouri",
+            "bet": 22,
+            "handle": 15
+          }
+        ]
+      }
+    },
+    "401858292": {
+      "spread": {
+        "sides": [
+          {
+            "label": "North Carolina -7",
+            "bet": 83,
+            "handle": 42
+          },
+          {
+            "label": "UConn +7",
+            "bet": 17,
+            "handle": 58
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 54.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 54.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "North Carolina",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "UConn",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      }
+    },
+    "401862822": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Tulsa -2.5",
+            "bet": 20,
+            "handle": 83
+          },
+          {
+            "label": "Tulane +2.5",
+            "bet": 80,
+            "handle": 17
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Tulsa",
+            "bet": 30,
+            "handle": 84
+          },
+          {
+            "label": "Tulane",
+            "bet": 70,
+            "handle": 16
+          }
+        ]
+      }
+    },
+    "401856853": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Iowa State +10",
+            "bet": 89,
+            "handle": 94
+          },
+          {
+            "label": "Baylor -10",
+            "bet": 11,
+            "handle": 6
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Iowa State",
+            "bet": 5,
+            "handle": 3
+          },
+          {
+            "label": "Baylor",
+            "bet": 95,
+            "handle": 97
+          }
+        ]
+      }
+    },
+    "401858512": {
+      "spread": {
+        "sides": [
+          {
+            "label": "UCLA -5.5",
+            "bet": 43,
+            "handle": 28
+          },
+          {
+            "label": "Minnesota +5.5",
+            "bet": 57,
+            "handle": 72
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 39.5",
+            "bet": 78,
+            "handle": 6
+          },
+          {
+            "label": "Under 39.5",
+            "bet": 22,
+            "handle": 94
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "UCLA",
+            "bet": 81,
+            "handle": 35
+          },
+          {
+            "label": "Minnesota",
+            "bet": 19,
+            "handle": 65
+          }
+        ]
+      }
+    },
+    "401856849": {
+      "spread": {
+        "sides": [
+          {
+            "label": "BYU +4.5",
+            "bet": 66,
+            "handle": 84
+          },
+          {
+            "label": "Utah -4.5",
+            "bet": 34,
+            "handle": 16
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 48.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 48.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "BYU",
+            "bet": 35,
+            "handle": 11
+          },
+          {
+            "label": "Utah",
+            "bet": 65,
+            "handle": 89
+          }
+        ]
+      }
+    },
+    "401858289": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Florida State -6.5",
+            "bet": 72,
+            "handle": 4
+          },
+          {
+            "label": "Boston College +6.5",
+            "bet": 28,
+            "handle": 96
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Florida State",
+            "bet": 73,
+            "handle": 3
+          },
+          {
+            "label": "Boston College",
+            "bet": 27,
+            "handle": 97
+          }
+        ]
+      }
+    },
+    "401858285": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Clemson -2.5",
+            "bet": 85,
+            "handle": 93
+          },
+          {
+            "label": "Syracuse +2.5",
+            "bet": 15,
+            "handle": 7
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 50.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 50.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Clemson",
+            "bet": 57,
+            "handle": 94
+          },
+          {
+            "label": "Syracuse",
+            "bet": 43,
+            "handle": 6
+          }
+        ]
+      }
+    },
+    "401858515": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Maryland +6",
+            "bet": 40,
+            "handle": 1
+          },
+          {
+            "label": "Purdue -6",
+            "bet": 60,
+            "handle": 99
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 56.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 56.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": null
+    },
+    "401858286": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Duke -4",
+            "bet": 36,
+            "handle": 38
+          },
+          {
+            "label": "NC State +4",
+            "bet": 64,
+            "handle": 62
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 51.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 51.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Duke",
+            "bet": 93,
+            "handle": 86
+          },
+          {
+            "label": "NC State",
+            "bet": 7,
+            "handle": 14
+          }
+        ]
+      }
+    },
+    "401856738": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Arkansas +10",
+            "bet": 75,
+            "handle": 21
+          },
+          {
+            "label": "Auburn -10",
+            "bet": 25,
+            "handle": 79
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Arkansas",
+            "bet": 7,
+            "handle": 80
+          },
+          {
+            "label": "Auburn",
+            "bet": 93,
+            "handle": 20
+          }
+        ]
+      }
+    },
+    "401869927": {
+      "spread": null,
+      "total": {
+        "sides": [
+          {
+            "label": "Over 54.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Under 54.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Georgia State",
+            "bet": 56,
+            "handle": 63
+          },
+          {
+            "label": "Appalachian State",
+            "bet": 44,
+            "handle": 37
+          }
+        ]
+      }
+    },
+    "401871073": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Delaware -1.5",
+            "bet": 75,
+            "handle": 87
+          },
+          {
+            "label": "Kennesaw State +1.5",
+            "bet": 25,
+            "handle": 13
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 57.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 57.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Delaware",
+            "bet": 50,
+            "handle": 14
+          },
+          {
+            "label": "Kennesaw State",
+            "bet": 50,
+            "handle": 86
+          }
+        ]
+      }
+    },
+    "401856744": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Texas A&M +7",
+            "bet": 46,
+            "handle": 54
+          },
+          {
+            "label": "South Carolina -7",
+            "bet": 54,
+            "handle": 46
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Texas A&M",
+            "bet": 7,
+            "handle": 1
+          },
+          {
+            "label": "South Carolina",
+            "bet": 93,
+            "handle": 99
+          }
+        ]
+      }
+    },
+    "401869936": {
+      "spread": {
+        "sides": [
+          {
+            "label": "ULM +14.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Arkansas State -14.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "ULM",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Arkansas State",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      }
+    },
+    "401862819": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Charlotte +8.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "UAB -8.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 47.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 47.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Charlotte",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "UAB",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      }
+    },
+    "401856740": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Alabama +6",
+            "bet": 65,
+            "handle": 44
+          },
+          {
+            "label": "LSU -6",
+            "bet": 35,
+            "handle": 56
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 52.5",
+            "bet": 73,
+            "handle": 92
+          },
+          {
+            "label": "Under 52.5",
+            "bet": 27,
+            "handle": 8
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Alabama",
+            "bet": 47,
+            "handle": 4
+          },
+          {
+            "label": "LSU",
+            "bet": 53,
+            "handle": 96
+          }
+        ]
+      }
+    },
+    "401856851": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Cincinnati +10.5",
+            "bet": 69,
+            "handle": 33
+          },
+          {
+            "label": "Houston -10.5",
+            "bet": 31,
+            "handle": 67
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 62.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 62.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Cincinnati",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Houston",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      }
+    },
+    "401858516": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Penn State +2.5",
+            "bet": 75,
+            "handle": 65
+          },
+          {
+            "label": "Washington -2.5",
+            "bet": 25,
+            "handle": 35
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 44.5",
+            "bet": 67,
+            "handle": 2
+          },
+          {
+            "label": "Under 44.5",
+            "bet": 33,
+            "handle": 98
+          }
+        ]
+      },
+      "moneyline": null
+    },
+    "401869951": {
+      "spread": null,
+      "total": {
+        "sides": [
+          {
+            "label": "Over 54.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 54.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Marshall",
+            "bet": 22,
+            "handle": 79
+          },
+          {
+            "label": "Georgia Southern",
+            "bet": 78,
+            "handle": 21
+          }
+        ]
+      }
+    },
+    "401858514": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Oregon +7.5",
+            "bet": 41,
+            "handle": 16
+          },
+          {
+            "label": "Ohio State -7.5",
+            "bet": 59,
+            "handle": 84
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 46.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 46.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Oregon",
+            "bet": 12,
+            "handle": 44
+          },
+          {
+            "label": "Ohio State",
+            "bet": 88,
+            "handle": 56
+          }
+        ]
+      }
+    },
+    "401862820": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Temple +7.5",
+            "bet": 78,
+            "handle": 76
+          },
+          {
+            "label": "Navy -7.5",
+            "bet": 22,
+            "handle": 24
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 54.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 54.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Temple",
+            "bet": 8,
+            "handle": 13
+          },
+          {
+            "label": "Navy",
+            "bet": 92,
+            "handle": 87
+          }
+        ]
+      }
+    },
+    "401856850": {
+      "spread": {
+        "sides": [
+          {
+            "label": "UCF +2.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Kansas -2.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 47.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 47.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "UCF",
+            "bet": 50,
+            "handle": 29
+          },
+          {
+            "label": "Kansas",
+            "bet": 50,
+            "handle": 71
+          }
+        ]
+      }
+    },
+    "401862821": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Rice +17.5",
+            "bet": 20,
+            "handle": 14
+          },
+          {
+            "label": "North Texas -17.5",
+            "bet": 80,
+            "handle": 86
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 64.5",
+            "bet": 90,
+            "handle": 26
+          },
+          {
+            "label": "Under 64.5",
+            "bet": 10,
+            "handle": 74
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Rice",
+            "bet": 16,
+            "handle": 80
+          },
+          {
+            "label": "North Texas",
+            "bet": 84,
+            "handle": 20
+          }
+        ]
+      }
+    },
+    "401871098": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Louisiana Tech -4.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Troy +4.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 47.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 47.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Louisiana Tech",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Troy",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      }
+    },
+    "401856742": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Vanderbilt +3",
+            "bet": 67,
+            "handle": 11
+          },
+          {
+            "label": "Mississippi State -3",
+            "bet": 33,
+            "handle": 89
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 48.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 48.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": null
+    },
+    "401858517": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Rutgers +17.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Wisconsin -17.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 45.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 45.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Rutgers",
+            "bet": 4,
+            "handle": 34
+          },
+          {
+            "label": "Wisconsin",
+            "bet": 96,
+            "handle": 66
+          }
+        ]
+      }
+    },
+    "401860911": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Boise State -17.5",
+            "bet": 67,
+            "handle": 30
+          },
+          {
+            "label": "Colorado State +17.5",
+            "bet": 33,
+            "handle": 70
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 68.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 68.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Boise State",
+            "bet": 97,
+            "handle": 64
+          },
+          {
+            "label": "Colorado State",
+            "bet": 3,
+            "handle": 36
+          }
+        ]
+      }
+    },
+    "401856745": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Kentucky +6.5",
+            "bet": 82,
+            "handle": 56
+          },
+          {
+            "label": "Tennessee -6.5",
+            "bet": 18,
+            "handle": 44
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 50.5",
+            "bet": 71,
+            "handle": 30
+          },
+          {
+            "label": "Under 50.5",
+            "bet": 29,
+            "handle": 70
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Kentucky",
+            "bet": 56,
+            "handle": 94
+          },
+          {
+            "label": "Tennessee",
+            "bet": 44,
+            "handle": 6
+          }
+        ]
+      }
+    },
+    "401871075": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Sam Houston +17.5",
+            "bet": 80,
+            "handle": 38
+          },
+          {
+            "label": "Jacksonville State -17.5",
+            "bet": 20,
+            "handle": 62
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 47.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 47.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Sam Houston",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Jacksonville State",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      }
+    },
+    "401858511": {
+      "spread": null,
+      "total": {
+        "sides": [
+          {
+            "label": "Over 39.5",
+            "bet": 33,
+            "handle": 86
+          },
+          {
+            "label": "Under 39.5",
+            "bet": 67,
+            "handle": 14
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Michigan State",
+            "bet": 17,
+            "handle": 96
+          },
+          {
+            "label": "Michigan",
+            "bet": 83,
+            "handle": 4
+          }
+        ]
+      }
+    },
+    "401858291": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Miami FL +7",
+            "bet": 73,
+            "handle": 81
+          },
+          {
+            "label": "Notre Dame -7",
+            "bet": 27,
+            "handle": 19
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 55.5",
+            "bet": 67,
+            "handle": 14
+          },
+          {
+            "label": "Under 55.5",
+            "bet": 33,
+            "handle": 86
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Miami FL",
+            "bet": 59,
+            "handle": 20
+          },
+          {
+            "label": "Notre Dame",
+            "bet": 41,
+            "handle": 80
+          }
+        ]
+      }
+    },
+    "401858513": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Iowa +2.5",
+            "bet": 28,
+            "handle": 6
+          },
+          {
+            "label": "Northwestern -2.5",
+            "bet": 72,
+            "handle": 94
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 45.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 45.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Iowa",
+            "bet": 76,
+            "handle": 2
+          },
+          {
+            "label": "Northwestern",
+            "bet": 24,
+            "handle": 98
+          }
+        ]
+      }
+    },
+    "401856852": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Colorado +3",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Arizona State -3",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 48.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 48.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Colorado",
+            "bet": 40,
+            "handle": 75
+          },
+          {
+            "label": "Arizona State",
+            "bet": 60,
+            "handle": 25
+          }
+        ]
+      }
+    },
+    "401858287": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Louisville -14.5",
+            "bet": 50,
+            "handle": 0
+          },
+          {
+            "label": "Georgia Tech +14.5",
+            "bet": 50,
+            "handle": 100
+          }
+        ]
+      },
+      "total": null,
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Louisville",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Georgia Tech",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      }
+    },
+    "401862823": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Air Force +3",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Army -3",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 45.5",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Under 45.5",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Air Force",
+            "bet": 33,
+            "handle": 47
+          },
+          {
+            "label": "Army",
+            "bet": 67,
+            "handle": 53
+          }
+        ]
+      }
+    },
+    "401856741": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Georgia -3.5",
+            "bet": 64,
+            "handle": 67
+          },
+          {
+            "label": "Ole Miss +3.5",
+            "bet": 36,
+            "handle": 33
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 56.5",
+            "bet": 67,
+            "handle": 97
+          },
+          {
+            "label": "Under 56.5",
+            "bet": 33,
+            "handle": 3
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Georgia",
+            "bet": 81,
+            "handle": 59
+          },
+          {
+            "label": "Ole Miss",
+            "bet": 19,
+            "handle": 41
+          }
+        ]
+      }
+    },
+    "401856739": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Oklahoma +6.5",
+            "bet": 23,
+            "handle": 39
+          },
+          {
+            "label": "Florida -6.5",
+            "bet": 77,
+            "handle": 61
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 44.5",
+            "bet": 50,
+            "handle": 0
+          },
+          {
+            "label": "Under 44.5",
+            "bet": 50,
+            "handle": 100
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Oklahoma",
+            "bet": 14,
+            "handle": 17
+          },
+          {
+            "label": "Florida",
+            "bet": 86,
+            "handle": 83
+          }
+        ]
+      }
+    },
+    "401870795": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Liberty -16.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "New Mexico State +16.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 46.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 46.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Liberty",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "New Mexico State",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      }
+    },
+    "401856856": {
+      "spread": {
+        "sides": [
+          {
+            "label": "West Virginia +16.5",
+            "bet": 92,
+            "handle": 70
+          },
+          {
+            "label": "Texas Tech -16.5",
+            "bet": 8,
+            "handle": 30
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 65.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 65.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "West Virginia",
+            "bet": 6,
+            "handle": 79
+          },
+          {
+            "label": "Texas Tech",
+            "bet": 94,
+            "handle": 21
+          }
+        ]
+      }
+    },
+    "401864535": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Wyoming +6",
+            "bet": 75,
+            "handle": 99
+          },
+          {
+            "label": "UNLV -6",
+            "bet": 25,
+            "handle": 1
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 48.5",
+            "bet": 100,
+            "handle": 100
+          },
+          {
+            "label": "Under 48.5",
+            "bet": 0,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Wyoming",
+            "bet": 20,
+            "handle": 0
+          },
+          {
+            "label": "UNLV",
+            "bet": 80,
+            "handle": 100
+          }
+        ]
+      }
+    },
+    "401860912": {
+      "spread": {
+        "sides": [
+          {
+            "label": "Texas State +6.5",
+            "bet": 50,
+            "handle": 6
+          },
+          {
+            "label": "Oregon State -6.5",
+            "bet": 50,
+            "handle": 94
+          }
+        ]
+      },
+      "total": {
+        "sides": [
+          {
+            "label": "Over 71.5",
+            "bet": 89,
+            "handle": 100
+          },
+          {
+            "label": "Under 71.5",
+            "bet": 11,
+            "handle": 0
+          }
+        ]
+      },
+      "moneyline": {
+        "sides": [
+          {
+            "label": "Texas State",
+            "bet": 0,
+            "handle": 0
+          },
+          {
+            "label": "Oregon State",
+            "bet": 100,
+            "handle": 100
+          }
+        ]
+      }
+    }
+  }
+}

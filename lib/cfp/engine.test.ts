@@ -179,6 +179,17 @@ describe("ranking adjustment", () => {
     expect(result.formulaOrder.indexOf("T1")).toBeGreaterThan(result.formulaOrder.indexOf("T8"));
   });
 
+  it("does not count a postseason game as a regular-season loss", () => {
+    const teams = Array.from({ length: 8 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
+    const order = teams.map((item) => item.id);
+    const bowl = { ...future("bowl", "T1", "T8"), seasonType: "postseason" as const, week: 1 };
+    const scenario = emptyScenario();
+    scenario.picks.bowl = "T8";
+    const result = simulate(season(teams, [bowl], order), scenario, format, ranking);
+    const baseline = simulate(season(teams, [], order), emptyScenario(), format, ranking);
+    expect(result.formulaOrder).toEqual(baseline.formulaOrder);
+  });
+
   it("puts a loser behind a worse team that beat them", () => {
     const teams = Array.from({ length: 6 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
     const order = teams.map((item) => item.id);
@@ -186,6 +197,36 @@ describe("ranking adjustment", () => {
     scenario.picks.g = "T6";
     const result = simulate(season(teams, [future("g", "T1", "T6")], order), scenario, format, ranking);
     expect(result.formulaOrder.indexOf("T1")).toBeGreaterThan(result.formulaOrder.indexOf("T6"));
+  });
+});
+
+describe("conference title", () => {
+  it("does not call second place a tie for the title", () => {
+    const teams = ["Leader", "Second", "Third", "Fourth"].map((id) => team(id, "Big Ten", "power"));
+    const games = [
+      played("a", "Leader", "Second", 1, 0, true),
+      played("b", "Leader", "Third", 1, 0, true),
+      played("c", "Second", "Fourth", 1, 0, true),
+      played("d", "Third", "Fourth", 1, 0, true),
+    ];
+    const result = simulate(season(teams, games, ["Second", "Third", "Leader", "Fourth"]), emptyScenario(), format, ranking);
+    expect(result.champions["Big Ten"].tied).toEqual([]);
+    expect(result.champions["Big Ten"].teamId).toBe("Second");
+  });
+
+  it("leaves a two-team tie to the projected title game", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true)];
+    const result = simulate(season(teams, games, ["B", "A", "C"]), emptyScenario(), format, ranking);
+    expect(result.champions.SEC.tied).toEqual([]);
+    expect(result.champions.SEC.teamId).toBe("B");
+  });
+
+  it("asks the visitor when three or more teams share the best record", () => {
+    const teams = ["A", "B", "C", "D"].map((id) => team(id, "MAC", "group"));
+    const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
+    const result = simulate(season(teams, games, ["A", "B", "C", "D"]), emptyScenario(), format, ranking);
+    expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
   });
 });
 

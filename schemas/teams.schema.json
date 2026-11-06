@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "minItems": 120,
+  "maxItems": 150,
+  "items": {
+    "type": "object",
+    "required": ["id", "school", "conference", "tier", "logo"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "school": { "type": "string", "minLength": 1 },
+      "conference": { "type": "string", "minLength": 1 },
+      "tier": { "enum": ["power", "group", "independent"] },
+      "logo": { "type": "string", "minLength": 1 }
+    }
+  }
+}

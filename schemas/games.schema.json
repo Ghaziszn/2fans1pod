@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "minItems": 100,
+  "items": {
+    "type": "object",
+    "required": ["id", "week", "homeId", "awayId", "homeName", "awayName", "completed"],
+    "properties": {
+      "id": { "type": "string", "minLength": 1 },
+      "week": { "type": "integer" },
+      "completed": { "type": "boolean" },
+      "spread": { "type": ["string", "null"] }
+    }
+  }
+}

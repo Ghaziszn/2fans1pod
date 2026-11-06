@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["cfp", "order"],
+  "properties": {
+    "cfp": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["teamId", "rank"],
+        "properties": {
+          "teamId": { "type": "string" },
+          "rank": { "type": "integer" }
+        }
+      }
+    },
+    "order": { "type": "array", "minItems": 120, "items": { "type": "string" } }
+  }
+}
