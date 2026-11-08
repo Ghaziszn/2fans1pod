@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { teamInk } from "@/components/team/TeamMark";
@@ -304,6 +305,7 @@ function PhoneGame({
   teams: Map<string, Team>;
   onPick: (slotId: string, teamId: string) => void;
 }) {
+  const reduceMotion = useReducedMotion();
   const sides = [
     { id: slot.teamA, seed: slot.seedA },
     { id: slot.teamB, seed: slot.seedB },
@@ -329,16 +331,18 @@ function PhoneGame({
         const selected = slot.winnerId === side.id;
         const ink = team ? teamInk(team.color) : "#16181d";
         return (
-          <button
+          <motion.button
             key={side.id}
             type="button"
             aria-pressed={selected}
             aria-label={`${team?.school ?? side.id}, seed ${side.seed ?? ""}`}
-            className="flex min-h-16 w-full items-center gap-3 border-b border-line px-3 text-left motion-reduce:transition-none"
+            className="flex min-h-16 w-full items-center gap-3 border-b border-line px-3 text-left"
+            initial={reduceMotion ? false : { x: 16, opacity: 0 }}
+            animate={{ x: 0, opacity: selected ? 1 : 0.55 }}
+            transition={{ duration: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
             style={{
               background: selected && team ? team.color : "transparent",
               color: selected ? ink : "var(--ink)",
-              opacity: selected ? 1 : 0.55,
             }}
             onClick={() => onPick(slot.id, side.id)}
           >
@@ -348,7 +352,7 @@ function PhoneGame({
               <span className="block truncate text-lg font-medium leading-tight">{team?.school ?? side.id}</span>
               <span className="block text-xs uppercase tracking-wide">{sideNote(selected, slot.round, side.seed)}</span>
             </span>
-          </button>
+          </motion.button>
         );
       })}
       <p className="px-3 pt-3 text-sm">{resultLine}</p>
@@ -382,6 +386,7 @@ function Match({
   teams: Map<string, Team>;
   onPick: (slotId: string, teamId: string) => void;
 }) {
+  const reduceMotion = useReducedMotion();
   const sides = [
     { id: slot.teamA, team: slot.teamA ? teams.get(slot.teamA) : undefined, seed: slot.seedA },
     { id: slot.teamB, team: slot.teamB ? teams.get(slot.teamB) : undefined, seed: slot.seedB },
@@ -393,17 +398,19 @@ function Match({
         const selected = slot.winnerId === side.id;
         const ink = side.team ? teamInk(side.team.color) : "#16181d";
         return (
-          <button
+          <motion.button
             key={side.id}
             type="button"
             aria-pressed={selected}
             aria-label={`${side.team?.school ?? side.id}, seed ${side.seed ?? ""}`}
             className="flex w-full items-center gap-1.5 px-1.5 text-left"
+            initial={reduceMotion ? false : { x: 12, opacity: 0 }}
+            animate={{ x: 0, opacity: selected ? 1 : 0.45 }}
+            transition={{ duration: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
             style={{
               height: sides.length === 1 ? MATCH : ROW,
               background: selected && side.team ? side.team.color : "transparent",
               color: selected ? ink : "var(--ink)",
-              opacity: selected ? 1 : 0.45,
               boxShadow: index > 0 ? `inset 0 1px 0 ${LINE}` : undefined,
             }}
             onClick={() => onPick(slot.id, side.id as string)}
@@ -411,7 +418,7 @@ function Match({
             <span className="nums w-3.5 shrink-0 text-center text-[10px] font-semibold">{side.seed ?? "–"}</span>
             {side.team?.logo ? <img src={side.team.logo} alt="" className="h-4 w-4 shrink-0 bg-white object-contain" /> : null}
             <span className="min-w-0 flex-1 truncate text-[12px] font-medium leading-none">{side.team?.school ?? side.id}</span>
-          </button>
+          </motion.button>
         );
       })}
     </div>

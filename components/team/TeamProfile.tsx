@@ -119,7 +119,7 @@ function PercentBar({ label, value, color }: { label: string; value: number | nu
     <div className="mt-1 grid grid-cols-[4.5rem_1fr_2.5rem] items-center gap-2 text-sm">
       <span className="text-muted">{label}</span>
       <span className="h-3 overflow-hidden rounded-full bg-line">
-        <span className="block h-full rounded-full" style={{ width: `${value ?? 0}%`, background: color }} />
+        <span key={value ?? "none"} className="stat-bar block h-full rounded-full" style={{ width: `${value ?? 0}%`, background: color }} />
       </span>
       <span className="nums text-right">{value == null ? "—" : value}</span>
     </div>

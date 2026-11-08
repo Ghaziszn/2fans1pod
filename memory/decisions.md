@@ -2,6 +2,11 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (slot motion)
+
+- **A team slides into a bracket slot when they arrive there.** The move is 180ms. Reduced motion skips it.
+- **The team-page percentile bars grow from the left.** Same 180ms, and reduced motion skips that too.
+
 ## 2026-11-08 (ranking shuffle)
 
 - **Dragging the list says “Ordered by you.”** Reset to formula puts the formula back in charge.

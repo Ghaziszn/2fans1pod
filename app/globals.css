@@ -57,6 +57,16 @@ h1, h2, h3, .display {
 
 .nums { font-variant-numeric: tabular-nums; }
 
+@keyframes grow-bar {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.stat-bar {
+  transform-origin: left center;
+  animation: grow-bar 180ms ease-out;
+}
+
 a { color: inherit; }
 
 :focus-visible {

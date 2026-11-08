@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (slot motion)
+
+- Picking Ohio State in the first round put them in the quarterfinal, and that row slid in from the right. With reduced motion on, the same pick changed the slot and did not slide. Alabama’s percentile bars use a 180ms grow.
+
 ## 2026-11-08 (ranking shuffle)
 
 - The rankings list now says “Ordered by you” after a drag or a nudge. Simulate replays that shuffle. On a fresh visit the button is quiet. After moving Georgia and Miami, the replay slid them back into the new order.
