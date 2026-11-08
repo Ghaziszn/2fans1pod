@@ -264,6 +264,26 @@ describe("wins out on a shared game", () => {
     expect(result.games.find((game) => game.id === "g")?.winnerId).toBe("Underdog");
   });
 
+  it("leaves a title pick alone when the team winning out is not in that game", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true), future("g", "C", "A")];
+    const title = { id: "ccg:SEC", homeId: "A", awayId: "B" };
+    let scenario = emptyScenario();
+    scenario.picks["ccg:SEC"] = "B";
+    scenario = withWinOut(scenario, "C", games, "SEC", title);
+    expect(scenario.picks["ccg:SEC"]).toBe("B");
+    const result = simulate(season(teams, games, ["A", "B", "C"]), scenario, format, ranking);
+    expect(result.champions.SEC.teamId).toBe("B");
+  });
+
+  it("gives the title game to a team that wins out and is actually playing in it", () => {
+    const games = [future("g", "A", "B")];
+    const title = { id: "ccg:SEC", homeId: "A", awayId: "B" };
+    let scenario = withWinOut(emptyScenario(), "A", games, "SEC", title);
+    scenario = withWinOut(scenario, "B", games, "SEC", title);
+    expect(scenario.picks["ccg:SEC"]).toBe("B");
+  });
+
   it("ignores a title-game pick for a team that is not playing", () => {
     const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
     const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true)];

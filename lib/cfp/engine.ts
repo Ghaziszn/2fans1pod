@@ -352,7 +352,13 @@ function writeSentence(
   return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`;
 }
 
-export function withWinOut(scenario: Scenario, teamId: string, games: Game[], conference: string | undefined): Scenario {
+export function withWinOut(
+  scenario: Scenario,
+  teamId: string,
+  games: Game[],
+  conference: string | undefined,
+  titleGame?: { id: string; homeId: string; awayId: string } | null,
+): Scenario {
   const turningOff = scenario.winOut.includes(teamId);
   const picks = { ...scenario.picks };
   const involved = games.filter(
@@ -367,7 +373,7 @@ export function withWinOut(scenario: Scenario, teamId: string, games: Game[], co
     return { ...scenario, winOut: scenario.winOut.filter((id) => id !== teamId), picks };
   }
   for (const game of involved) picks[game.id] = teamId;
-  if (titleId) picks[titleId] = teamId;
+  if (titleGame && (titleGame.homeId === teamId || titleGame.awayId === teamId)) picks[titleGame.id] = teamId;
   return { ...scenario, winOut: [...scenario.winOut, teamId], picks };
 }
 

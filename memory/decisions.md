@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (title pick)
+
+- **Wins out only writes the title-game winner when that team is one of the two teams playing.** A team outside the game keeps its own wins and leaves the championship pick you already made.
+
 ## 2026-11-08 (wins out)
 
 - **Wins out means that team wins every remaining game, including a game against another team that also has wins out.** The team clicked later takes the shared game. A title-game pick for a team that is not in that game is ignored.

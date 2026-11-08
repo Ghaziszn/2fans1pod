@@ -93,7 +93,13 @@ export function Simulator() {
 
   const toggleWinOut = (teamId: string) => {
     const conference = data.teams.find((team) => team.id === teamId)?.conference;
-    setScenario((current) => withWinOut(current, teamId, data.games, conference));
+    setScenario((current) => {
+      const draft = withWinOut(current, teamId, data.games, conference);
+      if (!draft.winOut.includes(teamId) || !conference) return draft;
+      const title = simulate(data, draft, cfpFormat, rankingConfig).games.find((game) => game.id === `ccg:${conference}`);
+      if (!title || (title.homeId !== teamId && title.awayId !== teamId)) return draft;
+      return withWinOut(current, teamId, data.games, conference, title);
+    });
   };
 
   if (data.teams.length === 0) {
@@ -107,6 +113,7 @@ export function Simulator() {
     return !contenderIds.has(game.homeId) && !contenderIds.has(game.awayId);
   });
   const weeks = [...new Set(otherGames.map((game) => game.week))].sort((a, b) => a - b);
+  const winnerById = new Map(result.games.map((game) => [game.id, game.winnerId]));
 
   const copyLink = async () => {
     try {
@@ -206,7 +213,7 @@ export function Simulator() {
               showOthers={showOthers}
               weeks={weeks}
               otherGames={otherGames}
-              order={data.rankings.order}
+              winnerById={winnerById}
             />
             <RankList
               order={result.order}
@@ -324,7 +331,7 @@ function ScenarioBuilder({
   showOthers,
   weeks,
   otherGames,
-  order,
+  winnerById,
 }: {
   board: ContenderGroup[];
   independents: string[];
@@ -342,7 +349,7 @@ function ScenarioBuilder({
   showOthers: boolean;
   weeks: number[];
   otherGames: Game[];
-  order: string[];
+  winnerById: Map<string, string>;
 }) {
   const group = board.find((item) => item.conference === focusConference);
   const choices = focusConference === "Independents" ? independents : [...(group?.shown ?? []), ...(group?.hidden ?? [])];
@@ -398,7 +405,7 @@ function ScenarioBuilder({
               {otherGames
                 .filter((game) => game.week === week)
                 .map((game) => {
-                  const winner = scenario.picks[game.id] ?? (order.indexOf(game.homeId) <= order.indexOf(game.awayId) ? game.homeId : game.awayId);
+                  const winner = winnerById.get(game.id) ?? game.homeId;
                   return (
                     <div key={game.id} className="mt-2 flex flex-wrap items-center justify-between gap-2 border-b border-line py-2">
                       {teams.has(game.awayId) && teams.has(game.homeId) ? (

@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (title pick)
+
+- Winning out with Alabama was erasing a Kentucky win in the projected SEC title. Kentucky still shows W after Alabama wins out, and Georgia shows L. The every-other-game list now uses the same winner as the simulator.
+
 ## 2026-11-08 (wins out)
 
 - If Alabama and Auburn both won out, the higher rank kept the Iron Bowl. The team clicked later now wins that game. Auburn’s row shows W and Alabama’s shows L.
