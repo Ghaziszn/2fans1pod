@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (neutral site)
+
+- Army–Navy was marked Away. The Army page now says Neutral for Week 15, TCU’s Dublin game says Neutral, and Army’s simulator row says Neutral next to Navy.
+
 ## 2026-11-08 (phone bracket)
 
 - A phone was still a sideways tree. It is now a list: Miami, Georgia, Utah, and Indiana show as byes, then each game is a card. Tapping Boise State carried them to the title. Tapping the first-round favorite again put Miami back on top. A wide window still shows the tree.

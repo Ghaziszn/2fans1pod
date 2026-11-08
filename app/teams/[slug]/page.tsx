@@ -92,7 +92,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
             return (
               <li key={game.id} className="flex min-h-11 flex-wrap items-center gap-3 py-2">
                 <span className="nums w-16 shrink-0 text-sm text-muted">Week {game.week}</span>
-                <span className="w-12 shrink-0 text-xs uppercase tracking-wide text-muted">{home ? "Home" : "Away"}</span>
+                <span className="w-20 shrink-0 text-xs uppercase tracking-wide text-muted">{game.neutralSite ? "Neutral" : home ? "Home" : "Away"}</span>
                 {opponentTeam ? (
                   <Link className="min-w-0 flex-1" href={pair}>
                     <TeamMark team={opponentTeam} size="sm" />

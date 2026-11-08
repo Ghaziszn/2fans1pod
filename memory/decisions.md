@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (neutral site)
+
+- **A neutral-site game is labeled Neutral or vs, not Home or Away.** Army–Navy at MetLife is the remaining one.
+
 ## 2026-11-08 (phone bracket)
 
 - **On a phone, the bracket is a vertical list: bye cards, then each game.** The connecting-line tree stays on wider screens.
