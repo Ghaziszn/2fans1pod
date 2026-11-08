@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (any matchup)
+
+- A pair that is not a saved rivalry page was showing the first two teams, then jumping to the names in the address. It now waits and opens the pair from the address. A missing page still says it was not found.
+
 ## 2026-11-08 (contender list)
 
 - Week 10 was still hiding teams who can win their league, behind a September cap. From week 6 on, those teams are on the main list. Illinois is back on the Big Ten list.

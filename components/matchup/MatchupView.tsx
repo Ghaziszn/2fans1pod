@@ -45,6 +45,7 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
   const data = useMemo(() => loadSeason(), []);
   const reduceMotion = useReducedMotion();
   const [slug, setSlug] = useState(initialSlug);
+  const [pathReady, setPathReady] = useState(Boolean(initialSlug));
   const [leftId, setLeftId] = useState(data.teams[0]?.id ?? "");
   const [rightId, setRightId] = useState(data.teams[1]?.id ?? "");
 
@@ -53,9 +54,11 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
     const path = window.location.pathname.replace(/\/$/, "");
     const marker = "/matchup/";
     const index = path.indexOf(marker);
-    if (index === -1) return;
-    const next = decodeURIComponent(path.slice(index + marker.length));
-    if (next) setSlug(next);
+    if (index !== -1) {
+      const next = decodeURIComponent(path.slice(index + marker.length));
+      if (next) setSlug(next);
+    }
+    setPathReady(true);
   }, [initialSlug]);
 
   const pair = slug ? parseMatchupSlug(data, slug) : null;
@@ -73,6 +76,8 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
     }, 50);
     return () => window.clearTimeout(id);
   }, [heading]);
+
+  if (!pathReady) return null;
 
   if (!pair) {
     return (
