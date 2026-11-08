@@ -54,7 +54,7 @@ function resolveScheduled(
   const played = actualWinner(game);
   if (played) return played;
   const picked = scenario.picks[game.id];
-  if (picked) return picked;
+  if (picked === game.homeId || picked === game.awayId) return picked;
   const homeOut = scenario.winOut.includes(game.homeId);
   const awayOut = scenario.winOut.includes(game.awayId);
   if (homeOut && !awayOut) return game.homeId;
@@ -144,7 +144,8 @@ function championForConference(
   const away = teams.find((team) => team.id === awayId);
   const projectedId = `ccg:${conference}`;
   const winner = (() => {
-    if (scenario.picks[projectedId]) return scenario.picks[projectedId];
+    const picked = scenario.picks[projectedId];
+    if (picked === homeId || picked === awayId) return picked;
     const homeOut = scenario.winOut.includes(homeId);
     const awayOut = scenario.winOut.includes(awayId);
     if (homeOut && !awayOut) return homeId;
@@ -349,6 +350,25 @@ function writeSentence(
   }
   if (!last) return "Pick the remaining games to see the bracket.";
   return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`;
+}
+
+export function withWinOut(scenario: Scenario, teamId: string, games: Game[], conference: string | undefined): Scenario {
+  const turningOff = scenario.winOut.includes(teamId);
+  const picks = { ...scenario.picks };
+  const involved = games.filter(
+    (game) => !game.completed && game.seasonType === "regular" && (game.homeId === teamId || game.awayId === teamId),
+  );
+  const titleId = conference ? `ccg:${conference}` : "";
+  if (turningOff) {
+    for (const game of involved) {
+      if (picks[game.id] === teamId) delete picks[game.id];
+    }
+    if (titleId && picks[titleId] === teamId) delete picks[titleId];
+    return { ...scenario, winOut: scenario.winOut.filter((id) => id !== teamId), picks };
+  }
+  for (const game of involved) picks[game.id] = teamId;
+  if (titleId) picks[titleId] = teamId;
+  return { ...scenario, winOut: [...scenario.winOut, teamId], picks };
 }
 
 export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat, ranking: RankingConfig): SimResult {

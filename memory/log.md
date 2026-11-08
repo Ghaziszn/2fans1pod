@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (wins out)
+
+- If Alabama and Auburn both won out, the higher rank kept the Iron Bowl. The team clicked later now wins that game. Auburn’s row shows W and Alabama’s shows L.
+
 ## 2026-11-08 (kickoff time)
 
 - Future games with no kickoff were stored as 05:00 UTC. The schedule treated that as 11 PM the night before. Those games now say TBD and stay on the date in the feed.

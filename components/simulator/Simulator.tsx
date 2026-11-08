@@ -7,7 +7,7 @@ import { renderBracketPng } from "@/components/simulator/bracketImage";
 import { RankList } from "@/components/simulator/RankList";
 import { InfoTip } from "@/components/info/InfoTip";
 import { TeamMark, teamInk } from "@/components/team/TeamMark";
-import { contenderBoard, simulate } from "@/lib/cfp/engine";
+import { contenderBoard, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
 import type { ChampState, ContenderGroup, Game, Scenario, Team } from "@/lib/cfp/types";
 import { cfpFormat, loadProfile, loadSeason, matchupSlug, rankingConfig } from "@/lib/load";
@@ -92,19 +92,8 @@ export function Simulator() {
   };
 
   const toggleWinOut = (teamId: string) => {
-    setScenario((current) => {
-      const on = current.winOut.includes(teamId);
-      const picks = { ...current.picks };
-      for (const game of data.games) {
-        if (!game.completed && (game.homeId === teamId || game.awayId === teamId)) delete picks[game.id];
-      }
-      delete picks[`ccg:${data.teams.find((team) => team.id === teamId)?.conference}`];
-      return {
-        ...current,
-        winOut: on ? current.winOut.filter((id) => id !== teamId) : [...current.winOut, teamId],
-        picks,
-      };
-    });
+    const conference = data.teams.find((team) => team.id === teamId)?.conference;
+    setScenario((current) => withWinOut(current, teamId, data.games, conference));
   };
 
   if (data.teams.length === 0) {

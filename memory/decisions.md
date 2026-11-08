@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (wins out)
+
+- **Wins out means that team wins every remaining game, including a game against another team that also has wins out.** The team clicked later takes the shared game. A title-game pick for a team that is not in that game is ignored.
+
 ## 2026-11-08 (contender list)
 
 - **The 8- and 5-team cap applies through week 5.** From week 6 on, every team that can still catch the conference leader is on the main list. The “Still alive” group is only for the early weeks.

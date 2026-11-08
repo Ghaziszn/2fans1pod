@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { contenderBoard, isAlive, simulate } from "./engine";
+import { contenderBoard, isAlive, simulate, withWinOut } from "./engine";
 import { decodeScenario, encodeScenario, emptyScenario } from "./share";
 import type { CfpFormat, Game, RankingConfig, SeasonData, Team } from "./types";
 
@@ -251,6 +251,26 @@ describe("conference title", () => {
     const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
     const result = simulate(season(teams, games, ["A", "B", "C", "D"]), emptyScenario(), format, ranking);
     expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
+  });
+});
+
+describe("wins out on a shared game", () => {
+  it("gives the head-to-head to the team that most recently wins out", () => {
+    const teams = ["Favorite", "Underdog"].map((id) => team(id, "SEC", "power"));
+    const games = [future("g", "Favorite", "Underdog")];
+    let scenario = withWinOut(emptyScenario(), "Favorite", games, "SEC");
+    scenario = withWinOut(scenario, "Underdog", games, "SEC");
+    const result = simulate(season(teams, games, ["Favorite", "Underdog"]), scenario, format, ranking);
+    expect(result.games.find((game) => game.id === "g")?.winnerId).toBe("Underdog");
+  });
+
+  it("ignores a title-game pick for a team that is not playing", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true)];
+    const scenario = emptyScenario();
+    scenario.picks["ccg:SEC"] = "C";
+    const result = simulate(season(teams, games, ["A", "B", "C"]), scenario, format, ranking);
+    expect(result.champions.SEC.teamId).toBe("A");
   });
 });
 
