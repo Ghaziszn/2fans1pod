@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (phone bracket)
+
+- **On a phone, the bracket is a vertical list: bye cards, then each game.** The connecting-line tree stays on wider screens.
+
 ## 2026-11-08 (title pick)
 
 - **Wins out only writes the title-game winner when that team is one of the two teams playing.** A team outside the game keeps its own wins and leaves the championship pick you already made.

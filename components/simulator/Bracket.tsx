@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { teamInk } from "@/components/team/TeamMark";
+import { TeamMark, teamInk } from "@/components/team/TeamMark";
 import type { BracketSlot, Team } from "@/lib/cfp/types";
 
 const LATER: Record<string, string[]> = {
@@ -48,10 +48,12 @@ export function Bracket({
     <section>
       <div className="flex flex-wrap items-end justify-between gap-3">
         <h2 className="text-3xl">Play the bracket</h2>
-        <p className="text-sm text-muted">Tap a team to send them on. Seeds 1–4 start in the quarterfinals. Swipe sideways on a phone.</p>
+        <p className="text-sm text-muted">Tap a team to send them on. Seeds 1–4 have a bye into the quarterfinals.</p>
       </div>
 
-      <div className="mt-2 overflow-x-auto pb-16 pt-7">
+      <PhoneBracket slots={slots} teams={teams} onPick={onPick} />
+
+      <div className="mt-2 hidden overflow-x-auto pb-16 pt-7 md:block">
         <div className="flex w-max min-w-full items-center justify-center">
           <Half side="left" match={match} />
           <GameElbow toward="right" />
@@ -168,6 +170,110 @@ function PairElbow({ toward }: { toward: "left" | "right" }) {
           ...(toward === "right" ? { left: 14 } : { right: 14 }),
         }}
       />
+    </div>
+  );
+}
+
+const ROUNDS = ["First round", "Quarterfinal", "Semifinal", "Championship"] as const;
+
+function PhoneBracket({
+  slots,
+  teams,
+  onPick,
+}: {
+  slots: BracketSlot[];
+  teams: Map<string, Team>;
+  onPick: (slotId: string, teamId: string) => void;
+}) {
+  const byes = slots
+    .filter((slot) => slot.round === "Quarterfinal")
+    .map((slot) => {
+      const aIsBye = (slot.seedA ?? 99) <= 4;
+      return { id: aIsBye ? slot.teamA : slot.teamB, seed: aIsBye ? slot.seedA : slot.seedB };
+    })
+    .filter((bye): bye is { id: string; seed: number | null } => Boolean(bye.id))
+    .sort((a, b) => (a.seed ?? 99) - (b.seed ?? 99));
+  const champion = slots.find((slot) => slot.id === "final");
+  const champTeam = champion?.winnerId ? teams.get(champion.winnerId) : undefined;
+
+  return (
+    <div className="mt-4 grid gap-6 md:hidden">
+      <section>
+        <h3 className="text-sm uppercase tracking-wide text-muted">Byes</h3>
+        <ul className="mt-2 grid gap-2">
+          {byes.map((bye) => (
+            <li key={bye.id} className="flex min-h-11 items-center rounded-md border border-line bg-surface px-3">
+              <TeamMark team={teams.get(bye.id)} seed={bye.seed} />
+              <span className="ml-auto text-xs uppercase tracking-wide text-muted">Bye</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+      {ROUNDS.map((round) => (
+        <section key={round}>
+          <h3 className="text-sm uppercase tracking-wide text-muted">{round}</h3>
+          <ul className="mt-2 grid gap-3">
+            {slots
+              .filter((slot) => slot.round === round)
+              .slice()
+              .sort((a, b) => Math.min(a.seedA ?? 99, a.seedB ?? 99) - Math.min(b.seedA ?? 99, b.seedB ?? 99))
+              .map((slot) => (
+                <li key={slot.id}>
+                  <PhoneGame slot={slot} teams={teams} onPick={onPick} />
+                </li>
+              ))}
+          </ul>
+        </section>
+      ))}
+      {champTeam ? (
+        <p className="text-lg">
+          Champion: <span className="font-medium">{champTeam.school}</span>
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
+function PhoneGame({
+  slot,
+  teams,
+  onPick,
+}: {
+  slot: BracketSlot;
+  teams: Map<string, Team>;
+  onPick: (slotId: string, teamId: string) => void;
+}) {
+  const sides = [
+    { id: slot.teamA, seed: slot.seedA },
+    { id: slot.teamB, seed: slot.seedB },
+  ].filter((side): side is { id: string; seed: number | null } => Boolean(side.id));
+
+  return (
+    <div className="overflow-hidden rounded-md border border-line bg-surface">
+      {sides.map((side) => {
+        const team = teams.get(side.id);
+        const selected = slot.winnerId === side.id;
+        const ink = team ? teamInk(team.color) : "#16181d";
+        return (
+          <button
+            key={side.id}
+            type="button"
+            aria-pressed={selected}
+            aria-label={`${team?.school ?? side.id}, seed ${side.seed ?? ""}`}
+            className="flex min-h-11 w-full items-center gap-2 px-3 text-left"
+            style={{
+              background: selected && team ? team.color : "transparent",
+              color: selected ? ink : "var(--ink)",
+            }}
+            onClick={() => onPick(slot.id, side.id)}
+          >
+            <span className="nums w-5 shrink-0 text-xs">{side.seed ?? "–"}</span>
+            {team?.logo ? <img src={team.logo} alt="" className="h-6 w-6 shrink-0 bg-white object-contain" /> : null}
+            <span className="min-w-0 flex-1 truncate font-medium">{team?.school ?? side.id}</span>
+          </button>
+        );
+      })}
+      <p className="border-t border-line px-3 py-2 text-xs text-muted">{slot.venueNote}</p>
     </div>
   );
 }

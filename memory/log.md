@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (phone bracket)
+
+- A phone was still a sideways tree. It is now a list: Miami, Georgia, Utah, and Indiana show as byes, then each game is a card. Tapping Boise State carried them to the title. Tapping the first-round favorite again put Miami back on top. A wide window still shows the tree.
+
 ## 2026-11-08 (title pick)
 
 - Winning out with Alabama was erasing a Kentucky win in the projected SEC title. Kentucky still shows W after Alabama wins out, and Georgia shows L. The every-other-game list now uses the same winner as the simulator.
