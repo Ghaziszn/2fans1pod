@@ -5,19 +5,25 @@ import { SortableContext, arrayMove, sortableKeyboardCoordinates, useSortable, v
 import { CSS } from "@dnd-kit/utilities";
 import { ChevronDown, ChevronUp, GripVertical } from "lucide-react";
 import { motion, useReducedMotion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TeamMark } from "@/components/team/TeamMark";
 import type { Team } from "@/lib/cfp/types";
+
+function sameOrder(left: string[], right: string[]) {
+  return left.length === right.length && left.every((id, index) => id === right[index]);
+}
 
 function Row({
   id,
   rank,
   team,
+  instant,
   onMove,
 }: {
   id: string;
   rank: number;
   team: Team | undefined;
+  instant: boolean;
   onMove: (id: string, direction: -1 | 1) => void;
 }) {
   const reduceMotion = useReducedMotion();
@@ -28,7 +34,7 @@ function Row({
       ref={setNodeRef}
       style={style}
       layout
-      transition={{ duration: reduceMotion ? 0 : 0.18 }}
+      transition={{ duration: reduceMotion || instant ? 0 : 0.18 }}
       className="flex items-center gap-2 border-b border-line py-1"
     >
       <button type="button" className="inline-flex h-11 w-8 cursor-grab items-center justify-center text-muted" aria-label={`Drag ${team?.school ?? id}`} {...attributes} {...listeners}>
@@ -61,7 +67,28 @@ export function RankList({
   onReset: () => void;
 }) {
   const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? order : order.slice(0, 25);
+  const [preview, setPreview] = useState<string[] | null>(null);
+  const [canReplay, setCanReplay] = useState(false);
+  const seen = useRef(order);
+  const lastChange = useRef<{ from: string[]; to: string[] } | null>(null);
+  const shown = preview ?? order;
+  const visible = showAll ? shown : shown.slice(0, 25);
+
+  useEffect(() => {
+    if (sameOrder(seen.current, order)) return;
+    lastChange.current = { from: seen.current, to: order };
+    seen.current = order;
+    setCanReplay(true);
+  }, [order]);
+
+  const replay = () => {
+    const change = lastChange.current;
+    if (!change || sameOrder(change.from, change.to)) return;
+    setPreview(change.from);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setPreview(null));
+    });
+  };
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 6 } }),
     useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }),
@@ -87,19 +114,23 @@ export function RankList({
     <section>
       <div className="mb-2 flex items-end justify-between gap-3">
         <h2 className="text-3xl">Rankings</h2>
-        {manual ? (
-          <button type="button" className="min-h-11 text-sm underline" onClick={onReset}>
-            Reset to formula
+        <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1">
+          <button type="button" className="min-h-11 text-sm underline disabled:text-muted disabled:no-underline" onClick={replay} disabled={!canReplay}>
+            Simulate
           </button>
-        ) : (
-          <p className="text-sm text-muted">Drag a team to play committee.</p>
-        )}
+          {manual ? (
+            <button type="button" className="min-h-11 text-sm underline" onClick={onReset}>
+              Reset to formula
+            </button>
+          ) : null}
+        </div>
       </div>
+      <p className="mb-2 text-sm text-muted">{manual ? "Ordered by you." : "Drag a team to play committee."}</p>
       <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={onDragEnd}>
         <SortableContext items={visible} strategy={verticalListSortingStrategy}>
-          <ol>
+          <ol className={preview ? "pointer-events-none" : undefined}>
             {visible.map((id, index) => (
-              <Row key={id} id={id} rank={order.indexOf(id) + 1 || index + 1} team={teams.get(id)} onMove={onMove} />
+              <Row key={id} id={id} rank={shown.indexOf(id) + 1 || index + 1} team={teams.get(id)} instant={preview !== null} onMove={onMove} />
             ))}
           </ol>
         </SortableContext>

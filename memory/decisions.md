@@ -2,6 +2,11 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (ranking shuffle)
+
+- **Dragging the list says “Ordered by you.”** Reset to formula puts the formula back in charge.
+- **Simulate replays the last ranking shuffle.** It does not run a new scenario. The bracket is already using the current order. The button stays quiet until the order has moved once.
+
 ## 2026-11-08 (round buttons)
 
 - **The phone round buttons stick just below the full header.** The header is taller than one row because of the garbage-time switch.

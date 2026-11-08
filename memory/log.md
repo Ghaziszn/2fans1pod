@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (ranking shuffle)
+
+- The rankings list now says “Ordered by you” after a drag or a nudge. Simulate replays that shuffle. On a fresh visit the button is quiet. After moving Georgia and Miami, the replay slid them back into the new order.
+
 ## 2026-11-08 (round buttons)
 
 - The First / Quarters / Semis / Title buttons were sliding 10 pixels under the header. They now sit flush under it, and the title game stays below the buttons.
