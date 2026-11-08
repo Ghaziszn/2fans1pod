@@ -1,8 +1,10 @@
 "use client";
 
-import type { ReactNode } from "react";
-import { TeamMark, teamInk } from "@/components/team/TeamMark";
+import Link from "next/link";
+import { useRef, useState, type ReactNode } from "react";
+import { teamInk } from "@/components/team/TeamMark";
 import type { BracketSlot, Team } from "@/lib/cfp/types";
+import { matchupSlug } from "@/lib/load";
 
 const LATER: Record<string, string[]> = {
   "r1-8-9": ["qf-1", "sf-1", "final"],
@@ -174,7 +176,19 @@ function PairElbow({ toward }: { toward: "left" | "right" }) {
   );
 }
 
-const ROUNDS = ["First round", "Quarterfinal", "Semifinal", "Championship"] as const;
+const PHONE_ROUNDS = [
+  { id: "First round", short: "First", help: "Tap who wins. The higher seed is filled in until you change it." },
+  { id: "Quarterfinal", short: "Quarters", help: "Seeds 1 through 4 are already here. The other team won a first-round game." },
+  { id: "Semifinal", short: "Semis", help: "Two games. The winners play for the title." },
+  { id: "Championship", short: "Title", help: "One game. The winner is the champion." },
+] as const;
+
+function gamesInRound(slots: BracketSlot[], round: BracketSlot["round"]) {
+  return slots
+    .filter((slot) => slot.round === round)
+    .slice()
+    .sort((a, b) => Math.min(a.seedA ?? 99, a.seedB ?? 99) - Math.min(b.seedA ?? 99, b.seedB ?? 99));
+}
 
 function PhoneBracket({
   slots,
@@ -185,61 +199,88 @@ function PhoneBracket({
   teams: Map<string, Team>;
   onPick: (slotId: string, teamId: string) => void;
 }) {
+  const [roundIndex, setRoundIndex] = useState(0);
+  const listRef = useRef<HTMLDivElement>(null);
+  const round = PHONE_ROUNDS[roundIndex];
+  const games = gamesInRound(slots, round.id);
+  const champTeam = slots.find((slot) => slot.id === "final")?.winnerId;
+  const champion = champTeam ? teams.get(champTeam) : undefined;
   const byes = slots
     .filter((slot) => slot.round === "Quarterfinal")
     .map((slot) => {
       const aIsBye = (slot.seedA ?? 99) <= 4;
-      return { id: aIsBye ? slot.teamA : slot.teamB, seed: aIsBye ? slot.seedA : slot.seedB };
+      const id = aIsBye ? slot.teamA : slot.teamB;
+      const seed = aIsBye ? slot.seedA : slot.seedB;
+      return id ? `${seed} ${teams.get(id)?.school ?? id}` : "";
     })
-    .filter((bye): bye is { id: string; seed: number | null } => Boolean(bye.id))
-    .sort((a, b) => (a.seed ?? 99) - (b.seed ?? 99));
-  const champion = slots.find((slot) => slot.id === "final");
-  const champTeam = champion?.winnerId ? teams.get(champion.winnerId) : undefined;
+    .filter(Boolean)
+    .sort();
+
+  const go = (index: number) => {
+    setRoundIndex(index);
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    requestAnimationFrame(() => listRef.current?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" }));
+  };
 
   return (
-    <div className="mt-4 grid gap-6 md:hidden">
-      <section>
-        <h3 className="text-sm uppercase tracking-wide text-muted">Byes</h3>
-        <ul className="mt-2 grid gap-2">
-          {byes.map((bye) => (
-            <li key={bye.id} className="flex min-h-11 items-center rounded-md border border-line bg-surface px-3">
-              <TeamMark team={teams.get(bye.id)} seed={bye.seed} />
-              <span className="ml-auto text-xs uppercase tracking-wide text-muted">Bye</span>
+    <div className="md:hidden">
+      <div className="sticky top-16 z-30 -mx-[clamp(16px,4vw,40px)] border-b border-line bg-paper px-[clamp(16px,4vw,40px)] py-2">
+        <div className="grid grid-cols-4 gap-1" role="tablist" aria-label="Playoff rounds">
+          {PHONE_ROUNDS.map((item, index) => (
+            <button
+              key={item.id}
+              type="button"
+              role="tab"
+              aria-selected={index === roundIndex}
+              className={`min-h-11 rounded-md px-1 text-sm font-medium ${index === roundIndex ? "bg-accent text-accent-ink" : "text-muted"}`}
+              onClick={() => go(index)}
+            >
+              {item.short}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div ref={listRef} className="scroll-mt-32 pt-4">
+        <p className="text-sm text-muted">{round.help}</p>
+        {round.id === "Quarterfinal" ? <p className="mt-2 text-sm text-muted">Byes: {byes.join(", ")}.</p> : null}
+        <ul className="mt-3 grid gap-4">
+          {games.map((slot) => (
+            <li key={slot.id}>
+              <PhoneGame slot={slot} slots={slots} teams={teams} onPick={onPick} />
             </li>
           ))}
         </ul>
-      </section>
-      {ROUNDS.map((round) => (
-        <section key={round}>
-          <h3 className="text-sm uppercase tracking-wide text-muted">{round}</h3>
-          <ul className="mt-2 grid gap-3">
-            {slots
-              .filter((slot) => slot.round === round)
-              .slice()
-              .sort((a, b) => Math.min(a.seedA ?? 99, a.seedB ?? 99) - Math.min(b.seedA ?? 99, b.seedB ?? 99))
-              .map((slot) => (
-                <li key={slot.id}>
-                  <PhoneGame slot={slot} teams={teams} onPick={onPick} />
-                </li>
-              ))}
-          </ul>
-        </section>
-      ))}
-      {champTeam ? (
-        <p className="text-lg">
-          Champion: <span className="font-medium">{champTeam.school}</span>
-        </p>
-      ) : null}
+        {round.id === "Championship" && champion ? <ChampionCard team={champion} /> : null}
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          <button type="button" className="min-h-11 rounded-full border border-line px-3 text-sm font-medium disabled:opacity-40" disabled={roundIndex === 0} onClick={() => go(roundIndex - 1)}>
+            {roundIndex === 0 ? "First" : PHONE_ROUNDS[roundIndex - 1].short}
+          </button>
+          <button type="button" className="min-h-11 rounded-full bg-accent px-3 text-sm font-medium text-accent-ink disabled:opacity-40" disabled={roundIndex === PHONE_ROUNDS.length - 1} onClick={() => go(roundIndex + 1)}>
+            {roundIndex === PHONE_ROUNDS.length - 1 ? "Title" : `Next: ${PHONE_ROUNDS[roundIndex + 1].short}`}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
 
+function nextOpponent(slot: BracketSlot, slots: BracketSlot[]) {
+  const nextId = LATER[slot.id]?.[0];
+  const next = nextId ? slots.find((item) => item.id === nextId) : undefined;
+  if (!next || !slot.winnerId) return null;
+  if (next.teamA === slot.winnerId) return next.teamB;
+  if (next.teamB === slot.winnerId) return next.teamA;
+  return null;
+}
+
 function PhoneGame({
   slot,
+  slots,
   teams,
   onPick,
 }: {
   slot: BracketSlot;
+  slots: BracketSlot[];
   teams: Map<string, Team>;
   onPick: (slotId: string, teamId: string) => void;
 }) {
@@ -247,9 +288,22 @@ function PhoneGame({
     { id: slot.teamA, seed: slot.seedA },
     { id: slot.teamB, seed: slot.seedB },
   ].filter((side): side is { id: string; seed: number | null } => Boolean(side.id));
+  const winner = slot.winnerId ? teams.get(slot.winnerId) : undefined;
+  const foeId = nextOpponent(slot, slots);
+  const foe = foeId ? teams.get(foeId) : undefined;
+  const resultLine =
+    slot.round === "Championship"
+      ? winner
+        ? `${winner.school} is the champion`
+        : "Tap a team"
+      : winner
+        ? foe
+          ? `${winner.school} plays ${foe.school}`
+          : `${winner.school} moves on`
+        : "Tap a team";
 
   return (
-    <div className="overflow-hidden rounded-md border border-line bg-surface">
+    <div className="overflow-hidden rounded-lg border border-line bg-surface">
       {sides.map((side) => {
         const team = teams.get(side.id);
         const selected = slot.winnerId === side.id;
@@ -260,20 +314,39 @@ function PhoneGame({
             type="button"
             aria-pressed={selected}
             aria-label={`${team?.school ?? side.id}, seed ${side.seed ?? ""}`}
-            className="flex min-h-11 w-full items-center gap-2 px-3 text-left"
+            className="flex min-h-16 w-full items-center gap-3 border-b border-line px-3 text-left motion-reduce:transition-none"
             style={{
               background: selected && team ? team.color : "transparent",
               color: selected ? ink : "var(--ink)",
+              opacity: selected ? 1 : 0.55,
             }}
             onClick={() => onPick(slot.id, side.id)}
           >
-            <span className="nums w-5 shrink-0 text-xs">{side.seed ?? "–"}</span>
-            {team?.logo ? <img src={team.logo} alt="" className="h-6 w-6 shrink-0 bg-white object-contain" /> : null}
-            <span className="min-w-0 flex-1 truncate font-medium">{team?.school ?? side.id}</span>
+            <span className="nums w-6 shrink-0 text-center text-base font-semibold">{side.seed ?? "–"}</span>
+            {team?.logo ? <img src={team.logo} alt="" className="h-10 w-10 shrink-0 rounded-sm bg-white object-contain p-0.5" /> : null}
+            <span className="min-w-0 flex-1 truncate text-lg font-medium">{team?.school ?? side.id}</span>
+            <span className="shrink-0 text-xs uppercase tracking-wide">{selected ? (slot.round === "Championship" ? "Champion" : "Moves on") : "Pick"}</span>
           </button>
         );
       })}
-      <p className="border-t border-line px-3 py-2 text-xs text-muted">{slot.venueNote}</p>
+      <p className="px-3 pt-3 text-sm">{resultLine}</p>
+      <p className="px-3 text-xs text-muted">{slot.venueNote}</p>
+      {slot.teamA && slot.teamB ? (
+        <Link href={`/matchup/${matchupSlug(slot.teamA, slot.teamB)}/`} className="flex min-h-11 items-center px-3 text-sm underline">
+          Compare these teams
+        </Link>
+      ) : null}
+    </div>
+  );
+}
+
+function ChampionCard({ team }: { team: Team }) {
+  const ink = teamInk(team.color);
+  return (
+    <div className="mt-4 rounded-lg px-4 py-5 text-center" style={{ background: team.color, color: ink }}>
+      {team.logo ? <img src={team.logo} alt="" className="mx-auto h-16 w-16 rounded-md bg-white object-contain p-1" /> : null}
+      <p className="mt-2 text-3xl">{team.school}</p>
+      <p className="text-sm uppercase tracking-wide">Champion</p>
     </div>
   );
 }

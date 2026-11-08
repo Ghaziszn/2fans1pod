@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (phone play)
+
+- A phone now plays one round at a time. First round shows four games. Tapping Boise State says they play Indiana. Quarters shows Boise State in that game. The title card names the champion. A wide window still shows the tree.
+
 ## 2026-11-08 (scoring offense)
 
 - Every team's scoring offense was blank. It is now the average of the scores already on the schedule. Alabama's page shows 38.2 points per game, 12th, next to 21.2 allowed, 44th.

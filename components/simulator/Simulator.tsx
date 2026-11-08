@@ -246,7 +246,7 @@ export function Simulator() {
               }
             />
           </div>
-          <div className="mt-6">
+          <div className="mt-6 hidden md:block">
             <h2 className="text-xl">Compare a game</h2>
             <p className="mt-1 text-sm text-muted">These open the matchup calculator. Tapping a team in the tree still picks the winner.</p>
             <ul className="mt-3 flex flex-wrap gap-2">

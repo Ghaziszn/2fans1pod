@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (phone play)
+
+- **On a phone, the bracket is one round at a time.** First, Quarters, Semis, and Title are buttons. Each team is a large tap. The wider screen still uses the connecting-line tree.
+
 ## 2026-11-08 (scoring offense)
 
 - **Points per game on offense come from the scores in the schedule, same as points allowed.** The season feed left scoring offense blank.
