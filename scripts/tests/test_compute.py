@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.compute import ats_records, cover_side, rank_values, record_without, strength_of_schedule, win_pct
+from scripts.compute import ats_records, cover_side, points_per_game, rank_values, record_without, strength_of_schedule, win_pct
 
 
 class ScheduleTests(unittest.TestCase):
@@ -30,6 +30,10 @@ class ScheduleTests(unittest.TestCase):
         self.assertEqual(records["a"], {"wins": 1, "losses": 0, "pushes": 0})
         self.assertEqual(records["b"], {"wins": 0, "losses": 1, "pushes": 0})
         self.assertNotIn("c", records)
+
+    def test_points_per_game_uses_one_decimal(self):
+        self.assertEqual(points_per_game([48, 45, 50, 49, 56, 17, 10, 31]), 38.2)
+        self.assertIsNone(points_per_game([]))
 
     def test_ties_share_the_best_rank(self):
         ranks = rank_values([("a", 10.0), ("b", 10.0), ("c", 8.0)], higher_is_better=True)

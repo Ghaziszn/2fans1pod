@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (scoring offense)
+
+- **Points per game on offense come from the scores in the schedule, same as points allowed.** The season feed left scoring offense blank.
+
 ## 2026-11-08 (neutral site)
 
 - **A neutral-site game is labeled Neutral or vs, not Home or Away.** Army–Navy at MetLife is the remaining one.

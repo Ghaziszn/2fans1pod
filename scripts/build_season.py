@@ -17,7 +17,7 @@ from pathlib import Path
 
 import requests
 
-from scripts.compute import ats_records, rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
+from scripts.compute import ats_records, points_per_game, rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
@@ -435,10 +435,17 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         team["alternateNames"] = aliases.get(team["school"], [])
 
     results: dict[str, dict] = {team["id"]: {"wins": 0, "losses": 0, "confWins": 0, "confLosses": 0} for team in teams}
-    points_allowed: dict[str, list[int]] = {team["id"]: [] for team in teams}
+    points_scored: dict[str, list[float]] = {team["id"]: [] for team in teams}
+    points_allowed: dict[str, list[float]] = {team["id"]: [] for team in teams}
     for game in games:
         if not game["completed"] or game["homePoints"] is None or game["awayPoints"] is None:
             continue
+        if game["homeId"] in points_scored:
+            points_scored[game["homeId"]].append(game["homePoints"])
+            points_allowed[game["homeId"]].append(game["awayPoints"])
+        if game["awayId"] in points_scored:
+            points_scored[game["awayId"]].append(game["awayPoints"])
+            points_allowed[game["awayId"]].append(game["homePoints"])
         if game["homePoints"] == game["awayPoints"]:
             continue
         winner = game["homeId"] if game["homePoints"] > game["awayPoints"] else game["awayId"]
@@ -451,10 +458,6 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             results[loser]["losses"] += 1
             if game["conferenceGame"] and not game["championship"] and winner in fbs_ids:
                 results[loser]["confLosses"] += 1
-        if game["homeId"] in points_allowed:
-            points_allowed[game["homeId"]].append(game["awayPoints"])
-        if game["awayId"] in points_allowed:
-            points_allowed[game["awayId"]].append(game["homePoints"])
 
     base_elo = {team["id"]: 1500.0 for team in teams}
     elo = bundle["elo"] or update_elo(base_elo, games)
@@ -474,8 +477,9 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         raw = bundle["stats"].get(team["id"], {})
         games_played = int(raw.get("gamesPlayed") or raw.get("teamGamesPlayed") or (results[team["id"]]["wins"] + results[team["id"]]["losses"]) or 0)
         allowed = points_allowed[team["id"]]
+        scored = points_per_game(points_scored[team["id"]])
         offense = {
-            "points": raw.get("totalPointsPerGame"),
+            "points": scored if scored is not None else raw.get("totalPointsPerGame"),
             "totalYards": raw.get("yardsPerGame") or per_game(raw.get("totalYards"), games_played),
             "passYards": raw.get("netPassingYardsPerGame") or raw.get("passingYardsPerGame"),
             "rushYards": raw.get("rushingYardsPerGame"),
@@ -491,7 +495,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         if scraped_off is not None:
             offense["redZone"] = round(float(scraped_off), 1)
         defense = {
-            "points": round(sum(allowed) / len(allowed), 1) if allowed else None,
+            "points": points_per_game(allowed),
             "totalYards": None,
             "passYards": None,
             "rushYards": None,

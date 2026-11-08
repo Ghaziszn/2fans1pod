@@ -80,6 +80,13 @@ def ats_records(games: list[dict]) -> dict[str, dict[str, int]]:
     return records
 
 
+def points_per_game(scores: list[float]) -> float | None:
+    """Average points from the games we already have. One decimal, same as the defense number."""
+    if not scores:
+        return None
+    return round(sum(scores) / len(scores), 1)
+
+
 def rank_values(items: list[tuple[str, float | None]], higher_is_better: bool) -> dict[str, int]:
     """Competition rank. Ties share the best rank in the tie."""
     present = [(team_id, value) for team_id, value in items if value is not None]

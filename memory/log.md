@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (scoring offense)
+
+- Every team's scoring offense was blank. It is now the average of the scores already on the schedule. Alabama's page shows 38.2 points per game, 12th, next to 21.2 allowed, 44th.
+
 ## 2026-11-08 (neutral site)
 
 - Army–Navy was marked Away. The Army page now says Neutral for Week 15, TCU’s Dublin game says Neutral, and Army’s simulator row says Neutral next to Navy.
