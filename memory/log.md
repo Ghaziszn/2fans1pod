@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (kickoff time)
+
+- Future games with no kickoff were stored as 05:00 UTC. The schedule treated that as 11 PM the night before. Those games now say TBD and stay on the date in the feed.
+
 ## 2026-11-08 (any matchup)
 
 - A pair that is not a saved rivalry page was showing the first two teams, then jumping to the names in the address. It now waits and opens the pair from the address. A missing page still says it was not found.

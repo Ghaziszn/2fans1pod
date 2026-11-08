@@ -9,7 +9,8 @@ import { loadSeason, loadSplits, matchupSlug } from "@/lib/load";
 const zone = "America/Chicago";
 
 function kickoffUnset(iso: string) {
-  return iso.endsWith("T05:00Z");
+  // The feed uses 05:00 UTC when a kickoff is not set yet. That is not 11 PM Central.
+  return /T05:00(?::00(?:\.0+)?)?Z$/.test(iso);
 }
 
 function placed(iso: string) {
