@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (round buttons)
+
+- **The phone round buttons stick just below the full header.** The header is taller than one row because of the garbage-time switch.
+
 ## 2026-11-08 (bowl sites)
 
 - **Only the first round is at the higher seed’s home.** Quarterfinals, semifinals, and the title say the bowl site is not chosen.

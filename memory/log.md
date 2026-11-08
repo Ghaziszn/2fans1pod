@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (round buttons)
+
+- The First / Quarters / Semis / Title buttons were sliding 10 pixels under the header. They now sit flush under it, and the title game stays below the buttons.
+
 ## 2026-11-08 (bowl sites)
 
 - A quarterfinal was labeled as if it were at a team’s stadium. The first round still says “at Alabama.” The quarterfinal and the title now say “Bowl site not chosen.”

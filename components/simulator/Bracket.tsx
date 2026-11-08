@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { teamInk } from "@/components/team/TeamMark";
 import type { BracketSlot, Team } from "@/lib/cfp/types";
 import { matchupSlug } from "@/lib/load";
@@ -203,7 +203,17 @@ function PhoneBracket({
   onPick: (slotId: string, teamId: string) => void;
 }) {
   const [roundIndex, setRoundIndex] = useState(0);
+  const [headerHeight, setHeaderHeight] = useState(64);
   const listRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (!header) return;
+    const measure = () => setHeaderHeight(Math.ceil(header.getBoundingClientRect().height));
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(header);
+    return () => observer.disconnect();
+  }, []);
   const round = PHONE_ROUNDS[roundIndex];
   const games = gamesInRound(slots, round.id);
   const champTeam = slots.find((slot) => slot.id === "final")?.winnerId;
@@ -227,7 +237,7 @@ function PhoneBracket({
 
   return (
     <div className="md:hidden">
-      <div className="sticky top-16 z-30 -mx-[clamp(16px,4vw,40px)] border-b border-line bg-paper px-[clamp(16px,4vw,40px)] py-2">
+      <div className="sticky z-30 -mx-[clamp(16px,4vw,40px)] border-b border-line bg-paper px-[clamp(16px,4vw,40px)] py-2" style={{ top: headerHeight }}>
         <div className="grid grid-cols-4 gap-1" role="tablist" aria-label="Playoff rounds">
           {PHONE_ROUNDS.map((item, index) => (
             <button
@@ -243,7 +253,7 @@ function PhoneBracket({
           ))}
         </div>
       </div>
-      <div ref={listRef} className="scroll-mt-32 pt-4">
+      <div ref={listRef} className="pt-4" style={{ scrollMarginTop: headerHeight + 72 }}>
         <p className="text-sm text-muted">{round.help}</p>
         {round.id === "Quarterfinal" ? <p className="mt-2 text-sm text-muted">Byes: {byes.join(", ")}.</p> : null}
         <ul className="mt-3 grid gap-4">
