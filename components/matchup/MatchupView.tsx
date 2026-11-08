@@ -2,7 +2,7 @@
 
 import { useReducedMotion } from "motion/react";
 import { useEffect, useMemo, useState, type ReactNode } from "react";
-import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, Cell, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { InfoTip } from "@/components/info/InfoTip";
 import { AdvancedMatchup } from "@/components/stats/AdvancedStats";
 import { teamInk } from "@/components/team/TeamMark";
@@ -161,19 +161,22 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
         <section className="mt-8">
           <h2 className="text-3xl">Rank gaps</h2>
           <p className="mt-2 text-sm text-muted">Bars to the right mean {pair.left.school} has the better rank. Bars to the left mean {pair.right.school} does.</p>
-          <div className="mt-4 h-80 w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={chart} layout="vertical" margin={{ left: 16, right: 16 }}>
-                <XAxis type="number" stroke="currentColor" />
-                <YAxis type="category" dataKey="name" width={120} stroke="currentColor" tick={{ fontSize: 12 }} />
-                <Tooltip />
-                <Bar dataKey="gap" isAnimationActive={!reduceMotion} animationDuration={180}>
-                  {chart.map((row) => (
-                    <Cell key={row.name} fill={row.gap >= 0 ? "#178a45" : "#c53636"} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+          <div className="mt-4 overflow-x-auto">
+            <div className="min-w-[640px]" style={{ height: Math.max(320, chart.length * 36) }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chart} layout="vertical" margin={{ left: 8, right: 16 }}>
+                  <XAxis type="number" stroke="currentColor" />
+                  <YAxis type="category" dataKey="name" width={188} stroke="currentColor" tick={{ fontSize: 11 }} interval={0} />
+                  <Tooltip />
+                  <ReferenceLine x={0} stroke="currentColor" />
+                  <Bar dataKey="gap" isAnimationActive={!reduceMotion} animationDuration={180}>
+                    {chart.map((row) => (
+                      <Cell key={row.name} fill={row.gap >= 0 ? "#178a45" : "#c53636"} />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         </section>
       ) : null}

@@ -8,6 +8,10 @@ Newest entry on top. A few lines is enough: what we decided, what we changed, wh
 - Kept this branch's College Football Data versions of games, rankings, season, and team stats. No application code conflicted.
 - The daily data job stays turned off until this pull request is on main. The lasting Vercel address still needs `npx vercel login`.
 
+## 2026-11-08 (rank gaps)
+
+- The matchup rank-gap chart was one short box, so the stat names sat on top of each other. Each stat now has its own row. On the Iron Bowl, Alabama’s better ranks go right in green and Auburn’s go left in red. A phone can scroll the chart sideways.
+
 ## 2026-11-05 (title ties)
 
 - A clear conference leader was lumped in with the teams tied for second, so the page asked who won a title that was not tied. The question now stays on a real three-or-more tie. The made-up title game is labeled Projected.
