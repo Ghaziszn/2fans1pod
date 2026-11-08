@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (phone round labels)
+
+- **On a phone, a quarterfinal says Bye for seeds 1–4 and Advanced for the team that won a first-round game.** The 4-seed game is first, because that is the game the top first-round card feeds.
+
 ## 2026-11-08 (phone play)
 
 - **On a phone, the bracket is one round at a time.** First, Quarters, Semis, and Title are buttons. Each team is a large tap. The wider screen still uses the connecting-line tree.

@@ -184,10 +184,13 @@ const PHONE_ROUNDS = [
 ] as const;
 
 function gamesInRound(slots: BracketSlot[], round: BracketSlot["round"]) {
-  return slots
+  const games = slots
     .filter((slot) => slot.round === round)
     .slice()
     .sort((a, b) => Math.min(a.seedA ?? 99, a.seedB ?? 99) - Math.min(b.seedA ?? 99, b.seedB ?? 99));
+  // The first first-round game feeds the 4 seed, so show that quarterfinal first.
+  if (round === "Quarterfinal") games.reverse();
+  return games;
 }
 
 function PhoneBracket({
@@ -264,6 +267,13 @@ function PhoneBracket({
   );
 }
 
+function sideNote(selected: boolean, round: BracketSlot["round"], seed: number | null) {
+  if (selected) return round === "Championship" ? "Champion" : "Moves on";
+  if (round === "Quarterfinal" && (seed ?? 99) <= 4) return "Bye";
+  if (round === "Quarterfinal") return "Advanced";
+  return "";
+}
+
 function nextOpponent(slot: BracketSlot, slots: BracketSlot[]) {
   const nextId = LATER[slot.id]?.[0];
   const next = nextId ? slots.find((item) => item.id === nextId) : undefined;
@@ -324,8 +334,10 @@ function PhoneGame({
           >
             <span className="nums w-6 shrink-0 text-center text-base font-semibold">{side.seed ?? "–"}</span>
             {team?.logo ? <img src={team.logo} alt="" className="h-10 w-10 shrink-0 rounded-sm bg-white object-contain p-0.5" /> : null}
-            <span className="min-w-0 flex-1 truncate text-lg font-medium">{team?.school ?? side.id}</span>
-            <span className="shrink-0 text-xs uppercase tracking-wide">{selected ? (slot.round === "Championship" ? "Champion" : "Moves on") : "Pick"}</span>
+            <span className="min-w-0 flex-1">
+              <span className="block truncate text-lg font-medium leading-tight">{team?.school ?? side.id}</span>
+              <span className="block text-xs uppercase tracking-wide">{sideNote(selected, slot.round, side.seed)}</span>
+            </span>
           </button>
         );
       })}

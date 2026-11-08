@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (phone round labels)
+
+- Tapping Boise State now says they play Indiana. The next round opens on that game: Indiana is the bye and still the favorite, and Boise State is marked Advanced. A shared link still beats the scenario saved on the device.
+
 ## 2026-11-08 (phone play)
 
 - A phone now plays one round at a time. First round shows four games. Tapping Boise State says they play Indiana. Quarters shows Boise State in that game. The title card names the champion. A wide window still shows the tree.
