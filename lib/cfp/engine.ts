@@ -282,6 +282,7 @@ function buildBracket(field: SeededTeam[], scenario: Scenario, teams: Map<string
     }
     const school = (teamId: string | null) => (teamId ? teams.get(teamId)?.school ?? "TBD" : "TBD");
     const host = (seedA ?? 99) <= (seedB ?? 99) ? school(teamA) : school(teamB);
+    const venueNote = !teamA || !teamB ? "Bye" : round === "First round" ? `at ${host}` : "Bowl site not chosen";
     slots.push({
       id,
       round,
@@ -290,7 +291,7 @@ function buildBracket(field: SeededTeam[], scenario: Scenario, teams: Map<string
       teamA,
       teamB,
       winnerId: winner,
-      venueNote: teamA && teamB ? `at ${host}` : "Bye",
+      venueNote,
     });
     return winner;
   };

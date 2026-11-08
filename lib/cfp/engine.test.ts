@@ -104,6 +104,16 @@ function fieldTeams() {
 }
 
 describe("playoff field", () => {
+  it("keeps the first round at the higher seed and leaves later rounds at a bowl", () => {
+    const { teams, order } = fieldTeams();
+    const result = simulate(season(teams, [], order), emptyScenario(), format, ranking);
+    const first = result.bracket.find((slot) => slot.id === "r1-5-12");
+    const host = (first?.seedA ?? 99) <= (first?.seedB ?? 99) ? first?.teamA : first?.teamB;
+    expect(first?.venueNote).toBe(`at ${host}`);
+    expect(result.bracket.find((slot) => slot.round === "Quarterfinal")?.venueNote).toBe("Bowl site not chosen");
+    expect(result.bracket.find((slot) => slot.id === "final")?.venueNote).toBe("Bowl site not chosen");
+  });
+
   it("gives Notre Dame an automatic bid inside the top 12 and leaves six at-large spots", () => {
     const { teams, order } = fieldTeams();
     const result = simulate(season(teams, [], order), emptyScenario(), format, ranking);

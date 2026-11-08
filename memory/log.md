@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (bowl sites)
+
+- A quarterfinal was labeled as if it were at a team’s stadium. The first round still says “at Alabama.” The quarterfinal and the title now say “Bowl site not chosen.”
+
 ## 2026-11-08 (phone round labels)
 
 - Tapping Boise State now says they play Indiana. The next round opens on that game: Indiana is the bye and still the favorite, and Boise State is marked Advanced. A shared link still beats the scenario saved on the device.
