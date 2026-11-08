@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isAlive, simulate } from "./engine";
+import { contenderBoard, isAlive, simulate } from "./engine";
 import { decodeScenario, encodeScenario, emptyScenario } from "./share";
 import type { CfpFormat, Game, RankingConfig, SeasonData, Team } from "./types";
 
@@ -197,6 +197,30 @@ describe("ranking adjustment", () => {
     scenario.picks.g = "T6";
     const result = simulate(season(teams, [future("g", "T1", "T6")], order), scenario, format, ranking);
     expect(result.formulaOrder.indexOf("T1")).toBeGreaterThan(result.formulaOrder.indexOf("T6"));
+  });
+});
+
+describe("early-season cap", () => {
+  function tenTeamSeason(week: number) {
+    const teams = Array.from({ length: 10 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
+    const data = season(teams, [], teams.map((item) => item.id));
+    data.season.week = week;
+    data.conferences = [{ id: "sec", name: "SEC", tier: "power", teams: teams.map((item) => item.id) }];
+    return data;
+  }
+
+  const capped = { ...ranking, bubbleRank: 0, earlySeasonThroughWeek: 5 };
+
+  it("shows every team still alive after the early weeks", () => {
+    const board = contenderBoard(tenTeamSeason(11), capped);
+    expect(board[0].hidden).toEqual([]);
+    expect(board[0].shown).toHaveLength(10);
+  });
+
+  it("caps a power conference at eight teams during the early weeks", () => {
+    const board = contenderBoard(tenTeamSeason(3), capped);
+    expect(board[0].shown).toHaveLength(8);
+    expect(board[0].hidden).toEqual(["T9", "T10"]);
   });
 });
 

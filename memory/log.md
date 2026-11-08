@@ -2,15 +2,19 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (contender list)
+
+- Week 10 was still hiding teams who can win their league, behind a September cap. From week 6 on, those teams are on the main list. Illinois is back on the Big Ten list.
+
+## 2026-11-08 (rank gaps)
+
+- The matchup rank-gap chart was one short box, so the stat names sat on top of each other. Each stat now has its own row. On the Iron Bowl, Alabama’s better ranks go right in green and Auburn’s go left in red. A phone can scroll the chart sideways.
+
 ## 2026-11-06 (unblock the pull request)
 
 - Brought this branch up to date with main. The only new commit on main was the 2026-11-04 ESPN season update, and it conflicted in four data files.
 - Kept this branch's College Football Data versions of games, rankings, season, and team stats. No application code conflicted.
 - The daily data job stays turned off until this pull request is on main. The lasting Vercel address still needs `npx vercel login`.
-
-## 2026-11-08 (rank gaps)
-
-- The matchup rank-gap chart was one short box, so the stat names sat on top of each other. Each stat now has its own row. On the Iron Bowl, Alabama’s better ranks go right in green and Auburn’s go left in red. A phone can scroll the chart sideways.
 
 ## 2026-11-05 (title ties)
 

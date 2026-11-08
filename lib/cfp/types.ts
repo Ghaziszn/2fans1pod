@@ -174,6 +174,7 @@ export interface RankingConfig {
   championRankBoost: number;
   bubbleRank: number;
   earlySeasonCap: { power: number; group: number };
+  earlySeasonThroughWeek?: number;
 }
 
 export interface Scenario {

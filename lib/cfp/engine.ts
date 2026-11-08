@@ -419,7 +419,8 @@ export function contenderBoard(data: SeasonData, ranking: RankingConfig): Conten
       const alive = ids.filter((id) => (records.get(id)?.confWins ?? 0) + (remaining.get(id) ?? 0) >= leaderWins);
       const cap = conference.tier === "power" ? ranking.earlySeasonCap.power : ranking.earlySeasonCap.group;
       const aliveSorted = sortByRecord(alive, records, index);
-      const capped = aliveSorted.slice(0, cap);
+      const early = ranking.earlySeasonThroughWeek == null || data.season.week <= ranking.earlySeasonThroughWeek;
+      const capped = early ? aliveSorted.slice(0, cap) : aliveSorted;
       const shown = order.filter((id) => ids.includes(id) && (bubble.has(id) || capped.includes(id)));
       const hidden = aliveSorted.filter((id) => !shown.includes(id));
       return { conference: conference.name, tier: conference.tier, shown, hidden };
