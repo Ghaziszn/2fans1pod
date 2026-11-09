@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (bracket site)
+
+- **On a phone, the site line is about this game and the next line is about the next game.** A first-round upset says "This game is at Alabama." and "Next: Boise State plays Indiana." Later rounds say the bowl site is not chosen yet.
+
 ## 2026-11-08 (bracket out)
 
 - **On a phone, the team that loses a playoff game is labeled Out.** The winner still says Moves on, or Champion in the title game. A top-four bye is still listed in the Byes line above the quarterfinals.

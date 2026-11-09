@@ -278,6 +278,13 @@ function PhoneBracket({
   );
 }
 
+function thisGameSite(note: string) {
+  if (note.startsWith("at ")) return `This game is ${note}.`;
+  if (note === "Bowl site not chosen") return "This game's bowl site is not chosen yet.";
+  if (note === "Bye") return "This team has a bye.";
+  return note;
+}
+
 function sideNote(selected: boolean, round: BracketSlot["round"], seed: number | null, decided: boolean) {
   if (selected) return round === "Championship" ? "Champion" : "Moves on";
   if (decided) return "Out";
@@ -317,13 +324,13 @@ function PhoneGame({
   const resultLine =
     slot.round === "Championship"
       ? winner
-        ? `${winner.school} is the champion`
-        : "Tap a team"
+        ? `${winner.school} is the champion.`
+        : "Tap who wins this game."
       : winner
         ? foe
-          ? `${winner.school} plays ${foe.school}`
-          : `${winner.school} moves on`
-        : "Tap a team";
+          ? `Next: ${winner.school} plays ${foe.school}.`
+          : `${winner.school} moves on.`
+        : "Tap who wins this game.";
 
   return (
     <div className="overflow-hidden rounded-lg border border-line bg-surface">
@@ -356,8 +363,8 @@ function PhoneGame({
           </motion.button>
         );
       })}
-      <p className="px-3 pt-3 text-sm">{resultLine}</p>
-      <p className="px-3 text-xs text-muted">{slot.venueNote}</p>
+      <p className="px-3 pt-3 text-xs text-muted">{thisGameSite(slot.venueNote)}</p>
+      <p className="px-3 text-sm">{resultLine}</p>
       {slot.teamA && slot.teamB ? (
         <Link href={`/matchup/${canonicalMatchupSlug(slot.teamA, slot.teamB)}/`} className="flex min-h-11 items-center px-3 text-sm underline">
           Compare these teams

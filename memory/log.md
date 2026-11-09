@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (bracket site)
+
+- On a phone, "Boise State plays Indiana" sat right above "at Alabama," which made the next game look like it was at Alabama. The card now says "This game is at Alabama." and then "Next: Boise State plays Indiana." A later round says the bowl site is not chosen yet.
+
 ## 2026-11-08 (bracket out)
 
 - On a phone, the team that does not move on now says Out. Tapping Boise State in the first round marks Alabama Out, and the quarterfinal then shows Boise State against Indiana.
