@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (schedule rows)
+
+- Week 10 on a phone reads 6:00 PM, 28–20, Ohio, at, Akron. None of the visible school names are cut off. A wide screen still shows the game on one row.
+
 ## 2026-11-08 (team ranks)
 
 - Alabama’s national ranks on a phone show points per game as offense 38.2 (#12) and defense 21.2 (#44) on one card. The page does not scroll sideways. A wide screen still shows the table.

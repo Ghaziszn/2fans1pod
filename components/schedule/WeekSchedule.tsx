@@ -204,7 +204,16 @@ function GameRow({ game, teams, split }: { game: Game; teams: Map<string, Team>;
   );
   const card = (
     <>
-      <div className="flex min-h-11 flex-wrap items-center gap-3">{body}</div>
+      <div className="grid gap-2 sm:hidden">
+        <div className="flex items-center justify-between gap-3">
+          <span className="nums text-sm text-muted">{timeLabel(game.startDate)}</span>
+          <span className="nums text-sm">{score}</span>
+        </div>
+        <TeamMark team={away} name={away?.school ?? game.awayName} size="sm" />
+        <span className="text-xs uppercase tracking-wide text-muted">{game.neutralSite ? "vs" : "at"}</span>
+        <TeamMark team={home} name={home?.school ?? game.homeName} size="sm" />
+      </div>
+      <div className="hidden min-h-11 items-center gap-3 sm:flex">{body}</div>
       {split ? <PublicSplits split={split} /> : null}
     </>
   );
