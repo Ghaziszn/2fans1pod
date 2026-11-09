@@ -36,8 +36,8 @@ type Kickoff = "any" | "morning" | "afternoon" | "prime" | "night" | "tbd";
 const kickoffChoices: { id: Kickoff; label: string }[] = [
   { id: "any", label: "Any kickoff" },
   { id: "morning", label: "Morning, before noon" },
-  { id: "afternoon", label: "Afternoon, noon to 5" },
-  { id: "prime", label: "Prime time, 5 to 8" },
+  { id: "afternoon", label: "Afternoon, noon until 5" },
+  { id: "prime", label: "Prime time, 5 PM until 9" },
   { id: "night", label: "Night, 9 PM and later" },
   { id: "tbd", label: "Kickoff not set" },
 ];
