@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (team page on a phone)
+
+- At 320px, Mississippi State’s opponents were squeezed to about 23px wide. UL Monroe now reads in full, and the page does not scroll sideways. Returning production fits on its card. At 768px the schedule is one row again and the ratings go back to two columns.
+
 ## 2026-11-08 (official bracket)
 
 - A finished regular season now opens on the bracket and says “This is the official field.” A changed result drops that sentence. The unit test covers both. This week’s live page still opens on step 1, Season, with Boise State as the 12th seed. The bracket is not on that first screen.

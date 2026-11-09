@@ -2,6 +2,11 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (team page on a phone)
+
+- **A team’s schedule stacks on a narrow phone.** The week, the place, and the score sit on one line. The opponent’s name gets the next line, so it is not cut down to a few letters.
+- **Rating cards are one column on a phone.** A label such as Returning production fits beside its help icon. Two columns start on a wider screen.
+
 ## 2026-11-08 (official bracket)
 
 - **Once every regular-season game is played, the homepage opens on the bracket.** The sentence says it is the official field until you change a result. Changing a result still updates the sentence. While games remain, the page opens on the season step, as it does now.

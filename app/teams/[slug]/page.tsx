@@ -89,18 +89,35 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
             const score = game.completed && ours != null && theirs != null ? `${ours}-${theirs}` : "upcoming";
             const opponentTeam = data.teams.find((item) => item.id === opponentId);
             const pair = `/matchup/${home ? team.id : opponentId}-vs-${home ? opponentId : team.id}/`;
+            const place = game.neutralSite ? "Neutral" : home ? "Home" : "Away";
             return (
-              <li key={game.id} className="flex min-h-11 flex-wrap items-center gap-3 py-2">
-                <span className="nums w-16 shrink-0 text-sm text-muted">Week {game.week}</span>
-                <span className="w-20 shrink-0 text-xs uppercase tracking-wide text-muted">{game.neutralSite ? "Neutral" : home ? "Home" : "Away"}</span>
-                {opponentTeam ? (
-                  <Link className="min-w-0 flex-1" href={pair}>
-                    <TeamMark team={opponentTeam} size="sm" />
-                  </Link>
-                ) : (
-                  <span className="min-w-0 flex-1">{opponent}</span>
-                )}
-                <span className="nums text-sm text-muted">{score}</span>
+              <li key={game.id} className="py-2">
+                <div className="grid gap-1 sm:hidden">
+                  <div className="flex items-center justify-between gap-3 text-sm text-muted">
+                    <span className="nums">Week {game.week}</span>
+                    <span className="text-xs uppercase tracking-wide">{place}</span>
+                    <span className="nums">{score}</span>
+                  </div>
+                  {opponentTeam ? (
+                    <Link className="flex min-h-11 items-center" href={pair}>
+                      <TeamMark team={opponentTeam} size="sm" />
+                    </Link>
+                  ) : (
+                    <span className="flex min-h-11 items-center">{opponent}</span>
+                  )}
+                </div>
+                <div className="hidden min-h-11 items-center gap-3 sm:flex">
+                  <span className="nums w-16 shrink-0 text-sm text-muted">Week {game.week}</span>
+                  <span className="w-20 shrink-0 text-xs uppercase tracking-wide text-muted">{place}</span>
+                  {opponentTeam ? (
+                    <Link className="min-w-0 flex-1" href={pair}>
+                      <TeamMark team={opponentTeam} size="sm" />
+                    </Link>
+                  ) : (
+                    <span className="min-w-0 flex-1">{opponent}</span>
+                  )}
+                  <span className="nums text-sm text-muted">{score}</span>
+                </div>
               </li>
             );
           })}

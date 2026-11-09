@@ -41,7 +41,7 @@ export function TeamProfile({ teamId, record, conferenceRecord }: { teamId: stri
     <>
       <section className="mt-8">
         <h2 className="text-3xl">Ratings</h2>
-        <ul className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <ul className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Card label="Record" value={record} detail={conferenceRecord} help="Wins and losses so far, then the conference record." />
           <Card label={catalog.spPlus.label} value={ratingText(row.sp.rating, row.sp.rank)} help={catalog.spPlus.help} />
           <Card label={catalog.srs.label} value={ratingText(row.srs.rating, row.srs.rank)} help={catalog.srs.help} />
@@ -56,7 +56,7 @@ export function TeamProfile({ teamId, record, conferenceRecord }: { teamId: stri
           <h2 className="text-3xl">Schedule strength</h2>
           <InfoTip label="About schedule strength" text="These answer different questions. SP+ schedule strength is blank in the feed this season. The FPI ranks come from ESPN: 1 is the hardest schedule, or the most impressive record." />
         </div>
-        <ul className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        <ul className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Card label={catalog.spSos.label} value={row.sp.sos != null ? ratingText(row.sp.sos, row.sp.sosRank) : "Not posted"} help={catalog.spSos.help} />
           <Card label={catalog.fpiSos.label} value={row.fpi.strengthOfSchedule ? `#${row.fpi.strengthOfSchedule}` : "—"} help={catalog.fpiSos.help} />
           <Card label={catalog.remainingSos.label} value={row.fpi.remainingStrengthOfSchedule ? `#${row.fpi.remainingStrengthOfSchedule}` : "—"} help={catalog.remainingSos.help} />
@@ -73,8 +73,8 @@ export function TeamProfile({ teamId, record, conferenceRecord }: { teamId: stri
 function Card({ label, value, detail, help }: { label: string; value: string; detail?: string; help: string }) {
   return (
     <li className="rounded-md border border-line bg-surface px-3 py-2">
-      <p className="flex items-center text-xs uppercase tracking-wide text-muted">
-        {label}
+      <p className="flex items-center gap-1 text-xs uppercase tracking-wide text-muted">
+        <span className="min-w-0 flex-1 leading-4">{label}</span>
         <InfoTip label={`About ${label}`} text={help} />
       </p>
       <p className="nums text-2xl leading-tight">{value}</p>
