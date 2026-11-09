@@ -389,6 +389,10 @@ export function withWinOut(
   return { ...scenario, winOut: [...scenario.winOut, teamId], picks };
 }
 
+export function openingStep(fieldLocked: boolean): 1 | 2 {
+  return fieldLocked ? 2 : 1;
+}
+
 export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat, ranking: RankingConfig): SimResult {
   const teams = teamMap(data);
   const known = new Set(teams.keys());

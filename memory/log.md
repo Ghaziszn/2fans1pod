@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (official bracket)
+
+- A finished regular season now opens on the bracket and says “This is the official field.” A changed result drops that sentence. The unit test covers both. This week’s live page still opens on step 1, Season, with Boise State as the 12th seed. The bracket is not on that first screen.
+
 ## 2026-11-08 (help notes)
 
 - Opened every help note on Alabama’s phone page. All 36 stayed inside the screen, including FPI on the right-hand card. The rankings note on the simulator stayed inside too. A tap outside closed it, and Escape closed it. On a wide Iron Bowl page the schedule-strength note opened beside the label.

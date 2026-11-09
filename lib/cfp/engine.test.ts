@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { contenderBoard, isAlive, simulate, withWinOut } from "./engine";
+import { contenderBoard, isAlive, openingStep, simulate, withWinOut } from "./engine";
 import { decodeScenario, encodeScenario, emptyScenario } from "./share";
 import type { CfpFormat, Game, RankingConfig, SeasonData, Team } from "./types";
 
@@ -104,6 +104,22 @@ function fieldTeams() {
 }
 
 describe("playoff field", () => {
+  it("opens on the official bracket once every regular-season game is played", () => {
+    const { teams, order } = fieldTeams();
+    const data = season(teams, [], order);
+    data.season.fieldLocked = true;
+    const official = simulate(data, emptyScenario(), format, ranking);
+    expect(openingStep(data.season.fieldLocked)).toBe(2);
+    expect(official.sentence.startsWith("This is the official field.")).toBe(true);
+    const withGame = season(teams, [future("g", "SEC-1", "SEC-2")], order);
+    withGame.season.fieldLocked = true;
+    const picked = emptyScenario();
+    picked.picks.g = "SEC-2";
+    const whatIf = simulate(withGame, picked, format, ranking);
+    expect(whatIf.sentence.includes("official field")).toBe(false);
+    expect(openingStep(false)).toBe(1);
+  });
+
   it("keeps the first round at the higher seed and leaves later rounds at a bowl", () => {
     const { teams, order } = fieldTeams();
     const result = simulate(season(teams, [], order), emptyScenario(), format, ranking);

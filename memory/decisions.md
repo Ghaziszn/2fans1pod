@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (official bracket)
+
+- **Once every regular-season game is played, the homepage opens on the bracket.** The sentence says it is the official field until you change a result. Changing a result still updates the sentence. While games remain, the page opens on the season step, as it does now.
+
 ## 2026-11-08 (help notes)
 
 - **A help note stays on the screen.** The note opens under the icon, and slides left or up when it would run off the edge. Escape or a tap outside still closes it.

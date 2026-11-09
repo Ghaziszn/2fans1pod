@@ -8,7 +8,7 @@ import { RankList } from "@/components/simulator/RankList";
 import { InfoTip } from "@/components/info/InfoTip";
 import { simulatorRankNote } from "@/lib/cfp/words";
 import { TeamMark, teamInk } from "@/components/team/TeamMark";
-import { contenderBoard, simulate, withWinOut } from "@/lib/cfp/engine";
+import { contenderBoard, openingStep, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
 import type { ChampState, ContenderGroup, Game, Scenario, Team } from "@/lib/cfp/types";
 import { cfpFormat, loadProfile, loadSeason, matchupSlug, rankingConfig } from "@/lib/load";
@@ -24,7 +24,7 @@ export function Simulator() {
   const [focusConference, setFocusConference] = useState("");
   const [focusTeam, setFocusTeam] = useState("");
   const [showOthers, setShowOthers] = useState(false);
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const [step, setStep] = useState<1 | 2 | 3>(openingStep(data.season.fieldLocked));
   const [copied, setCopied] = useState(false);
   const [pictureUrl, setPictureUrl] = useState<string | null>(null);
   const [pictureBlob, setPictureBlob] = useState<Blob | null>(null);
