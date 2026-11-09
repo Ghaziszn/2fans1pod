@@ -1,36 +1,49 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { TeamMark } from "@/components/team/TeamMark";
+import { rankingsIntro } from "@/lib/cfp/words";
 import { JsonLd } from "@/lib/json-ld";
 import { loadSeason, siteConfig } from "@/lib/load";
 
+const seasonData = loadSeason();
+const hasPoll = seasonData.rankings.cfp.length > 0;
+
 export const metadata: Metadata = {
-  title: "CFP rankings",
-  description: "This week's College Football Playoff rankings, plus the full order the simulator uses.",
+  title: hasPoll ? "CFP rankings" : "Elo rankings",
+  description: hasPoll
+    ? "This week's College Football Playoff rankings, plus the full order the simulator uses."
+    : "Elo order used before the College Football Playoff committee releases a poll.",
 };
 
 export default function RankingsPage() {
   const data = loadSeason();
   const teams = new Map(data.teams.map((team) => [team.id, team]));
+  const hasCommitteePoll = data.rankings.cfp.length > 0;
+  const elo = data.season.eloSource === "cfbd" ? "College Football Data Elo" : "an Elo rating computed from this season's results";
   return (
     <>
       <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: data.season.rankingLabel,
+          name: hasCommitteePoll ? data.season.rankingLabel : "Elo rankings",
           url: `${siteConfig.siteUrl}/rankings/`,
-          itemListElement: data.rankings.cfp.map((row) => ({
-            "@type": "ListItem",
-            position: row.rank,
-            name: teams.get(row.teamId)?.school ?? row.teamId,
-          })),
+          itemListElement: hasCommitteePoll
+            ? data.rankings.cfp.map((row) => ({
+                "@type": "ListItem",
+                position: row.rank,
+                name: teams.get(row.teamId)?.school ?? row.teamId,
+              }))
+            : data.rankings.order.map((id, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: teams.get(id)?.school ?? id,
+              })),
         }}
       />
-      <h1 className="text-5xl">CFP rankings</h1>
-      <p className="mt-3 text-muted">
-        {data.season.rankingLabel}. Updated {data.season.updatedAt.slice(0, 10)}. Teams after 25 follow {data.season.eloSource === "cfbd" ? "CollegeFootballData Elo" : "an Elo rating computed from this season's results"}.
-      </p>
+      <h1 className="text-5xl">{hasCommitteePoll ? "CFP rankings" : "Elo rankings"}</h1>
+      <p className="mt-3 text-muted">{rankingsIntro(hasCommitteePoll, data.season.rankingLabel, data.season.updatedAt.slice(0, 10), elo)}</p>
+      {hasCommitteePoll ? (
       <ol className="mt-6 divide-y divide-line">
         {data.rankings.cfp.map((row) => {
           const team = teams.get(row.teamId);
@@ -45,6 +58,7 @@ export default function RankingsPage() {
           );
         })}
       </ol>
+      ) : null}
       <section className="mt-10">
         <h2 className="text-3xl">Full simulator order</h2>
         <ol className="mt-4 divide-y divide-line">

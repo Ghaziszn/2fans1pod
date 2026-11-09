@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (no poll yet)
+
+- **Before the committee releases a poll, the order is Elo and the page says so.** It does not call that list a committee ranking. When a poll exists, the rankings page names it and says when the data was checked. That checked date is not labeled as the poll date. The next data run includes the poll week in the name when College Football Data provides it.
+
 ## 2026-11-08 (any matchup)
 
 - **A pair that is not a prebuilt rivalry still opens the calculator.** The site address keeps the trailing slash, so Vercel is told to serve the calculator shell for both `/matchup/some-pair` and `/matchup/some-pair/`. A rivalry page that was built ahead of time stays its own page.

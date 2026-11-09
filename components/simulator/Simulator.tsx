@@ -6,6 +6,7 @@ import { Bracket, laterPlayoffSlots } from "@/components/simulator/Bracket";
 import { renderBracketPng } from "@/components/simulator/bracketImage";
 import { RankList } from "@/components/simulator/RankList";
 import { InfoTip } from "@/components/info/InfoTip";
+import { simulatorRankNote } from "@/lib/cfp/words";
 import { TeamMark, teamInk } from "@/components/team/TeamMark";
 import { contenderBoard, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
@@ -184,11 +185,19 @@ export function Simulator() {
           <p className="mt-3 flex items-start gap-1 text-sm text-muted">
             <span>
               Pick a conference, then a team, then mark each remaining game W or L. That fills the 12-team field. Untouched games go to the higher-ranked team. Each future loss costs {rankingConfig.lossDropSpots} spots.
-              {data.season.eloSource === "cfbd"
-                ? " Teams outside the top 25 are ordered by College Football Data Elo."
-                : " Teams outside the top 25 are ordered by an Elo rating computed from this season's results."}
+              {simulatorRankNote(
+                data.rankings.cfp.length > 0,
+                data.season.eloSource === "cfbd" ? "College Football Data Elo" : "an Elo rating computed from this season's results",
+              )}
             </span>
-            <InfoTip label="How rankings are adjusted" text="The simulator starts from the latest CFP order, then Elo for everyone else. It applies every remaining result once. It does not re-rank after each game and then pick new favorites. Conference champions follow the records in your scenario. If the title game is not scheduled yet, the top two teams play a projected championship. If three or more teams share the best record, you pick who plays and who wins." />
+            <InfoTip
+              label="How rankings are adjusted"
+              text={
+                data.rankings.cfp.length > 0
+                  ? "The simulator starts from the latest CFP order, then Elo for everyone else. It applies every remaining result once. It does not re-rank after each game and then pick new favorites. Conference champions follow the records in your scenario. If the title game is not scheduled yet, the top two teams play a projected championship. If three or more teams share the best record, you pick who plays and who wins."
+                  : "The committee has not released a poll yet, so the simulator starts from Elo only. It is not a committee ranking. It applies every remaining result once. It does not re-rank after each game and then pick new favorites. Conference champions follow the records in your scenario. If the title game is not scheduled yet, the top two teams play a projected championship. If three or more teams share the best record, you pick who plays and who wins."
+              }
+            />
           </p>
           <InOut resultField={result.field} firstOut={result.firstOut} teams={teams} remainingSos={(teamId) => profiles.teams[teamId]?.fpi.remainingStrengthOfSchedule ?? null} />
           <div className="mt-8 grid gap-10 min-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">

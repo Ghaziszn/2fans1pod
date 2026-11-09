@@ -17,7 +17,7 @@ from pathlib import Path
 
 import requests
 
-from scripts.compute import ats_records, points_per_game, rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
+from scripts.compute import ats_records, cfp_ranking_label, points_per_game, rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
@@ -784,10 +784,12 @@ def fetch_cfbd(fmt: dict, key: str) -> dict:
     polls = pull("/rankings", year=year, seasonType="regular")
     cfp_rows = []
     latest = None
+    poll_week = None
     for poll in polls:
         for item in poll.get("polls") or []:
             if "Playoff" in item.get("poll", "") or item.get("poll") in {"CFP", "Playoff Committee Rankings"}:
                 latest = item
+                poll_week = poll.get("week")
     if latest:
         for row in latest.get("ranks") or []:
             team = by_name.get(row.get("school"))
@@ -839,7 +841,7 @@ def fetch_cfbd(fmt: dict, key: str) -> dict:
         "ats": ats_by_id,
         "stats": normalized,
         "week": max((game["week"] for game in games if game["completed"]), default=0),
-        "rankingLabel": "CFP committee rankings",
+        "rankingLabel": cfp_ranking_label(cfp_rows, poll_week),
     }
 
 

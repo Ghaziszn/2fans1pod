@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.compute import ats_records, cover_side, points_per_game, rank_values, record_without, strength_of_schedule, win_pct
+from scripts.compute import ats_records, cfp_ranking_label, cover_side, points_per_game, rank_values, record_without, strength_of_schedule, win_pct
 
 
 class ScheduleTests(unittest.TestCase):
@@ -40,6 +40,17 @@ class ScheduleTests(unittest.TestCase):
         self.assertEqual(ranks["a"], 1)
         self.assertEqual(ranks["b"], 1)
         self.assertEqual(ranks["c"], 3)
+
+
+class RankingLabelTests(unittest.TestCase):
+    def test_week_is_part_of_the_poll_name(self):
+        self.assertEqual(cfp_ranking_label([{"teamId": "miami"}], 11), "CFP Rankings, Week 11")
+
+    def test_empty_poll_is_elo(self):
+        self.assertEqual(cfp_ranking_label([], 11), "Elo rankings")
+
+    def test_missing_week_stays_generic(self):
+        self.assertEqual(cfp_ranking_label([{"teamId": "miami"}], None), "CFP committee rankings")
 
 
 if __name__ == "__main__":
