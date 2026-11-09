@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (favorite outline)
+
+- A remaining game used to look like a pick before anyone tapped it. The favorite is now an outline. Tapping W fills the button. Checked on a phone width, including dark mode.
+
 ## 2026-11-08 (share link and footer)
 
 - The share step now shows the link on the page. If the browser will not copy it, the button says "Copy the link below." A fresh visit with that link kept Boise State's first-round upset even when the phone had Alabama saved. The footer no longer sends X, YouTube, Instagram, Spotify, or Apple Podcasts to placeholder addresses.

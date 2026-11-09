@@ -438,6 +438,7 @@ function ScenarioBuilder({
       </div>
       {showOthers ? (
         <div className="mt-4">
+          <p className="text-sm text-muted">An outline is the favorite. A filled button is a pick you made.</p>
           {weeks.map((week) => (
             <div key={week} className="mt-4">
               <h3 className="text-sm uppercase tracking-wide text-muted">Week {week}</h3>
@@ -445,6 +446,7 @@ function ScenarioBuilder({
                 .filter((game) => game.week === week)
                 .map((game) => {
                   const winner = winnerById.get(game.id) ?? game.homeId;
+                  const chosen = scenario.picks[game.id] === game.homeId || scenario.picks[game.id] === game.awayId;
                   return (
                     <div key={game.id} className="mt-2 flex flex-wrap items-center justify-between gap-2 border-b border-line py-2">
                       {teams.has(game.awayId) && teams.has(game.homeId) ? (
@@ -456,7 +458,7 @@ function ScenarioBuilder({
                           {game.awayName} {game.neutralSite ? "vs" : "at"} {game.homeName}
                         </span>
                       )}
-                      <WinLoss winnerIsHome={winner === game.homeId} onHome={() => setWinner(game.id, game.homeId)} onAway={() => setWinner(game.id, game.awayId)} homeLabel={game.homeName} awayLabel={game.awayName} />
+                      <WinLoss winnerIsHome={winner === game.homeId} chosen={chosen} onHome={() => setWinner(game.id, game.homeId)} onAway={() => setWinner(game.id, game.awayId)} homeLabel={game.homeName} awayLabel={game.awayName} />
                     </div>
                   );
                 })}
@@ -474,12 +476,14 @@ function ScenarioBuilder({
               Wins out
             </button>
           </div>
+          <p className="mt-3 text-sm text-muted">An outline is the favorite. A filled button is a pick you made.</p>
           <ul className="mt-3">
             {games.map((game) => {
               const opponentId = game.homeId === team.id ? game.awayId : game.homeId;
               const opponent = teams.get(opponentId);
               const opponentName = opponent?.school ?? (game.homeId === team.id ? game.awayName : game.homeName);
               const teamWon = game.winnerId === team.id;
+              const chosen = scenario.picks[game.id] === team.id || scenario.picks[game.id] === opponentId;
               return (
                 <li key={game.id} className="flex min-h-12 items-center gap-3 border-b border-line py-2">
                   <span className="w-24 shrink-0 text-xs uppercase tracking-wide text-muted">{game.projected ? "Projected" : game.neutralSite ? "Neutral" : game.homeId === team.id ? "Home" : "Away"}</span>
@@ -493,10 +497,10 @@ function ScenarioBuilder({
                     )}
                   </span>
                   <span className="inline-flex shrink-0 overflow-hidden rounded-full border border-line">
-                    <button type="button" className={`min-h-11 min-w-11 px-3 text-sm font-medium ${teamWon ? "bg-emerald-600 text-white" : "text-muted"}`} onClick={() => setWinner(game.id, team.id)}>
+                    <button type="button" aria-pressed={teamWon} className={`min-h-11 min-w-11 px-3 text-sm font-medium ${pickStyle(teamWon, chosen, "win")}`} onClick={() => setWinner(game.id, team.id)}>
                       W
                     </button>
-                    <button type="button" className={`min-h-11 min-w-11 px-3 text-sm font-medium ${!teamWon ? "bg-red-600 text-white" : "text-muted"}`} onClick={() => setWinner(game.id, opponentId)}>
+                    <button type="button" aria-pressed={!teamWon} className={`min-h-11 min-w-11 px-3 text-sm font-medium ${pickStyle(!teamWon, chosen, "loss")}`} onClick={() => setWinner(game.id, opponentId)}>
                       L
                     </button>
                   </span>
@@ -584,14 +588,22 @@ function TitleTie({
   );
 }
 
+function pickStyle(active: boolean, chosen: boolean, kind: "win" | "loss") {
+  if (!active) return "text-muted";
+  if (!chosen) return kind === "win" ? "text-emerald-800 ring-2 ring-inset ring-emerald-700 dark:text-emerald-200" : "text-red-800 ring-2 ring-inset ring-red-700 dark:text-red-200";
+  return kind === "win" ? "bg-emerald-600 text-white" : "bg-red-600 text-white";
+}
+
 function WinLoss({
   winnerIsHome,
+  chosen,
   onHome,
   onAway,
   homeLabel,
   awayLabel,
 }: {
   winnerIsHome: boolean;
+  chosen: boolean;
   onHome: () => void;
   onAway: () => void;
   homeLabel: string;
@@ -599,10 +611,10 @@ function WinLoss({
 }) {
   return (
     <span className="inline-flex overflow-hidden rounded-full border border-line text-sm">
-      <button type="button" className={`min-h-11 px-3 ${!winnerIsHome ? "bg-emerald-600 text-white" : "text-muted"}`} onClick={onAway}>
+      <button type="button" aria-pressed={!winnerIsHome} className={`min-h-11 px-3 ${pickStyle(!winnerIsHome, chosen, "win")}`} onClick={onAway}>
         {awayLabel} W
       </button>
-      <button type="button" className={`min-h-11 px-3 ${winnerIsHome ? "bg-emerald-600 text-white" : "text-muted"}`} onClick={onHome}>
+      <button type="button" aria-pressed={winnerIsHome} className={`min-h-11 px-3 ${pickStyle(winnerIsHome, chosen, "win")}`} onClick={onHome}>
         {homeLabel} W
       </button>
     </span>

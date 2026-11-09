@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (favorite outline)
+
+- **An outline is the favorite. A filled W or L is a pick you made.** Wins out fills the games it sets, because those are picks.
+
 ## 2026-11-08 (share link and footer)
 
 - **The share step shows the link, and a shared link wins over the bracket saved on the device.** Copy still uses the clipboard when the browser allows it.
