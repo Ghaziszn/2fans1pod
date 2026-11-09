@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (matchup names)
+
+- **On a phone, a matchup label can use two lines.** “Florida International offense” stays whole. The numbers and the edge stay under the names.
+
 ## 2026-11-08 (kickoff windows)
 
 - **Prime time runs from 5 PM until 9 PM Central.** That includes 8:00 and 8:30 kickoffs. Night starts at 9 PM. Afternoon ends when prime time starts.

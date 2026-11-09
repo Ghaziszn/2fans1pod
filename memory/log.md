@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (matchup names)
+
+- On a 320px screen, “Florida International offense” and “Jacksonville State defense” were cut off in the matchup cards. They now wrap onto a second line. Nothing scrolls sideways, and the edge is still named.
+
 ## 2026-11-08 (kickoff windows)
 
 - The schedule menu now says prime time is 5 PM until 9, and afternoon is noon until 5. Week 10 prime time is 26 games, including Boise State at 5:00, New Mexico at Nevada at 8:00, and West Virginia at Texas Tech at 8:30. Night is the 3 games at 9:15 and 9:30, including TCU at Arizona.

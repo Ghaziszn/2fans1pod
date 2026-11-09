@@ -416,11 +416,11 @@ function StatTable({ rows, left, right }: { rows: Row[]; left: string; right: st
             </p>
             <div className="mt-2 grid grid-cols-2 gap-2">
               <p>
-                <span className="block truncate text-xs text-muted">{left}</span>
+                <span className="block text-xs leading-4 text-muted">{left}</span>
                 <span className={`nums mt-1 block rounded-md px-2 py-2 ${edgeShade(row.winner, "left")}`}>{shown(row.leftValue, row.leftRank)}</span>
               </p>
               <p>
-                <span className="block truncate text-xs text-muted">{right}</span>
+                <span className="block text-xs leading-4 text-muted">{right}</span>
                 <span className={`nums mt-1 block rounded-md px-2 py-2 ${edgeShade(row.winner, "right")}`}>{shown(row.rightValue, row.rightRank)}</span>
               </p>
             </div>
