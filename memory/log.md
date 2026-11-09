@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (rivalry search)
+
+- Search knew teams and pages, but not rivalry names. Typing Iron Bowl now opens `/matchup/alabama-vs-auburn/`. Egg Bowl and The Game do the same. Typing bama still lists Alabama first. `scripts/tests/test_search.py` is a small check that every named rivalry gets a search row. The Python tests passed.
+
 ## 2026-11-08 (bracket site)
 
 - On a phone, "Boise State plays Indiana" sat right above "at Alabama," which made the next game look like it was at Alabama. The card now says "This game is at Alabama." and then "Next: Boise State plays Indiana." A later round says the bowl site is not chosen yet.

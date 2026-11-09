@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (rivalry search)
+
+- **Search includes named rivalries.** Iron Bowl, Egg Bowl, and The Game open their matchup pages. A nickname such as bama still finds the team first. The next data build keeps these rows.
+
 ## 2026-11-08 (bracket site)
 
 - **On a phone, the site line is about this game and the next line is about the next game.** A first-round upset says "This game is at Alabama." and "Next: Boise State plays Indiana." Later rounds say the bowl site is not chosen yet.

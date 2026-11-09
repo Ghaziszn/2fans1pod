@@ -624,6 +624,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         )
     for conference in conferences:
         search.append({"type": "conference", "name": conference["name"], "detail": "Conference", "href": f"/conferences/{conference['id']}/", "aliases": []})
+    search.extend(rivalry_search_rows(teams, load_json(ROOT / "config" / "rivalries.json")))
     for name, href, aliases_list in (
         ("Playoff Simulator", "/", ["playoff", "bracket", "simulate"]),
         ("Schedule", "/schedule/", ["schedule", "games", "week"]),
@@ -659,6 +660,27 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
     write_json(dest / "team-stats.json", team_stats)
     write_json(dest / "search-index.json", search)
     print(f"Wrote {len(public_teams)} teams and {len(public_games)} games from {bundle['provider']}.")
+
+
+def rivalry_search_rows(teams: list[dict], rivalries: list[dict]) -> list[dict]:
+    """One search row per named rivalry, using the same slug as the matchup page."""
+    by_school = {team["school"].lower(): team for team in teams}
+    rows = []
+    for item in rivalries:
+        home = by_school.get(str(item.get("home", "")).lower())
+        away = by_school.get(str(item.get("away", "")).lower())
+        if not home or not away or home["id"] == away["id"]:
+            continue
+        rows.append(
+            {
+                "type": "rivalry",
+                "name": item["name"],
+                "detail": f"{home['school']} vs {away['school']}",
+                "href": f"/matchup/{home['id']}-vs-{away['id']}/",
+                "aliases": [f"{home['school']} {away['school']}", f"{away['school']} {home['school']}"],
+            }
+        )
+    return rows
 
 
 def write_json(path: Path, payload) -> None:

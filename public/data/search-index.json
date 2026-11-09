@@ -1527,6 +1527,256 @@
     "aliases": []
   },
   {
+    "type": "rivalry",
+    "name": "Iron Bowl",
+    "detail": "Alabama vs Auburn",
+    "href": "/matchup/alabama-vs-auburn/",
+    "aliases": [
+      "Alabama Auburn",
+      "Auburn Alabama"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Deep South's Oldest Rivalry",
+    "detail": "Georgia vs Auburn",
+    "href": "/matchup/georgia-vs-auburn/",
+    "aliases": [
+      "Georgia Auburn",
+      "Auburn Georgia"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Red River Rivalry",
+    "detail": "Texas vs Oklahoma",
+    "href": "/matchup/texas-vs-oklahoma/",
+    "aliases": [
+      "Texas Oklahoma",
+      "Oklahoma Texas"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "The Game",
+    "detail": "Michigan vs Ohio State",
+    "href": "/matchup/michigan-vs-ohio-state/",
+    "aliases": [
+      "Michigan Ohio State",
+      "Ohio State Michigan"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Army-Navy",
+    "detail": "Army vs Navy",
+    "href": "/matchup/army-vs-navy/",
+    "aliases": [
+      "Army Navy",
+      "Navy Army"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Oregon-Washington",
+    "detail": "Oregon vs Washington",
+    "href": "/matchup/oregon-vs-washington/",
+    "aliases": [
+      "Oregon Washington",
+      "Washington Oregon"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Florida-Georgia",
+    "detail": "Georgia vs Florida",
+    "href": "/matchup/georgia-vs-florida/",
+    "aliases": [
+      "Georgia Florida",
+      "Florida Georgia"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Lone Star Showdown",
+    "detail": "Texas vs Texas A&M",
+    "href": "/matchup/texas-vs-texas-am/",
+    "aliases": [
+      "Texas Texas A&M",
+      "Texas A&M Texas"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "USC-Notre Dame",
+    "detail": "Notre Dame vs USC",
+    "href": "/matchup/notre-dame-vs-usc/",
+    "aliases": [
+      "Notre Dame USC",
+      "USC Notre Dame"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Florida-Florida State",
+    "detail": "Florida vs Florida State",
+    "href": "/matchup/florida-vs-florida-state/",
+    "aliases": [
+      "Florida Florida State",
+      "Florida State Florida"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Florida State-Miami",
+    "detail": "Florida State vs Miami",
+    "href": "/matchup/florida-state-vs-miami/",
+    "aliases": [
+      "Florida State Miami",
+      "Miami Florida State"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Clean, Old-Fashioned Hate",
+    "detail": "Georgia vs Georgia Tech",
+    "href": "/matchup/georgia-vs-georgia-tech/",
+    "aliases": [
+      "Georgia Georgia Tech",
+      "Georgia Tech Georgia"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Egg Bowl",
+    "detail": "Ole Miss vs Mississippi State",
+    "href": "/matchup/ole-miss-vs-mississippi-state/",
+    "aliases": [
+      "Ole Miss Mississippi State",
+      "Mississippi State Ole Miss"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Palmetto Bowl",
+    "detail": "Clemson vs South Carolina",
+    "href": "/matchup/clemson-vs-south-carolina/",
+    "aliases": [
+      "Clemson South Carolina",
+      "South Carolina Clemson"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Holy War",
+    "detail": "Utah vs BYU",
+    "href": "/matchup/utah-vs-byu/",
+    "aliases": [
+      "Utah BYU",
+      "BYU Utah"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Civil War",
+    "detail": "Oregon vs Oregon State",
+    "href": "/matchup/oregon-vs-oregon-state/",
+    "aliases": [
+      "Oregon Oregon State",
+      "Oregon State Oregon"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "UCLA-USC",
+    "detail": "USC vs UCLA",
+    "href": "/matchup/usc-vs-ucla/",
+    "aliases": [
+      "USC UCLA",
+      "UCLA USC"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Backyard Brawl",
+    "detail": "Pittsburgh vs West Virginia",
+    "href": "/matchup/pittsburgh-vs-west-virginia/",
+    "aliases": [
+      "Pittsburgh West Virginia",
+      "West Virginia Pittsburgh"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Cy-Hawk",
+    "detail": "Iowa vs Iowa State",
+    "href": "/matchup/iowa-vs-iowa-state/",
+    "aliases": [
+      "Iowa Iowa State",
+      "Iowa State Iowa"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Old Oaken Bucket",
+    "detail": "Purdue vs Indiana",
+    "href": "/matchup/purdue-vs-indiana/",
+    "aliases": [
+      "Purdue Indiana",
+      "Indiana Purdue"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Paul Bunyan's Axe",
+    "detail": "Wisconsin vs Minnesota",
+    "href": "/matchup/wisconsin-vs-minnesota/",
+    "aliases": [
+      "Wisconsin Minnesota",
+      "Minnesota Wisconsin"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Michigan-Michigan State",
+    "detail": "Michigan vs Michigan State",
+    "href": "/matchup/michigan-vs-michigan-state/",
+    "aliases": [
+      "Michigan Michigan State",
+      "Michigan State Michigan"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Alabama-Tennessee",
+    "detail": "Alabama vs Tennessee",
+    "href": "/matchup/alabama-vs-tennessee/",
+    "aliases": [
+      "Alabama Tennessee",
+      "Tennessee Alabama"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Bedlam",
+    "detail": "Oklahoma vs Oklahoma State",
+    "href": "/matchup/oklahoma-vs-oklahoma-state/",
+    "aliases": [
+      "Oklahoma Oklahoma State",
+      "Oklahoma State Oklahoma"
+    ]
+  },
+  {
+    "type": "rivalry",
+    "name": "Alabama-LSU",
+    "detail": "Alabama vs LSU",
+    "href": "/matchup/alabama-vs-lsu/",
+    "aliases": [
+      "Alabama LSU",
+      "LSU Alabama"
+    ]
+  },
+  {
     "type": "page",
     "name": "Playoff Simulator",
     "detail": "Page",
