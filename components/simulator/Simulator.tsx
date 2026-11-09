@@ -207,7 +207,7 @@ export function Simulator() {
             />
           </p>
           <InOut resultField={result.field} firstOut={result.firstOut} teams={teams} remainingSos={(teamId) => profiles.teams[teamId]?.fpi.remainingStrengthOfSchedule ?? null} />
-          <div className="mt-8 grid gap-10 min-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
+          <div className="mt-8 grid min-w-0 gap-10 min-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
             <ScenarioBuilder
               board={board}
               independents={independents}
@@ -398,13 +398,13 @@ function ScenarioBuilder({
   const tied = champions[focusConference]?.tied ?? [];
 
   return (
-    <section className="rounded-lg border border-line bg-surface p-4">
+    <section className="min-w-0 rounded-lg border border-line bg-surface p-4">
       <h2 className="text-3xl">Build the scenario</h2>
       <p className="mt-2 text-sm text-muted">Pick a conference, then a team. Their remaining games are listed underneath. W means that team wins the game.</p>
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        <label className="grid gap-1 text-sm">
+      <div className="mt-4 grid min-w-0 gap-3 sm:grid-cols-2">
+        <label className="grid min-w-0 gap-1 text-sm">
           Conference
-          <select className="min-h-11 rounded-md border border-line bg-paper px-3" value={showOthers ? "other" : focusConference} onChange={(event) => onConference(event.target.value)}>
+          <select className="min-h-11 w-full min-w-0 rounded-md border border-line bg-paper px-3" value={showOthers ? "other" : focusConference} onChange={(event) => onConference(event.target.value)}>
             {board.map((item) => (
               <option key={item.conference} value={item.conference}>
                 {item.conference}
@@ -415,9 +415,9 @@ function ScenarioBuilder({
           </select>
         </label>
         {showOthers ? null : (
-          <label className="grid gap-1 text-sm">
+          <label className="grid min-w-0 gap-1 text-sm">
             Team
-            <select className="min-h-11 rounded-md border border-line bg-paper px-3" value={selected} onChange={(event) => onTeam(event.target.value)}>
+            <select className="min-h-11 w-full min-w-0 rounded-md border border-line bg-paper px-3" value={selected} onChange={(event) => onTeam(event.target.value)}>
               {(group?.shown ?? (focusConference === "Independents" ? independents : [])).map((id) => (
                 <option key={id} value={id}>
                   {teams.get(id)?.school ?? id}
@@ -468,11 +468,11 @@ function ScenarioBuilder({
       ) : team ? (
         <div className="mt-4">
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-md px-3 py-3" style={{ background: team.color, color: teamInk(team.color) }}>
-            <Link href={`/teams/${team.id}`} className="flex min-w-0 items-center gap-3">
-              {team.logo ? <img src={team.logo} alt="" className="h-12 w-12 rounded-md bg-white p-1 object-contain" /> : null}
-              <span className="text-2xl">{team.school}</span>
+            <Link href={`/teams/${team.id}`} className="flex min-w-0 flex-1 items-center gap-3">
+              {team.logo ? <img src={team.logo} alt="" className="h-12 w-12 shrink-0 rounded-md bg-white p-1 object-contain" /> : null}
+              <span className="min-w-0 text-2xl leading-tight">{team.school}</span>
             </Link>
-            <button type="button" className={`min-h-11 rounded-full px-4 text-sm font-medium ${scenario.winOut.includes(team.id) ? "bg-paper text-ink" : "border border-current"}`} onClick={() => toggleWinOut(team.id)}>
+            <button type="button" className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-medium ${scenario.winOut.includes(team.id) ? "bg-paper text-ink" : "border border-current"}`} onClick={() => toggleWinOut(team.id)}>
               Wins out
             </button>
           </div>
@@ -485,9 +485,9 @@ function ScenarioBuilder({
               const teamWon = game.winnerId === team.id;
               const chosen = scenario.picks[game.id] === team.id || scenario.picks[game.id] === opponentId;
               return (
-                <li key={game.id} className="flex min-h-12 items-center gap-3 border-b border-line py-2">
-                  <span className="w-24 shrink-0 text-xs uppercase tracking-wide text-muted">{game.projected ? "Projected" : game.neutralSite ? "Neutral" : game.homeId === team.id ? "Home" : "Away"}</span>
-                  <span className="min-w-0 flex-1">
+                <li key={game.id} className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1 border-b border-line py-2">
+                  <span className="text-xs uppercase tracking-wide text-muted">{game.projected ? "Projected" : game.neutralSite ? "Neutral" : game.homeId === team.id ? "Home" : "Away"}</span>
+                  <span className="min-w-0">
                     {opponent ? (
                       <Link href={`/matchup/${canonicalMatchupSlug(team.id, opponent.id)}/`} className="inline-flex max-w-full">
                         <TeamMark team={opponent} size="sm" />
@@ -496,7 +496,7 @@ function ScenarioBuilder({
                       opponentName
                     )}
                   </span>
-                  <span className="inline-flex shrink-0 overflow-hidden rounded-full border border-line">
+                  <span className="col-start-2 row-span-2 row-start-1 inline-flex self-center overflow-hidden rounded-full border border-line">
                     <button type="button" aria-pressed={teamWon} className={`min-h-11 min-w-11 px-3 text-sm font-medium ${pickStyle(teamWon, chosen, "win")}`} onClick={() => setWinner(game.id, team.id)}>
                       W
                     </button>

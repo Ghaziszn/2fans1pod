@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (phone scenario)
+
+- On a 320px-wide phone the season step used to run 94px past the edge. Virginia Tech’s games now read “Away, SMU, W, L” and stay on the screen. Tapping W fills that button. The page no longer scrolls sideways.
+
 ## 2026-11-08 (ranking move)
 
 - Moving the 25th team down used to hide them. USC was 25th. After the tap, the list shows 26 teams, Florida is 25th, and USC is still there at 26th. The line says the order is yours.

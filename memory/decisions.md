@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (phone scenario)
+
+- **A remaining game on a phone lists the place, then the opponent, then W and L.** The place no longer sits in a wide column that pushed the page sideways. The rankings list stays inside the same screen.
+
 ## 2026-11-08 (ranking move)
 
 - **Moving a team past the top 25 keeps them on screen.** The list grows by one row instead of hiding the team you just moved. Show top 25 folds it back.

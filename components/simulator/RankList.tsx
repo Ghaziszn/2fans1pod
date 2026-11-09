@@ -114,7 +114,7 @@ export function RankList({
   };
 
   return (
-    <section>
+    <section className="min-w-0">
       <div className="mb-2 flex items-end justify-between gap-3">
         <h2 className="text-3xl">Rankings</h2>
         <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1">
