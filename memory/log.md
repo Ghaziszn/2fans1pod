@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (advanced edge)
+
+- The Iron Bowl advanced table now says who has the better rank. Alabama leads EPA per play on offense, 0.257 (#18) to Auburn’s 0.108 (#83). Auburn leads explosiveness on defense, #43 to #115. Turning garbage time on changes Alabama’s offensive EPA from 0.257 to 0.246. On a phone the same explosiveness card says Auburn, and the names are not cut off.
+
 ## 2026-11-08 (tap size)
 
 - Desktop bracket rows are now 44px. The line between UCLA and Ohio State still meets the middle of each name. The page does not scroll sideways at 1400px wide. On a phone the cards stay 64px, and tapping Boise State still sends them on to play Indiana. The drag handle and Copy link are 44px.

@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (advanced edge)
+
+- **An advanced matchup row names the team with the better rank.** Green is that side. The rank already points the right way, including defense and havoc. Turning garbage time on still changes the numbers.
+
 ## 2026-11-08 (tap size)
 
 - **A desktop bracket row is 44px tall.** The connecting lines still meet the middle of each team. The phone cards stay larger. The ranking drag handle and the copy-link button are 44px as well.
