@@ -349,7 +349,7 @@ function PhoneGame({
             <span className="nums w-6 shrink-0 text-center text-base font-semibold">{side.seed ?? "–"}</span>
             {team?.logo ? <img src={team.logo} alt="" className="h-10 w-10 shrink-0 rounded-sm bg-white object-contain p-0.5" /> : null}
             <span className="min-w-0 flex-1">
-              <span className="block truncate text-lg font-medium leading-tight">{team?.school ?? side.id}</span>
+              <span className="block text-lg font-medium leading-tight">{team?.school ?? side.id}</span>
               <span className="block text-xs uppercase tracking-wide">{sideNote(selected, slot.round, side.seed)}</span>
             </span>
           </motion.button>

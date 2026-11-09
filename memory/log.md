@@ -2,6 +2,11 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (search and phone names)
+
+- The search button now says Ctrl K on Windows and Linux, and ⌘K on a Mac. On a 1024px screen the header still fits, Ctrl+K opened the search box, and Escape closed it.
+- Phone bracket names wrap instead of ending in an ellipsis. Florida International still fits on one line at 320px wide. Tapping Boise State in the first round sent them on to play Indiana.
+
 ## 2026-11-08 (top 25 filter)
 
 - Before a committee poll exists, the schedule Top 25 button now uses the first 25 teams in the Elo order, so an August week is not empty. With this week's poll, week 10 still shows 16 games, including TCU at Arizona, and hides Ohio at Akron.

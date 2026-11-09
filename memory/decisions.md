@@ -2,6 +2,14 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (search shortcut)
+
+- **The search hint matches the keyboard.** A Mac shows ⌘K. Windows and Linux show Ctrl K. Either shortcut opens search.
+
+## 2026-11-08 (phone bracket names)
+
+- **A school name on the phone bracket wraps onto another line.** The desktop tree still uses one short row, because those rows are part of the connecting lines.
+
 ## 2026-11-08 (top 25 filter)
 
 - **The schedule Top 25 button uses the committee list when one exists.** When that list is empty, it uses the first 25 teams in the site order, which is Elo. An empty committee list used to hide every game. The button still says Top 25.

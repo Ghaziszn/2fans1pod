@@ -20,6 +20,11 @@ const links = [
 export function Header() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [shortcut, setShortcut] = useState("Ctrl K");
+
+  useEffect(() => {
+    if (/Mac|iPhone|iPad/.test(navigator.userAgent)) setShortcut("⌘K");
+  }, []);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -60,13 +65,14 @@ export function Header() {
               type="button"
               className="hidden min-h-11 min-w-11 items-center justify-center gap-2 rounded-md border border-line px-2 text-sm text-muted md:inline-flex lg:px-3"
               aria-label="Search"
+              aria-keyshortcuts="Control+K Meta+K"
               onClick={() => setSearchOpen(true)}
             >
               <Search size={16} />
               <span className="hidden lg:inline">Search</span>
-              <kbd className="hidden rounded border border-line px-1.5 py-0.5 text-xs lg:inline">⌘K</kbd>
+              <kbd className="hidden rounded border border-line px-1.5 py-0.5 text-xs lg:inline">{shortcut}</kbd>
             </button>
-            <button type="button" className="inline-flex h-11 w-11 items-center justify-center md:hidden" aria-label="Search" onClick={() => setSearchOpen(true)}>
+            <button type="button" className="inline-flex h-11 w-11 items-center justify-center md:hidden" aria-label="Search" aria-keyshortcuts="Control+K Meta+K" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
             </button>
             <ThemeToggle />
