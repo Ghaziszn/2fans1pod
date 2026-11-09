@@ -13,6 +13,35 @@ function sameOrder(left: string[], right: string[]) {
   return left.length === right.length && left.every((id, index) => id === right[index]);
 }
 
+function PlainRow({
+  id,
+  rank,
+  team,
+  onMove,
+}: {
+  id: string;
+  rank: number;
+  team: Team | undefined;
+  onMove: (id: string, direction: -1 | 1) => void;
+}) {
+  return (
+    <li className="flex items-center gap-2 border-b border-line py-1">
+      <button type="button" className="inline-flex h-11 w-11 items-center justify-center text-muted" aria-label={`Drag ${team?.school ?? id}`}>
+        <GripVertical size={16} />
+      </button>
+      <span className="min-w-0 flex-1">
+        <TeamMark team={team} name={team?.school ?? id} seed={rank} size="sm" />
+      </span>
+      <button type="button" className="inline-flex h-11 w-11 items-center justify-center" aria-label={`Move ${team?.school} up`} onClick={() => onMove(id, -1)}>
+        <ChevronUp size={16} />
+      </button>
+      <button type="button" className="inline-flex h-11 w-11 items-center justify-center" aria-label={`Move ${team?.school} down`} onClick={() => onMove(id, 1)}>
+        <ChevronDown size={16} />
+      </button>
+    </li>
+  );
+}
+
 function Row({
   id,
   rank,
@@ -67,6 +96,7 @@ export function RankList({
   onReset: () => void;
 }) {
   const [showAll, setShowAll] = useState(false);
+  const [dragReady, setDragReady] = useState(false);
   const [extra, setExtra] = useState(0);
   const [preview, setPreview] = useState<string[] | null>(null);
   const [canReplay, setCanReplay] = useState(false);
@@ -74,6 +104,8 @@ export function RankList({
   const lastChange = useRef<{ from: string[]; to: string[] } | null>(null);
   const shown = preview ?? order;
   const visible = showAll ? shown : shown.slice(0, 25 + extra);
+
+  useEffect(() => setDragReady(true), []);
 
   useEffect(() => {
     if (sameOrder(seen.current, order)) return;
@@ -129,15 +161,23 @@ export function RankList({
         </div>
       </div>
       <p className="mb-2 text-sm text-muted">{manual ? "Ordered by you." : "Drag a team to play committee."}</p>
-      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={onDragEnd}>
-        <SortableContext items={visible} strategy={verticalListSortingStrategy}>
-          <ol className={preview ? "pointer-events-none" : undefined}>
-            {visible.map((id, index) => (
-              <Row key={id} id={id} rank={shown.indexOf(id) + 1 || index + 1} team={teams.get(id)} instant={preview !== null} onMove={onMove} />
-            ))}
-          </ol>
-        </SortableContext>
-      </DndContext>
+      {dragReady ? (
+        <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={onDragEnd}>
+          <SortableContext items={visible} strategy={verticalListSortingStrategy}>
+            <ol className={preview ? "pointer-events-none" : undefined}>
+              {visible.map((id, index) => (
+                <Row key={id} id={id} rank={shown.indexOf(id) + 1 || index + 1} team={teams.get(id)} instant={preview !== null} onMove={onMove} />
+              ))}
+            </ol>
+          </SortableContext>
+        </DndContext>
+      ) : (
+        <ol>
+          {visible.map((id, index) => (
+            <PlainRow key={id} id={id} rank={shown.indexOf(id) + 1 || index + 1} team={teams.get(id)} onMove={onMove} />
+          ))}
+        </ol>
+      )}
       {order.length > 25 ? (
         <button
           type="button"
