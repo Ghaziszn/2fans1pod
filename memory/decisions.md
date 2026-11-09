@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (search)
+
+- **Search matches names and nicknames, not the small conference label on every team.** Typing SEC opens the conference. Typing bama still opens Alabama.
+
 ## 2026-11-08 (share titles)
 
 - **Each page’s share title and description match that page.** A link to Alabama says Alabama, not only the site name. The picture stays the logo on the dark background.

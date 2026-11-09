@@ -17,7 +17,10 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
   const fuse = useMemo(
     () =>
       new Fuse(searchEntries, {
-        keys: ["name", "aliases", "detail"],
+        keys: [
+          { name: "name", weight: 0.7 },
+          { name: "aliases", weight: 0.3 },
+        ],
         threshold: 0.35,
         ignoreLocation: true,
       }),
