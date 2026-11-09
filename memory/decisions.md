@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (ranking hydration)
+
+- **Dragging waits until the page is in the browser.** The server and the browser were giving the drag handles different labels, which made React show an error on every load. The up and down buttons work immediately. Dragging turns on a moment later.
+
 ## 2026-11-08 (wins out)
 
 - **Wins out turns off when that team is given a loss.** The other wins stay as picks you made. If two teams were both set to win out, the shared game keeps the later pick and the first button turns off.

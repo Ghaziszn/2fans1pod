@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (ranking hydration)
+
+- Reloading the homepage no longer reports a hydration error. The ranking handles can be dragged after the page is ready. Moving USC from 25th still leaves them on screen at 26th.
+
 ## 2026-11-08 (wins out)
 
 - Miami’s Wins out button used to stay filled after a loss to Notre Dame. It now turns off. The loss stays marked, and the sentence still says Miami wins the ACC and is the 8th seed. 25 simulator tests passed.
