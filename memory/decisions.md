@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (contact message)
+
+- **A visitor who sends a note before the inbox is connected sees a plain sentence.** The page says to try again later. It does not name the setup key.
+
 ## 2026-11-08 (garbage-time link)
 
 - **A link keeps garbage time when the switch is on.** The address bar gains `?gt=1`, including after you open a team page. The share step shows that same link. A link that says `?gt=0` still turns the switch off.

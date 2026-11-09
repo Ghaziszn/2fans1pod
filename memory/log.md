@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (contact message)
+
+- Sending a note with no inbox connected now says “The form is not connected yet. Please try again later.” The name stays in the box. A filled company field still says “Message sent.” and leaves the form filled. Five contact tests passed.
+
 ## 2026-11-08 (garbage-time link)
 
 - With the switch saved as on, the homepage address and the share step both include `gt=1` next to the scenario code. Opening Miami from that page keeps `gt=1`. Opening Miami’s page directly, with the choice only saved on the device, adds `gt=1` too. A visit with `gt=0` stays excluded.

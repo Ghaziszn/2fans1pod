@@ -14,7 +14,7 @@ describe("contact form", () => {
     const result = await submitContact(form(note), "");
     expect(result).toEqual({
       status: "error",
-      message: "The form is not connected yet. Add WEB3FORMS_ACCESS_KEY and rebuild.",
+      message: "The form is not connected yet. Please try again later.",
       clear: false,
     });
   });

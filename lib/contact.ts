@@ -5,7 +5,7 @@ export async function submitContact(form: FormData, accessKey: string, fetchImpl
     return { status: "sent", message: "Message sent.", clear: false };
   }
   if (!accessKey) {
-    return { status: "error", message: "The form is not connected yet. Add WEB3FORMS_ACCESS_KEY and rebuild.", clear: false };
+    return { status: "error", message: "The form is not connected yet. Please try again later.", clear: false };
   }
   try {
     const response = await fetchImpl("https://api.web3forms.com/submit", {
