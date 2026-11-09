@@ -340,6 +340,17 @@ describe("wins out on a shared game", () => {
   });
 });
 
+describe("field sentence", () => {
+  it("names the team that played its way in and the team that fell out", () => {
+    const { teams, order } = fieldTeams();
+    const games = [future("g", "SEC-4", "G6-5")];
+    const scenario = emptyScenario();
+    scenario.picks.g = "G6-5";
+    const result = simulate(season(teams, games, order), scenario, format, ranking);
+    expect(result.sentence).toBe("Big 12-1 wins the Big 12 and is the 9th seed. SEC-4 fell out. Big 12-4 is the first team out.");
+  });
+});
+
 describe("wins out and still alive", () => {
   it("makes a team the champion when they win out and the leader loses", () => {
     const teams = ["Wake", "Clemson", "Duke", "Pitt"].map((id) => team(id, "ACC", "power"));

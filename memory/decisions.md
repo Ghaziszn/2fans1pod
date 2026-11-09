@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (who got in)
+
+- **When a pick changes the field, the sentence names who came in and who fell out.** Tennessee winning out says Tennessee is the 10th seed and Notre Dame fell out. A conference winner seeded 5th or lower still leads the sentence. If nobody new enters, the sentence stays on the last team in and the first team out.
+
 ## 2026-11-08 (long team names)
 
 - **On a phone, the team name sits under the logo.** A long name such as Florida International stays on the page instead of pushing it sideways. From the small-tablet width up, the logo and the name sit in a row again.

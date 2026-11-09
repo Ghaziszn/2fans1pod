@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (who got in)
+
+- Tennessee winning out used to leave the sentence on Boise State and Ole Miss. It now says Tennessee is in at the 10th seed and Notre Dame fell out. Wake Forest winning the ACC says Miami fell out. A favorite who was already going to win, such as Georgia, keeps the same sentence. The playoff tests passed.
+
 ## 2026-11-08 (long team names)
 
 - On a 320px screen, Florida International's name sat beside the logo and pushed the page sideways. The name now sits under the logo until the screen is wider. The page no longer scrolls sideways, and the full name still shows. Checked Florida International, Jacksonville State, and Sam Houston.

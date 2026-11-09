@@ -1,16 +1,17 @@
-import type {
-  BracketSlot,
-  CfpFormat,
-  ChampState,
-  ContenderGroup,
-  Game,
-  RankingConfig,
-  ResolvedGame,
-  Scenario,
-  SeasonData,
-  SeededTeam,
-  SimResult,
-  Team,
+import {
+  emptyScenario,
+  type BracketSlot,
+  type CfpFormat,
+  type ChampState,
+  type ContenderGroup,
+  type Game,
+  type RankingConfig,
+  type ResolvedGame,
+  type Scenario,
+  type SeasonData,
+  type SeededTeam,
+  type SimResult,
+  type Team,
 } from "./types";
 
 const FIRST_ROUND: [number, number][] = [
@@ -336,32 +337,60 @@ function ordinal(seed: number) {
   return `${seed}th`;
 }
 
+function seasonTouched(scenario: Scenario) {
+  return (
+    Object.keys(scenario.picks).length > 0 ||
+    scenario.winOut.length > 0 ||
+    scenario.manualOrder != null ||
+    Object.keys(scenario.champPicks).length > 0 ||
+    Object.keys(scenario.titlePairs ?? {}).length > 0
+  );
+}
+
+function fellOutSentence(field: SeededTeam[], baseline: SeededTeam[] | null, firstOut: string | undefined, name: (id: string | undefined) => string) {
+  if (!baseline) return "";
+  const now = new Set(field.map((team) => team.teamId));
+  const schools = baseline.filter((team) => !now.has(team.teamId) && team.teamId !== firstOut).map((team) => name(team.teamId));
+  if (schools.length === 0) return "";
+  if (schools.length === 1) return `${schools[0]} fell out. `;
+  return `${schools.slice(0, -1).join(", ")} and ${schools[schools.length - 1]} fell out. `;
+}
+
 function writeSentence(
   field: SeededTeam[],
   firstOut: string[],
   teams: Map<string, Team>,
   fieldLocked: boolean,
   scenario: Scenario,
+  baseline: SeededTeam[] | null,
 ) {
   const name = (id: string | undefined) => (id ? teams.get(id)?.school ?? "A team" : "The next team");
   const last = field[field.length - 1];
   const out = name(firstOut[0]);
-  const untouched =
-    Object.keys(scenario.picks).length === 0 &&
-    scenario.winOut.length === 0 &&
-    scenario.manualOrder == null &&
-    Object.keys(scenario.champPicks).length === 0 &&
-    Object.keys(scenario.titlePairs ?? {}).length === 0;
+  const untouched = !seasonTouched(scenario);
   if (fieldLocked && untouched) {
     return `This is the official field. ${name(last?.teamId)} is the ${ordinal(last?.seed ?? 12)} seed. ${out} is the first team out.`;
   }
+  const fell = fellOutSentence(field, baseline, firstOut[0], name);
   const bubble = field.find((team) => team.automatic && team.reason.includes("champion") && team.seed >= 5);
   if (bubble) {
     const school = name(bubble.teamId);
-    return `${school} wins the ${bubble.conference} and is the ${ordinal(bubble.seed)} seed. ${out} is the first team out.`;
+    return `${school} wins the ${bubble.conference} and is the ${ordinal(bubble.seed)} seed. ${fell}${out} is the first team out.`;
   }
   if (!last) return "Pick the remaining games to see the bracket.";
-  return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`;
+  const baselineIds = new Set(baseline?.map((team) => team.teamId) ?? []);
+  const entered = baseline ? field.filter((team) => !baselineIds.has(team.teamId)) : [];
+  if (entered.length === 1) {
+    const team = entered[0];
+    const lead = `${name(team.teamId)} is in, the ${ordinal(team.seed)} seed (${team.reason}).`;
+    const tail = team.teamId === last.teamId ? "" : ` ${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}).`;
+    return `${lead} ${fell}${tail} ${out} is the first team out.`.replaceAll("  ", " ");
+  }
+  if (entered.length > 1) {
+    const lead = `${entered.map((team) => `${name(team.teamId)} (${ordinal(team.seed)})`).join(" and ")} are in.`;
+    return `${lead} ${fell}${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`.replaceAll("  ", " ");
+  }
+  return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${fell}${out} is the first team out.`;
 }
 
 export function withWinOut(
@@ -416,6 +445,7 @@ export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat
   const order = manual && manual.length ? manual : formula;
   const selected = selectField(order, teams, champIds, format);
   const bracket = buildBracket(selected.field, scenario, teams);
+  const baseline = seasonTouched(scenario) ? simulate(data, emptyScenario(), format, ranking).field : null;
   return {
     order,
     formulaOrder: formula,
@@ -425,7 +455,7 @@ export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat
     field: selected.field,
     firstOut: selected.firstOut,
     bracket,
-    sentence: writeSentence(selected.field, selected.firstOut, teams, data.season.fieldLocked, scenario),
+    sentence: writeSentence(selected.field, selected.firstOut, teams, data.season.fieldLocked, scenario, baseline),
   };
 }
 
