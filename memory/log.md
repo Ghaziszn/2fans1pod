@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (wins out)
+
+- Miami’s Wins out button used to stay filled after a loss to Notre Dame. It now turns off. The loss stays marked, and the sentence still says Miami wins the ACC and is the 8th seed. 25 simulator tests passed.
+
 ## 2026-11-08 (share picture)
 
 - On a 320px phone the share picture is 740px wide and now opens 226px in, on the championship. The page does not scroll sideways. The line says to swipe for both halves. On a 1280px screen the whole picture fits and that line is hidden.

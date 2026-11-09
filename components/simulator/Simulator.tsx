@@ -9,7 +9,7 @@ import { InfoTip } from "@/components/info/InfoTip";
 import { simulatorRankNote } from "@/lib/cfp/words";
 import { TeamMark, teamInk } from "@/components/team/TeamMark";
 import { useGarbageTime } from "@/components/stats/GarbageTime";
-import { contenderBoard, openingStep, simulate, withWinOut } from "@/lib/cfp/engine";
+import { contenderBoard, openingStep, reconcileWinOut, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
 import type { ChampState, ContenderGroup, Game, Scenario, Team } from "@/lib/cfp/types";
 import { canonicalMatchupSlug, cfpFormat, loadProfile, loadSeason, rankingConfig } from "@/lib/load";
@@ -40,12 +40,10 @@ export function Simulator() {
     const params = new URLSearchParams(window.location.search);
     const fromUrl = params.get("s");
     const decoded = fromUrl ? decodeScenario(fromUrl) : null;
-    if (decoded) setScenario(decoded);
-    else {
-      const saved = window.localStorage.getItem(STORAGE_KEY);
-      const fromDevice = saved ? decodeScenario(saved) : null;
-      if (fromDevice) setScenario(fromDevice);
-    }
+    const saved = window.localStorage.getItem(STORAGE_KEY);
+    const fromDevice = !decoded && saved ? decodeScenario(saved) : null;
+    const incoming = decoded ?? fromDevice;
+    if (incoming) setScenario(reconcileWinOut(incoming, data.games));
     setReady(true);
   }, []);
 
@@ -116,13 +114,22 @@ export function Simulator() {
   const remainingFor = (teamId: string) =>
     result.games.filter((game) => !game.completed && (game.homeId === teamId || game.awayId === teamId));
 
+  const commitScenario = (recipe: (current: Scenario) => Scenario) => {
+    setScenario((current) => {
+      const next = recipe(current);
+      const seen = new Set(data.games.map((game) => game.id));
+      const projected = result.games.filter((game) => !seen.has(game.id));
+      return reconcileWinOut(next, [...data.games, ...projected]);
+    });
+  };
+
   const setWinner = (gameId: string, winnerId: string) => {
-    setScenario((current) => ({ ...current, picks: { ...current.picks, [gameId]: winnerId } }));
+    commitScenario((current) => ({ ...current, picks: { ...current.picks, [gameId]: winnerId } }));
   };
 
   const toggleWinOut = (teamId: string) => {
     const conference = data.teams.find((team) => team.id === teamId)?.conference;
-    setScenario((current) => {
+    commitScenario((current) => {
       const draft = withWinOut(current, teamId, data.games, conference);
       if (!draft.winOut.includes(teamId) || !conference) return draft;
       const title = simulate(data, draft, cfpFormat, rankingConfig).games.find((game) => game.id === `ccg:${conference}`);
@@ -251,14 +258,14 @@ export function Simulator() {
               setWinner={setWinner}
               toggleWinOut={toggleWinOut}
               onChampion={(conference, team) =>
-                setScenario((current) => ({
+                commitScenario((current) => ({
                   ...current,
                   champPicks: { ...current.champPicks, [conference]: team },
                   picks: { ...current.picks, [`ccg:${conference}`]: team },
                 }))
               }
               onTitlePair={(conference, index, teamId) =>
-                setScenario((current) => {
+                commitScenario((current) => {
                   const playing = result.champions[conference]?.playing;
                   if (!playing || playing[index] === teamId || playing[1 - index] === teamId) return current;
                   const next: [string, string] = [playing[0], playing[1]];

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { contenderBoard, isAlive, openingStep, simulate, withWinOut } from "./engine";
+import { contenderBoard, isAlive, openingStep, reconcileWinOut, simulate, withWinOut } from "./engine";
 import { decodeScenario, encodeScenario, emptyScenario } from "./share";
 import type { CfpFormat, Game, RankingConfig, SeasonData, Team } from "./types";
 
@@ -352,6 +352,24 @@ describe("field sentence", () => {
 });
 
 describe("wins out and still alive", () => {
+  it("turns wins out off when that team is given a loss", () => {
+    const games = [future("g1", "Wake", "Miami")];
+    const on = withWinOut(emptyScenario(), "Wake", games, "ACC");
+    const lost = reconcileWinOut({ ...on, picks: { ...on.picks, g1: "Miami" } }, games);
+    expect(on.winOut).toEqual(["Wake"]);
+    expect(lost.winOut).toEqual([]);
+    expect(lost.picks.g1).toBe("Miami");
+  });
+
+  it("keeps only the second team when both were set to win out", () => {
+    const games = [future("g1", "Wake", "Miami")];
+    const wake = withWinOut(emptyScenario(), "Wake", games, "ACC");
+    const both = withWinOut(wake, "Miami", games, "ACC");
+    const settled = reconcileWinOut(both, games);
+    expect(settled.winOut).toEqual(["Miami"]);
+    expect(settled.picks.g1).toBe("Miami");
+  });
+
   it("makes a team the champion when they win out and the leader loses", () => {
     const teams = ["Wake", "Clemson", "Duke", "Pitt"].map((id) => team(id, "ACC", "power"));
     const games = [

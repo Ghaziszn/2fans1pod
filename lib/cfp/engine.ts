@@ -418,6 +418,19 @@ export function withWinOut(
   return { ...scenario, winOut: [...scenario.winOut, teamId], picks };
 }
 
+export function reconcileWinOut(scenario: Scenario, games: { id: string; homeId: string; awayId: string }[]): Scenario {
+  if (scenario.winOut.length === 0) return scenario;
+  const winOut = scenario.winOut.filter((teamId) =>
+    games.every((game) => {
+      if (game.homeId !== teamId && game.awayId !== teamId) return true;
+      const pick = scenario.picks[game.id];
+      return pick == null || pick === teamId;
+    }),
+  );
+  if (winOut.length === scenario.winOut.length && winOut.every((id, index) => id === scenario.winOut[index])) return scenario;
+  return { ...scenario, winOut };
+}
+
 export function openingStep(fieldLocked: boolean): 1 | 2 {
   return fieldLocked ? 2 : 1;
 }

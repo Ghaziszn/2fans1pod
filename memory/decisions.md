@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (wins out)
+
+- **Wins out turns off when that team is given a loss.** The other wins stay as picks you made. If two teams were both set to win out, the shared game keeps the later pick and the first button turns off.
+
 ## 2026-11-08 (share picture)
 
 - **On a phone, the bracket picture opens on the championship.** The picture stays wide enough to read. A line says to swipe sideways for both halves. A wide screen shows the whole picture and hides that line.
