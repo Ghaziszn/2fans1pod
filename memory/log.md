@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (no poll yet)
+
+- The rankings page now says the top 25 is the committee poll and that the data was checked on 2026-11-05. Miami is still first. The homepage still says teams outside the top 25 use Elo, because a poll is published. The empty-poll sentence is covered by a unit test.
+
 ## 2026-11-08 (any matchup)
 
 - `/matchup/wake-forest-vs-navy/` is not a prebuilt rivalry. It opened as Wake Forest vs Navy. The Iron Bowl page still opened under its own name.
