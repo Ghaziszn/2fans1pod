@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (team color on charts)
+
+- Southern Miss gold was nearly the same color as the light bar track. The bars, the offense line, and the team's scatter dot now mix the team color with the text color. In light mode that gold becomes a darker gold. In dark mode App State's black bar becomes a gray you can see on the dark track. Alabama's bar stays crimson.
+
 ## 2026-11-08 (game EPA list)
 
 - Alabama's page now lists Week 6 vs Georgia as offense 0.202 and defense 0.227. Turning garbage time on changes Week 1 vs East Carolina from 0.364 to 0.240 on offense. Checked at 320px. The page does not scroll sideways.

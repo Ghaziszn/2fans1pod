@@ -33,6 +33,11 @@ function ratingText(value: number | null, rank: number | null, digits = 1) {
   return `${value.toFixed(digits)}${rank ? ` (#${rank})` : ""}`;
 }
 
+function teamPaint(color: string) {
+  // A gold or a black can match the bar track. Mixing in the text color keeps the team color and stays visible in both themes.
+  return `color-mix(in srgb, ${color} 62%, var(--ink))`;
+}
+
 export function TeamProfile({ teamId, record, conferenceRecord }: { teamId: string; record: string; conferenceRecord: string }) {
   const team = seasonTeams.find((item) => item.id === teamId);
   const row = profile.teams[teamId];
@@ -119,7 +124,7 @@ function PercentBar({ label, value, color }: { label: string; value: number | nu
     <div className="mt-1 grid grid-cols-[4.5rem_1fr_2.5rem] items-center gap-2 text-sm">
       <span className="text-muted">{label}</span>
       <span className="h-3 overflow-hidden rounded-full bg-line">
-        <span key={value ?? "none"} className="stat-bar block h-full rounded-full" style={{ width: `${value ?? 0}%`, background: color }} />
+        <span key={value ?? "none"} className="stat-bar block h-full rounded-full" style={{ width: `${value ?? 0}%`, background: teamPaint(color) }} />
       </span>
       <span className="nums text-right">{value == null ? "—" : value}</span>
     </div>
@@ -165,7 +170,7 @@ function EpaScatter({ teamId, school, color }: { teamId: string; school: string;
 function ScatterDot(props: { cx?: number; cy?: number; payload?: { id?: string }; teamId?: string; color?: string }) {
   const big = props.payload?.id === props.teamId;
   if (props.cx == null || props.cy == null) return null;
-  return <circle cx={props.cx} cy={props.cy} r={big ? 7 : 3} fill={big ? props.color : "var(--muted)"} />;
+  return <circle cx={props.cx} cy={props.cy} r={big ? 7 : 3} fill={big ? teamPaint(props.color ?? "var(--accent)") : "var(--muted)"} />;
 }
 
 function ScatterTip({ active, payload }: { active?: boolean; payload?: { payload: { name: string; off: number; def: number } }[] }) {
@@ -201,7 +206,7 @@ function EpaLine({ teamId, color }: { teamId: string; color: string }) {
                 <XAxis dataKey="week" stroke="currentColor" tick={{ fontSize: 12 }} />
                 <YAxis stroke="currentColor" tick={{ fontSize: 12 }} width={48} />
                 <Tooltip content={<LineTip />} />
-                <Line type="monotone" dataKey="offEpa" name="Offense" stroke={color} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
+                <Line type="monotone" dataKey="offEpa" name="Offense" stroke={teamPaint(color)} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
                 <Line type="monotone" dataKey="defEpa" name="Defense" stroke="currentColor" strokeDasharray="5 4" strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
               </LineChart>
             </ResponsiveContainer>

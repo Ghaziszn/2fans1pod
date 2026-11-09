@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (team color on charts)
+
+- **A light or black team color is mixed with the text color on charts.** Southern Miss gold stays visible on the beige bar track. App State black stays visible on the dark track. Alabama stays crimson.
+
 ## 2026-11-08 (game EPA list)
 
 - **Each team page lists EPA game by game under the chart.** The line stays. The list names the opponent, so a phone can read it without hovering. It follows the garbage-time switch.
