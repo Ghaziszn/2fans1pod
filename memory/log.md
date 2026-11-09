@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (bracket out)
+
+- On a phone, the team that does not move on now says Out. Tapping Boise State in the first round marks Alabama Out, and the quarterfinal then shows Boise State against Indiana.
+
 ## 2026-11-08 (rivalry name either way)
 
 - Opening Auburn vs Alabama used to title the page "Auburn vs Alabama". It now says Iron Bowl, and the browser tab does too. Alabama vs Georgia still uses the two school names, because that pair is not in the rivalry list.

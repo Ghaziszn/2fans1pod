@@ -278,8 +278,9 @@ function PhoneBracket({
   );
 }
 
-function sideNote(selected: boolean, round: BracketSlot["round"], seed: number | null) {
+function sideNote(selected: boolean, round: BracketSlot["round"], seed: number | null, decided: boolean) {
   if (selected) return round === "Championship" ? "Champion" : "Moves on";
+  if (decided) return "Out";
   if (round === "Quarterfinal" && (seed ?? 99) <= 4) return "Bye";
   if (round === "Quarterfinal") return "Advanced";
   return "";
@@ -350,7 +351,7 @@ function PhoneGame({
             {team?.logo ? <img src={team.logo} alt="" className="h-10 w-10 shrink-0 rounded-sm bg-white object-contain p-0.5" /> : null}
             <span className="min-w-0 flex-1">
               <span className="block text-lg font-medium leading-tight">{team?.school ?? side.id}</span>
-              <span className="block text-xs uppercase tracking-wide">{sideNote(selected, slot.round, side.seed)}</span>
+              <span className="block text-xs uppercase tracking-wide">{sideNote(selected, slot.round, side.seed, Boolean(slot.winnerId))}</span>
             </span>
           </motion.button>
         );

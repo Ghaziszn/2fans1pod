@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (bracket out)
+
+- **On a phone, the team that loses a playoff game is labeled Out.** The winner still says Moves on, or Champion in the title game. A top-four bye is still listed in the Byes line above the quarterfinals.
+
 ## 2026-11-08 (rivalry name either way)
 
 - **The rivalry name shows no matter which team is on the left.** `/matchup/auburn-vs-alabama/` says Iron Bowl, same as `/matchup/alabama-vs-auburn/`. A pair that is not a named rivalry keeps the two school names.
