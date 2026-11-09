@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (played matchup)
+
+- Alabama vs Georgia was showing only "Consensus line: Alabama -2.5" after Georgia had already won. It now says Georgia beat Alabama, 20–17, and that the line was Alabama -2.5. The Iron Bowl still says Alabama -10. Wake Forest vs Navy still says no line is posted.
+
 ## 2026-11-08 (standings ties)
 
 - Conference pages broke ties by the order in the file. The American page listed North Texas (6-2, 4-0) above UTSA (7-1, 4-0). The ACC listed Louisville (5-3, 4-2) above SMU (6-2, 4-2). The same conference record now keeps the better overall record first. Checked the American and ACC pages at 320px.

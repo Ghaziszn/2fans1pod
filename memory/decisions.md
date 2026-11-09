@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (played matchup)
+
+- **A matchup that has already been played says who won.** Alabama vs Georgia says Georgia beat Alabama, 20–17, and that the line was Alabama -2.5. A future game still shows the consensus line. A pair with no game still says no line is posted.
+
 ## 2026-11-08 (standings ties)
 
 - **When two teams share a conference record, the better overall record is listed first.** UTSA (7-1, 4-0) sits above North Texas (6-2, 4-0). If the overall records match too, the higher simulator rank is listed first. This is not an official tiebreaker.

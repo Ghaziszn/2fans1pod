@@ -6,7 +6,7 @@ import { Bar, BarChart, Cell, ReferenceLine, ResponsiveContainer, Tooltip, XAxis
 import { InfoTip } from "@/components/info/InfoTip";
 import { AdvancedMatchup } from "@/components/stats/AdvancedStats";
 import { teamInk } from "@/components/team/TeamMark";
-import type { StatCell, Team, TeamSeason } from "@/lib/cfp/types";
+import type { Game, StatCell, Team, TeamSeason } from "@/lib/cfp/types";
 import { loadProfile, loadSeason, parseMatchupSlug, resolvedRivalries, siteConfig, statCatalog } from "@/lib/load";
 
 type CatalogEntry = {
@@ -28,6 +28,19 @@ function formatValue(key: string, value: number | null) {
   const entry = catalog[key];
   const digits = entry?.digits ?? 1;
   return `${value.toFixed(digits)}${entry?.suffix ?? ""}`;
+}
+
+function lineText(played: Game | undefined, upcoming: Game | undefined) {
+  const parts: string[] = [];
+  if (played && played.awayPoints != null && played.homePoints != null) {
+    if (played.awayPoints > played.homePoints) parts.push(`In week ${played.week}, ${played.awayName} beat ${played.homeName}, ${played.awayPoints}–${played.homePoints}.`);
+    else if (played.homePoints > played.awayPoints) parts.push(`In week ${played.week}, ${played.homeName} beat ${played.awayName}, ${played.homePoints}–${played.awayPoints}.`);
+    else parts.push(`In week ${played.week}, ${played.awayName} and ${played.homeName} tied, ${played.awayPoints}–${played.homePoints}.`);
+  }
+  if (upcoming?.spread) parts.push(`Consensus line: ${upcoming.spread}.`);
+  else if (played?.spread) parts.push(`The line was ${played.spread}.`);
+  else parts.push("No line is posted. A line shows up only when these teams are scheduled and a number is in the feed.");
+  return parts.join(" ");
 }
 
 function edge(left: number | null, right: number | null): "left" | "right" | "tie" | null {
@@ -127,11 +140,15 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
 
   const leftStats = data.stats[pair.left.id];
   const rightStats = data.stats[pair.right.id];
-  const meeting = data.games.find(
-    (game) =>
-      (game.homeId === pair.left.id && game.awayId === pair.right.id) ||
-      (game.homeId === pair.right.id && game.awayId === pair.left.id),
-  );
+  const meetings = data.games
+    .filter(
+      (game) =>
+        (game.homeId === pair.left.id && game.awayId === pair.right.id) ||
+        (game.homeId === pair.right.id && game.awayId === pair.left.id),
+    )
+    .sort((a, b) => a.week - b.week || a.startDate.localeCompare(b.startDate));
+  const played = [...meetings].reverse().find((game) => game.completed && game.homePoints != null && game.awayPoints != null);
+  const upcoming = meetings.find((game) => !game.completed);
 
   const sideBySide = sideBySideRows(leftStats, rightStats);
   const leftHasBall = ballKeys.map((key) =>
@@ -158,11 +175,7 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
       <p className="mt-4 text-lg">
         {pair.left.school} leads {countEdges(sideBySide, "left")} categories. {pair.right.school} leads {countEdges(sideBySide, "right")}.
       </p>
-      <p className="mt-2 text-sm text-muted">
-        {meeting?.spread
-          ? `Consensus line: ${meeting.spread}.`
-          : "No line is posted. A line shows up only when these teams are scheduled and a number is in the feed."}
-      </p>
+      <p className="mt-2 text-sm text-muted">{lineText(played, upcoming)}</p>
       <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">
         Strength of schedule is the average winning percentage of opponents in games already played. Each FCS opponent counts as .400. Higher is a harder schedule. It is not an SP+ rating.
         {leftStats?.defense.totalYards?.value == null ? " Defensive yards are filled from each game's box score. If a row is blank, that number was not in the feed." : ""}
