@@ -2,6 +2,11 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (in and out)
+
+- **On a phone, each playoff team’s reason sits under the school name.** A long reason such as Group of Six bid no longer cuts off the name. A wider screen keeps the reason on the same row.
+- **The homepage browser tab reads “Playoff Simulator · 2fans1pod.”** The site name is part of that tab, same as the other pages.
+
 ## 2026-11-08 (empty poll)
 
 - **A season with no committee poll can be published when the label says the order is Elo.** The data check still refuses an empty poll that is labeled as the committee. That keeps a broken download from replacing a real top 25.

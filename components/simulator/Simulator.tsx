@@ -619,12 +619,12 @@ function InOut({
         {resultField.map((team) => {
           const club = teams.get(team.teamId);
           return (
-            <li key={team.teamId} className="flex min-h-11 items-center gap-2 rounded-md border border-line px-3 py-2" style={{ background: club ? `${club.color}18` : undefined }}>
-              <span className="nums w-6 text-sm">{team.seed}</span>
+            <li key={team.teamId} className="flex min-h-11 flex-wrap items-center gap-x-2 gap-y-1 rounded-md border border-line px-3 py-2 sm:flex-nowrap" style={{ background: club ? `${club.color}18` : undefined }}>
+              <span className="nums w-6 shrink-0 text-sm">{team.seed}</span>
               <span className="min-w-0 flex-1">
                 <TeamMark team={club} size="sm" />
               </span>
-              <span className="text-xs text-muted">
+              <span className="w-full pl-8 text-xs text-muted sm:w-auto sm:shrink-0 sm:pl-0">
                 {team.reason}
                 {remainingSos(team.teamId) != null ? ` · Rem. SOS #${remainingSos(team.teamId)}` : ""}
               </span>

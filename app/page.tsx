@@ -4,7 +4,7 @@ import { JsonLd } from "@/lib/json-ld";
 import { siteConfig } from "@/lib/load";
 
 export const metadata: Metadata = {
-  title: "Playoff Simulator",
+  title: { absolute: `Playoff Simulator · ${siteConfig.name}` },
   description: "Change the games that have not been played and see who makes the College Football Playoff.",
 };
 

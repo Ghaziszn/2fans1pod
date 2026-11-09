@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (in and out)
+
+- On a phone, Boise State’s name was cut off by “Group of Six bid.” The reason now sits under the school. All 12 names fit, and the page does not scroll sideways. A wide screen still keeps the reason beside the name. The homepage tab now says Playoff Simulator · 2fans1pod.
+
 ## 2026-11-08 (empty poll)
 
 - The data check now accepts an empty committee list when the season file says the order is Elo. It still rejects an empty list that claims to be the committee. The live files still have 25 ranked teams. The Python tests passed, including that case.
