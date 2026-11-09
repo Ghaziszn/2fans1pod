@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (current week)
+
+- **The schedule row scrolls so the selected week is on screen.** On a phone, week 10 was selected but only weeks 1 through 3 were visible. Choosing another week scrolls that button into view too.
+
 ## 2026-11-08 (who got in)
 
 - **When a pick changes the field, the sentence names who came in and who fell out.** Tennessee winning out says Tennessee is the 10th seed and Notre Dame fell out. A conference winner seeded 5th or lower still leads the sentence. If nobody new enters, the sentence stays on the last team in and the first team out.

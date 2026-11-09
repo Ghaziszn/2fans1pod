@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { TeamMark } from "@/components/team/TeamMark";
 import type { Game, GameSplit, Team } from "@/lib/cfp/types";
 import { top25TeamIds } from "@/lib/cfp/words";
@@ -71,6 +71,15 @@ export function WeekSchedule() {
   const ranked = useMemo(() => new Set(top25TeamIds(data.rankings.cfp, data.rankings.order)), [data.rankings]);
   const start = weeks.regular.includes(data.season.week) ? data.season.week : weeks.regular[0] ?? 1;
   const [selected, setSelected] = useState<number | "postseason">(start);
+  const weekRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const row = weekRow.current;
+    const active = row?.querySelector<HTMLButtonElement>("[aria-pressed='true']");
+    if (!row || !active) return;
+    const rowBox = row.getBoundingClientRect();
+    const buttonBox = active.getBoundingClientRect();
+    row.scrollLeft += buttonBox.left - rowBox.left - (rowBox.width - buttonBox.width) / 2;
+  }, [selected]);
   const [top25, setTop25] = useState(false);
   const [conference, setConference] = useState("all");
   const [kickoff, setKickoff] = useState<Kickoff>("any");
@@ -112,11 +121,12 @@ export function WeekSchedule() {
 
   return (
     <div>
-      <div className="mt-6 flex gap-2 overflow-x-auto pb-2">
+      <div ref={weekRow} className="mt-6 flex gap-2 overflow-x-auto pb-2">
         {weeks.regular.map((week) => (
           <button
             key={week}
             type="button"
+            aria-pressed={selected === week}
             className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-medium ${selected === week ? "bg-accent text-accent-ink" : "border border-line text-muted"}`}
             onClick={() => setSelected(week)}
           >
@@ -127,6 +137,7 @@ export function WeekSchedule() {
         {weeks.postseason ? (
           <button
             type="button"
+            aria-pressed={selected === "postseason"}
             className={`min-h-11 shrink-0 rounded-full px-4 text-sm font-medium ${selected === "postseason" ? "bg-accent text-accent-ink" : "border border-line text-muted"}`}
             onClick={() => setSelected("postseason")}
           >

@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (current week)
+
+- On a 320px screen the schedule opened on weeks 1 through 3, while week 10 was the current week and sat off to the right. The selected week now scrolls into the middle of that row. Week 1 stays at the start, and week 15 stays at the end. The page itself does not jump.
+
 ## 2026-11-08 (who got in)
 
 - Tennessee winning out used to leave the sentence on Boise State and Ole Miss. It now says Tennessee is in at the 10th seed and Notre Dame fell out. Wake Forest winning the ACC says Miami fell out. A favorite who was already going to win, such as Georgia, keeps the same sentence. The playoff tests passed.
