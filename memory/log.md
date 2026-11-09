@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (phone stats)
+
+- The Iron Bowl on a phone shows stat cards instead of a sideways table. One card reads FPI schedule rank, Alabama #7, Auburn #2, edge Auburn. The page does not scroll sideways. A wide screen still shows the table.
+
 ## 2026-11-08 (no poll yet)
 
 - The rankings page now says the top 25 is the committee poll and that the data was checked on 2026-11-05. Miami is still first. The homepage still says teams outside the top 25 use Elo, because a poll is published. The empty-poll sentence is covered by a unit test.

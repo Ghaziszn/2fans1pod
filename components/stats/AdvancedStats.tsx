@@ -35,7 +35,19 @@ export function AdvancedTeamTable({ teamId }: { teamId: string }) {
         <h2 className="text-3xl">Advanced stats</h2>
         <p className="text-sm text-muted">{include ? "Every play is counted." : "Garbage time is left out."}</p>
       </div>
-      <div className="mt-3 overflow-x-auto">
+      <ul className="mt-3 grid gap-3 md:hidden">
+        {keys.map((key) => (
+          <li key={key} className="rounded-lg border border-line p-3 text-sm">
+            <p className="inline-flex items-center font-medium">
+              {catalog[key].label}
+              <InfoTip label={`About ${catalog[key].label}`} text={catalog[key].help} />
+            </p>
+            <p className="mt-2">Offense <span className="nums">{show(copy.offense[key], key)}</span></p>
+            <p>Defense <span className="nums">{show(copy.defense[key], key)}</span></p>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-3 hidden overflow-x-auto md:block">
         <table className="w-full min-w-[520px] text-sm">
           <thead>
             <tr className="border-b border-line text-left text-muted">
@@ -73,7 +85,28 @@ export function AdvancedMatchup({ leftId, rightId, leftName, rightName }: { left
     <section className="mt-8">
       <h2 className="text-3xl">Advanced stats</h2>
       <p className="mt-2 text-sm text-muted">{include ? "Every play is counted." : "Garbage time is left out."} A lower defensive rank is better when the help text says so.</p>
-      <div className="mt-3 overflow-x-auto">
+      <ul className="mt-3 grid gap-3 md:hidden">
+        {keys.flatMap((key) =>
+          (["offense", "defense"] as const).map((side) => (
+            <li key={`${key}-${side}`} className="rounded-lg border border-line p-3 text-sm">
+              <p className="font-medium">
+                {catalog[key].label} ({side})
+              </p>
+              <div className="mt-2 grid grid-cols-2 gap-2">
+                <p>
+                  <span className="block truncate text-xs text-muted">{leftName}</span>
+                  <span className="nums mt-1 block">{show(left[side][key], key)}</span>
+                </p>
+                <p>
+                  <span className="block truncate text-xs text-muted">{rightName}</span>
+                  <span className="nums mt-1 block">{show(right[side][key], key)}</span>
+                </p>
+              </div>
+            </li>
+          )),
+        )}
+      </ul>
+      <div className="mt-3 hidden overflow-x-auto md:block">
         <table className="w-full min-w-[640px] text-sm">
           <thead>
             <tr className="border-b border-line text-left text-muted">

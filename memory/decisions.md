@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (phone stats)
+
+- **On a phone, each matchup stat is its own card.** Both teams and the edge are on the card. The wide table stays on a wider screen. The rank-gap chart fits the phone width.
+
 ## 2026-11-08 (no poll yet)
 
 - **Before the committee releases a poll, the order is Elo and the page says so.** It does not call that list a committee ranking. When a poll exists, the rankings page names it and says when the data was checked. That checked date is not labeled as the poll date. The next data run includes the poll week in the name when College Football Data provides it.

@@ -166,12 +166,12 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
         <section className="mt-8">
           <h2 className="text-3xl">Rank gaps</h2>
           <p className="mt-2 text-sm text-muted">Bars to the right mean {pair.left.school} has the better rank. Bars to the left mean {pair.right.school} does.</p>
-          <div className="mt-4 overflow-x-auto">
-            <div className="min-w-[640px]" style={{ height: Math.max(320, chart.length * 36) }}>
+          <div className="mt-4 w-full" style={{ height: Math.max(320, chart.length * 36) }}>
+            <div className="h-full w-full">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={chart} layout="vertical" margin={{ left: 8, right: 16 }}>
                   <XAxis type="number" stroke="currentColor" />
-                  <YAxis type="category" dataKey="name" width={188} stroke="currentColor" tick={{ fontSize: 11 }} interval={0} />
+                  <YAxis type="category" dataKey="name" width={128} stroke="currentColor" tick={{ fontSize: 11 }} interval={0} />
                   <Tooltip />
                   <ReferenceLine x={0} stroke="currentColor" />
                   <Bar dataKey="gap" isAnimationActive={!reduceMotion} animationDuration={180}>
@@ -367,9 +367,38 @@ function shown(value: string, rank: number | null) {
   return rank ? `#${rank}` : "—";
 }
 
+function edgeName(row: Row, left: string, right: string) {
+  if (row.winner === "left") return left;
+  if (row.winner === "right") return right;
+  if (row.winner === "tie") return "Even";
+  return "—";
+}
+
 function StatTable({ rows, left, right }: { rows: Row[]; left: string; right: string }) {
   return (
-    <div className="overflow-x-auto">
+    <>
+      <ul className="grid gap-3 md:hidden">
+        {rows.map((row) => (
+          <li key={row.label} className="rounded-lg border border-line p-3">
+            <p className="inline-flex items-center text-sm font-medium">
+              {row.label}
+              <InfoTip label={`About ${row.label}`} text={row.help} />
+            </p>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              <p>
+                <span className="block truncate text-xs text-muted">{left}</span>
+                <span className={`nums mt-1 block rounded-md px-2 py-2 ${edgeShade(row.winner, "left")}`}>{shown(row.leftValue, row.leftRank)}</span>
+              </p>
+              <p>
+                <span className="block truncate text-xs text-muted">{right}</span>
+                <span className={`nums mt-1 block rounded-md px-2 py-2 ${edgeShade(row.winner, "right")}`}>{shown(row.rightValue, row.rightRank)}</span>
+              </p>
+            </div>
+            <p className="mt-2 text-sm">Edge: {edgeName(row, left, right)}</p>
+          </li>
+        ))}
+      </ul>
+      <div className="hidden overflow-x-auto md:block">
       <table className="w-full min-w-[640px] border-collapse text-sm">
         <thead>
           <tr className="border-b border-line text-left text-muted">
@@ -395,6 +424,7 @@ function StatTable({ rows, left, right }: { rows: Row[]; left: string; right: st
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
+    </>
   );
 }
