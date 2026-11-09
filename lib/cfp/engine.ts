@@ -133,19 +133,16 @@ function championForConference(
   const leaders = ordered.filter((id) => recordKey(records.get(id)) === best);
   // Two teams with the best record play the projected title game. Ask the visitor only when three or more share that record.
   const tied = leaders.length > 2 ? leaders : [];
-  const override = scenario.champPicks[conference];
-  if (override && tied.includes(override)) {
-    return { champ: { teamId: override, tied }, projected: null };
-  }
-  const homeId = ordered[0];
-  const awayId = ordered[1] ?? ordered[0];
+  const [homeId, awayId] = tied.length > 2 ? teamsInTitle(conference, ordered, tied, scenario) : [ordered[0], ordered[1] ?? ordered[0]];
   if (homeId === awayId) return { champ: { teamId: homeId, tied }, projected: null };
   const home = teams.find((team) => team.id === homeId);
   const away = teams.find((team) => team.id === awayId);
   const projectedId = `ccg:${conference}`;
   const winner = (() => {
+    const crowned = scenario.champPicks[conference];
     const picked = scenario.picks[projectedId];
     if (picked === homeId || picked === awayId) return picked;
+    if (tied.length > 2 && (crowned === homeId || crowned === awayId)) return crowned;
     const homeOut = scenario.winOut.includes(homeId);
     const awayOut = scenario.winOut.includes(awayId);
     if (homeOut && !awayOut) return homeId;
@@ -172,7 +169,20 @@ function championForConference(
     winnerId: winner,
     projected: true,
   };
-  return { champ: { teamId: winner, tied }, projected };
+  return { champ: { teamId: winner, tied, playing: tied.length > 2 ? [homeId, awayId] : undefined }, projected };
+}
+
+function teamsInTitle(conference: string, ordered: string[], tied: string[], scenario: Scenario): [string, string] {
+  const chosen = scenario.titlePairs?.[conference];
+  let home = ordered[0];
+  let away = ordered[1] ?? ordered[0];
+  if (chosen && chosen[0] !== chosen[1] && tied.includes(chosen[0]) && tied.includes(chosen[1])) {
+    home = chosen[0];
+    away = chosen[1];
+  }
+  const crowned = scenario.champPicks[conference];
+  if (crowned && tied.includes(crowned) && crowned !== home && crowned !== away) away = crowned;
+  return [home, away];
 }
 
 function formulaOrder(
@@ -340,7 +350,8 @@ function writeSentence(
     Object.keys(scenario.picks).length === 0 &&
     scenario.winOut.length === 0 &&
     scenario.manualOrder == null &&
-    Object.keys(scenario.champPicks).length === 0;
+    Object.keys(scenario.champPicks).length === 0 &&
+    Object.keys(scenario.titlePairs ?? {}).length === 0;
   if (fieldLocked && untouched) {
     return `This is the official field. ${name(last?.teamId)} is the ${ordinal(last?.seed ?? 12)} seed. ${out} is the first team out.`;
   }

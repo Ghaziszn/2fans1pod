@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (title ties)
+
+- **Three or more teams tied for a conference title ask who plays and who wins.** Until you pick, the higher-ranked tied team is used so the bracket can still be drawn. The page says it is not an official tiebreaker. Two teams still just play the projected game.
+
 ## 2026-11-08 (slot motion)
 
 - **A team slides into a bracket slot when they arrive there.** The move is 180ms. Reduced motion skips it.

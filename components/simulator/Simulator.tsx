@@ -188,7 +188,7 @@ export function Simulator() {
                 ? " Teams outside the top 25 are ordered by College Football Data Elo."
                 : " Teams outside the top 25 are ordered by an Elo rating computed from this season's results."}
             </span>
-            <InfoTip label="How rankings are adjusted" text="The simulator starts from the latest CFP order, then Elo for everyone else. It applies every remaining result once. It does not re-rank after each game and then pick new favorites. Conference champions follow the records in your scenario. If the title game is not scheduled yet, the top two teams play a projected championship." />
+            <InfoTip label="How rankings are adjusted" text="The simulator starts from the latest CFP order, then Elo for everyone else. It applies every remaining result once. It does not re-rank after each game and then pick new favorites. Conference champions follow the records in your scenario. If the title game is not scheduled yet, the top two teams play a projected championship. If three or more teams share the best record, you pick who plays and who wins." />
           </p>
           <InOut resultField={result.field} firstOut={result.firstOut} teams={teams} remainingSos={(teamId) => profiles.teams[teamId]?.fpi.remainingStrengthOfSchedule ?? null} />
           <div className="mt-8 grid gap-10 min-[1100px]:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]">
@@ -209,7 +209,27 @@ export function Simulator() {
               remainingFor={remainingFor}
               setWinner={setWinner}
               toggleWinOut={toggleWinOut}
-              onChampion={(conference, team) => setScenario((current) => ({ ...current, champPicks: { ...current.champPicks, [conference]: team } }))}
+              onChampion={(conference, team) =>
+                setScenario((current) => ({
+                  ...current,
+                  champPicks: { ...current.champPicks, [conference]: team },
+                  picks: { ...current.picks, [`ccg:${conference}`]: team },
+                }))
+              }
+              onTitlePair={(conference, index, teamId) =>
+                setScenario((current) => {
+                  const playing = result.champions[conference]?.playing;
+                  if (!playing || playing[index] === teamId || playing[1 - index] === teamId) return current;
+                  const next: [string, string] = [playing[0], playing[1]];
+                  next[index] = teamId;
+                  const champPicks = { ...current.champPicks };
+                  const picks = { ...current.picks };
+                  const titleId = `ccg:${conference}`;
+                  if (champPicks[conference] && champPicks[conference] !== next[0] && champPicks[conference] !== next[1]) delete champPicks[conference];
+                  if (picks[titleId] && picks[titleId] !== next[0] && picks[titleId] !== next[1]) delete picks[titleId];
+                  return { ...current, titlePairs: { ...(current.titlePairs ?? {}), [conference]: next }, champPicks, picks };
+                })
+              }
               showOthers={showOthers}
               weeks={weeks}
               otherGames={otherGames}
@@ -328,6 +348,7 @@ function ScenarioBuilder({
   setWinner,
   toggleWinOut,
   onChampion,
+  onTitlePair,
   showOthers,
   weeks,
   otherGames,
@@ -346,6 +367,7 @@ function ScenarioBuilder({
   setWinner: (gameId: string, winnerId: string) => void;
   toggleWinOut: (teamId: string) => void;
   onChampion: (conference: string, teamId: string) => void;
+  onTitlePair: (conference: string, index: 0 | 1, teamId: string) => void;
   showOthers: boolean;
   weeks: number[];
   otherGames: Game[];
@@ -466,23 +488,82 @@ function ScenarioBuilder({
             })}
             {games.length === 0 ? <li className="py-3 text-sm text-muted">No games left on the schedule.</li> : null}
           </ul>
-          {tied.length > 1 ? (
-            <label className="mt-3 flex min-h-11 flex-wrap items-center gap-2 text-sm">
-              Title is tied. Who wins it?
-              <select className="min-h-11 rounded-md border border-line bg-paper px-2" value={scenario.champPicks[focusConference] ?? champions[focusConference].teamId} onChange={(event) => onChampion(focusConference, event.target.value)}>
-                {tied.map((id) => (
-                  <option key={id} value={id}>
-                    {teams.get(id)?.school ?? id}
-                  </option>
-                ))}
-              </select>
-            </label>
+          {tied.length > 2 ? (
+            <TitleTie
+              tied={tied}
+              playing={champions[focusConference].playing ?? [tied[0], tied[1]]}
+              winnerId={champions[focusConference].teamId}
+              teams={teams}
+              chosen={Boolean(scenario.titlePairs?.[focusConference] || scenario.champPicks[focusConference])}
+              onPair={(index, teamId) => onTitlePair(focusConference, index, teamId)}
+              onWinner={(teamId) => onChampion(focusConference, teamId)}
+            />
           ) : null}
         </div>
       ) : (
         <p className="mt-4 text-sm text-muted">No contenders in this group yet.</p>
       )}
     </section>
+  );
+}
+
+function TitleTie({
+  tied,
+  playing,
+  winnerId,
+  teams,
+  chosen,
+  onPair,
+  onWinner,
+}: {
+  tied: string[];
+  playing: [string, string];
+  winnerId: string;
+  teams: Map<string, Team>;
+  chosen: boolean;
+  onPair: (index: 0 | 1, teamId: string) => void;
+  onWinner: (teamId: string) => void;
+}) {
+  const name = (id: string) => teams.get(id)?.school ?? id;
+  const list = tied.map(name);
+  const names = list.length < 3 ? list.join(" and ") : `${list.slice(0, -1).join(", ")}, and ${list[list.length - 1]}`;
+  const winner = playing.includes(winnerId) ? winnerId : playing[0];
+  return (
+    <div className="mt-3 grid gap-3 rounded-md border border-line p-3 text-sm">
+      <p>
+        {tied.length} teams are tied at the top: {names}. {chosen ? "You picked who plays and who wins." : `Until you pick, ${name(winner)} is used so the bracket can still be drawn.`} This is not an official tiebreaker.
+      </p>
+      <label className="grid gap-1">
+        First team
+        <select className="min-h-11 rounded-md border border-line bg-paper px-2" value={playing[0]} onChange={(event) => onPair(0, event.target.value)}>
+          {tied.filter((id) => id !== playing[1]).map((id) => (
+            <option key={id} value={id}>
+              {name(id)}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="grid gap-1">
+        Second team
+        <select className="min-h-11 rounded-md border border-line bg-paper px-2" value={playing[1]} onChange={(event) => onPair(1, event.target.value)}>
+          {tied.filter((id) => id !== playing[0]).map((id) => (
+            <option key={id} value={id}>
+              {name(id)}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label className="grid gap-1">
+        Who wins
+        <select className="min-h-11 rounded-md border border-line bg-paper px-2" value={winner} onChange={(event) => onWinner(event.target.value)}>
+          {playing.map((id) => (
+            <option key={id} value={id}>
+              {name(id)}
+            </option>
+          ))}
+        </select>
+      </label>
+    </div>
   );
 }
 

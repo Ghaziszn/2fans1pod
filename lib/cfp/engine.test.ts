@@ -261,6 +261,26 @@ describe("conference title", () => {
     const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
     const result = simulate(season(teams, games, ["A", "B", "C", "D"]), emptyScenario(), format, ranking);
     expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
+    expect(result.champions.MAC.playing).toEqual(["A", "B"]);
+    expect(result.champions.MAC.teamId).toBe("A");
+    const game = result.games.find((item) => item.id === "ccg:MAC");
+    expect(game?.winnerId).toBe("A");
+  });
+
+  it("lets the visitor pick who plays in a three-team tie and who wins", () => {
+    const teams = ["A", "B", "C", "D"].map((id) => team(id, "MAC", "group"));
+    const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
+    const scenario = emptyScenario();
+    scenario.titlePairs.MAC = ["A", "C"];
+    scenario.champPicks.MAC = "C";
+    const result = simulate(season(teams, games, ["A", "B", "C", "D"]), scenario, format, ranking);
+    expect(result.champions.MAC.playing).toEqual(["A", "C"]);
+    expect(result.champions.MAC.teamId).toBe("C");
+    expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
+    const game = result.games.find((item) => item.id === "ccg:MAC");
+    expect(game?.homeId).toBe("A");
+    expect(game?.awayId).toBe("C");
+    expect(game?.winnerId).toBe("C");
   });
 });
 

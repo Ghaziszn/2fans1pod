@@ -181,6 +181,7 @@ export interface Scenario {
   picks: Record<string, string>;
   winOut: string[];
   champPicks: Record<string, string>;
+  titlePairs: Record<string, [string, string]>;
   manualOrder: string[] | null;
   playoffPicks: Record<string, string>;
 }
@@ -189,6 +190,7 @@ export const emptyScenario = (): Scenario => ({
   picks: {},
   winOut: [],
   champPicks: {},
+  titlePairs: {},
   manualOrder: null,
   playoffPicks: {},
 });
@@ -209,6 +211,7 @@ export interface SeededTeam {
 export interface ChampState {
   teamId: string;
   tied: string[];
+  playing?: [string, string];
 }
 
 export interface BracketSlot {
