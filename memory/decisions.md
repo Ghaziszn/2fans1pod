@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (share titles)
+
+- **Each page’s share title and description match that page.** A link to Alabama says Alabama, not only the site name. The picture stays the logo on the dark background.
+
 ## 2026-11-08 (schedule rows)
 
 - **On a phone, a schedule game stacks the two teams.** The kickoff and the score sit on the first line. A wider screen keeps both teams on one row.

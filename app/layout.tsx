@@ -27,17 +27,12 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   openGraph: {
-    title: siteConfig.name,
-    description: siteConfig.description,
-    url: siteConfig.siteUrl,
     siteName: siteConfig.name,
     images: [{ url: "/og.png", width: 1200, height: 630 }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
     images: ["/og.png"],
   },
 };

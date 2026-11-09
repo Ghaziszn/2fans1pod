@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (share titles)
+
+- Alabama, the Iron Bowl, the rankings, the schedule, contact, and the SEC page each now put their own title and description on the share tags. The share picture is still the logo.
+
 ## 2026-11-08 (schedule rows)
 
 - Week 10 on a phone reads 6:00 PM, 28–20, Ohio, at, Akron. None of the visible school names are cut off. A wide screen still shows the game on one row.
