@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (contact send)
+
+- **The contact form clears the fields only after the inbox accepts the note.** A missing key, a refused note, or a lost connection leaves what you typed. A hidden company field still pretends the note was sent and does not call the inbox.
+
 ## 2026-11-08 (rank gaps)
 
 - **Rank-gap labels wrap onto a second line.** A name such as “Total yards per game (offense)” stays readable. The bars still fit the phone width.

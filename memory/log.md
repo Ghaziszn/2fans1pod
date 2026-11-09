@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (contact send)
+
+- Sending used to clear the form after the request, but the page had already dropped its handle, so a successful note could be reported as a failure. The form now keeps its own handle and clears only when the inbox says yes. Five unit tests passed. In the browser, a missing key still says the form is not connected and leaves the name in the box. A filled company field still says “Message sent.”
+
 ## 2026-11-08 (rank gaps)
 
 - The Iron Bowl chart now shows the full “Total yards per game (offense)” label on two lines. Checked at 320, 390, and 1280. None of the 23 labels run off the left edge or into the next label. The page does not scroll sideways. All 23 bars are still drawn.
