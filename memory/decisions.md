@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (game EPA list)
+
+- **Each team page lists EPA game by game under the chart.** The line stays. The list names the opponent, so a phone can read it without hovering. It follows the garbage-time switch.
+
 ## 2026-11-08 (team schedule)
 
 - **A played game on a team page says Win, Loss, or Tie.** The team's points come first. A game still to be played says Upcoming.

@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (game EPA list)
+
+- Alabama's page now lists Week 6 vs Georgia as offense 0.202 and defense 0.227. Turning garbage time on changes Week 1 vs East Carolina from 0.364 to 0.240 on offense. Checked at 320px. The page does not scroll sideways.
+
 ## 2026-11-08 (team schedule)
 
 - Alabama's schedule now says Loss 17–20 for Georgia and Win 48–10 for East Carolina. LSU, still to be played, says Upcoming. Checked at 320px and on a wide screen. The page does not scroll sideways.

@@ -193,18 +193,30 @@ function EpaLine({ teamId, color }: { teamId: string; color: string }) {
       {games.length === 0 ? (
         <p className="mt-3 text-sm text-muted">No game EPA is posted yet.</p>
       ) : (
-        <div className="mt-4 h-72 w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={games} margin={{ top: 8, right: 8, bottom: 8, left: 0 }}>
-              <CartesianGrid stroke="var(--line)" vertical={false} />
-              <XAxis dataKey="week" stroke="currentColor" tick={{ fontSize: 12 }} />
-              <YAxis stroke="currentColor" tick={{ fontSize: 12 }} width={48} />
-              <Tooltip content={<LineTip />} />
-              <Line type="monotone" dataKey="offEpa" name="Offense" stroke={color} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
-              <Line type="monotone" dataKey="defEpa" name="Defense" stroke="currentColor" strokeDasharray="5 4" strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        <>
+          <div className="mt-4 h-72 w-full">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={games} margin={{ top: 8, right: 8, bottom: 8, left: 0 }}>
+                <CartesianGrid stroke="var(--line)" vertical={false} />
+                <XAxis dataKey="week" stroke="currentColor" tick={{ fontSize: 12 }} />
+                <YAxis stroke="currentColor" tick={{ fontSize: 12 }} width={48} />
+                <Tooltip content={<LineTip />} />
+                <Line type="monotone" dataKey="offEpa" name="Offense" stroke={color} strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
+                <Line type="monotone" dataKey="defEpa" name="Defense" stroke="currentColor" strokeDasharray="5 4" strokeWidth={2} dot={{ r: 3 }} isAnimationActive={!reduceMotion} animationDuration={180} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+          <ul className="mt-3 divide-y divide-line text-sm">
+            {games.map((point) => (
+              <li key={point.gameId} className="py-2">
+                <p>Week {point.week} vs {point.opponent}</p>
+                <p className="nums text-muted">
+                  Offense {point.offEpa == null ? "—" : point.offEpa.toFixed(3)} · Defense {point.defEpa == null ? "—" : point.defEpa.toFixed(3)}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </>
       )}
     </section>
   );
