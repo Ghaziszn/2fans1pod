@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (rivalry name either way)
+
+- **The rivalry name shows no matter which team is on the left.** `/matchup/auburn-vs-alabama/` says Iron Bowl, same as `/matchup/alabama-vs-auburn/`. A pair that is not a named rivalry keeps the two school names.
+
 ## 2026-11-08 (rivalry links)
 
 - **A link to a known rivalry uses that rivalry's page.** The schedule and team pages open the Iron Bowl and The Game, even when the home team is flipped. Any other pair keeps the game's home and away order.

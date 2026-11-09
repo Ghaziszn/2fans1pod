@@ -107,7 +107,11 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
   const pair = slug ? parseMatchupSlug(data, slug) : null;
   const heading = useMemo(() => {
     if (!pair) return "Matchup calculator";
-    const rivalry = resolvedRivalries(data).find((item) => item.home.id === pair.left.id && item.away.id === pair.right.id);
+    const rivalry = resolvedRivalries(data).find(
+      (item) =>
+        (item.home.id === pair.left.id && item.away.id === pair.right.id) ||
+        (item.home.id === pair.right.id && item.away.id === pair.left.id),
+    );
     return rivalry?.name ?? `${pair.left.school} vs ${pair.right.school}`;
   }, [data, pair]);
 
