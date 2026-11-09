@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (share link and footer)
+
+- The share step now shows the link on the page. If the browser will not copy it, the button says "Copy the link below." A fresh visit with that link kept Boise State's first-round upset even when the phone had Alabama saved. The footer no longer sends X, YouTube, Instagram, Spotify, or Apple Podcasts to placeholder addresses.
+
 ## 2026-11-08 (rivalry search)
 
 - Search knew teams and pages, but not rivalry names. Typing Iron Bowl now opens `/matchup/alabama-vs-auburn/`. Egg Bowl and The Game do the same. Typing bama still lists Alabama first. `scripts/tests/test_search.py` is a small check that every named rivalry gets a search row. The Python tests passed.

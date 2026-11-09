@@ -26,6 +26,8 @@ export function Simulator() {
   const [showOthers, setShowOthers] = useState(false);
   const [step, setStep] = useState<1 | 2 | 3>(openingStep(data.season.fieldLocked));
   const [copied, setCopied] = useState(false);
+  const [copyFailed, setCopyFailed] = useState(false);
+  const [shareHref, setShareHref] = useState("");
   const [pictureUrl, setPictureUrl] = useState<string | null>(null);
   const [pictureBlob, setPictureBlob] = useState<Blob | null>(null);
   const [pictureStatus, setPictureStatus] = useState<"idle" | "shared" | "saved">("idle");
@@ -50,6 +52,7 @@ export function Simulator() {
     const url = new URL(window.location.href);
     url.searchParams.set("s", encoded);
     window.history.replaceState(null, "", `${url.pathname}?${url.searchParams.toString()}`);
+    setShareHref(url.toString());
   }, [scenario, ready]);
 
   const result = useMemo(() => simulate(data, scenario, cfpFormat, rankingConfig), [data, scenario]);
@@ -117,11 +120,14 @@ export function Simulator() {
   const winnerById = new Map(result.games.map((game) => [game.id, game.winnerId]));
 
   const copyLink = async () => {
+    const link = shareHref || window.location.href;
     try {
-      await navigator.clipboard.writeText(window.location.href);
+      await navigator.clipboard.writeText(link);
       setCopied(true);
+      setCopyFailed(false);
     } catch {
       setCopied(false);
+      setCopyFailed(true);
     }
   };
 
@@ -170,6 +176,7 @@ export function Simulator() {
               onClick={() => {
                 setStep(number);
                 setCopied(false);
+                setCopyFailed(false);
                 setPictureStatus("idle");
               }}
             >
@@ -324,8 +331,9 @@ export function Simulator() {
             </button>
           </div>
           <button type="button" className="mt-3 inline-flex min-h-11 items-center text-sm text-muted underline" onClick={copyLink}>
-            {copied ? "Link copied" : "Copy link"}
+            {copied ? "Link copied" : copyFailed ? "Copy the link below" : "Copy link"}
           </button>
+          {shareHref ? <p className="mt-1 max-w-3xl break-all text-sm text-muted">{shareHref}</p> : null}
         </section>
       ) : null}
     </div>
