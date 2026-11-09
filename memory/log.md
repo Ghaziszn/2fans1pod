@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (tap size)
+
+- Desktop bracket rows are now 44px. The line between UCLA and Ohio State still meets the middle of each name. The page does not scroll sideways at 1400px wide. On a phone the cards stay 64px, and tapping Boise State still sends them on to play Indiana. The drag handle and Copy link are 44px.
+
 ## 2026-11-08 (any matchup)
 
 - Picking Wake Forest and Navy on the matchup page opened that pair and said no line is posted. TCU vs Arizona showed Arizona -7.5. The Iron Bowl page still marks the game. A static build still writes 186 pages, and TCU vs Arizona is not one of the prebuilt files.

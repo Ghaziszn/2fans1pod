@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (tap size)
+
+- **A desktop bracket row is 44px tall.** The connecting lines still meet the middle of each team. The phone cards stay larger. The ranking drag handle and the copy-link button are 44px as well.
+
 ## 2026-11-08 (any matchup)
 
 - **An unlisted pair opens the calculator on the local server.** The published site already does this through Vercel. Rivalry pages stay real pages. A name that is not a team still asks you to pick two teams.
