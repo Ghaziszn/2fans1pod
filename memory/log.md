@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (team schedule)
+
+- Alabama's schedule now says Loss 17–20 for Georgia and Win 48–10 for East Carolina. LSU, still to be played, says Upcoming. Checked at 320px and on a wide screen. The page does not scroll sideways.
+
 ## 2026-11-08 (matchup names)
 
 - On a 320px screen, “Florida International offense” and “Jacksonville State defense” were cut off in the matchup cards. They now wrap onto a second line. Nothing scrolls sideways, and the edge is still named.

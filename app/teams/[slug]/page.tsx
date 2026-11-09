@@ -86,7 +86,9 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
             const opponentId = home ? game.awayId : game.homeId;
             const ours = home ? game.homePoints : game.awayPoints;
             const theirs = home ? game.awayPoints : game.homePoints;
-            const score = game.completed && ours != null && theirs != null ? `${ours}-${theirs}` : "upcoming";
+            const played = game.completed && ours != null && theirs != null;
+            const result = !played ? "Upcoming" : ours > theirs ? "Win" : ours < theirs ? "Loss" : "Tie";
+            const score = played ? `${ours}–${theirs}` : "";
             const opponentTeam = data.teams.find((item) => item.id === opponentId);
             const pair = `/matchup/${home ? team.id : opponentId}-vs-${home ? opponentId : team.id}/`;
             const place = game.neutralSite ? "Neutral" : home ? "Home" : "Away";
@@ -96,7 +98,10 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                   <div className="flex items-center justify-between gap-3 text-sm text-muted">
                     <span className="nums">Week {game.week}</span>
                     <span className="text-xs uppercase tracking-wide">{place}</span>
-                    <span className="nums">{score}</span>
+                    <span className="text-sm">
+                      {result}
+                      {score ? <span className="nums"> {score}</span> : null}
+                    </span>
                   </div>
                   {opponentTeam ? (
                     <Link className="flex min-h-11 items-center" href={pair}>
@@ -116,7 +121,10 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
                   ) : (
                     <span className="min-w-0 flex-1">{opponent}</span>
                   )}
-                  <span className="nums text-sm text-muted">{score}</span>
+                  <span className="shrink-0 text-sm text-muted">
+                    {result}
+                    {score ? <span className="nums"> {score}</span> : null}
+                  </span>
                 </div>
               </li>
             );

@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (team schedule)
+
+- **A played game on a team page says Win, Loss, or Tie.** The team's points come first. A game still to be played says Upcoming.
+
 ## 2026-11-08 (matchup names)
 
 - **On a phone, a matchup label can use two lines.** “Florida International offense” stays whole. The numbers and the edge stay under the names.
