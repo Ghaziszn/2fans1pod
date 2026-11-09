@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (rank gaps)
+
+- The Iron Bowl chart now shows the full “Total yards per game (offense)” label on two lines. Checked at 320, 390, and 1280. None of the 23 labels run off the left edge or into the next label. The page does not scroll sideways. All 23 bars are still drawn.
+
 ## 2026-11-08 (team page on a phone)
 
 - At 320px, Mississippi State’s opponents were squeezed to about 23px wide. UL Monroe now reads in full, and the page does not scroll sideways. Returning production fits on its card. At 768px the schedule is one row again and the ratings go back to two columns.

@@ -41,6 +41,36 @@ function cell(stats: TeamSeason | undefined, side: "offense" | "defense", key: s
   return stats?.[side]?.[key] ?? { value: null, rank: null };
 }
 
+function wrapLabel(value: string) {
+  const lines: string[] = [];
+  let current = "";
+  for (const word of value.split(" ")) {
+    const next = current ? `${current} ${word}` : word;
+    if (next.length > 22 && current) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = next;
+    }
+  }
+  if (current) lines.push(current);
+  return lines.slice(0, 3);
+}
+
+function GapTick({ x = 0, y = 0, payload }: { x?: number; y?: number; payload?: { value?: string } }) {
+  const lines = wrapLabel(payload?.value ?? "");
+  const first = lines.length === 1 ? 4 : 4 - (lines.length - 1) * 6;
+  return (
+    <text x={x} y={y} textAnchor="end" fill="currentColor" fontSize={11}>
+      {lines.map((line, index) => (
+        <tspan key={line} x={x} dy={index === 0 ? first : 12}>
+          {line}
+        </tspan>
+      ))}
+    </text>
+  );
+}
+
 export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
   const data = useMemo(() => loadSeason(), []);
   const reduceMotion = useReducedMotion();
@@ -166,12 +196,12 @@ export function MatchupView({ initialSlug = "" }: { initialSlug?: string }) {
         <section className="mt-8">
           <h2 className="text-3xl">Rank gaps</h2>
           <p className="mt-2 text-sm text-muted">Bars to the right mean {pair.left.school} has the better rank. Bars to the left mean {pair.right.school} does.</p>
-          <div className="mt-4 w-full" style={{ height: Math.max(320, chart.length * 36) }}>
+          <div className="mt-4 w-full" style={{ height: Math.max(320, chart.length * 44) }}>
             <div className="h-full w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chart} layout="vertical" margin={{ left: 8, right: 16 }}>
+                <BarChart data={chart} layout="vertical" margin={{ left: 4, right: 16 }}>
                   <XAxis type="number" stroke="currentColor" />
-                  <YAxis type="category" dataKey="name" width={128} stroke="currentColor" tick={{ fontSize: 11 }} interval={0} />
+                  <YAxis type="category" dataKey="name" width={156} stroke="currentColor" tick={<GapTick />} interval={0} />
                   <Tooltip />
                   <ReferenceLine x={0} stroke="currentColor" />
                   <Bar dataKey="gap" isAnimationActive={!reduceMotion} animationDuration={180}>

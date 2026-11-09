@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (rank gaps)
+
+- **Rank-gap labels wrap onto a second line.** A name such as “Total yards per game (offense)” stays readable. The bars still fit the phone width.
+
 ## 2026-11-08 (team page on a phone)
 
 - **A team’s schedule stacks on a narrow phone.** The week, the place, and the score sit on one line. The opponent’s name gets the next line, so it is not cut down to a few letters.
