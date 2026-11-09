@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (standings ties)
+
+- **When two teams share a conference record, the better overall record is listed first.** UTSA (7-1, 4-0) sits above North Texas (6-2, 4-0). If the overall records match too, the higher simulator rank is listed first. This is not an official tiebreaker.
+
 ## 2026-11-08 (team color on charts)
 
 - **A light or black team color is mixed with the text color on charts.** Southern Miss gold stays visible on the beige bar track. App State black stays visible on the dark track. Alabama stays crimson.

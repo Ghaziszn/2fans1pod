@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (standings ties)
+
+- Conference pages broke ties by the order in the file. The American page listed North Texas (6-2, 4-0) above UTSA (7-1, 4-0). The ACC listed Louisville (5-3, 4-2) above SMU (6-2, 4-2). The same conference record now keeps the better overall record first. Checked the American and ACC pages at 320px.
+
 ## 2026-11-08 (team color on charts)
 
 - Southern Miss gold was nearly the same color as the light bar track. The bars, the offense line, and the team's scatter dot now mix the team color with the text color. In light mode that gold becomes a darker gold. In dark mode App State's black bar becomes a gray you can see on the dark track. Alabama's bar stays crimson.
