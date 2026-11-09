@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (team ranks)
+
+- **A team page lists national ranks as cards on a phone.** Offense and defense are both on the card. The table stays on a wider screen.
+
 ## 2026-11-08 (phone stats)
 
 - **On a phone, each matchup stat is its own card.** Both teams and the edge are on the card. The wide table stays on a wider screen. The rank-gap chart fits the phone width.

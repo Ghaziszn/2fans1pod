@@ -109,7 +109,29 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
       <section className="mt-8">
         <h2 className="text-3xl">National ranks</h2>
         <p className="mt-2 text-sm text-muted">Includes all plays. These box-score totals do not change with the garbage-time switch.</p>
-        <div className="mt-3 overflow-x-auto">
+        <ul className="mt-3 grid gap-3 md:hidden">
+          {keys.map((key) => {
+            const entry = catalog[key];
+            const offense = stats?.offense[key];
+            const defense = stats?.defense[key];
+            return (
+              <li key={key} className="rounded-lg border border-line p-3 text-sm">
+                <p className="font-medium">{entry.label}</p>
+                <p className="mt-2">
+                  Offense <span className="nums">{entry.offense ? showCell(key, offense?.value ?? null, offense?.rank ?? null) : "—"}</span>
+                </p>
+                <p>
+                  Defense <span className="nums">{entry.defense ? showCell(key, defense?.value ?? null, defense?.rank ?? null) : "—"}</span>
+                </p>
+              </li>
+            );
+          })}
+          <li className="rounded-lg border border-line p-3 text-sm">
+            <p className="font-medium">{catalog.sos.label}</p>
+            <p className="nums mt-2">{showCell("sos", stats?.sos.value ?? null, stats?.sos.rank ?? null)}</p>
+          </li>
+        </ul>
+        <div className="mt-3 hidden overflow-x-auto md:block">
           <table className="w-full min-w-[520px] text-sm">
             <thead>
               <tr className="border-b border-line text-left text-muted">

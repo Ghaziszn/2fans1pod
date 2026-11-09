@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (team ranks)
+
+- Alabama’s national ranks on a phone show points per game as offense 38.2 (#12) and defense 21.2 (#44) on one card. The page does not scroll sideways. A wide screen still shows the table.
+
 ## 2026-11-08 (phone stats)
 
 - The Iron Bowl on a phone shows stat cards instead of a sideways table. One card reads FPI schedule rank, Alabama #7, Auburn #2, edge Auburn. The page does not scroll sideways. A wide screen still shows the table.
