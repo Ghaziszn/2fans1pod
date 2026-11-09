@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Bracket, laterPlayoffSlots } from "@/components/simulator/Bracket";
 import { renderBracketPng } from "@/components/simulator/bracketImage";
 import { RankList } from "@/components/simulator/RankList";
@@ -33,6 +33,8 @@ export function Simulator() {
   const [pictureBlob, setPictureBlob] = useState<Blob | null>(null);
   const [pictureStatus, setPictureStatus] = useState<"idle" | "shared" | "saved">("idle");
   const { include: includeGarbageTime } = useGarbageTime();
+  const pictureFrame = useRef<HTMLDivElement>(null);
+  const [pictureScrolls, setPictureScrolls] = useState(false);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -79,6 +81,24 @@ export function Simulator() {
       setPictureBlob(null);
     };
   }, [ready, step, result, teams]);
+
+  useEffect(() => {
+    const frame = pictureFrame.current;
+    if (!frame || !pictureUrl) return;
+    const center = () => {
+      frame.scrollLeft = Math.max(0, (frame.scrollWidth - frame.clientWidth) / 2);
+      setPictureScrolls(frame.scrollWidth > frame.clientWidth + 1);
+    };
+    center();
+    const img = frame.querySelector("img");
+    img?.addEventListener("load", center);
+    const observer = new ResizeObserver(center);
+    observer.observe(frame);
+    return () => {
+      img?.removeEventListener("load", center);
+      observer.disconnect();
+    };
+  }, [pictureUrl]);
   const board = useMemo(() => contenderBoard(data, rankingConfig), [data]);
   const independents = useMemo(
     () => data.teams.filter((team) => team.tier === "independent" && data.rankings.order.indexOf(team.id) < rankingConfig.bubbleRank).map((team) => team.id),
@@ -317,13 +337,14 @@ export function Simulator() {
         <section className="mt-6">
           <h2 className="text-3xl">Share your bracket</h2>
           <p className="mt-2 max-w-3xl text-sm text-muted">Share saves a picture of the whole bracket: every game, the connecting lines, and the champion.</p>
-          <div className="mt-4 overflow-x-auto">
+          <div ref={pictureFrame} className="mt-4 overflow-x-auto">
             {pictureUrl ? (
               <img id="bracket-picture" src={pictureUrl} alt="Your full playoff bracket" className="h-auto max-w-none" style={{ width: 740 }} />
             ) : (
               <p className="text-sm text-muted">Drawing the bracket…</p>
             )}
           </div>
+          {pictureScrolls ? <p className="mt-2 text-sm text-muted">The picture is wide. Swipe sideways to see both halves.</p> : null}
           <div className="mt-4 flex flex-wrap gap-3">
             <button type="button" className="min-h-11 rounded-full bg-accent px-5 font-medium text-accent-ink" onClick={sharePicture}>
               {pictureStatus === "shared" ? "Shared" : pictureStatus === "saved" ? "Saved" : "Share"}

@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (share picture)
+
+- On a 320px phone the share picture is 740px wide and now opens 226px in, on the championship. The page does not scroll sideways. The line says to swipe for both halves. On a 1280px screen the whole picture fits and that line is hidden.
+
 ## 2026-11-08 (contact message)
 
 - Sending a note with no inbox connected now says “The form is not connected yet. Please try again later.” The name stays in the box. A filled company field still says “Message sent.” and leaves the form filled. Five contact tests passed.

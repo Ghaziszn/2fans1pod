@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (share picture)
+
+- **On a phone, the bracket picture opens on the championship.** The picture stays wide enough to read. A line says to swipe sideways for both halves. A wide screen shows the whole picture and hides that line.
+
 ## 2026-11-08 (contact message)
 
 - **A visitor who sends a note before the inbox is connected sees a plain sentence.** The page says to try again later. It does not name the setup key.
