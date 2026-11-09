@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (long team names)
+
+- On a 320px screen, Florida International's name sat beside the logo and pushed the page sideways. The name now sits under the logo until the screen is wider. The page no longer scrolls sideways, and the full name still shows. Checked Florida International, Jacksonville State, and Sam Houston.
+
 ## 2026-11-08 (favorite outline)
 
 - A remaining game used to look like a pick before anyone tapped it. The favorite is now an outline. Tapping W fills the button. Checked on a phone width, including dark mode.

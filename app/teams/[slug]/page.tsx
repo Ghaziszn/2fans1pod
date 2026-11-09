@@ -52,11 +52,11 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
         }}
       />
       <p className="text-sm uppercase tracking-wide text-muted">{team.conference}</p>
-      <div className="mt-3 inline-flex max-w-full items-center gap-4 rounded-md px-4 py-3" style={{ background: team.color, color: teamInk(team.color) }}>
+      <div className="mt-3 flex max-w-full flex-col items-start gap-3 rounded-md px-4 py-3 sm:flex-row sm:items-center sm:gap-4" style={{ background: team.color, color: teamInk(team.color) }}>
         {team.logo ? <img src={team.logo} alt="" className="h-16 w-16 shrink-0 rounded-sm bg-white object-contain p-1" /> : null}
-        <div>
-          <h1 className="text-5xl">{team.school}</h1>
-          <p className="mt-1 text-lg">
+        <div className="min-w-0">
+          <h1 className="text-5xl leading-none">{team.school}</h1>
+          <p className="mt-2 text-lg leading-6">
             {stats ? `${stats.wins}-${stats.losses}` : "Record unavailable"}
             {stats ? `, ${stats.conferenceWins}-${stats.conferenceLosses} in conference` : ""}. Simulator rank {rank || "—"}.
           </p>

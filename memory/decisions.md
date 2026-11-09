@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (long team names)
+
+- **On a phone, the team name sits under the logo.** A long name such as Florida International stays on the page instead of pushing it sideways. From the small-tablet width up, the logo and the name sit in a row again.
+
 ## 2026-11-08 (favorite outline)
 
 - **An outline is the favorite. A filled W or L is a pick you made.** Wins out fills the games it sets, because those are picks.

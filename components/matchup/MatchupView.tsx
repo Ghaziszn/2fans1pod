@@ -290,10 +290,10 @@ function Picker({
 
 function TeamHead({ team, stats }: { team: Team; stats: TeamSeason | undefined }) {
   return (
-    <div className="flex items-center gap-3 rounded-md px-4 py-4" style={{ background: team.color, color: teamInk(team.color) }}>
-      {team.logo ? <img src={team.logo} alt="" className="h-16 w-16 rounded-md bg-white p-1 object-contain" /> : null}
-      <div>
-        <p className="text-3xl">{team.school}</p>
+    <div className="flex min-w-0 items-center gap-3 rounded-md px-4 py-4" style={{ background: team.color, color: teamInk(team.color) }}>
+      {team.logo ? <img src={team.logo} alt="" className="h-16 w-16 shrink-0 rounded-md bg-white p-1 object-contain" /> : null}
+      <div className="min-w-0">
+        <p className="text-3xl leading-none">{team.school}</p>
         <p className="text-sm opacity-80">
           {stats ? `${stats.wins}-${stats.losses}` : "—"} · {team.conference}
         </p>
