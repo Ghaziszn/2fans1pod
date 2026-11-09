@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (header fit)
+
+- **The top bar fits a tablet.** From a tablet width up to a laptop, the links sit closer together and Search is an icon. On a wider screen the word Search and the ⌘K hint come back. A phone still uses the full-screen menu.
+
 ## 2026-11-08 (in and out)
 
 - **On a phone, each playoff team’s reason sits under the school name.** A long reason such as Group of Six bid no longer cuts off the name. A wider screen keeps the reason on the same row.

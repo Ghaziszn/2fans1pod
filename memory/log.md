@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (header fit)
+
+- At 768px the header was about 130px wider than the screen, so the theme button sat off the right edge. The links now sit closer together there, and Search is an icon until 1024px, where the word Search and ⌘K return. Checked 390, 768, 900, and 1024. The icon still opens search. The phone menu still lists every page. Nothing scrolls sideways.
+
 ## 2026-11-08 (in and out)
 
 - On a phone, Boise State’s name was cut off by “Group of Six bid.” The reason now sits under the school. All 12 names fit, and the page does not scroll sideways. A wide screen still keeps the reason beside the name. The homepage tab now says Playoff Simulator · 2fans1pod.

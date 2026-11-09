@@ -48,9 +48,9 @@ export function Header() {
             <img src="/brand/logo.jpg" alt="" width={36} height={36} className="h-9 w-9 rounded-sm" />
             <span className="display text-2xl">{siteConfig.name}</span>
           </Link>
-          <nav className="ml-6 hidden items-center gap-1 md:flex" aria-label="Main">
+          <nav className="ml-3 hidden items-center md:flex lg:ml-6 lg:gap-1" aria-label="Main">
             {links.map((link) => (
-              <Link key={link.href} href={link.href} className="min-h-11 px-3 py-2 text-sm font-medium text-muted hover:text-ink">
+              <Link key={link.href} href={link.href} className="min-h-11 px-2 py-2 text-sm font-medium text-muted hover:text-ink lg:px-3">
                 {link.label}
               </Link>
             ))}
@@ -58,12 +58,13 @@ export function Header() {
           <div className="ml-auto flex items-center gap-1">
             <button
               type="button"
-              className="hidden min-h-11 items-center gap-2 rounded-md border border-line px-3 text-sm text-muted md:flex"
+              className="hidden min-h-11 min-w-11 items-center justify-center gap-2 rounded-md border border-line px-2 text-sm text-muted md:inline-flex lg:px-3"
+              aria-label="Search"
               onClick={() => setSearchOpen(true)}
             >
               <Search size={16} />
-              Search
-              <kbd className="rounded border border-line px-1.5 py-0.5 text-xs">⌘K</kbd>
+              <span className="hidden lg:inline">Search</span>
+              <kbd className="hidden rounded border border-line px-1.5 py-0.5 text-xs lg:inline">⌘K</kbd>
             </button>
             <button type="button" className="inline-flex h-11 w-11 items-center justify-center md:hidden" aria-label="Search" onClick={() => setSearchOpen(true)}>
               <Search size={20} />
