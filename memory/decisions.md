@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (kickoff windows)
+
+- **Prime time runs from 5 PM until 9 PM Central.** That includes 8:00 and 8:30 kickoffs. Night starts at 9 PM. Afternoon ends when prime time starts.
+
 ## 2026-11-08 (advanced edge)
 
 - **An advanced matchup row names the team with the better rank.** Green is that side. The rank already points the right way, including defense and havoc. Turning garbage time on still changes the numbers.

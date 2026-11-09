@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (kickoff windows)
+
+- The schedule menu now says prime time is 5 PM until 9, and afternoon is noon until 5. Week 10 prime time is 26 games, including Boise State at 5:00, New Mexico at Nevada at 8:00, and West Virginia at Texas Tech at 8:30. Night is the 3 games at 9:15 and 9:30, including TCU at Arizona.
+
 ## 2026-11-08 (advanced edge)
 
 - The Iron Bowl advanced table now says who has the better rank. Alabama leads EPA per play on offense, 0.257 (#18) to Auburn’s 0.108 (#83). Auburn leads explosiveness on defense, #43 to #115. Turning garbage time on changes Alabama’s offensive EPA from 0.257 to 0.246. On a phone the same explosiveness card says Auburn, and the names are not cut off.
