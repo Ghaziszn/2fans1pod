@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (search)
+
+- Ctrl+K opened search. “bama” listed Alabama first. “sec” listed the SEC conference first, instead of every SEC team.
+
 ## 2026-11-08 (share titles)
 
 - Alabama, the Iron Bowl, the rankings, the schedule, contact, and the SEC page each now put their own title and description on the share tags. The share picture is still the logo.
