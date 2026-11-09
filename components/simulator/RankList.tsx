@@ -67,12 +67,13 @@ export function RankList({
   onReset: () => void;
 }) {
   const [showAll, setShowAll] = useState(false);
+  const [extra, setExtra] = useState(0);
   const [preview, setPreview] = useState<string[] | null>(null);
   const [canReplay, setCanReplay] = useState(false);
   const seen = useRef(order);
   const lastChange = useRef<{ from: string[]; to: string[] } | null>(null);
   const shown = preview ?? order;
-  const visible = showAll ? shown : shown.slice(0, 25);
+  const visible = showAll ? shown : shown.slice(0, 25 + extra);
 
   useEffect(() => {
     if (sameOrder(seen.current, order)) return;
@@ -101,6 +102,7 @@ export function RankList({
     const newIndex = order.indexOf(String(over));
     if (oldIndex < 0 || newIndex < 0) return;
     onReorder(arrayMove(order, oldIndex, newIndex));
+    if (!showAll && newIndex >= 25 + extra) setExtra(newIndex - 24);
   };
 
   const onMove = (id: string, direction: -1 | 1) => {
@@ -108,6 +110,7 @@ export function RankList({
     const target = index + direction;
     if (index < 0 || target < 0 || target >= order.length) return;
     onReorder(arrayMove(order, index, target));
+    if (!showAll && target >= 25 + extra) setExtra(target - 24);
   };
 
   return (
@@ -136,7 +139,16 @@ export function RankList({
         </SortableContext>
       </DndContext>
       {order.length > 25 ? (
-        <button type="button" className="mt-2 min-h-11 text-sm underline" onClick={() => setShowAll((value) => !value)}>
+        <button
+          type="button"
+          className="mt-2 min-h-11 text-sm underline"
+          onClick={() =>
+            setShowAll((value) => {
+              if (value) setExtra(0);
+              return !value;
+            })
+          }
+        >
           {showAll ? "Show top 25" : `Show all ${order.length} teams`}
         </button>
       ) : null}

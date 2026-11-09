@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (ranking move)
+
+- **Moving a team past the top 25 keeps them on screen.** The list grows by one row instead of hiding the team you just moved. Show top 25 folds it back.
+
 ## 2026-11-08 (current week)
 
 - **The schedule row scrolls so the selected week is on screen.** On a phone, week 10 was selected but only weeks 1 through 3 were visible. Choosing another week scrolls that button into view too.

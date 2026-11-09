@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (ranking move)
+
+- Moving the 25th team down used to hide them. USC was 25th. After the tap, the list shows 26 teams, Florida is 25th, and USC is still there at 26th. The line says the order is yours.
+
 ## 2026-11-08 (current week)
 
 - On a 320px screen the schedule opened on weeks 1 through 3, while week 10 was the current week and sat off to the right. The selected week now scrolls into the middle of that row. Week 1 stays at the start, and week 15 stays at the end. The page itself does not jump.
