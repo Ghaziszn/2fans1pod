@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (garbage-time link)
+
+- With the switch saved as on, the homepage address and the share step both include `gt=1` next to the scenario code. Opening Miami from that page keeps `gt=1`. Opening Miami’s page directly, with the choice only saved on the device, adds `gt=1` too. A visit with `gt=0` stays excluded.
+
 ## 2026-11-08 (phone scenario)
 
 - On a 320px-wide phone the season step used to run 94px past the edge. Virginia Tech’s games now read “Away, SMU, W, L” and stay on the screen. Tapping W fills that button. The page no longer scrolls sideways.

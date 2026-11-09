@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (garbage-time link)
+
+- **A link keeps garbage time when the switch is on.** The address bar gains `?gt=1`, including after you open a team page. The share step shows that same link. A link that says `?gt=0` still turns the switch off.
+
 ## 2026-11-08 (phone scenario)
 
 - **A remaining game on a phone lists the place, then the opponent, then W and L.** The place no longer sits in a wide column that pushed the page sideways. The rankings list stays inside the same screen.

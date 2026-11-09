@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { InfoTip } from "@/components/info/InfoTip";
 
@@ -8,6 +9,7 @@ const STORAGE_KEY = "2fans1pod-gt";
 const GarbageTimeContext = createContext({ include: false, ready: false, setInclude: (_value: boolean) => {} });
 
 export function GarbageTimeProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
   const [include, setIncludeState] = useState(false);
   const [ready, setReady] = useState(false);
 
@@ -24,6 +26,22 @@ export function GarbageTimeProvider({ children }: { children: ReactNode }) {
     }
     setReady(true);
   }, []);
+
+  useEffect(() => {
+    if (!ready) return;
+    const url = new URL(window.location.href);
+    const current = url.searchParams.get("gt");
+    if (include) {
+      if (current === "1") return;
+      url.searchParams.set("gt", "1");
+    } else if (current === "1") {
+      url.searchParams.delete("gt");
+    } else {
+      return;
+    }
+    const query = url.searchParams.toString();
+    window.history.replaceState(null, "", query ? `${url.pathname}?${query}` : url.pathname);
+  }, [include, ready, pathname]);
 
   const setInclude = (value: boolean) => {
     setIncludeState(value);

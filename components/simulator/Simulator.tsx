@@ -8,6 +8,7 @@ import { RankList } from "@/components/simulator/RankList";
 import { InfoTip } from "@/components/info/InfoTip";
 import { simulatorRankNote } from "@/lib/cfp/words";
 import { TeamMark, teamInk } from "@/components/team/TeamMark";
+import { useGarbageTime } from "@/components/stats/GarbageTime";
 import { contenderBoard, openingStep, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
 import type { ChampState, ContenderGroup, Game, Scenario, Team } from "@/lib/cfp/types";
@@ -31,6 +32,7 @@ export function Simulator() {
   const [pictureUrl, setPictureUrl] = useState<string | null>(null);
   const [pictureBlob, setPictureBlob] = useState<Blob | null>(null);
   const [pictureStatus, setPictureStatus] = useState<"idle" | "shared" | "saved">("idle");
+  const { include: includeGarbageTime } = useGarbageTime();
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -51,9 +53,12 @@ export function Simulator() {
     window.localStorage.setItem(STORAGE_KEY, encoded);
     const url = new URL(window.location.href);
     url.searchParams.set("s", encoded);
-    window.history.replaceState(null, "", `${url.pathname}?${url.searchParams.toString()}`);
+    if (includeGarbageTime) url.searchParams.set("gt", "1");
+    else if (url.searchParams.get("gt") === "1") url.searchParams.delete("gt");
+    const query = url.searchParams.toString();
+    window.history.replaceState(null, "", query ? `${url.pathname}?${query}` : url.pathname);
     setShareHref(url.toString());
-  }, [scenario, ready]);
+  }, [scenario, ready, includeGarbageTime]);
 
   const result = useMemo(() => simulate(data, scenario, cfpFormat, rankingConfig), [data, scenario]);
 
