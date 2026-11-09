@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (empty poll)
+
+- The data check now accepts an empty committee list when the season file says the order is Elo. It still rejects an empty list that claims to be the committee. The live files still have 25 ranked teams. The Python tests passed, including that case.
+
 ## 2026-11-08 (search)
 
 - Ctrl+K opened search. “bama” listed Alabama first. “sec” listed the SEC conference first, instead of every SEC team.

@@ -48,8 +48,8 @@ def validate_dir(folder: Path) -> None:
             fail(f"Ranking lists an unknown team: {team_id}")
     if len(rankings["order"]) != len(ids):
         fail("The full ranking order does not include every team.")
-    if not rankings["cfp"]:
-        fail("CFP rankings are empty.")
+    if not rankings["cfp"] and "elo" not in season.get("rankingLabel", "").lower():
+        fail("CFP rankings are empty, and the season file does not say this order is Elo.")
     if not season.get("rankingLabel"):
         fail("Season file needs a ranking label.")
     missing_stats = [team_id for team_id in ids if team_id not in stats]

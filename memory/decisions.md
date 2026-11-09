@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (empty poll)
+
+- **A season with no committee poll can be published when the label says the order is Elo.** The data check still refuses an empty poll that is labeled as the committee. That keeps a broken download from replacing a real top 25.
+
 ## 2026-11-08 (search)
 
 - **Search matches names and nicknames, not the small conference label on every team.** Typing SEC opens the conference. Typing bama still opens Alabama.

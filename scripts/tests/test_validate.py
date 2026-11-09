@@ -1,4 +1,5 @@
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -28,6 +29,32 @@ class ValidatorTests(unittest.TestCase):
             target.write_text("")
             with self.assertRaises(SystemExit):
                 validate_dir(Path(folder))
+
+    def copy_live(self, folder: Path) -> None:
+        for name in ["season.json", "teams.json", "games.json", "conferences.json", "rankings.json", "team-stats.json", "search-index.json"]:
+            shutil.copy(ROOT / "public" / "data" / name, folder / name)
+
+    def test_empty_poll_is_allowed_when_the_label_says_elo(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            self.copy_live(root)
+            rankings = json.loads((root / "rankings.json").read_text())
+            rankings["cfp"] = []
+            (root / "rankings.json").write_text(json.dumps(rankings))
+            season = json.loads((root / "season.json").read_text())
+            season["rankingLabel"] = "Elo rankings"
+            (root / "season.json").write_text(json.dumps(season))
+            validate_dir(root)
+
+    def test_empty_poll_is_rejected_when_it_still_claims_to_be_the_committee(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            self.copy_live(root)
+            rankings = json.loads((root / "rankings.json").read_text())
+            rankings["cfp"] = []
+            (root / "rankings.json").write_text(json.dumps(rankings))
+            with self.assertRaises(SystemExit):
+                validate_dir(root)
 
     def test_bad_shape_is_rejected(self):
         with tempfile.TemporaryDirectory() as folder:
