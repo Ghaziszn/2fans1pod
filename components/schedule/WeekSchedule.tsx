@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { TeamMark } from "@/components/team/TeamMark";
 import type { Game, GameSplit, Team } from "@/lib/cfp/types";
 import { top25TeamIds } from "@/lib/cfp/words";
-import { loadSeason, loadSplits, matchupSlug } from "@/lib/load";
+import { canonicalMatchupSlug, loadSeason, loadSplits } from "@/lib/load";
 
 const zone = "America/Chicago";
 
@@ -221,7 +221,7 @@ function GameRow({ game, teams, split }: { game: Game; teams: Map<string, Team>;
   return (
     <li className="py-2">
       {both ? (
-        <Link href={`/matchup/${matchupSlug(game.awayId, game.homeId)}/`} className="block">
+        <Link href={`/matchup/${canonicalMatchupSlug(game.awayId, game.homeId)}/`} className="block">
           {card}
         </Link>
       ) : (

@@ -75,6 +75,13 @@ export function matchupSlug(a: string, b: string) {
   return `${a}-vs-${b}`;
 }
 
+export function canonicalMatchupSlug(a: string, b: string) {
+  const match = resolvedRivalries(loadSeason()).find(
+    (item) => (item.home.id === a && item.away.id === b) || (item.home.id === b && item.away.id === a),
+  );
+  return match ? match.slug : matchupSlug(a, b);
+}
+
 export function resolvedRivalries(data: SeasonData) {
   return rivalryList.flatMap((item) => {
     const home = findTeam(data, item.home);

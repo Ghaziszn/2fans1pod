@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { teamInk } from "@/components/team/TeamMark";
 import type { BracketSlot, Team } from "@/lib/cfp/types";
-import { matchupSlug } from "@/lib/load";
+import { canonicalMatchupSlug } from "@/lib/load";
 
 const LATER: Record<string, string[]> = {
   "r1-8-9": ["qf-1", "sf-1", "final"],
@@ -358,7 +358,7 @@ function PhoneGame({
       <p className="px-3 pt-3 text-sm">{resultLine}</p>
       <p className="px-3 text-xs text-muted">{slot.venueNote}</p>
       {slot.teamA && slot.teamB ? (
-        <Link href={`/matchup/${matchupSlug(slot.teamA, slot.teamB)}/`} className="flex min-h-11 items-center px-3 text-sm underline">
+        <Link href={`/matchup/${canonicalMatchupSlug(slot.teamA, slot.teamB)}/`} className="flex min-h-11 items-center px-3 text-sm underline">
           Compare these teams
         </Link>
       ) : null}

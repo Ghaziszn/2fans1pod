@@ -11,7 +11,7 @@ import { TeamMark, teamInk } from "@/components/team/TeamMark";
 import { contenderBoard, openingStep, simulate, withWinOut } from "@/lib/cfp/engine";
 import { decodeScenario, emptyScenario, encodeScenario } from "@/lib/cfp/share";
 import type { ChampState, ContenderGroup, Game, Scenario, Team } from "@/lib/cfp/types";
-import { cfpFormat, loadProfile, loadSeason, matchupSlug, rankingConfig } from "@/lib/load";
+import { canonicalMatchupSlug, cfpFormat, loadProfile, loadSeason, rankingConfig } from "@/lib/load";
 
 const STORAGE_KEY = "2fans1pod-scenario";
 const profiles = loadProfile();
@@ -283,7 +283,7 @@ export function Simulator() {
                 .filter((slot) => slot.teamA && slot.teamB)
                 .map((slot) => (
                   <li key={slot.id}>
-                    <Link href={`/matchup/${matchupSlug(slot.teamA as string, slot.teamB as string)}/`} className="inline-flex min-h-11 items-center rounded-full border border-line px-4 text-sm">
+                    <Link href={`/matchup/${canonicalMatchupSlug(slot.teamA as string, slot.teamB as string)}/`} className="inline-flex min-h-11 items-center rounded-full border border-line px-4 text-sm">
                       {teams.get(slot.teamA as string)?.school ?? slot.teamA} vs {teams.get(slot.teamB as string)?.school ?? slot.teamB}
                     </Link>
                   </li>
@@ -440,7 +440,7 @@ function ScenarioBuilder({
                   return (
                     <div key={game.id} className="mt-2 flex flex-wrap items-center justify-between gap-2 border-b border-line py-2">
                       {teams.has(game.awayId) && teams.has(game.homeId) ? (
-                        <Link href={`/matchup/${matchupSlug(game.awayId, game.homeId)}/`} className="text-sm underline-offset-4 hover:underline">
+                        <Link href={`/matchup/${canonicalMatchupSlug(game.awayId, game.homeId)}/`} className="text-sm underline-offset-4 hover:underline">
                           {game.awayName} {game.neutralSite ? "vs" : "at"} {game.homeName}
                         </Link>
                       ) : (
@@ -477,7 +477,7 @@ function ScenarioBuilder({
                   <span className="w-24 shrink-0 text-xs uppercase tracking-wide text-muted">{game.projected ? "Projected" : game.neutralSite ? "Neutral" : game.homeId === team.id ? "Home" : "Away"}</span>
                   <span className="min-w-0 flex-1">
                     {opponent ? (
-                      <Link href={`/matchup/${matchupSlug(team.id, opponent.id)}/`} className="inline-flex max-w-full">
+                      <Link href={`/matchup/${canonicalMatchupSlug(team.id, opponent.id)}/`} className="inline-flex max-w-full">
                         <TeamMark team={opponent} size="sm" />
                       </Link>
                     ) : (

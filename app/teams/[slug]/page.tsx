@@ -7,7 +7,7 @@ import { TeamProfile } from "@/components/team/TeamProfile";
 import { simulate } from "@/lib/cfp/engine";
 import { emptyScenario } from "@/lib/cfp/share";
 import { JsonLd } from "@/lib/json-ld";
-import { cfpFormat, loadSeason, rankingConfig, siteConfig, statCatalog } from "@/lib/load";
+import { canonicalMatchupSlug, cfpFormat, loadSeason, rankingConfig, siteConfig, statCatalog } from "@/lib/load";
 
 const catalog = statCatalog as Record<string, { label: string; offense?: boolean; defense?: boolean; digits?: number; suffix?: string; garbageTimeAware?: boolean }>;
 
@@ -90,7 +90,7 @@ export default async function TeamPage({ params }: { params: Promise<{ slug: str
             const result = !played ? "Upcoming" : ours > theirs ? "Win" : ours < theirs ? "Loss" : "Tie";
             const score = played ? `${ours}–${theirs}` : "";
             const opponentTeam = data.teams.find((item) => item.id === opponentId);
-            const pair = `/matchup/${home ? team.id : opponentId}-vs-${home ? opponentId : team.id}/`;
+            const pair = `/matchup/${canonicalMatchupSlug(home ? team.id : opponentId, home ? opponentId : team.id)}/`;
             const place = game.neutralSite ? "Neutral" : home ? "Home" : "Away";
             return (
               <li key={game.id} className="py-2">

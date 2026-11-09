@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (rivalry links)
+
+- Week 13 on the schedule used to link Auburn at Alabama to `/matchup/auburn-vs-alabama/`, which is the plain calculator. It now opens `/matchup/alabama-vs-auburn/` and the title is Iron Bowl. Ohio State's page opens The Game at `/matchup/michigan-vs-ohio-state/`. East Carolina at Alabama stays `/matchup/alabama-vs-east-carolina/`.
+
 ## 2026-11-08 (played matchup)
 
 - Alabama vs Georgia was showing only "Consensus line: Alabama -2.5" after Georgia had already won. It now says Georgia beat Alabama, 20–17, and that the line was Alabama -2.5. The Iron Bowl still says Alabama -10. Wake Forest vs Navy still says no line is posted.
