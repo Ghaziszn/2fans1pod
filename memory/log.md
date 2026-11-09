@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (any matchup)
+
+- `/matchup/wake-forest-vs-navy/` is not a prebuilt rivalry. It opened as Wake Forest vs Navy. The Iron Bowl page still opened under its own name.
+
 ## 2026-11-08 (title ties)
 
 - The MAC is tied four ways. The page named Toledo, Western Michigan, Ohio, and Buffalo, and used Toledo until a pick. Choosing Toledo against Ohio, with Ohio winning, showed that projected game and marked the loss.

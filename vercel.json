@@ -1,5 +1,6 @@
 {
   "rewrites": [
-    { "source": "/matchup/:slug", "destination": "/matchup/index.html" }
+    { "source": "/matchup/:slug", "destination": "/matchup/index.html" },
+    { "source": "/matchup/:slug/", "destination": "/matchup/index.html" }
   ]
 }
