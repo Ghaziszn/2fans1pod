@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (any matchup)
+
+- Picking Wake Forest and Navy on the matchup page opened that pair and said no line is posted. TCU vs Arizona showed Arizona -7.5. The Iron Bowl page still marks the game. A static build still writes 186 pages, and TCU vs Arizona is not one of the prebuilt files.
+
 ## 2026-11-08 (search and phone names)
 
 - The search button now says Ctrl K on Windows and Linux, and ⌘K on a Mac. On a 1024px screen the header still fits, Ctrl+K opened the search box, and Escape closed it.

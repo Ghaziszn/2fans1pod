@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (any matchup)
+
+- **An unlisted pair opens the calculator on the local server.** The published site already does this through Vercel. Rivalry pages stay real pages. A name that is not a team still asks you to pick two teams.
+
 ## 2026-11-08 (search shortcut)
 
 - **The search hint matches the keyboard.** A Mac shows ⌘K. Windows and Linux show Ctrl K. Either shortcut opens search.

@@ -6,9 +6,19 @@ const nextConfig: NextConfig = {
   // A normal build writes the finished site to out/. Setting NEXT_DIST_DIR
   // sends that same site into another folder so the local preview can stay up.
   distDir: process.env.NEXT_DIST_DIR || ".next",
-  ...(process.env.NODE_ENV === "production" ? { output: "export" as const } : {}),
   images: { unoptimized: true },
   trailingSlash: true,
+  ...(process.env.NODE_ENV === "production"
+    ? { output: "export" as const }
+    : {
+        // The published site uses vercel.json for the same rule. This copy
+        // runs only on the local server, so an unlisted pair still opens.
+        async rewrites() {
+          return {
+            fallback: [{ source: "/matchup/:slug", destination: "/matchup" }],
+          };
+        },
+      }),
 };
 
 export default nextConfig;
