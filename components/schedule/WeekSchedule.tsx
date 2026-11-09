@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { TeamMark } from "@/components/team/TeamMark";
 import type { Game, GameSplit, Team } from "@/lib/cfp/types";
+import { top25TeamIds } from "@/lib/cfp/words";
 import { loadSeason, loadSplits, matchupSlug } from "@/lib/load";
 
 const zone = "America/Chicago";
@@ -67,7 +68,7 @@ export function WeekSchedule() {
     const postseason = data.games.some((game) => game.seasonType === "postseason");
     return { regular, postseason };
   }, [data.games]);
-  const ranked = useMemo(() => new Set(data.rankings.cfp.map((row) => row.teamId)), [data.rankings.cfp]);
+  const ranked = useMemo(() => new Set(top25TeamIds(data.rankings.cfp, data.rankings.order)), [data.rankings]);
   const start = weeks.regular.includes(data.season.week) ? data.season.week : weeks.regular[0] ?? 1;
   const [selected, setSelected] = useState<number | "postseason">(start);
   const [top25, setTop25] = useState(false);

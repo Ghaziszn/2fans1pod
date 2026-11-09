@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (top 25 filter)
+
+- **The schedule Top 25 button uses the committee list when one exists.** When that list is empty, it uses the first 25 teams in the site order, which is Elo. An empty committee list used to hide every game. The button still says Top 25.
+
 ## 2026-11-08 (contact send)
 
 - **The contact form clears the fields only after the inbox accepts the note.** A missing key, a refused note, or a lost connection leaves what you typed. A hidden company field still pretends the note was sent and does not call the inbox.

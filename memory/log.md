@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (top 25 filter)
+
+- Before a committee poll exists, the schedule Top 25 button now uses the first 25 teams in the Elo order, so an August week is not empty. With this week's poll, week 10 still shows 16 games, including TCU at Arizona, and hides Ohio at Akron.
+
 ## 2026-11-08 (contact send)
 
 - Sending used to clear the form after the request, but the page had already dropped its handle, so a successful note could be reported as a failure. The form now keeps its own handle and clears only when the inbox says yes. Five unit tests passed. In the browser, a missing key still says the form is not connected and leaves the name in the box. A filled company field still says “Message sent.”

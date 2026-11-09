@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { rankingsIntro, simulatorRankNote } from "./words";
+import { rankingsIntro, simulatorRankNote, top25TeamIds } from "./words";
 
 describe("ranking words", () => {
   it("does not call an Elo list a committee poll", () => {
@@ -7,6 +7,12 @@ describe("ranking words", () => {
       "The committee has not released a poll yet. This order is Elo only. It is not a committee ranking.",
     );
     expect(simulatorRankNote(false, "Elo")).toContain("Elo only");
+  });
+
+  it("uses the Elo top 25 when the committee list is empty", () => {
+    const order = Array.from({ length: 30 }, (_, index) => `t${index + 1}`);
+    expect(top25TeamIds([], order)).toEqual(order.slice(0, 25));
+    expect(top25TeamIds([{ teamId: "committee" }], order)).toEqual(["committee"]);
   });
 
   it("names the committee poll without calling the file date the poll date", () => {
