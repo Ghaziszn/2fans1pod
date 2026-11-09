@@ -2,6 +2,10 @@
 
 Settled choices. Add a new one at the top. Do not delete old ones; mark them replaced if we change our mind.
 
+## 2026-11-08 (help notes)
+
+- **A help note stays on the screen.** The note opens under the icon, and slides left or up when it would run off the edge. Escape or a tap outside still closes it.
+
 ## 2026-11-08 (header fit)
 
 - **The top bar fits a tablet.** From a tablet width up to a laptop, the links sit closer together and Search is an icon. On a wider screen the word Search and the ⌘K hint come back. A phone still uses the full-screen menu.

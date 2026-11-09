@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-08 (help notes)
+
+- Opened every help note on Alabama’s phone page. All 36 stayed inside the screen, including FPI on the right-hand card. The rankings note on the simulator stayed inside too. A tap outside closed it, and Escape closed it. On a wide Iron Bowl page the schedule-strength note opened beside the label.
+
 ## 2026-11-08 (header fit)
 
 - At 768px the header was about 130px wider than the screen, so the theme button sat off the right edge. The links now sit closer together there, and Search is an icon until 1024px, where the word Search and ⌘K return. Checked 390, 768, 900, and 1024. The icon still opens search. The phone menu still lists every page. Nothing scrolls sideways.
