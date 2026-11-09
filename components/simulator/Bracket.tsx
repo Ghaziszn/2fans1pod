@@ -20,7 +20,7 @@ const LATER: Record<string, string[]> = {
   "sf-2": ["final"],
 };
 
-const ROW = 34;
+const ROW = 44;
 const MATCH = ROW * 2;
 const PAIR_GAP = 32;
 const GAME_W = 124;

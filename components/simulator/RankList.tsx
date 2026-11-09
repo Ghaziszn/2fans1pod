@@ -37,7 +37,7 @@ function Row({
       transition={{ duration: reduceMotion || instant ? 0 : 0.18 }}
       className="flex items-center gap-2 border-b border-line py-1"
     >
-      <button type="button" className="inline-flex h-11 w-8 cursor-grab items-center justify-center text-muted" aria-label={`Drag ${team?.school ?? id}`} {...attributes} {...listeners}>
+      <button type="button" className="inline-flex h-11 w-11 cursor-grab items-center justify-center text-muted" aria-label={`Drag ${team?.school ?? id}`} {...attributes} {...listeners}>
         <GripVertical size={16} />
       </button>
       <span className="min-w-0 flex-1">

@@ -323,7 +323,7 @@ export function Simulator() {
               Back to the bracket
             </button>
           </div>
-          <button type="button" className="mt-3 text-sm text-muted underline" onClick={copyLink}>
+          <button type="button" className="mt-3 inline-flex min-h-11 items-center text-sm text-muted underline" onClick={copyLink}>
             {copied ? "Link copied" : "Copy link"}
           </button>
         </section>
