@@ -1,6 +1,6 @@
 import unittest
 
-from scripts.compute import rank_values, record_without, strength_of_schedule, win_pct
+from scripts.compute import ats_records, cfp_ranking_label, cover_side, points_per_game, rank_values, record_without, strength_of_schedule, win_pct
 
 
 class ScheduleTests(unittest.TestCase):
@@ -15,11 +15,42 @@ class ScheduleTests(unittest.TestCase):
     def test_empty_schedule_has_no_rating(self):
         self.assertIsNone(strength_of_schedule([]))
 
+    def test_home_favorite_needs_to_win_by_more_than_the_line(self):
+        self.assertEqual(cover_side(27, 24, -3.5), "away")
+        self.assertEqual(cover_side(31, 24, -3.5), "home")
+        self.assertEqual(cover_side(27, 24, -3), "push")
+
+    def test_ats_skips_games_without_a_line(self):
+        records = ats_records(
+            [
+                {"completed": True, "homeId": "a", "awayId": "b", "homePoints": 31, "awayPoints": 24, "homeSpread": -3.5},
+                {"completed": True, "homeId": "a", "awayId": "c", "homePoints": 10, "awayPoints": 7, "homeSpread": None},
+            ]
+        )
+        self.assertEqual(records["a"], {"wins": 1, "losses": 0, "pushes": 0})
+        self.assertEqual(records["b"], {"wins": 0, "losses": 1, "pushes": 0})
+        self.assertNotIn("c", records)
+
+    def test_points_per_game_uses_one_decimal(self):
+        self.assertEqual(points_per_game([48, 45, 50, 49, 56, 17, 10, 31]), 38.2)
+        self.assertIsNone(points_per_game([]))
+
     def test_ties_share_the_best_rank(self):
         ranks = rank_values([("a", 10.0), ("b", 10.0), ("c", 8.0)], higher_is_better=True)
         self.assertEqual(ranks["a"], 1)
         self.assertEqual(ranks["b"], 1)
         self.assertEqual(ranks["c"], 3)
+
+
+class RankingLabelTests(unittest.TestCase):
+    def test_week_is_part_of_the_poll_name(self):
+        self.assertEqual(cfp_ranking_label([{"teamId": "miami"}], 11), "CFP Rankings, Week 11")
+
+    def test_empty_poll_is_elo(self):
+        self.assertEqual(cfp_ranking_label([], 11), "Elo rankings")
+
+    def test_missing_week_stays_generic(self):
+        self.assertEqual(cfp_ranking_label([{"teamId": "miami"}], None), "CFP committee rankings")
 
 
 if __name__ == "__main__":

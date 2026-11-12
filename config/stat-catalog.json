@@ -6,7 +6,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
-    "digits": 1
+    "digits": 1,
+    "garbageTimeAware": false
   },
   "totalYards": {
     "label": "Total yards per game",
@@ -15,7 +16,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
-    "digits": 1
+    "digits": 1,
+    "garbageTimeAware": false
   },
   "passYards": {
     "label": "Pass yards per game",
@@ -24,7 +26,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
-    "digits": 1
+    "digits": 1,
+    "garbageTimeAware": false
   },
   "rushYards": {
     "label": "Rush yards per game",
@@ -33,7 +36,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
-    "digits": 1
+    "digits": 1,
+    "garbageTimeAware": false
   },
   "yardsPerRush": {
     "label": "Yards per rush",
@@ -42,7 +46,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "thirdDown": {
     "label": "3rd down %",
@@ -52,7 +57,8 @@
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
     "digits": 1,
-    "suffix": "%"
+    "suffix": "%",
+    "garbageTimeAware": false
   },
   "fourthDown": {
     "label": "4th down %",
@@ -62,7 +68,8 @@
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
     "digits": 1,
-    "suffix": "%"
+    "suffix": "%",
+    "garbageTimeAware": false
   },
   "redZone": {
     "label": "Red zone scoring %",
@@ -72,7 +79,8 @@
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
     "digits": 1,
-    "suffix": "%"
+    "suffix": "%",
+    "garbageTimeAware": false
   },
   "giveaways": {
     "label": "Giveaways per game",
@@ -81,7 +89,8 @@
     "defense": false,
     "higherIsBetterOffense": false,
     "higherIsBetterDefense": false,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "takeaways": {
     "label": "Takeaways per game",
@@ -90,7 +99,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": true,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "sacks": {
     "label": "Sacks per game",
@@ -99,7 +109,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": true,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "tfl": {
     "label": "Tackles for loss per game",
@@ -108,7 +119,8 @@
     "defense": true,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": true,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "top": {
     "label": "Time of possession",
@@ -118,7 +130,8 @@
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": false,
     "digits": 1,
-    "suffix": " min"
+    "suffix": " min",
+    "garbageTimeAware": false
   },
   "penalties": {
     "label": "Penalties per game",
@@ -127,16 +140,18 @@
     "defense": false,
     "higherIsBetterOffense": false,
     "higherIsBetterDefense": false,
-    "digits": 2
+    "digits": 2,
+    "garbageTimeAware": false
   },
   "sos": {
-    "label": "Strength of schedule",
-    "help": "Average winning percentage of opponents so far. An FCS opponent counts as a .400 win percentage. Higher means a harder schedule. This is record-based, not an SP+ rating.",
+    "label": "Opponent win %",
+    "help": "Average winning percentage of opponents so far. An FCS opponent counts as a .400 win percentage. Higher means a harder slate of results. This is the plain record-based number, kept as a fallback. It is not SP+ schedule strength.",
     "offense": false,
     "defense": false,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": true,
-    "digits": 3
+    "digits": 3,
+    "garbageTimeAware": false
   },
   "ats": {
     "label": "ATS record",
@@ -145,6 +160,222 @@
     "defense": false,
     "higherIsBetterOffense": true,
     "higherIsBetterDefense": true,
-    "digits": 0
+    "digits": 0,
+    "garbageTimeAware": false
+  },
+  "ppa": {
+    "label": "EPA per play",
+    "help": "Expected points added per play, from College Football Data. Higher is better on offense. Lower is better on defense, because that is points allowed. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 3,
+    "garbageTimeAware": true
+  },
+  "successRate": {
+    "label": "Success rate",
+    "help": "Share of plays that count as a success. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 1,
+    "garbageTimeAware": true,
+    "suffix": "%"
+  },
+  "explosiveness": {
+    "label": "Explosiveness",
+    "help": "How big the successful plays are. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 2,
+    "garbageTimeAware": true
+  },
+  "havoc": {
+    "label": "Havoc rate",
+    "help": "Plays with a tackle for loss, forced fumble, or pass breakup. Lower is better on offense, because it is havoc allowed. Higher is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": true,
+    "suffix": "%"
+  },
+  "lineYards": {
+    "label": "Line yards",
+    "help": "Rushing yards attributed to the line, per carry. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 2,
+    "garbageTimeAware": true
+  },
+  "stuffRate": {
+    "label": "Stuff rate",
+    "help": "Share of rushes stopped at or behind the line. Lower is better on offense. Higher is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": true,
+    "suffix": "%"
+  },
+  "pointsPerOpportunity": {
+    "label": "Points per opportunity",
+    "help": "Points scored on a scoring opportunity. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 2,
+    "garbageTimeAware": true
+  },
+  "fieldPosition": {
+    "label": "Starting field position",
+    "help": "Average yards still to go at the start of a drive. Checked against this season: a better offense starts with fewer yards to go. Lower is better on offense. Higher is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": true,
+    "suffix": " yds"
+  },
+  "standardDownsEpa": {
+    "label": "EPA on standard downs",
+    "help": "Expected points added on standard downs. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 3,
+    "garbageTimeAware": true
+  },
+  "passingDownsEpa": {
+    "label": "EPA on passing downs",
+    "help": "Expected points added on passing downs. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 3,
+    "garbageTimeAware": true
+  },
+  "rushEpa": {
+    "label": "Rush EPA per play",
+    "help": "Expected points added on rushes. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 3,
+    "garbageTimeAware": true
+  },
+  "passEpa": {
+    "label": "Pass EPA per play",
+    "help": "Expected points added on passes. Higher is better on offense. Lower is better on defense. This follows the garbage-time switch.",
+    "offense": true,
+    "defense": true,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": false,
+    "digits": 3,
+    "garbageTimeAware": true
+  },
+  "spPlus": {
+    "label": "SP+",
+    "help": "Bill Connelly's SP+ rating from College Football Data. Higher is a better team. The rank is SP+'s own national rank.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": false
+  },
+  "srs": {
+    "label": "SRS",
+    "help": "Simple Rating System from College Football Data. Higher is better. It starts from margin of victory and adjusts for the schedule.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": false
+  },
+  "fpi": {
+    "label": "FPI",
+    "help": "ESPN's Football Power Index, carried by College Football Data. Higher is a better team. The rank is ours, among FBS teams.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": false
+  },
+  "talent": {
+    "label": "Talent",
+    "help": "247Sports talent composite from College Football Data. Higher means a more highly rated roster. The rank is ours.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": false
+  },
+  "returning": {
+    "label": "Returning production",
+    "help": "Share of last year's offensive production that came back, from College Football Data. Higher means more of the offense returned.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "suffix": "%",
+    "garbageTimeAware": false
+  },
+  "spSos": {
+    "label": "SP+ schedule strength",
+    "help": "How strong the opponents have been, on the SP+ scale, from College Football Data. This season the feed left that number blank for every team, so the card says it is not posted.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": true,
+    "higherIsBetterDefense": true,
+    "digits": 1,
+    "garbageTimeAware": false
+  },
+  "fpiSos": {
+    "label": "FPI schedule rank",
+    "help": "ESPN's strength-of-schedule rank from the FPI resume, via College Football Data. 1 is the hardest schedule played so far. Checked against this season: the SEC and Big Ten sit well ahead of the MAC and Conference USA.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": false,
+    "digits": 0,
+    "garbageTimeAware": false
+  },
+  "remainingSos": {
+    "label": "Remaining SOS",
+    "help": "ESPN's rank for the opponents still left, from the FPI resume. 1 is the hardest remaining schedule. Checked against this season: the SEC and Big Ten still have the harder roads.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": false,
+    "digits": 0,
+    "garbageTimeAware": false
+  },
+  "strengthOfRecord": {
+    "label": "Strength of record",
+    "help": "ESPN's rank for how impressive this record is given the schedule, from the FPI resume. 1 is the most impressive. Checked against this season: the SEC and Big Ten rank ahead of the MAC and Conference USA.",
+    "offense": false,
+    "defense": false,
+    "higherIsBetterOffense": false,
+    "higherIsBetterDefense": false,
+    "digits": 0,
+    "garbageTimeAware": false
   }
 }

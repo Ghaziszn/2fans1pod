@@ -1,16 +1,17 @@
-import type {
-  BracketSlot,
-  CfpFormat,
-  ChampState,
-  ContenderGroup,
-  Game,
-  RankingConfig,
-  ResolvedGame,
-  Scenario,
-  SeasonData,
-  SeededTeam,
-  SimResult,
-  Team,
+import {
+  emptyScenario,
+  type BracketSlot,
+  type CfpFormat,
+  type ChampState,
+  type ContenderGroup,
+  type Game,
+  type RankingConfig,
+  type ResolvedGame,
+  type Scenario,
+  type SeasonData,
+  type SeededTeam,
+  type SimResult,
+  type Team,
 } from "./types";
 
 const FIRST_ROUND: [number, number][] = [
@@ -54,7 +55,7 @@ function resolveScheduled(
   const played = actualWinner(game);
   if (played) return played;
   const picked = scenario.picks[game.id];
-  if (picked) return picked;
+  if (picked === game.homeId || picked === game.awayId) return picked;
   const homeOut = scenario.winOut.includes(game.homeId);
   const awayOut = scenario.winOut.includes(game.awayId);
   if (homeOut && !awayOut) return game.homeId;
@@ -129,22 +130,20 @@ function championForConference(
     return { champ: { teamId: real.winnerId, tied: [] }, projected: null };
   }
   if (ordered.length === 0) return { champ: { teamId: "", tied: [] }, projected: null };
-  const second = ordered[Math.min(1, ordered.length - 1)];
-  const line = recordKey(records.get(second));
-  const cluster = ordered.filter((id) => recordKey(records.get(id)) === line || recordKey(records.get(id)) === recordKey(records.get(ordered[0])));
-  const tied = cluster.length > 2 ? cluster : [];
-  const override = scenario.champPicks[conference];
-  if (override && (tied.includes(override) || cluster.includes(override))) {
-    return { champ: { teamId: override, tied }, projected: null };
-  }
-  const homeId = ordered[0];
-  const awayId = ordered[1] ?? ordered[0];
+  const best = recordKey(records.get(ordered[0]));
+  const leaders = ordered.filter((id) => recordKey(records.get(id)) === best);
+  // Two teams with the best record play the projected title game. Ask the visitor only when three or more share that record.
+  const tied = leaders.length > 2 ? leaders : [];
+  const [homeId, awayId] = tied.length > 2 ? teamsInTitle(conference, ordered, tied, scenario) : [ordered[0], ordered[1] ?? ordered[0]];
   if (homeId === awayId) return { champ: { teamId: homeId, tied }, projected: null };
   const home = teams.find((team) => team.id === homeId);
   const away = teams.find((team) => team.id === awayId);
   const projectedId = `ccg:${conference}`;
   const winner = (() => {
-    if (scenario.picks[projectedId]) return scenario.picks[projectedId];
+    const crowned = scenario.champPicks[conference];
+    const picked = scenario.picks[projectedId];
+    if (picked === homeId || picked === awayId) return picked;
+    if (tied.length > 2 && (crowned === homeId || crowned === awayId)) return crowned;
     const homeOut = scenario.winOut.includes(homeId);
     const awayOut = scenario.winOut.includes(awayId);
     if (homeOut && !awayOut) return homeId;
@@ -171,7 +170,20 @@ function championForConference(
     winnerId: winner,
     projected: true,
   };
-  return { champ: { teamId: winner, tied }, projected };
+  return { champ: { teamId: winner, tied, playing: tied.length > 2 ? [homeId, awayId] : undefined }, projected };
+}
+
+function teamsInTitle(conference: string, ordered: string[], tied: string[], scenario: Scenario): [string, string] {
+  const chosen = scenario.titlePairs?.[conference];
+  let home = ordered[0];
+  let away = ordered[1] ?? ordered[0];
+  if (chosen && chosen[0] !== chosen[1] && tied.includes(chosen[0]) && tied.includes(chosen[1])) {
+    home = chosen[0];
+    away = chosen[1];
+  }
+  const crowned = scenario.champPicks[conference];
+  if (crowned && tied.includes(crowned) && crowned !== home && crowned !== away) away = crowned;
+  return [home, away];
 }
 
 function formulaOrder(
@@ -281,6 +293,7 @@ function buildBracket(field: SeededTeam[], scenario: Scenario, teams: Map<string
     }
     const school = (teamId: string | null) => (teamId ? teams.get(teamId)?.school ?? "TBD" : "TBD");
     const host = (seedA ?? 99) <= (seedB ?? 99) ? school(teamA) : school(teamB);
+    const venueNote = !teamA || !teamB ? "Bye" : round === "First round" ? `at ${host}` : "Bowl site not chosen";
     slots.push({
       id,
       round,
@@ -289,7 +302,7 @@ function buildBracket(field: SeededTeam[], scenario: Scenario, teams: Map<string
       teamA,
       teamB,
       winnerId: winner,
-      venueNote: teamA && teamB ? `at ${host}` : "Bye",
+      venueNote,
     });
     return winner;
   };
@@ -324,38 +337,109 @@ function ordinal(seed: number) {
   return `${seed}th`;
 }
 
+function seasonTouched(scenario: Scenario) {
+  return (
+    Object.keys(scenario.picks).length > 0 ||
+    scenario.winOut.length > 0 ||
+    scenario.manualOrder != null ||
+    Object.keys(scenario.champPicks).length > 0 ||
+    Object.keys(scenario.titlePairs ?? {}).length > 0
+  );
+}
+
+function fellOutSentence(field: SeededTeam[], baseline: SeededTeam[] | null, firstOut: string | undefined, name: (id: string | undefined) => string) {
+  if (!baseline) return "";
+  const now = new Set(field.map((team) => team.teamId));
+  const schools = baseline.filter((team) => !now.has(team.teamId) && team.teamId !== firstOut).map((team) => name(team.teamId));
+  if (schools.length === 0) return "";
+  if (schools.length === 1) return `${schools[0]} fell out. `;
+  return `${schools.slice(0, -1).join(", ")} and ${schools[schools.length - 1]} fell out. `;
+}
+
 function writeSentence(
   field: SeededTeam[],
   firstOut: string[],
   teams: Map<string, Team>,
   fieldLocked: boolean,
   scenario: Scenario,
+  baseline: SeededTeam[] | null,
 ) {
   const name = (id: string | undefined) => (id ? teams.get(id)?.school ?? "A team" : "The next team");
   const last = field[field.length - 1];
   const out = name(firstOut[0]);
-  const untouched =
-    Object.keys(scenario.picks).length === 0 &&
-    scenario.winOut.length === 0 &&
-    scenario.manualOrder == null &&
-    Object.keys(scenario.champPicks).length === 0;
+  const untouched = !seasonTouched(scenario);
   if (fieldLocked && untouched) {
     return `This is the official field. ${name(last?.teamId)} is the ${ordinal(last?.seed ?? 12)} seed. ${out} is the first team out.`;
   }
+  const fell = fellOutSentence(field, baseline, firstOut[0], name);
   const bubble = field.find((team) => team.automatic && team.reason.includes("champion") && team.seed >= 5);
   if (bubble) {
     const school = name(bubble.teamId);
-    return `${school} wins the ${bubble.conference} and is the ${ordinal(bubble.seed)} seed. ${out} is the first team out.`;
+    return `${school} wins the ${bubble.conference} and is the ${ordinal(bubble.seed)} seed. ${fell}${out} is the first team out.`;
   }
   if (!last) return "Pick the remaining games to see the bracket.";
-  return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`;
+  const baselineIds = new Set(baseline?.map((team) => team.teamId) ?? []);
+  const entered = baseline ? field.filter((team) => !baselineIds.has(team.teamId)) : [];
+  if (entered.length === 1) {
+    const team = entered[0];
+    const lead = `${name(team.teamId)} is in, the ${ordinal(team.seed)} seed (${team.reason}).`;
+    const tail = team.teamId === last.teamId ? "" : ` ${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}).`;
+    return `${lead} ${fell}${tail} ${out} is the first team out.`.replaceAll("  ", " ");
+  }
+  if (entered.length > 1) {
+    const lead = `${entered.map((team) => `${name(team.teamId)} (${ordinal(team.seed)})`).join(" and ")} are in.`;
+    return `${lead} ${fell}${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${out} is the first team out.`.replaceAll("  ", " ");
+  }
+  return `${name(last.teamId)} is the last team in, the ${ordinal(last.seed)} seed (${last.reason}). ${fell}${out} is the first team out.`;
+}
+
+export function withWinOut(
+  scenario: Scenario,
+  teamId: string,
+  games: Game[],
+  conference: string | undefined,
+  titleGame?: { id: string; homeId: string; awayId: string } | null,
+): Scenario {
+  const turningOff = scenario.winOut.includes(teamId);
+  const picks = { ...scenario.picks };
+  const involved = games.filter(
+    (game) => !game.completed && game.seasonType === "regular" && (game.homeId === teamId || game.awayId === teamId),
+  );
+  const titleId = conference ? `ccg:${conference}` : "";
+  if (turningOff) {
+    for (const game of involved) {
+      if (picks[game.id] === teamId) delete picks[game.id];
+    }
+    if (titleId && picks[titleId] === teamId) delete picks[titleId];
+    return { ...scenario, winOut: scenario.winOut.filter((id) => id !== teamId), picks };
+  }
+  for (const game of involved) picks[game.id] = teamId;
+  if (titleGame && (titleGame.homeId === teamId || titleGame.awayId === teamId)) picks[titleGame.id] = teamId;
+  return { ...scenario, winOut: [...scenario.winOut, teamId], picks };
+}
+
+export function reconcileWinOut(scenario: Scenario, games: { id: string; homeId: string; awayId: string }[]): Scenario {
+  if (scenario.winOut.length === 0) return scenario;
+  const winOut = scenario.winOut.filter((teamId) =>
+    games.every((game) => {
+      if (game.homeId !== teamId && game.awayId !== teamId) return true;
+      const pick = scenario.picks[game.id];
+      return pick == null || pick === teamId;
+    }),
+  );
+  if (winOut.length === scenario.winOut.length && winOut.every((id, index) => id === scenario.winOut[index])) return scenario;
+  return { ...scenario, winOut };
+}
+
+export function openingStep(fieldLocked: boolean): 1 | 2 {
+  return fieldLocked ? 2 : 1;
 }
 
 export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat, ranking: RankingConfig): SimResult {
   const teams = teamMap(data);
   const known = new Set(teams.keys());
   const { index } = startRanks(data);
-  const resolved: ResolvedGame[] = data.games.map((game) => ({
+  const resolved: ResolvedGame[] = data.games.filter((game) => game.seasonType === "regular").map((game) => ({
     ...game,
     winnerId: resolveScheduled(game, scenario, index, known),
     projected: false,
@@ -374,6 +458,7 @@ export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat
   const order = manual && manual.length ? manual : formula;
   const selected = selectField(order, teams, champIds, format);
   const bracket = buildBracket(selected.field, scenario, teams);
+  const baseline = seasonTouched(scenario) ? simulate(data, emptyScenario(), format, ranking).field : null;
   return {
     order,
     formulaOrder: formula,
@@ -383,7 +468,7 @@ export function simulate(data: SeasonData, scenario: Scenario, format: CfpFormat
     field: selected.field,
     firstOut: selected.firstOut,
     bracket,
-    sentence: writeSentence(selected.field, selected.firstOut, teams, data.season.fieldLocked, scenario),
+    sentence: writeSentence(selected.field, selected.firstOut, teams, data.season.fieldLocked, scenario, baseline),
   };
 }
 
@@ -406,7 +491,7 @@ export function contenderBoard(data: SeasonData, ranking: RankingConfig): Conten
   const remaining = new Map<string, number>();
   for (const team of data.teams) remaining.set(team.id, 0);
   for (const game of data.games) {
-    if (game.completed || !game.conferenceGame || game.championship) continue;
+    if (game.completed || game.seasonType !== "regular" || !game.conferenceGame || game.championship) continue;
     if (remaining.has(game.homeId)) remaining.set(game.homeId, (remaining.get(game.homeId) ?? 0) + 1);
     if (remaining.has(game.awayId)) remaining.set(game.awayId, (remaining.get(game.awayId) ?? 0) + 1);
   }
@@ -419,7 +504,8 @@ export function contenderBoard(data: SeasonData, ranking: RankingConfig): Conten
       const alive = ids.filter((id) => (records.get(id)?.confWins ?? 0) + (remaining.get(id) ?? 0) >= leaderWins);
       const cap = conference.tier === "power" ? ranking.earlySeasonCap.power : ranking.earlySeasonCap.group;
       const aliveSorted = sortByRecord(alive, records, index);
-      const capped = aliveSorted.slice(0, cap);
+      const early = ranking.earlySeasonThroughWeek == null || data.season.week <= ranking.earlySeasonThroughWeek;
+      const capped = early ? aliveSorted.slice(0, cap) : aliveSorted;
       const shown = order.filter((id) => ids.includes(id) && (bubble.has(id) || capped.includes(id)));
       const hidden = aliveSorted.filter((id) => !shown.includes(id));
       return { conference: conference.name, tier: conference.tier, shown, hidden };
@@ -434,6 +520,7 @@ export function isAlive(teamId: string, data: SeasonData) {
   const remaining = (id: string) =>
     data.games.filter(
       (game) =>
+        game.seasonType === "regular" &&
         !game.completed &&
         game.conferenceGame &&
         !game.championship &&

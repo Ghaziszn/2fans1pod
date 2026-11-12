@@ -44,6 +44,62 @@ def strength_of_schedule(values: list[float]) -> float | None:
     return sum(values) / len(values)
 
 
+def cover_side(home_points: float, away_points: float, home_spread: float) -> str:
+    """Home spread is negative when the home team is favored. Returns home, away, or push."""
+    adjusted = home_points + home_spread - away_points
+    if abs(adjusted) < 1e-6:
+        return "push"
+    return "home" if adjusted > 0 else "away"
+
+
+def ats_records(games: list[dict]) -> dict[str, dict[str, int]]:
+    """Cover records from finished games that have a home-team spread."""
+    records: dict[str, dict[str, int]] = {}
+
+    def bucket(team_id: str) -> dict[str, int]:
+        return records.setdefault(team_id, {"wins": 0, "losses": 0, "pushes": 0})
+
+    for game in games:
+        spread = game.get("homeSpread")
+        if not game.get("completed") or spread is None:
+            continue
+        if game.get("homePoints") is None or game.get("awayPoints") is None:
+            continue
+        side = cover_side(game["homePoints"], game["awayPoints"], float(spread))
+        home = bucket(game["homeId"])
+        away = bucket(game["awayId"])
+        if side == "push":
+            home["pushes"] += 1
+            away["pushes"] += 1
+        elif side == "home":
+            home["wins"] += 1
+            away["losses"] += 1
+        else:
+            away["wins"] += 1
+            home["losses"] += 1
+    return records
+
+
+def points_per_game(scores: list[float]) -> float | None:
+    """Average points from the games we already have. One decimal, same as the defense number."""
+    if not scores:
+        return None
+    return round(sum(scores) / len(scores), 1)
+
+
+def cfp_ranking_label(cfp_rows: list, week: object) -> str:
+    """Name the poll when the committee has published one. Otherwise this is Elo, not a fake poll."""
+    if not cfp_rows:
+        return "Elo rankings"
+    try:
+        number = int(week) if week is not None else 0
+    except (TypeError, ValueError):
+        number = 0
+    if number > 0:
+        return f"CFP Rankings, Week {number}"
+    return "CFP committee rankings"
+
+
 def rank_values(items: list[tuple[str, float | None]], higher_is_better: bool) -> dict[str, int]:
     """Competition rank. Ties share the best rank in the tie."""
     present = [(team_id, value) for team_id, value in items if value is not None]

@@ -4,9 +4,9 @@ A free college football site. The homepage is a rest-of-season playoff simulator
 
 ## What is here
 
-- The simulator, header, footer, theme toggle, and search are in the app.
+- The simulator, matchup calculator, team pages, conference standings, CFP rankings, search, and contact form.
 - Season numbers live in `public/data`. Python scripts in `scripts/` build those files.
-- Team pages, the matchup calculator, the contact form, and the Vercel deploy are not finished yet.
+- A lasting Vercel address still needs a login. A short-lived preview can be created with `npx vercel deploy --temporary`.
 
 ## Run it
 
@@ -28,3 +28,10 @@ python3 -m venv .venv
 ```
 
 If the key is missing, the script uses the public ESPN feed and says so in `public/data/season.json`.
+
+## Tests
+
+```bash
+npm test
+.venv/bin/python -m unittest scripts.tests.test_compute scripts.tests.test_validate
+```

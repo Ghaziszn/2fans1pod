@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isAlive, simulate } from "./engine";
+import { contenderBoard, isAlive, openingStep, reconcileWinOut, simulate, withWinOut } from "./engine";
 import { decodeScenario, encodeScenario, emptyScenario } from "./share";
 import type { CfpFormat, Game, RankingConfig, SeasonData, Team } from "./types";
 
@@ -104,6 +104,32 @@ function fieldTeams() {
 }
 
 describe("playoff field", () => {
+  it("opens on the official bracket once every regular-season game is played", () => {
+    const { teams, order } = fieldTeams();
+    const data = season(teams, [], order);
+    data.season.fieldLocked = true;
+    const official = simulate(data, emptyScenario(), format, ranking);
+    expect(openingStep(data.season.fieldLocked)).toBe(2);
+    expect(official.sentence.startsWith("This is the official field.")).toBe(true);
+    const withGame = season(teams, [future("g", "SEC-1", "SEC-2")], order);
+    withGame.season.fieldLocked = true;
+    const picked = emptyScenario();
+    picked.picks.g = "SEC-2";
+    const whatIf = simulate(withGame, picked, format, ranking);
+    expect(whatIf.sentence.includes("official field")).toBe(false);
+    expect(openingStep(false)).toBe(1);
+  });
+
+  it("keeps the first round at the higher seed and leaves later rounds at a bowl", () => {
+    const { teams, order } = fieldTeams();
+    const result = simulate(season(teams, [], order), emptyScenario(), format, ranking);
+    const first = result.bracket.find((slot) => slot.id === "r1-5-12");
+    const host = (first?.seedA ?? 99) <= (first?.seedB ?? 99) ? first?.teamA : first?.teamB;
+    expect(first?.venueNote).toBe(`at ${host}`);
+    expect(result.bracket.find((slot) => slot.round === "Quarterfinal")?.venueNote).toBe("Bowl site not chosen");
+    expect(result.bracket.find((slot) => slot.id === "final")?.venueNote).toBe("Bowl site not chosen");
+  });
+
   it("gives Notre Dame an automatic bid inside the top 12 and leaves six at-large spots", () => {
     const { teams, order } = fieldTeams();
     const result = simulate(season(teams, [], order), emptyScenario(), format, ranking);
@@ -179,6 +205,17 @@ describe("ranking adjustment", () => {
     expect(result.formulaOrder.indexOf("T1")).toBeGreaterThan(result.formulaOrder.indexOf("T8"));
   });
 
+  it("does not count a postseason game as a regular-season loss", () => {
+    const teams = Array.from({ length: 8 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
+    const order = teams.map((item) => item.id);
+    const bowl = { ...future("bowl", "T1", "T8"), seasonType: "postseason" as const, week: 1 };
+    const scenario = emptyScenario();
+    scenario.picks.bowl = "T8";
+    const result = simulate(season(teams, [bowl], order), scenario, format, ranking);
+    const baseline = simulate(season(teams, [], order), emptyScenario(), format, ranking);
+    expect(result.formulaOrder).toEqual(baseline.formulaOrder);
+  });
+
   it("puts a loser behind a worse team that beat them", () => {
     const teams = Array.from({ length: 6 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
     const order = teams.map((item) => item.id);
@@ -189,7 +226,150 @@ describe("ranking adjustment", () => {
   });
 });
 
+describe("early-season cap", () => {
+  function tenTeamSeason(week: number) {
+    const teams = Array.from({ length: 10 }, (_, n) => team(`T${n + 1}`, "SEC", "power"));
+    const data = season(teams, [], teams.map((item) => item.id));
+    data.season.week = week;
+    data.conferences = [{ id: "sec", name: "SEC", tier: "power", teams: teams.map((item) => item.id) }];
+    return data;
+  }
+
+  const capped = { ...ranking, bubbleRank: 0, earlySeasonThroughWeek: 5 };
+
+  it("shows every team still alive after the early weeks", () => {
+    const board = contenderBoard(tenTeamSeason(11), capped);
+    expect(board[0].hidden).toEqual([]);
+    expect(board[0].shown).toHaveLength(10);
+  });
+
+  it("caps a power conference at eight teams during the early weeks", () => {
+    const board = contenderBoard(tenTeamSeason(3), capped);
+    expect(board[0].shown).toHaveLength(8);
+    expect(board[0].hidden).toEqual(["T9", "T10"]);
+  });
+});
+
+describe("conference title", () => {
+  it("does not call second place a tie for the title", () => {
+    const teams = ["Leader", "Second", "Third", "Fourth"].map((id) => team(id, "Big Ten", "power"));
+    const games = [
+      played("a", "Leader", "Second", 1, 0, true),
+      played("b", "Leader", "Third", 1, 0, true),
+      played("c", "Second", "Fourth", 1, 0, true),
+      played("d", "Third", "Fourth", 1, 0, true),
+    ];
+    const result = simulate(season(teams, games, ["Second", "Third", "Leader", "Fourth"]), emptyScenario(), format, ranking);
+    expect(result.champions["Big Ten"].tied).toEqual([]);
+    expect(result.champions["Big Ten"].teamId).toBe("Second");
+  });
+
+  it("leaves a two-team tie to the projected title game", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true)];
+    const result = simulate(season(teams, games, ["B", "A", "C"]), emptyScenario(), format, ranking);
+    expect(result.champions.SEC.tied).toEqual([]);
+    expect(result.champions.SEC.teamId).toBe("B");
+  });
+
+  it("asks the visitor when three or more teams share the best record", () => {
+    const teams = ["A", "B", "C", "D"].map((id) => team(id, "MAC", "group"));
+    const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
+    const result = simulate(season(teams, games, ["A", "B", "C", "D"]), emptyScenario(), format, ranking);
+    expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
+    expect(result.champions.MAC.playing).toEqual(["A", "B"]);
+    expect(result.champions.MAC.teamId).toBe("A");
+    const game = result.games.find((item) => item.id === "ccg:MAC");
+    expect(game?.winnerId).toBe("A");
+  });
+
+  it("lets the visitor pick who plays in a three-team tie and who wins", () => {
+    const teams = ["A", "B", "C", "D"].map((id) => team(id, "MAC", "group"));
+    const games = [played("a", "A", "D", 1, 0, true), played("b", "B", "D", 1, 0, true), played("c", "C", "D", 1, 0, true)];
+    const scenario = emptyScenario();
+    scenario.titlePairs.MAC = ["A", "C"];
+    scenario.champPicks.MAC = "C";
+    const result = simulate(season(teams, games, ["A", "B", "C", "D"]), scenario, format, ranking);
+    expect(result.champions.MAC.playing).toEqual(["A", "C"]);
+    expect(result.champions.MAC.teamId).toBe("C");
+    expect(result.champions.MAC.tied).toEqual(["A", "B", "C"]);
+    const game = result.games.find((item) => item.id === "ccg:MAC");
+    expect(game?.homeId).toBe("A");
+    expect(game?.awayId).toBe("C");
+    expect(game?.winnerId).toBe("C");
+  });
+});
+
+describe("wins out on a shared game", () => {
+  it("gives the head-to-head to the team that most recently wins out", () => {
+    const teams = ["Favorite", "Underdog"].map((id) => team(id, "SEC", "power"));
+    const games = [future("g", "Favorite", "Underdog")];
+    let scenario = withWinOut(emptyScenario(), "Favorite", games, "SEC");
+    scenario = withWinOut(scenario, "Underdog", games, "SEC");
+    const result = simulate(season(teams, games, ["Favorite", "Underdog"]), scenario, format, ranking);
+    expect(result.games.find((game) => game.id === "g")?.winnerId).toBe("Underdog");
+  });
+
+  it("leaves a title pick alone when the team winning out is not in that game", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true), future("g", "C", "A")];
+    const title = { id: "ccg:SEC", homeId: "A", awayId: "B" };
+    let scenario = emptyScenario();
+    scenario.picks["ccg:SEC"] = "B";
+    scenario = withWinOut(scenario, "C", games, "SEC", title);
+    expect(scenario.picks["ccg:SEC"]).toBe("B");
+    const result = simulate(season(teams, games, ["A", "B", "C"]), scenario, format, ranking);
+    expect(result.champions.SEC.teamId).toBe("B");
+  });
+
+  it("gives the title game to a team that wins out and is actually playing in it", () => {
+    const games = [future("g", "A", "B")];
+    const title = { id: "ccg:SEC", homeId: "A", awayId: "B" };
+    let scenario = withWinOut(emptyScenario(), "A", games, "SEC", title);
+    scenario = withWinOut(scenario, "B", games, "SEC", title);
+    expect(scenario.picks["ccg:SEC"]).toBe("B");
+  });
+
+  it("ignores a title-game pick for a team that is not playing", () => {
+    const teams = ["A", "B", "C"].map((id) => team(id, "SEC", "power"));
+    const games = [played("a", "A", "C", 1, 0, true), played("b", "B", "C", 1, 0, true)];
+    const scenario = emptyScenario();
+    scenario.picks["ccg:SEC"] = "C";
+    const result = simulate(season(teams, games, ["A", "B", "C"]), scenario, format, ranking);
+    expect(result.champions.SEC.teamId).toBe("A");
+  });
+});
+
+describe("field sentence", () => {
+  it("names the team that played its way in and the team that fell out", () => {
+    const { teams, order } = fieldTeams();
+    const games = [future("g", "SEC-4", "G6-5")];
+    const scenario = emptyScenario();
+    scenario.picks.g = "G6-5";
+    const result = simulate(season(teams, games, order), scenario, format, ranking);
+    expect(result.sentence).toBe("Big 12-1 wins the Big 12 and is the 9th seed. SEC-4 fell out. Big 12-4 is the first team out.");
+  });
+});
+
 describe("wins out and still alive", () => {
+  it("turns wins out off when that team is given a loss", () => {
+    const games = [future("g1", "Wake", "Miami")];
+    const on = withWinOut(emptyScenario(), "Wake", games, "ACC");
+    const lost = reconcileWinOut({ ...on, picks: { ...on.picks, g1: "Miami" } }, games);
+    expect(on.winOut).toEqual(["Wake"]);
+    expect(lost.winOut).toEqual([]);
+    expect(lost.picks.g1).toBe("Miami");
+  });
+
+  it("keeps only the second team when both were set to win out", () => {
+    const games = [future("g1", "Wake", "Miami")];
+    const wake = withWinOut(emptyScenario(), "Wake", games, "ACC");
+    const both = withWinOut(wake, "Miami", games, "ACC");
+    const settled = reconcileWinOut(both, games);
+    expect(settled.winOut).toEqual(["Miami"]);
+    expect(settled.picks.g1).toBe("Miami");
+  });
+
   it("makes a team the champion when they win out and the leader loses", () => {
     const teams = ["Wake", "Clemson", "Duke", "Pitt"].map((id) => team(id, "ACC", "power"));
     const games = [

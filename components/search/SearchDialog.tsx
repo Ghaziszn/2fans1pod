@@ -1,19 +1,26 @@
 "use client";
 
 import Fuse from "fuse.js";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { searchEntries } from "@/lib/load";
 
+function sitePath(href: string) {
+  if (href === "/" || href.endsWith("/")) return href;
+  return `${href}/`;
+}
+
 export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
   const fuse = useMemo(
     () =>
       new Fuse(searchEntries, {
-        keys: ["name", "aliases", "detail"],
+        keys: [
+          { name: "name", weight: 0.7 },
+          { name: "aliases", weight: 0.3 },
+        ],
         threshold: 0.35,
         ignoreLocation: true,
       }),
@@ -30,11 +37,6 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
   }, [open]);
 
   if (!open) return null;
-
-  const go = (href: string) => {
-    onClose();
-    router.push(href);
-  };
 
   return (
     <div className="fixed inset-0 z-50 bg-ink/40 p-4" onClick={onClose}>
@@ -60,7 +62,7 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
               event.preventDefault();
               setActive((value) => Math.max(value - 1, 0));
             } else if (event.key === "Enter" && results[active]) {
-              go(results[active].href);
+              window.location.assign(sitePath(results[active].href));
             } else if (event.key === "Escape") {
               onClose();
             }
@@ -71,15 +73,15 @@ export function SearchDialog({ open, onClose }: { open: boolean; onClose: () => 
         <ul className="max-h-80 overflow-auto py-2">
           {results.map((result, index) => (
             <li key={result.href + result.name}>
-              <button
-                type="button"
+              <Link
+                href={sitePath(result.href)}
                 className={`flex min-h-11 w-full items-center justify-between px-4 text-left ${index === active ? "bg-paper" : ""}`}
                 onMouseEnter={() => setActive(index)}
-                onClick={() => go(result.href)}
+                onClick={onClose}
               >
                 <span>{result.name}</span>
                 <span className="text-sm text-muted">{result.detail}</span>
-              </button>
+              </Link>
             </li>
           ))}
           {results.length === 0 ? <li className="px-4 py-6 text-sm text-muted">No matches.</li> : null}

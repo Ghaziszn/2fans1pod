@@ -28,6 +28,7 @@ export function decodeScenario(value: string): Scenario | null {
       picks: parsed.picks ?? {},
       winOut: Array.isArray(parsed.winOut) ? parsed.winOut : [],
       champPicks: parsed.champPicks ?? {},
+      titlePairs: parsed.titlePairs ?? {},
       manualOrder: Array.isArray(parsed.manualOrder) ? parsed.manualOrder : null,
       playoffPicks: parsed.playoffPicks ?? {},
     };

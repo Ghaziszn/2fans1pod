@@ -1,1188 +1,5 @@
 [
   {
-    "id": "utsa",
-    "school": "UTSA",
-    "mascot": "Roadrunners",
-    "abbreviation": "UTSA",
-    "conference": "American",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/utsa.png",
-    "alternateNames": [
-      "utsa"
-    ]
-  },
-  {
-    "id": "memphis",
-    "school": "Memphis",
-    "mascot": "Tigers",
-    "abbreviation": "MEM",
-    "conference": "American",
-    "tier": "group",
-    "color": "#004991",
-    "alternateColor": "#8e908f",
-    "logo": "/logos/memphis.png",
-    "alternateNames": []
-  },
-  {
-    "id": "north-texas",
-    "school": "North Texas",
-    "mascot": "Mean Green",
-    "abbreviation": "UNT",
-    "conference": "American",
-    "tier": "group",
-    "color": "#068f33",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/north-texas.png",
-    "alternateNames": [
-      "unt"
-    ]
-  },
-  {
-    "id": "south-florida",
-    "school": "South Florida",
-    "mascot": "Bulls",
-    "abbreviation": "USF",
-    "conference": "American",
-    "tier": "group",
-    "color": "#006747",
-    "alternateColor": "#cfc493",
-    "logo": "/logos/south-florida.png",
-    "alternateNames": []
-  },
-  {
-    "id": "army",
-    "school": "Army",
-    "mascot": "Black Knights",
-    "abbreviation": "ARMY",
-    "conference": "American",
-    "tier": "group",
-    "color": "#000000",
-    "alternateColor": "#d3bc8d",
-    "logo": "/logos/army.png",
-    "alternateNames": [
-      "black knights"
-    ]
-  },
-  {
-    "id": "florida-atlantic",
-    "school": "Florida Atlantic",
-    "mascot": "Owls",
-    "abbreviation": "FAU",
-    "conference": "American",
-    "tier": "group",
-    "color": "#003366",
-    "alternateColor": "#cc0000",
-    "logo": "/logos/florida-atlantic.png",
-    "alternateNames": [
-      "fau"
-    ]
-  },
-  {
-    "id": "uab",
-    "school": "UAB",
-    "mascot": "Blazers",
-    "abbreviation": "UAB",
-    "conference": "American",
-    "tier": "group",
-    "color": "#1a5632",
-    "alternateColor": "#fdb913",
-    "logo": "/logos/uab.png",
-    "alternateNames": [
-      "blazers"
-    ]
-  },
-  {
-    "id": "east-carolina",
-    "school": "East Carolina",
-    "mascot": "Pirates",
-    "abbreviation": "ECU",
-    "conference": "American",
-    "tier": "group",
-    "color": "#582c83",
-    "alternateColor": "#ffc72c",
-    "logo": "/logos/east-carolina.png",
-    "alternateNames": [
-      "ecu"
-    ]
-  },
-  {
-    "id": "tulane",
-    "school": "Tulane",
-    "mascot": "Green Wave",
-    "abbreviation": "TULN",
-    "conference": "American",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/tulane.png",
-    "alternateNames": []
-  },
-  {
-    "id": "tulsa",
-    "school": "Tulsa",
-    "mascot": "Golden Hurricane",
-    "abbreviation": "TLSA",
-    "conference": "American",
-    "tier": "group",
-    "color": "#003595",
-    "alternateColor": "#d0b787",
-    "logo": "/logos/tulsa.png",
-    "alternateNames": []
-  },
-  {
-    "id": "temple",
-    "school": "Temple",
-    "mascot": "Owls",
-    "abbreviation": "TEM",
-    "conference": "American",
-    "tier": "group",
-    "color": "#a41e35",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/temple.png",
-    "alternateNames": []
-  },
-  {
-    "id": "navy",
-    "school": "Navy",
-    "mascot": "Midshipmen",
-    "abbreviation": "NAVY",
-    "conference": "American",
-    "tier": "group",
-    "color": "#00225b",
-    "alternateColor": "#b5a67c",
-    "logo": "/logos/navy.png",
-    "alternateNames": [
-      "midshipmen"
-    ]
-  },
-  {
-    "id": "charlotte",
-    "school": "Charlotte",
-    "mascot": "49ers",
-    "abbreviation": "CLT",
-    "conference": "American",
-    "tier": "group",
-    "color": "#005035",
-    "alternateColor": "#a49665",
-    "logo": "/logos/charlotte.png",
-    "alternateNames": []
-  },
-  {
-    "id": "rice",
-    "school": "Rice",
-    "mascot": "Owls",
-    "abbreviation": "RICE",
-    "conference": "American",
-    "tier": "group",
-    "color": "#00205b",
-    "alternateColor": "#c1c6c8",
-    "logo": "/logos/rice.png",
-    "alternateNames": []
-  },
-  {
-    "id": "miami",
-    "school": "Miami",
-    "mascot": "Hurricanes",
-    "abbreviation": "MIA",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#f47423",
-    "alternateColor": "#035131",
-    "logo": "/logos/miami.png",
-    "alternateNames": [
-      "the u"
-    ]
-  },
-  {
-    "id": "wake-forest",
-    "school": "Wake Forest",
-    "mascot": "Demon Deacons",
-    "abbreviation": "WAKE",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#ceb888",
-    "alternateColor": "#2c2a29",
-    "logo": "/logos/wake-forest.png",
-    "alternateNames": []
-  },
-  {
-    "id": "smu",
-    "school": "SMU",
-    "mascot": "Mustangs",
-    "abbreviation": "SMU",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/smu.png",
-    "alternateNames": [
-      "mustangs"
-    ]
-  },
-  {
-    "id": "virginia-tech",
-    "school": "Virginia Tech",
-    "mascot": "Hokies",
-    "abbreviation": "VT",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#6a2c3e",
-    "alternateColor": "#cf4520",
-    "logo": "/logos/virginia-tech.png",
-    "alternateNames": [
-      "vt"
-    ]
-  },
-  {
-    "id": "duke",
-    "school": "Duke",
-    "mascot": "Blue Devils",
-    "abbreviation": "DUKE",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#00539b",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/duke.png",
-    "alternateNames": []
-  },
-  {
-    "id": "pittsburgh",
-    "school": "Pittsburgh",
-    "mascot": "Panthers",
-    "abbreviation": "PITT",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#003594",
-    "alternateColor": "#ffb81c",
-    "logo": "/logos/pittsburgh.png",
-    "alternateNames": [
-      "pitt",
-      "pittsburgh"
-    ]
-  },
-  {
-    "id": "louisville",
-    "school": "Louisville",
-    "mascot": "Cardinals",
-    "abbreviation": "LOU",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#c9001f",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/louisville.png",
-    "alternateNames": []
-  },
-  {
-    "id": "clemson",
-    "school": "Clemson",
-    "mascot": "Tigers",
-    "abbreviation": "CLEM",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#f56600",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/clemson.png",
-    "alternateNames": []
-  },
-  {
-    "id": "boston-college",
-    "school": "Boston College",
-    "mascot": "Eagles",
-    "abbreviation": "BC",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#8c2232",
-    "alternateColor": "#dbcca6",
-    "logo": "/logos/boston-college.png",
-    "alternateNames": [
-      "bc"
-    ]
-  },
-  {
-    "id": "nc-state",
-    "school": "NC State",
-    "mascot": "Wolfpack",
-    "abbreviation": "NCSU",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#cc0000",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/nc-state.png",
-    "alternateNames": [
-      "north carolina state"
-    ]
-  },
-  {
-    "id": "north-carolina",
-    "school": "North Carolina",
-    "mascot": "Tar Heels",
-    "abbreviation": "UNC",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#7bafd4",
-    "alternateColor": "#13294b",
-    "logo": "/logos/north-carolina.png",
-    "alternateNames": []
-  },
-  {
-    "id": "syracuse",
-    "school": "Syracuse",
-    "mascot": "Orange",
-    "abbreviation": "SYR",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#000e54",
-    "alternateColor": "#ff431b",
-    "logo": "/logos/syracuse.png",
-    "alternateNames": []
-  },
-  {
-    "id": "virginia",
-    "school": "Virginia",
-    "mascot": "Cavaliers",
-    "abbreviation": "UVA",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#232d4b",
-    "alternateColor": "#f84c1e",
-    "logo": "/logos/virginia.png",
-    "alternateNames": []
-  },
-  {
-    "id": "stanford",
-    "school": "Stanford",
-    "mascot": "Cardinal",
-    "abbreviation": "STAN",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#8c1515",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/stanford.png",
-    "alternateNames": []
-  },
-  {
-    "id": "florida-state",
-    "school": "Florida State",
-    "mascot": "Seminoles",
-    "abbreviation": "FSU",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#782f40",
-    "alternateColor": "#ceb888",
-    "logo": "/logos/florida-state.png",
-    "alternateNames": [
-      "fsu"
-    ]
-  },
-  {
-    "id": "california",
-    "school": "California",
-    "mascot": "Golden Bears",
-    "abbreviation": "CAL",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#041e42",
-    "alternateColor": "#ffc72c",
-    "logo": "/logos/california.png",
-    "alternateNames": []
-  },
-  {
-    "id": "georgia-tech",
-    "school": "Georgia Tech",
-    "mascot": "Yellow Jackets",
-    "abbreviation": "GT",
-    "conference": "ACC",
-    "tier": "power",
-    "color": "#b3a369",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/georgia-tech.png",
-    "alternateNames": [
-      "gt"
-    ]
-  },
-  {
-    "id": "utah",
-    "school": "Utah",
-    "mascot": "Utes",
-    "abbreviation": "UTAH",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#be0000",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/utah.png",
-    "alternateNames": []
-  },
-  {
-    "id": "byu",
-    "school": "BYU",
-    "mascot": "Cougars",
-    "abbreviation": "BYU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#0047ba",
-    "alternateColor": "#002e5d",
-    "logo": "/logos/byu.png",
-    "alternateNames": [
-      "cougars"
-    ]
-  },
-  {
-    "id": "texas-tech",
-    "school": "Texas Tech",
-    "mascot": "Red Raiders",
-    "abbreviation": "TTU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/texas-tech.png",
-    "alternateNames": []
-  },
-  {
-    "id": "houston",
-    "school": "Houston",
-    "mascot": "Cougars",
-    "abbreviation": "HOU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#c8102e",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/houston.png",
-    "alternateNames": []
-  },
-  {
-    "id": "arizona",
-    "school": "Arizona",
-    "mascot": "Wildcats",
-    "abbreviation": "ARIZ",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#cc0033",
-    "alternateColor": "#003366",
-    "logo": "/logos/arizona.png",
-    "alternateNames": []
-  },
-  {
-    "id": "baylor",
-    "school": "Baylor",
-    "mascot": "Bears",
-    "abbreviation": "BAY",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#154734",
-    "alternateColor": "#ffb81c",
-    "logo": "/logos/baylor.png",
-    "alternateNames": []
-  },
-  {
-    "id": "oklahoma-state",
-    "school": "Oklahoma State",
-    "mascot": "Cowboys",
-    "abbreviation": "OKST",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#fe5c00",
-    "alternateColor": "#000000",
-    "logo": "/logos/oklahoma-state.png",
-    "alternateNames": [
-      "okstate",
-      "osu cowboys"
-    ]
-  },
-  {
-    "id": "west-virginia",
-    "school": "West Virginia",
-    "mascot": "Mountaineers",
-    "abbreviation": "WVU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#eaaa00",
-    "alternateColor": "#002855",
-    "logo": "/logos/west-virginia.png",
-    "alternateNames": [
-      "wvu"
-    ]
-  },
-  {
-    "id": "cincinnati",
-    "school": "Cincinnati",
-    "mascot": "Bearcats",
-    "abbreviation": "CIN",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#000000",
-    "alternateColor": "#e00122",
-    "logo": "/logos/cincinnati.png",
-    "alternateNames": []
-  },
-  {
-    "id": "iowa-state",
-    "school": "Iowa State",
-    "mascot": "Cyclones",
-    "abbreviation": "ISU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#ae192d",
-    "alternateColor": "#ffc72a",
-    "logo": "/logos/iowa-state.png",
-    "alternateNames": [
-      "isu"
-    ]
-  },
-  {
-    "id": "ucf",
-    "school": "UCF",
-    "mascot": "Knights",
-    "abbreviation": "UCF",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#000000",
-    "alternateColor": "#b4a169",
-    "logo": "/logos/ucf.png",
-    "alternateNames": [
-      "knights"
-    ]
-  },
-  {
-    "id": "arizona-state",
-    "school": "Arizona State",
-    "mascot": "Sun Devils",
-    "abbreviation": "ASU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#ffc627",
-    "alternateColor": "#8c1d40",
-    "logo": "/logos/arizona-state.png",
-    "alternateNames": [
-      "asu"
-    ]
-  },
-  {
-    "id": "tcu",
-    "school": "TCU",
-    "mascot": "Horned Frogs",
-    "abbreviation": "TCU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/tcu.png",
-    "alternateNames": [
-      "horned frogs"
-    ]
-  },
-  {
-    "id": "kansas-state",
-    "school": "Kansas State",
-    "mascot": "Wildcats",
-    "abbreviation": "KSU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#330a57",
-    "alternateColor": "#e2e3e4",
-    "logo": "/logos/kansas-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "colorado",
-    "school": "Colorado",
-    "mascot": "Buffaloes",
-    "abbreviation": "COLO",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#cfb87c",
-    "alternateColor": "#000000",
-    "logo": "/logos/colorado.png",
-    "alternateNames": []
-  },
-  {
-    "id": "kansas",
-    "school": "Kansas",
-    "mascot": "Jayhawks",
-    "abbreviation": "KU",
-    "conference": "Big 12",
-    "tier": "power",
-    "color": "#0051ba",
-    "alternateColor": "#e8000d",
-    "logo": "/logos/kansas.png",
-    "alternateNames": []
-  },
-  {
-    "id": "ucla",
-    "school": "UCLA",
-    "mascot": "Bruins",
-    "abbreviation": "UCLA",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#2774ae",
-    "alternateColor": "#f2a900",
-    "logo": "/logos/ucla.png",
-    "alternateNames": [
-      "bruins"
-    ]
-  },
-  {
-    "id": "indiana",
-    "school": "Indiana",
-    "mascot": "Hoosiers",
-    "abbreviation": "IU",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#970310",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/indiana.png",
-    "alternateNames": []
-  },
-  {
-    "id": "usc",
-    "school": "USC",
-    "mascot": "Trojans",
-    "abbreviation": "USC",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#9d2235",
-    "alternateColor": "#ffc72c",
-    "logo": "/logos/usc.png",
-    "alternateNames": [
-      "southern cal",
-      "trojans"
-    ]
-  },
-  {
-    "id": "ohio-state",
-    "school": "Ohio State",
-    "mascot": "Buckeyes",
-    "abbreviation": "OSU",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#ba0c2f",
-    "alternateColor": "#a8adb4",
-    "logo": "/logos/ohio-state.png",
-    "alternateNames": [
-      "osu",
-      "the ohio state"
-    ]
-  },
-  {
-    "id": "iowa",
-    "school": "Iowa",
-    "mascot": "Hawkeyes",
-    "abbreviation": "IOWA",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#231f20",
-    "alternateColor": "#fcd116",
-    "logo": "/logos/iowa.png",
-    "alternateNames": []
-  },
-  {
-    "id": "northwestern",
-    "school": "Northwestern",
-    "mascot": "Wildcats",
-    "abbreviation": "NU",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#492f92",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/northwestern.png",
-    "alternateNames": []
-  },
-  {
-    "id": "illinois",
-    "school": "Illinois",
-    "mascot": "Fighting Illini",
-    "abbreviation": "ILL",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#ff5f05",
-    "alternateColor": "#13294b",
-    "logo": "/logos/illinois.png",
-    "alternateNames": []
-  },
-  {
-    "id": "minnesota",
-    "school": "Minnesota",
-    "mascot": "Golden Gophers",
-    "abbreviation": "MINN",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#5e0a2f",
-    "alternateColor": "#fab41c",
-    "logo": "/logos/minnesota.png",
-    "alternateNames": []
-  },
-  {
-    "id": "oregon",
-    "school": "Oregon",
-    "mascot": "Ducks",
-    "abbreviation": "ORE",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#00934b",
-    "alternateColor": "#fff41b",
-    "logo": "/logos/oregon.png",
-    "alternateNames": []
-  },
-  {
-    "id": "wisconsin",
-    "school": "Wisconsin",
-    "mascot": "Badgers",
-    "abbreviation": "WIS",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#a00000",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/wisconsin.png",
-    "alternateNames": []
-  },
-  {
-    "id": "washington",
-    "school": "Washington",
-    "mascot": "Huskies",
-    "abbreviation": "WASH",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#33006f",
-    "alternateColor": "#e8d3a2",
-    "logo": "/logos/washington.png",
-    "alternateNames": []
-  },
-  {
-    "id": "michigan",
-    "school": "Michigan",
-    "mascot": "Wolverines",
-    "abbreviation": "MICH",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#00274c",
-    "alternateColor": "#ffcb05",
-    "logo": "/logos/michigan.png",
-    "alternateNames": []
-  },
-  {
-    "id": "nebraska",
-    "school": "Nebraska",
-    "mascot": "Cornhuskers",
-    "abbreviation": "NEB",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#e31937",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/nebraska.png",
-    "alternateNames": []
-  },
-  {
-    "id": "penn-state",
-    "school": "Penn State",
-    "mascot": "Nittany Lions",
-    "abbreviation": "PSU",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#061440",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/penn-state.png",
-    "alternateNames": [
-      "psu"
-    ]
-  },
-  {
-    "id": "purdue",
-    "school": "Purdue",
-    "mascot": "Boilermakers",
-    "abbreviation": "PUR",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/purdue.png",
-    "alternateNames": []
-  },
-  {
-    "id": "rutgers",
-    "school": "Rutgers",
-    "mascot": "Scarlet Knights",
-    "abbreviation": "RUTG",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#ce0e2d",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/rutgers.png",
-    "alternateNames": []
-  },
-  {
-    "id": "maryland",
-    "school": "Maryland",
-    "mascot": "Terrapins",
-    "abbreviation": "MD",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#ce1126",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/maryland.png",
-    "alternateNames": []
-  },
-  {
-    "id": "michigan-state",
-    "school": "Michigan State",
-    "mascot": "Spartans",
-    "abbreviation": "MSU",
-    "conference": "Big Ten",
-    "tier": "power",
-    "color": "#173f35",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/michigan-state.png",
-    "alternateNames": [
-      "msu"
-    ]
-  },
-  {
-    "id": "liberty",
-    "school": "Liberty",
-    "mascot": "Flames",
-    "abbreviation": "LIB",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#0a254e",
-    "alternateColor": "#b72025",
-    "logo": "/logos/liberty.png",
-    "alternateNames": []
-  },
-  {
-    "id": "jacksonville-state",
-    "school": "Jacksonville State",
-    "mascot": "Gamecocks",
-    "abbreviation": "JXST",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#cc0000",
-    "alternateColor": "#000000",
-    "logo": "/logos/jacksonville-state.png",
-    "alternateNames": [
-      "jax state"
-    ]
-  },
-  {
-    "id": "delaware",
-    "school": "Delaware",
-    "mascot": "Blue Hens",
-    "abbreviation": "DEL",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#00539f",
-    "alternateColor": "#ffd200",
-    "logo": "/logos/delaware.png",
-    "alternateNames": []
-  },
-  {
-    "id": "middle-tennessee",
-    "school": "Middle Tennessee",
-    "mascot": "Blue Raiders",
-    "abbreviation": "MTSU",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#036eb7",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/middle-tennessee.png",
-    "alternateNames": [
-      "mtsu"
-    ]
-  },
-  {
-    "id": "new-mexico-state",
-    "school": "New Mexico State",
-    "mascot": "Aggies",
-    "abbreviation": "NMSU",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#7e141b",
-    "alternateColor": "#231f20",
-    "logo": "/logos/new-mexico-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "western-kentucky",
-    "school": "Western Kentucky",
-    "mascot": "Hilltoppers",
-    "abbreviation": "WKU",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#e13a3e",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/western-kentucky.png",
-    "alternateNames": [
-      "wku"
-    ]
-  },
-  {
-    "id": "missouri-state",
-    "school": "Missouri State",
-    "mascot": "Bears",
-    "abbreviation": "MOST",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/missouri-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "florida-international",
-    "school": "Florida International",
-    "mascot": "Panthers",
-    "abbreviation": "FIU",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#091f3f",
-    "alternateColor": "#c3993f",
-    "logo": "/logos/florida-international.png",
-    "alternateNames": [
-      "fiu"
-    ]
-  },
-  {
-    "id": "kennesaw-state",
-    "school": "Kennesaw State",
-    "mascot": "Owls",
-    "abbreviation": "KENN",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#fdbb30",
-    "alternateColor": "#0b1315",
-    "logo": "/logos/kennesaw-state.png",
-    "alternateNames": [
-      "ksu owls"
-    ]
-  },
-  {
-    "id": "sam-houston",
-    "school": "Sam Houston",
-    "mascot": "Bearkats",
-    "abbreviation": "SHSU",
-    "conference": "Conference USA",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/sam-houston.png",
-    "alternateNames": [
-      "shsu"
-    ]
-  },
-  {
-    "id": "notre-dame",
-    "school": "Notre Dame",
-    "mascot": "Fighting Irish",
-    "abbreviation": "ND",
-    "conference": "FBS Independents",
-    "tier": "independent",
-    "color": "#062340",
-    "alternateColor": "#c99700",
-    "logo": "/logos/notre-dame.png",
-    "alternateNames": [
-      "irish",
-      "nd"
-    ]
-  },
-  {
-    "id": "uconn",
-    "school": "UConn",
-    "mascot": "Huskies",
-    "abbreviation": "CONN",
-    "conference": "FBS Independents",
-    "tier": "independent",
-    "color": "#0c2340",
-    "alternateColor": "#a2aaad",
-    "logo": "/logos/uconn.png",
-    "alternateNames": [
-      "connecticut",
-      "huskies"
-    ]
-  },
-  {
-    "id": "ohio",
-    "school": "Ohio",
-    "mascot": "Bobcats",
-    "abbreviation": "OHIO",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#154734",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/ohio.png",
-    "alternateNames": []
-  },
-  {
-    "id": "toledo",
-    "school": "Toledo",
-    "mascot": "Rockets",
-    "abbreviation": "TOL",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/toledo.png",
-    "alternateNames": []
-  },
-  {
-    "id": "western-michigan",
-    "school": "Western Michigan",
-    "mascot": "Broncos",
-    "abbreviation": "WMU",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/western-michigan.png",
-    "alternateNames": []
-  },
-  {
-    "id": "buffalo",
-    "school": "Buffalo",
-    "mascot": "Bulls",
-    "abbreviation": "BUF",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#005bbb",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/buffalo.png",
-    "alternateNames": []
-  },
-  {
-    "id": "miami-oh",
-    "school": "Miami (OH)",
-    "mascot": "RedHawks",
-    "abbreviation": "M-OH",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#c41230",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/miami-oh.png",
-    "alternateNames": [
-      "miami ohio",
-      "miami of ohio"
-    ]
-  },
-  {
-    "id": "massachusetts",
-    "school": "Massachusetts",
-    "mascot": "Minutemen",
-    "abbreviation": "MASS",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#881c1c",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/massachusetts.png",
-    "alternateNames": []
-  },
-  {
-    "id": "eastern-michigan",
-    "school": "Eastern Michigan",
-    "mascot": "Eagles",
-    "abbreviation": "EMU",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#006938",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/eastern-michigan.png",
-    "alternateNames": []
-  },
-  {
-    "id": "ball-state",
-    "school": "Ball State",
-    "mascot": "Cardinals",
-    "abbreviation": "BALL",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#ba0c2f",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/ball-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "central-michigan",
-    "school": "Central Michigan",
-    "mascot": "Chippewas",
-    "abbreviation": "CMU",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#4c0027",
-    "alternateColor": "#fbab18",
-    "logo": "/logos/central-michigan.png",
-    "alternateNames": []
-  },
-  {
-    "id": "kent-state",
-    "school": "Kent State",
-    "mascot": "Golden Flashes",
-    "abbreviation": "KENT",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#002664",
-    "alternateColor": "#eaab00",
-    "logo": "/logos/kent-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "bowling-green",
-    "school": "Bowling Green",
-    "mascot": "Falcons",
-    "abbreviation": "BGSU",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#fd5000",
-    "alternateColor": "#4f2c1d",
-    "logo": "/logos/bowling-green.png",
-    "alternateNames": []
-  },
-  {
-    "id": "sacramento-state",
-    "school": "Sacramento State",
-    "mascot": "Hornets",
-    "abbreviation": "SAC",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#00573C",
-    "alternateColor": "#cdb97d",
-    "logo": "/logos/sacramento-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "akron",
-    "school": "Akron",
-    "mascot": "Zips",
-    "abbreviation": "AKR",
-    "conference": "MAC",
-    "tier": "group",
-    "color": "#041e42",
-    "alternateColor": "#c5b783",
-    "logo": "/logos/akron.png",
-    "alternateNames": []
-  },
-  {
-    "id": "new-mexico",
-    "school": "New Mexico",
-    "mascot": "Lobos",
-    "abbreviation": "UNM",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#ba0c2f",
-    "alternateColor": "#a7a8aa",
-    "logo": "/logos/new-mexico.png",
-    "alternateNames": []
-  },
-  {
-    "id": "north-dakota-state",
-    "school": "North Dakota State",
-    "mascot": "Bison",
-    "abbreviation": "NDSU",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#01402A",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/north-dakota-state.png",
-    "alternateNames": []
-  },
-  {
     "id": "air-force",
     "school": "Air Force",
     "mascot": "Falcons",
@@ -1195,222 +12,15 @@
     "alternateNames": []
   },
   {
-    "id": "wyoming",
-    "school": "Wyoming",
-    "mascot": "Cowboys",
-    "abbreviation": "WYO",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/wyoming.png",
-    "alternateNames": []
-  },
-  {
-    "id": "unlv",
-    "school": "UNLV",
-    "mascot": "Rebels",
-    "abbreviation": "UNLV",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#cf0a2c",
-    "alternateColor": "#cac8c8",
-    "logo": "/logos/unlv.png",
-    "alternateNames": []
-  },
-  {
-    "id": "san-jos-state",
-    "school": "San Jos\u00e9 State",
-    "mascot": "Spartans",
-    "abbreviation": "SJSU",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#0038a8",
-    "alternateColor": "#ffb81a",
-    "logo": "/logos/san-jos-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "nevada",
-    "school": "Nevada",
-    "mascot": "Wolf Pack",
-    "abbreviation": "NEV",
-    "conference": "Mountain West",
+    "id": "akron",
+    "school": "Akron",
+    "mascot": "Zips",
+    "abbreviation": "AKR",
+    "conference": "MAC",
     "tier": "group",
     "color": "#041e42",
-    "alternateColor": "#8a8d8f",
-    "logo": "/logos/nevada.png",
-    "alternateNames": []
-  },
-  {
-    "id": "hawai-i",
-    "school": "Hawai'i",
-    "mascot": "Rainbow Warriors",
-    "abbreviation": "HAW",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#005737",
-    "alternateColor": "#000000",
-    "logo": "/logos/hawai-i.png",
-    "alternateNames": []
-  },
-  {
-    "id": "utep",
-    "school": "UTEP",
-    "mascot": "Miners",
-    "abbreviation": "UTEP",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/utep.png",
-    "alternateNames": []
-  },
-  {
-    "id": "northern-illinois",
-    "school": "Northern Illinois",
-    "mascot": "Huskies",
-    "abbreviation": "NIU",
-    "conference": "Mountain West",
-    "tier": "group",
-    "color": "#c8102e",
-    "alternateColor": "#000000",
-    "logo": "/logos/northern-illinois.png",
-    "alternateNames": []
-  },
-  {
-    "id": "boise-state",
-    "school": "Boise State",
-    "mascot": "Broncos",
-    "abbreviation": "BOIS",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#0033a0",
-    "alternateColor": "#d64309",
-    "logo": "/logos/boise-state.png",
-    "alternateNames": [
-      "boise"
-    ]
-  },
-  {
-    "id": "oregon-state",
-    "school": "Oregon State",
-    "mascot": "Beavers",
-    "abbreviation": "ORST",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#dc4405",
-    "alternateColor": "#000000",
-    "logo": "/logos/oregon-state.png",
-    "alternateNames": [
-      "beavers"
-    ]
-  },
-  {
-    "id": "fresno-state",
-    "school": "Fresno State",
-    "mascot": "Bulldogs",
-    "abbreviation": "FRES",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#b1102b",
-    "alternateColor": "#13284c",
-    "logo": "/logos/fresno-state.png",
-    "alternateNames": [
-      "fresno"
-    ]
-  },
-  {
-    "id": "texas-state",
-    "school": "Texas State",
-    "mascot": "Bobcats",
-    "abbreviation": "TXST",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#501214",
-    "alternateColor": "#6a5638",
-    "logo": "/logos/texas-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "san-diego-state",
-    "school": "San Diego State",
-    "mascot": "Aztecs",
-    "abbreviation": "SDSU",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#a6192e",
-    "alternateColor": "#000000",
-    "logo": "/logos/san-diego-state.png",
-    "alternateNames": [
-      "sdsu"
-    ]
-  },
-  {
-    "id": "utah-state",
-    "school": "Utah State",
-    "mascot": "Aggies",
-    "abbreviation": "USU",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#0f2439",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/utah-state.png",
-    "alternateNames": [
-      "usu"
-    ]
-  },
-  {
-    "id": "colorado-state",
-    "school": "Colorado State",
-    "mascot": "Rams",
-    "abbreviation": "CSU",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#004c23",
-    "alternateColor": "#c8c372",
-    "logo": "/logos/colorado-state.png",
-    "alternateNames": [
-      "csu"
-    ]
-  },
-  {
-    "id": "washington-state",
-    "school": "Washington State",
-    "mascot": "Cougars",
-    "abbreviation": "WSU",
-    "conference": "Pac-12",
-    "tier": "group",
-    "color": "#a60f2d",
-    "alternateColor": "#4d4d4d",
-    "logo": "/logos/washington-state.png",
-    "alternateNames": [
-      "wazzu",
-      "cougs"
-    ]
-  },
-  {
-    "id": "georgia",
-    "school": "Georgia",
-    "mascot": "Bulldogs",
-    "abbreviation": "UGA",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#ba0c2f",
-    "alternateColor": "#2c2a29",
-    "logo": "/logos/georgia.png",
-    "alternateNames": []
-  },
-  {
-    "id": "kentucky",
-    "school": "Kentucky",
-    "mascot": "Wildcats",
-    "abbreviation": "UK",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#0033a0",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/kentucky.png",
+    "alternateColor": "#a89968",
+    "logo": "/logos/akron.png",
     "alternateNames": []
   },
   {
@@ -1429,148 +39,41 @@
     ]
   },
   {
-    "id": "ole-miss",
-    "school": "Ole Miss",
-    "mascot": "Rebels",
-    "abbreviation": "MISS",
-    "conference": "SEC",
+    "id": "app-state",
+    "school": "App State",
+    "mascot": "Mountaineers",
+    "abbreviation": "APP",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#000000",
+    "alternateColor": "#ffcd00",
+    "logo": "/logos/app-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "arizona",
+    "school": "Arizona",
+    "mascot": "Wildcats",
+    "abbreviation": "ARIZ",
+    "conference": "Big 12",
     "tier": "power",
-    "color": "#13294b",
-    "alternateColor": "#cf142b",
-    "logo": "/logos/ole-miss.png",
+    "color": "#cc0033",
+    "alternateColor": "#003366",
+    "logo": "/logos/arizona.png",
+    "alternateNames": []
+  },
+  {
+    "id": "arizona-state",
+    "school": "Arizona State",
+    "mascot": "Sun Devils",
+    "abbreviation": "ASU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#ffc627",
+    "alternateColor": "#8c1d40",
+    "logo": "/logos/arizona-state.png",
     "alternateNames": [
-      "ole",
-      "ole miss",
-      "mississippi"
-    ]
-  },
-  {
-    "id": "texas",
-    "school": "Texas",
-    "mascot": "Longhorns",
-    "abbreviation": "TEX",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#af5c37",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/texas.png",
-    "alternateNames": []
-  },
-  {
-    "id": "lsu",
-    "school": "LSU",
-    "mascot": "Tigers",
-    "abbreviation": "LSU",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#461d76",
-    "alternateColor": "#fdd023",
-    "logo": "/logos/lsu.png",
-    "alternateNames": [
-      "louisiana state"
-    ]
-  },
-  {
-    "id": "missouri",
-    "school": "Missouri",
-    "mascot": "Tigers",
-    "abbreviation": "MIZ",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#f1b82d",
-    "alternateColor": "#000000",
-    "logo": "/logos/missouri.png",
-    "alternateNames": []
-  },
-  {
-    "id": "tennessee",
-    "school": "Tennessee",
-    "mascot": "Volunteers",
-    "abbreviation": "TENN",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/tennessee.png",
-    "alternateNames": []
-  },
-  {
-    "id": "south-carolina",
-    "school": "South Carolina",
-    "mascot": "Gamecocks",
-    "abbreviation": "SC",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/south-carolina.png",
-    "alternateNames": []
-  },
-  {
-    "id": "florida",
-    "school": "Florida",
-    "mascot": "Gators",
-    "abbreviation": "FLA",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#0021a5",
-    "alternateColor": "#fa4616",
-    "logo": "/logos/florida.png",
-    "alternateNames": []
-  },
-  {
-    "id": "oklahoma",
-    "school": "Oklahoma",
-    "mascot": "Sooners",
-    "abbreviation": "OU",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#990000",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/oklahoma.png",
-    "alternateNames": []
-  },
-  {
-    "id": "auburn",
-    "school": "Auburn",
-    "mascot": "Tigers",
-    "abbreviation": "AUB",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#002b5c",
-    "alternateColor": "#f26522",
-    "logo": "/logos/auburn.png",
-    "alternateNames": []
-  },
-  {
-    "id": "mississippi-state",
-    "school": "Mississippi State",
-    "mascot": "Bulldogs",
-    "abbreviation": "MSST",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#5d1725",
-    "alternateColor": "#c1c6c8",
-    "logo": "/logos/mississippi-state.png",
-    "alternateNames": [
-      "miss state",
-      "state"
-    ]
-  },
-  {
-    "id": "texas-am",
-    "school": "Texas A&M",
-    "mascot": "Aggies",
-    "abbreviation": "TA&M",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#500000",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/texas-am.png",
-    "alternateNames": [
-      "a&m",
-      "tamu",
-      "aggies"
+      "asu"
     ]
   },
   {
@@ -1586,53 +89,361 @@
     "alternateNames": []
   },
   {
-    "id": "vanderbilt",
-    "school": "Vanderbilt",
-    "mascot": "Commodores",
-    "abbreviation": "VAN",
-    "conference": "SEC",
-    "tier": "power",
-    "color": "#000000",
-    "alternateColor": "#cfae70",
-    "logo": "/logos/vanderbilt.png",
+    "id": "arkansas-state",
+    "school": "Arkansas State",
+    "mascot": "Red Wolves",
+    "abbreviation": "ARST",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#cc092f",
+    "alternateColor": "#000000",
+    "logo": "/logos/arkansas-state.png",
     "alternateNames": []
   },
   {
-    "id": "james-madison",
-    "school": "James Madison",
-    "mascot": "Dukes",
-    "abbreviation": "JMU",
-    "conference": "Sun Belt",
+    "id": "army",
+    "school": "Army",
+    "mascot": "Black Knights",
+    "abbreviation": "ARMY",
+    "conference": "American",
     "tier": "group",
-    "color": "#450084",
-    "alternateColor": "#cbb677",
-    "logo": "/logos/james-madison.png",
+    "color": "#000000",
+    "alternateColor": "#d3bc8d",
+    "logo": "/logos/army.png",
     "alternateNames": [
-      "jmu"
+      "black knights"
     ]
   },
   {
-    "id": "app-state",
-    "school": "App State",
-    "mascot": "Mountaineers",
-    "abbreviation": "APP",
-    "conference": "Sun Belt",
-    "tier": "group",
-    "color": "#000000",
-    "alternateColor": "#ffcd00",
-    "logo": "/logos/app-state.png",
+    "id": "auburn",
+    "school": "Auburn",
+    "mascot": "Tigers",
+    "abbreviation": "AUB",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#0c2340",
+    "alternateColor": "#f26522",
+    "logo": "/logos/auburn.png",
     "alternateNames": []
   },
   {
-    "id": "marshall",
-    "school": "Marshall",
-    "mascot": "Thundering Herd",
-    "abbreviation": "MRSH",
+    "id": "ball-state",
+    "school": "Ball State",
+    "mascot": "Cardinals",
+    "abbreviation": "BALL",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#ba0c2f",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/ball-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "baylor",
+    "school": "Baylor",
+    "mascot": "Bears",
+    "abbreviation": "BAY",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#154734",
+    "alternateColor": "#ffb81c",
+    "logo": "/logos/baylor.png",
+    "alternateNames": []
+  },
+  {
+    "id": "boise-state",
+    "school": "Boise State",
+    "mascot": "Broncos",
+    "abbreviation": "BOIS",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#0033a0",
+    "alternateColor": "#d64309",
+    "logo": "/logos/boise-state.png",
+    "alternateNames": [
+      "boise"
+    ]
+  },
+  {
+    "id": "boston-college",
+    "school": "Boston College",
+    "mascot": "Eagles",
+    "abbreviation": "BC",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#8c2232",
+    "alternateColor": "#dbcca6",
+    "logo": "/logos/boston-college.png",
+    "alternateNames": [
+      "bc"
+    ]
+  },
+  {
+    "id": "bowling-green",
+    "school": "Bowling Green",
+    "mascot": "Falcons",
+    "abbreviation": "BGSU",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#fd5000",
+    "alternateColor": "#4f2c1d",
+    "logo": "/logos/bowling-green.png",
+    "alternateNames": []
+  },
+  {
+    "id": "buffalo",
+    "school": "Buffalo",
+    "mascot": "Bulls",
+    "abbreviation": "BUF",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#005bbb",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/buffalo.png",
+    "alternateNames": []
+  },
+  {
+    "id": "byu",
+    "school": "BYU",
+    "mascot": "Cougars",
+    "abbreviation": "BYU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#003da5",
+    "alternateColor": "#002e5d",
+    "logo": "/logos/byu.png",
+    "alternateNames": [
+      "cougars"
+    ]
+  },
+  {
+    "id": "california",
+    "school": "California",
+    "mascot": "Golden Bears",
+    "abbreviation": "CAL",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#041e42",
+    "alternateColor": "#ffc72c",
+    "logo": "/logos/california.png",
+    "alternateNames": []
+  },
+  {
+    "id": "central-michigan",
+    "school": "Central Michigan",
+    "mascot": "Chippewas",
+    "abbreviation": "CMU",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#6a0032",
+    "alternateColor": "#ffc82e",
+    "logo": "/logos/central-michigan.png",
+    "alternateNames": []
+  },
+  {
+    "id": "charlotte",
+    "school": "Charlotte",
+    "mascot": "49ers",
+    "abbreviation": "CLT",
+    "conference": "American",
+    "tier": "group",
+    "color": "#005035",
+    "alternateColor": "#a49665",
+    "logo": "/logos/charlotte.png",
+    "alternateNames": []
+  },
+  {
+    "id": "cincinnati",
+    "school": "Cincinnati",
+    "mascot": "Bearcats",
+    "abbreviation": "CIN",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#000000",
+    "alternateColor": "#e00122",
+    "logo": "/logos/cincinnati.png",
+    "alternateNames": []
+  },
+  {
+    "id": "clemson",
+    "school": "Clemson",
+    "mascot": "Tigers",
+    "abbreviation": "CLEM",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#f56600",
+    "alternateColor": "#522d80",
+    "logo": "/logos/clemson.png",
+    "alternateNames": []
+  },
+  {
+    "id": "coastal-carolina",
+    "school": "Coastal Carolina",
+    "mascot": "Chanticleers",
+    "abbreviation": "CCU",
     "conference": "Sun Belt",
     "tier": "group",
-    "color": "#00b140",
+    "color": "#006f71",
+    "alternateColor": "#a27752",
+    "logo": "/logos/coastal-carolina.png",
+    "alternateNames": [
+      "ccu"
+    ]
+  },
+  {
+    "id": "colorado",
+    "school": "Colorado",
+    "mascot": "Buffaloes",
+    "abbreviation": "COLO",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#cfb87c",
     "alternateColor": "#000000",
-    "logo": "/logos/marshall.png",
+    "logo": "/logos/colorado.png",
+    "alternateNames": []
+  },
+  {
+    "id": "colorado-state",
+    "school": "Colorado State",
+    "mascot": "Rams",
+    "abbreviation": "CSU",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#1e4d2b",
+    "alternateColor": "#c8c372",
+    "logo": "/logos/colorado-state.png",
+    "alternateNames": [
+      "csu"
+    ]
+  },
+  {
+    "id": "delaware",
+    "school": "Delaware",
+    "mascot": "Blue Hens",
+    "abbreviation": "DEL",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#00539f",
+    "alternateColor": "#ffd200",
+    "logo": "/logos/delaware.png",
+    "alternateNames": []
+  },
+  {
+    "id": "duke",
+    "school": "Duke",
+    "mascot": "Blue Devils",
+    "abbreviation": "DUKE",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#00539b",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/duke.png",
+    "alternateNames": []
+  },
+  {
+    "id": "east-carolina",
+    "school": "East Carolina",
+    "mascot": "Pirates",
+    "abbreviation": "ECU",
+    "conference": "American",
+    "tier": "group",
+    "color": "#592a8a",
+    "alternateColor": "#fdc82f",
+    "logo": "/logos/east-carolina.png",
+    "alternateNames": [
+      "ecu"
+    ]
+  },
+  {
+    "id": "eastern-michigan",
+    "school": "Eastern Michigan",
+    "mascot": "Eagles",
+    "abbreviation": "EMU",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#046a38",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/eastern-michigan.png",
+    "alternateNames": []
+  },
+  {
+    "id": "florida",
+    "school": "Florida",
+    "mascot": "Gators",
+    "abbreviation": "FLA",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#0021a5",
+    "alternateColor": "#fa4616",
+    "logo": "/logos/florida.png",
+    "alternateNames": []
+  },
+  {
+    "id": "florida-atlantic",
+    "school": "Florida Atlantic",
+    "mascot": "Owls",
+    "abbreviation": "FAU",
+    "conference": "American",
+    "tier": "group",
+    "color": "#003366",
+    "alternateColor": "#cc0000",
+    "logo": "/logos/florida-atlantic.png",
+    "alternateNames": [
+      "fau"
+    ]
+  },
+  {
+    "id": "florida-international",
+    "school": "Florida International",
+    "mascot": "Panthers",
+    "abbreviation": "FIU",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#091f3f",
+    "alternateColor": "#c3993f",
+    "logo": "/logos/florida-international.png",
+    "alternateNames": [
+      "fiu"
+    ]
+  },
+  {
+    "id": "florida-state",
+    "school": "Florida State",
+    "mascot": "Seminoles",
+    "abbreviation": "FSU",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#782f40",
+    "alternateColor": "#ceb888",
+    "logo": "/logos/florida-state.png",
+    "alternateNames": [
+      "fsu"
+    ]
+  },
+  {
+    "id": "fresno-state",
+    "school": "Fresno State",
+    "mascot": "Bulldogs",
+    "abbreviation": "FRES",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#c41230",
+    "alternateColor": "#13284c",
+    "logo": "/logos/fresno-state.png",
+    "alternateNames": [
+      "fresno"
+    ]
+  },
+  {
+    "id": "georgia",
+    "school": "Georgia",
+    "mascot": "Bulldogs",
+    "abbreviation": "UGA",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#ba0c2f",
+    "alternateColor": "#2c2a29",
+    "logo": "/logos/georgia.png",
     "alternateNames": []
   },
   {
@@ -1643,7 +454,7 @@
     "conference": "Sun Belt",
     "tier": "group",
     "color": "#041e42",
-    "alternateColor": "#a3aaae",
+    "alternateColor": "#ffffff",
     "logo": "/logos/georgia-southern.png",
     "alternateNames": [
       "southern"
@@ -1662,41 +473,193 @@
     "alternateNames": []
   },
   {
-    "id": "coastal-carolina",
-    "school": "Coastal Carolina",
-    "mascot": "Chanticleers",
-    "abbreviation": "CCU",
-    "conference": "Sun Belt",
-    "tier": "group",
-    "color": "#006f71",
-    "alternateColor": "#a27752",
-    "logo": "/logos/coastal-carolina.png",
+    "id": "georgia-tech",
+    "school": "Georgia Tech",
+    "mascot": "Yellow Jackets",
+    "abbreviation": "GT",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#b3a369",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/georgia-tech.png",
     "alternateNames": [
-      "ccu"
+      "gt"
     ]
   },
   {
-    "id": "old-dominion",
-    "school": "Old Dominion",
-    "mascot": "Monarchs",
-    "abbreviation": "ODU",
-    "conference": "Sun Belt",
+    "id": "hawai-i",
+    "school": "Hawai'i",
+    "mascot": "Rainbow Warriors",
+    "abbreviation": "HAW",
+    "conference": "Mountain West",
     "tier": "group",
-    "color": "#003768",
-    "alternateColor": "#a1d2f1",
-    "logo": "/logos/old-dominion.png",
+    "color": "#024731",
+    "alternateColor": "#000000",
+    "logo": "/logos/hawai-i.png",
     "alternateNames": []
   },
   {
-    "id": "louisiana-tech",
-    "school": "Louisiana Tech",
-    "mascot": "Bulldogs",
-    "abbreviation": "LT",
+    "id": "houston",
+    "school": "Houston",
+    "mascot": "Cougars",
+    "abbreviation": "HOU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#c8102e",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/houston.png",
+    "alternateNames": []
+  },
+  {
+    "id": "illinois",
+    "school": "Illinois",
+    "mascot": "Fighting Illini",
+    "abbreviation": "ILL",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#ff5f05",
+    "alternateColor": "#13294b",
+    "logo": "/logos/illinois.png",
+    "alternateNames": []
+  },
+  {
+    "id": "indiana",
+    "school": "Indiana",
+    "mascot": "Hoosiers",
+    "abbreviation": "IU",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#990000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/indiana.png",
+    "alternateNames": []
+  },
+  {
+    "id": "iowa",
+    "school": "Iowa",
+    "mascot": "Hawkeyes",
+    "abbreviation": "IOWA",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#000000",
+    "alternateColor": "#ffcd00",
+    "logo": "/logos/iowa.png",
+    "alternateNames": []
+  },
+  {
+    "id": "iowa-state",
+    "school": "Iowa State",
+    "mascot": "Cyclones",
+    "abbreviation": "ISU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#c8102e",
+    "alternateColor": "#f1be48",
+    "logo": "/logos/iowa-state.png",
+    "alternateNames": [
+      "isu"
+    ]
+  },
+  {
+    "id": "jacksonville-state",
+    "school": "Jacksonville State",
+    "mascot": "Gamecocks",
+    "abbreviation": "JXST",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#cc0000",
+    "alternateColor": "#000000",
+    "logo": "/logos/jacksonville-state.png",
+    "alternateNames": [
+      "jax state"
+    ]
+  },
+  {
+    "id": "james-madison",
+    "school": "James Madison",
+    "mascot": "Dukes",
+    "abbreviation": "JMU",
     "conference": "Sun Belt",
     "tier": "group",
-    "color": "#003087",
-    "alternateColor": "#cb333b",
-    "logo": "/logos/louisiana-tech.png",
+    "color": "#450084",
+    "alternateColor": "#cbb677",
+    "logo": "/logos/james-madison.png",
+    "alternateNames": [
+      "jmu"
+    ]
+  },
+  {
+    "id": "kansas",
+    "school": "Kansas",
+    "mascot": "Jayhawks",
+    "abbreviation": "KU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#0051ba",
+    "alternateColor": "#e8000d",
+    "logo": "/logos/kansas.png",
+    "alternateNames": []
+  },
+  {
+    "id": "kansas-state",
+    "school": "Kansas State",
+    "mascot": "Wildcats",
+    "abbreviation": "KSU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#512888",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/kansas-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "kennesaw-state",
+    "school": "Kennesaw State",
+    "mascot": "Owls",
+    "abbreviation": "KENN",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#fdbb30",
+    "alternateColor": "#0b1315",
+    "logo": "/logos/kennesaw-state.png",
+    "alternateNames": [
+      "ksu owls"
+    ]
+  },
+  {
+    "id": "kent-state",
+    "school": "Kent State",
+    "mascot": "Golden Flashes",
+    "abbreviation": "KENT",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#002664",
+    "alternateColor": "#eaab00",
+    "logo": "/logos/kent-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "kentucky",
+    "school": "Kentucky",
+    "mascot": "Wildcats",
+    "abbreviation": "UK",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#0033a0",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/kentucky.png",
+    "alternateNames": []
+  },
+  {
+    "id": "liberty",
+    "school": "Liberty",
+    "mascot": "Flames",
+    "abbreviation": "LIB",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#0a254e",
+    "alternateColor": "#b72025",
+    "logo": "/logos/liberty.png",
     "alternateNames": []
   },
   {
@@ -1715,6 +678,604 @@
     ]
   },
   {
+    "id": "louisiana-tech",
+    "school": "Louisiana Tech",
+    "mascot": "Bulldogs",
+    "abbreviation": "LT",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#003087",
+    "alternateColor": "#cb333b",
+    "logo": "/logos/louisiana-tech.png",
+    "alternateNames": []
+  },
+  {
+    "id": "louisville",
+    "school": "Louisville",
+    "mascot": "Cardinals",
+    "abbreviation": "LOU",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#c9001f",
+    "alternateColor": "#000000",
+    "logo": "/logos/louisville.png",
+    "alternateNames": []
+  },
+  {
+    "id": "lsu",
+    "school": "LSU",
+    "mascot": "Tigers",
+    "abbreviation": "LSU",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#461d7c",
+    "alternateColor": "#fdd023",
+    "logo": "/logos/lsu.png",
+    "alternateNames": [
+      "louisiana state"
+    ]
+  },
+  {
+    "id": "marshall",
+    "school": "Marshall",
+    "mascot": "Thundering Herd",
+    "abbreviation": "MRSH",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#00b140",
+    "alternateColor": "#000000",
+    "logo": "/logos/marshall.png",
+    "alternateNames": []
+  },
+  {
+    "id": "maryland",
+    "school": "Maryland",
+    "mascot": "Terrapins",
+    "abbreviation": "MD",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#ce1126",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/maryland.png",
+    "alternateNames": []
+  },
+  {
+    "id": "massachusetts",
+    "school": "Massachusetts",
+    "mascot": "Minutemen",
+    "abbreviation": "MASS",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#881c1c",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/massachusetts.png",
+    "alternateNames": []
+  },
+  {
+    "id": "memphis",
+    "school": "Memphis",
+    "mascot": "Tigers",
+    "abbreviation": "MEM",
+    "conference": "American",
+    "tier": "group",
+    "color": "#00498f",
+    "alternateColor": "#9c9ea1",
+    "logo": "/logos/memphis.png",
+    "alternateNames": []
+  },
+  {
+    "id": "miami",
+    "school": "Miami",
+    "mascot": "Hurricanes",
+    "abbreviation": "MIA",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#f47321",
+    "alternateColor": "#005030",
+    "logo": "/logos/miami.png",
+    "alternateNames": [
+      "the u"
+    ]
+  },
+  {
+    "id": "miami-oh",
+    "school": "Miami (OH)",
+    "mascot": "RedHawks",
+    "abbreviation": "M-OH",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#c41230",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/miami-oh.png",
+    "alternateNames": [
+      "miami ohio",
+      "miami of ohio"
+    ]
+  },
+  {
+    "id": "michigan",
+    "school": "Michigan",
+    "mascot": "Wolverines",
+    "abbreviation": "MICH",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#00274c",
+    "alternateColor": "#ffcb05",
+    "logo": "/logos/michigan.png",
+    "alternateNames": []
+  },
+  {
+    "id": "michigan-state",
+    "school": "Michigan State",
+    "mascot": "Spartans",
+    "abbreviation": "MSU",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#173f35",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/michigan-state.png",
+    "alternateNames": [
+      "msu"
+    ]
+  },
+  {
+    "id": "middle-tennessee",
+    "school": "Middle Tennessee",
+    "mascot": "Blue Raiders",
+    "abbreviation": "MTSU",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#036eb7",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/middle-tennessee.png",
+    "alternateNames": [
+      "mtsu"
+    ]
+  },
+  {
+    "id": "minnesota",
+    "school": "Minnesota",
+    "mascot": "Golden Gophers",
+    "abbreviation": "MINN",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#7a0019",
+    "alternateColor": "#ffcc33",
+    "logo": "/logos/minnesota.png",
+    "alternateNames": []
+  },
+  {
+    "id": "mississippi-state",
+    "school": "Mississippi State",
+    "mascot": "Bulldogs",
+    "abbreviation": "MSST",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#5d1725",
+    "alternateColor": "#c1c6c8",
+    "logo": "/logos/mississippi-state.png",
+    "alternateNames": [
+      "miss state",
+      "state"
+    ]
+  },
+  {
+    "id": "missouri",
+    "school": "Missouri",
+    "mascot": "Tigers",
+    "abbreviation": "MIZ",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#f1b82d",
+    "alternateColor": "#000000",
+    "logo": "/logos/missouri.png",
+    "alternateNames": []
+  },
+  {
+    "id": "missouri-state",
+    "school": "Missouri State",
+    "mascot": "Bears",
+    "abbreviation": "MOST",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#5e0009",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/missouri-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "navy",
+    "school": "Navy",
+    "mascot": "Midshipmen",
+    "abbreviation": "NAVY",
+    "conference": "American",
+    "tier": "group",
+    "color": "#00225b",
+    "alternateColor": "#b5a67c",
+    "logo": "/logos/navy.png",
+    "alternateNames": [
+      "midshipmen"
+    ]
+  },
+  {
+    "id": "nc-state",
+    "school": "NC State",
+    "mascot": "Wolfpack",
+    "abbreviation": "NCSU",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#cc0000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/nc-state.png",
+    "alternateNames": [
+      "north carolina state"
+    ]
+  },
+  {
+    "id": "nebraska",
+    "school": "Nebraska",
+    "mascot": "Cornhuskers",
+    "abbreviation": "NEB",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#d00000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/nebraska.png",
+    "alternateNames": []
+  },
+  {
+    "id": "nevada",
+    "school": "Nevada",
+    "mascot": "Wolf Pack",
+    "abbreviation": "NEV",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#041e42",
+    "alternateColor": "#8a8d8f",
+    "logo": "/logos/nevada.png",
+    "alternateNames": []
+  },
+  {
+    "id": "new-mexico",
+    "school": "New Mexico",
+    "mascot": "Lobos",
+    "abbreviation": "UNM",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#ba0c2f",
+    "alternateColor": "#a7a8aa",
+    "logo": "/logos/new-mexico.png",
+    "alternateNames": []
+  },
+  {
+    "id": "new-mexico-state",
+    "school": "New Mexico State",
+    "mascot": "Aggies",
+    "abbreviation": "NMSU",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#8c0b42",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/new-mexico-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "north-carolina",
+    "school": "North Carolina",
+    "mascot": "Tar Heels",
+    "abbreviation": "UNC",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#7bafd4",
+    "alternateColor": "#13294b",
+    "logo": "/logos/north-carolina.png",
+    "alternateNames": []
+  },
+  {
+    "id": "north-dakota-state",
+    "school": "North Dakota State",
+    "mascot": "Bison",
+    "abbreviation": "NDSU",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#00583d",
+    "alternateColor": "#ffc425",
+    "logo": "/logos/north-dakota-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "northern-illinois",
+    "school": "Northern Illinois",
+    "mascot": "Huskies",
+    "abbreviation": "NIU",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#c8102e",
+    "alternateColor": "#000000",
+    "logo": "/logos/northern-illinois.png",
+    "alternateNames": []
+  },
+  {
+    "id": "north-texas",
+    "school": "North Texas",
+    "mascot": "Mean Green",
+    "abbreviation": "UNT",
+    "conference": "American",
+    "tier": "group",
+    "color": "#00853e",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/north-texas.png",
+    "alternateNames": [
+      "unt"
+    ]
+  },
+  {
+    "id": "northwestern",
+    "school": "Northwestern",
+    "mascot": "Wildcats",
+    "abbreviation": "NU",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#582c83",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/northwestern.png",
+    "alternateNames": []
+  },
+  {
+    "id": "notre-dame",
+    "school": "Notre Dame",
+    "mascot": "Fighting Irish",
+    "abbreviation": "ND",
+    "conference": "FBS Independents",
+    "tier": "independent",
+    "color": "#0c2340",
+    "alternateColor": "#c99700",
+    "logo": "/logos/notre-dame.png",
+    "alternateNames": [
+      "irish",
+      "nd"
+    ]
+  },
+  {
+    "id": "ohio",
+    "school": "Ohio",
+    "mascot": "Bobcats",
+    "abbreviation": "OHIO",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#024230",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/ohio.png",
+    "alternateNames": []
+  },
+  {
+    "id": "ohio-state",
+    "school": "Ohio State",
+    "mascot": "Buckeyes",
+    "abbreviation": "OSU",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#ba0c2f",
+    "alternateColor": "#a7b1b7",
+    "logo": "/logos/ohio-state.png",
+    "alternateNames": [
+      "osu",
+      "the ohio state"
+    ]
+  },
+  {
+    "id": "oklahoma",
+    "school": "Oklahoma",
+    "mascot": "Sooners",
+    "abbreviation": "OU",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#841617",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/oklahoma.png",
+    "alternateNames": []
+  },
+  {
+    "id": "oklahoma-state",
+    "school": "Oklahoma State",
+    "mascot": "Cowboys",
+    "abbreviation": "OKST",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#fe5c00",
+    "alternateColor": "#000000",
+    "logo": "/logos/oklahoma-state.png",
+    "alternateNames": [
+      "okstate",
+      "osu cowboys"
+    ]
+  },
+  {
+    "id": "old-dominion",
+    "school": "Old Dominion",
+    "mascot": "Monarchs",
+    "abbreviation": "ODU",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#043657",
+    "alternateColor": "#98c5ea",
+    "logo": "/logos/old-dominion.png",
+    "alternateNames": []
+  },
+  {
+    "id": "ole-miss",
+    "school": "Ole Miss",
+    "mascot": "Rebels",
+    "abbreviation": "MISS",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#13294b",
+    "alternateColor": "#cf142b",
+    "logo": "/logos/ole-miss.png",
+    "alternateNames": [
+      "ole",
+      "ole miss",
+      "mississippi"
+    ]
+  },
+  {
+    "id": "oregon",
+    "school": "Oregon",
+    "mascot": "Ducks",
+    "abbreviation": "ORE",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#007030",
+    "alternateColor": "#fee11a",
+    "logo": "/logos/oregon.png",
+    "alternateNames": []
+  },
+  {
+    "id": "oregon-state",
+    "school": "Oregon State",
+    "mascot": "Beavers",
+    "abbreviation": "ORST",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#dc4405",
+    "alternateColor": "#000000",
+    "logo": "/logos/oregon-state.png",
+    "alternateNames": [
+      "beavers"
+    ]
+  },
+  {
+    "id": "penn-state",
+    "school": "Penn State",
+    "mascot": "Nittany Lions",
+    "abbreviation": "PSU",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#001e44",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/penn-state.png",
+    "alternateNames": [
+      "psu"
+    ]
+  },
+  {
+    "id": "pittsburgh",
+    "school": "Pittsburgh",
+    "mascot": "Panthers",
+    "abbreviation": "PITT",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#003594",
+    "alternateColor": "#ffb81c",
+    "logo": "/logos/pittsburgh.png",
+    "alternateNames": [
+      "pitt",
+      "pittsburgh"
+    ]
+  },
+  {
+    "id": "purdue",
+    "school": "Purdue",
+    "mascot": "Boilermakers",
+    "abbreviation": "PUR",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#ceb888",
+    "alternateColor": "#000000",
+    "logo": "/logos/purdue.png",
+    "alternateNames": []
+  },
+  {
+    "id": "rice",
+    "school": "Rice",
+    "mascot": "Owls",
+    "abbreviation": "RICE",
+    "conference": "American",
+    "tier": "group",
+    "color": "#00205b",
+    "alternateColor": "#c1c6c8",
+    "logo": "/logos/rice.png",
+    "alternateNames": []
+  },
+  {
+    "id": "rutgers",
+    "school": "Rutgers",
+    "mascot": "Scarlet Knights",
+    "abbreviation": "RUTG",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#ce0e2d",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/rutgers.png",
+    "alternateNames": []
+  },
+  {
+    "id": "sacramento-state",
+    "school": "Sacramento State",
+    "mascot": "Hornets",
+    "abbreviation": "SAC",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#00573c",
+    "alternateColor": "#cdb97d",
+    "logo": "/logos/sacramento-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "sam-houston",
+    "school": "Sam Houston",
+    "mascot": "Bearkats",
+    "abbreviation": "SHSU",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#f56423",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/sam-houston.png",
+    "alternateNames": [
+      "shsu"
+    ]
+  },
+  {
+    "id": "san-diego-state",
+    "school": "San Diego State",
+    "mascot": "Aztecs",
+    "abbreviation": "SDSU",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#a6192e",
+    "alternateColor": "#000000",
+    "logo": "/logos/san-diego-state.png",
+    "alternateNames": [
+      "sdsu"
+    ]
+  },
+  {
+    "id": "san-jos-state",
+    "school": "San Jos\u00e9 State",
+    "mascot": "Spartans",
+    "abbreviation": "SJSU",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#0055a2",
+    "alternateColor": "#e5a823",
+    "logo": "/logos/san-jos-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "smu",
+    "school": "SMU",
+    "mascot": "Mustangs",
+    "abbreviation": "SMU",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#d70000",
+    "alternateColor": "#0033a1",
+    "logo": "/logos/smu.png",
+    "alternateNames": [
+      "mustangs"
+    ]
+  },
+  {
     "id": "south-alabama",
     "school": "South Alabama",
     "mascot": "Jaguars",
@@ -1729,27 +1290,15 @@
     ]
   },
   {
-    "id": "arkansas-state",
-    "school": "Arkansas State",
-    "mascot": "Red Wolves",
-    "abbreviation": "ARST",
-    "conference": "Sun Belt",
-    "tier": "group",
-    "color": "#cc092f",
+    "id": "south-carolina",
+    "school": "South Carolina",
+    "mascot": "Gamecocks",
+    "abbreviation": "SC",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#73000a",
     "alternateColor": "#000000",
-    "logo": "/logos/arkansas-state.png",
-    "alternateNames": []
-  },
-  {
-    "id": "troy",
-    "school": "Troy",
-    "mascot": "Trojans",
-    "abbreviation": "TROY",
-    "conference": "Sun Belt",
-    "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
-    "logo": "/logos/troy.png",
+    "logo": "/logos/south-carolina.png",
     "alternateNames": []
   },
   {
@@ -1759,11 +1308,242 @@
     "abbreviation": "USM",
     "conference": "Sun Belt",
     "tier": "group",
-    "color": "#333333",
-    "alternateColor": "#ffffff",
+    "color": "#ffc72c",
+    "alternateColor": "#231f20",
     "logo": "/logos/southern-miss.png",
     "alternateNames": [
       "usm"
+    ]
+  },
+  {
+    "id": "south-florida",
+    "school": "South Florida",
+    "mascot": "Bulls",
+    "abbreviation": "USF",
+    "conference": "American",
+    "tier": "group",
+    "color": "#006747",
+    "alternateColor": "#cfc493",
+    "logo": "/logos/south-florida.png",
+    "alternateNames": []
+  },
+  {
+    "id": "stanford",
+    "school": "Stanford",
+    "mascot": "Cardinal",
+    "abbreviation": "STAN",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#8c1515",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/stanford.png",
+    "alternateNames": []
+  },
+  {
+    "id": "syracuse",
+    "school": "Syracuse",
+    "mascot": "Orange",
+    "abbreviation": "SYR",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#f76900",
+    "alternateColor": "#000e54",
+    "logo": "/logos/syracuse.png",
+    "alternateNames": []
+  },
+  {
+    "id": "tcu",
+    "school": "TCU",
+    "mascot": "Horned Frogs",
+    "abbreviation": "TCU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#4d1979",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/tcu.png",
+    "alternateNames": [
+      "horned frogs"
+    ]
+  },
+  {
+    "id": "temple",
+    "school": "Temple",
+    "mascot": "Owls",
+    "abbreviation": "TEM",
+    "conference": "American",
+    "tier": "group",
+    "color": "#a41e35",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/temple.png",
+    "alternateNames": []
+  },
+  {
+    "id": "tennessee",
+    "school": "Tennessee",
+    "mascot": "Volunteers",
+    "abbreviation": "TENN",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#ff8200",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/tennessee.png",
+    "alternateNames": []
+  },
+  {
+    "id": "texas",
+    "school": "Texas",
+    "mascot": "Longhorns",
+    "abbreviation": "TEX",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#bf5700",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/texas.png",
+    "alternateNames": []
+  },
+  {
+    "id": "texas-am",
+    "school": "Texas A&M",
+    "mascot": "Aggies",
+    "abbreviation": "TA&M",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#500000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/texas-am.png",
+    "alternateNames": [
+      "a&m",
+      "tamu",
+      "aggies"
+    ]
+  },
+  {
+    "id": "texas-state",
+    "school": "Texas State",
+    "mascot": "Bobcats",
+    "abbreviation": "TXST",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#501214",
+    "alternateColor": "#6a5638",
+    "logo": "/logos/texas-state.png",
+    "alternateNames": []
+  },
+  {
+    "id": "texas-tech",
+    "school": "Texas Tech",
+    "mascot": "Red Raiders",
+    "abbreviation": "TTU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#c30020",
+    "alternateColor": "#000000",
+    "logo": "/logos/texas-tech.png",
+    "alternateNames": []
+  },
+  {
+    "id": "toledo",
+    "school": "Toledo",
+    "mascot": "Rockets",
+    "abbreviation": "TOL",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#0b2240",
+    "alternateColor": "#ffcd00",
+    "logo": "/logos/toledo.png",
+    "alternateNames": []
+  },
+  {
+    "id": "troy",
+    "school": "Troy",
+    "mascot": "Trojans",
+    "abbreviation": "TROY",
+    "conference": "Sun Belt",
+    "tier": "group",
+    "color": "#862633",
+    "alternateColor": "#b1b1b1",
+    "logo": "/logos/troy.png",
+    "alternateNames": []
+  },
+  {
+    "id": "tulane",
+    "school": "Tulane",
+    "mascot": "Green Wave",
+    "abbreviation": "TULN",
+    "conference": "American",
+    "tier": "group",
+    "color": "#006747",
+    "alternateColor": "#418fde",
+    "logo": "/logos/tulane.png",
+    "alternateNames": []
+  },
+  {
+    "id": "tulsa",
+    "school": "Tulsa",
+    "mascot": "Golden Hurricane",
+    "abbreviation": "TLSA",
+    "conference": "American",
+    "tier": "group",
+    "color": "#003595",
+    "alternateColor": "#d0b787",
+    "logo": "/logos/tulsa.png",
+    "alternateNames": []
+  },
+  {
+    "id": "uab",
+    "school": "UAB",
+    "mascot": "Blazers",
+    "abbreviation": "UAB",
+    "conference": "American",
+    "tier": "group",
+    "color": "#1a5632",
+    "alternateColor": "#fdb913",
+    "logo": "/logos/uab.png",
+    "alternateNames": [
+      "blazers"
+    ]
+  },
+  {
+    "id": "ucf",
+    "school": "UCF",
+    "mascot": "Knights",
+    "abbreviation": "UCF",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#000000",
+    "alternateColor": "#b4a169",
+    "logo": "/logos/ucf.png",
+    "alternateNames": [
+      "knights"
+    ]
+  },
+  {
+    "id": "ucla",
+    "school": "UCLA",
+    "mascot": "Bruins",
+    "abbreviation": "UCLA",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#2774ae",
+    "alternateColor": "#f2a900",
+    "logo": "/logos/ucla.png",
+    "alternateNames": [
+      "bruins"
+    ]
+  },
+  {
+    "id": "uconn",
+    "school": "UConn",
+    "mascot": "Huskies",
+    "abbreviation": "CONN",
+    "conference": "FBS Independents",
+    "tier": "independent",
+    "color": "#000e2f",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/uconn.png",
+    "alternateNames": [
+      "connecticut",
+      "huskies"
     ]
   },
   {
@@ -1779,5 +1559,225 @@
     "alternateNames": [
       "ulm"
     ]
+  },
+  {
+    "id": "unlv",
+    "school": "UNLV",
+    "mascot": "Rebels",
+    "abbreviation": "UNLV",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#cf0a2c",
+    "alternateColor": "#cac8c8",
+    "logo": "/logos/unlv.png",
+    "alternateNames": []
+  },
+  {
+    "id": "usc",
+    "school": "USC",
+    "mascot": "Trojans",
+    "abbreviation": "USC",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#990000",
+    "alternateColor": "#ffcc00",
+    "logo": "/logos/usc.png",
+    "alternateNames": [
+      "southern cal",
+      "trojans"
+    ]
+  },
+  {
+    "id": "utah",
+    "school": "Utah",
+    "mascot": "Utes",
+    "abbreviation": "UTAH",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#be0000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/utah.png",
+    "alternateNames": []
+  },
+  {
+    "id": "utah-state",
+    "school": "Utah State",
+    "mascot": "Aggies",
+    "abbreviation": "USU",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#0f2439",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/utah-state.png",
+    "alternateNames": [
+      "usu"
+    ]
+  },
+  {
+    "id": "utep",
+    "school": "UTEP",
+    "mascot": "Miners",
+    "abbreviation": "UTEP",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#ff8200",
+    "alternateColor": "#041e42",
+    "logo": "/logos/utep.png",
+    "alternateNames": []
+  },
+  {
+    "id": "utsa",
+    "school": "UTSA",
+    "mascot": "Roadrunners",
+    "abbreviation": "UTSA",
+    "conference": "American",
+    "tier": "group",
+    "color": "#0c2340",
+    "alternateColor": "#f15a22",
+    "logo": "/logos/utsa.png",
+    "alternateNames": [
+      "utsa"
+    ]
+  },
+  {
+    "id": "vanderbilt",
+    "school": "Vanderbilt",
+    "mascot": "Commodores",
+    "abbreviation": "VAN",
+    "conference": "SEC",
+    "tier": "power",
+    "color": "#000000",
+    "alternateColor": "#cfae70",
+    "logo": "/logos/vanderbilt.png",
+    "alternateNames": []
+  },
+  {
+    "id": "virginia",
+    "school": "Virginia",
+    "mascot": "Cavaliers",
+    "abbreviation": "UVA",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#232d4b",
+    "alternateColor": "#f84c1e",
+    "logo": "/logos/virginia.png",
+    "alternateNames": []
+  },
+  {
+    "id": "virginia-tech",
+    "school": "Virginia Tech",
+    "mascot": "Hokies",
+    "abbreviation": "VT",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#861f41",
+    "alternateColor": "#e87722",
+    "logo": "/logos/virginia-tech.png",
+    "alternateNames": [
+      "vt"
+    ]
+  },
+  {
+    "id": "wake-forest",
+    "school": "Wake Forest",
+    "mascot": "Demon Deacons",
+    "abbreviation": "WAKE",
+    "conference": "ACC",
+    "tier": "power",
+    "color": "#ceb888",
+    "alternateColor": "#2c2a29",
+    "logo": "/logos/wake-forest.png",
+    "alternateNames": []
+  },
+  {
+    "id": "washington",
+    "school": "Washington",
+    "mascot": "Huskies",
+    "abbreviation": "WASH",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#33006f",
+    "alternateColor": "#e8d3a2",
+    "logo": "/logos/washington.png",
+    "alternateNames": []
+  },
+  {
+    "id": "washington-state",
+    "school": "Washington State",
+    "mascot": "Cougars",
+    "abbreviation": "WSU",
+    "conference": "Pac-12",
+    "tier": "group",
+    "color": "#a60f2d",
+    "alternateColor": "#4d4d4d",
+    "logo": "/logos/washington-state.png",
+    "alternateNames": [
+      "wazzu",
+      "cougs"
+    ]
+  },
+  {
+    "id": "western-kentucky",
+    "school": "Western Kentucky",
+    "mascot": "Hilltoppers",
+    "abbreviation": "WKU",
+    "conference": "Conference USA",
+    "tier": "group",
+    "color": "#c60c30",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/western-kentucky.png",
+    "alternateNames": [
+      "wku"
+    ]
+  },
+  {
+    "id": "western-michigan",
+    "school": "Western Michigan",
+    "mascot": "Broncos",
+    "abbreviation": "WMU",
+    "conference": "MAC",
+    "tier": "group",
+    "color": "#532e1f",
+    "alternateColor": "#f1c500",
+    "logo": "/logos/western-michigan.png",
+    "alternateNames": []
+  },
+  {
+    "id": "west-virginia",
+    "school": "West Virginia",
+    "mascot": "Mountaineers",
+    "abbreviation": "WVU",
+    "conference": "Big 12",
+    "tier": "power",
+    "color": "#eaaa00",
+    "alternateColor": "#002855",
+    "logo": "/logos/west-virginia.png",
+    "alternateNames": [
+      "wvu"
+    ]
+  },
+  {
+    "id": "wisconsin",
+    "school": "Wisconsin",
+    "mascot": "Badgers",
+    "abbreviation": "WIS",
+    "conference": "Big Ten",
+    "tier": "power",
+    "color": "#a00000",
+    "alternateColor": "#ffffff",
+    "logo": "/logos/wisconsin.png",
+    "alternateNames": []
+  },
+  {
+    "id": "wyoming",
+    "school": "Wyoming",
+    "mascot": "Cowboys",
+    "abbreviation": "WYO",
+    "conference": "Mountain West",
+    "tier": "group",
+    "color": "#492f24",
+    "alternateColor": "#ffc425",
+    "logo": "/logos/wyoming.png",
+    "alternateNames": []
   }
 ]

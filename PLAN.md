@@ -1,6 +1,6 @@
 # 2fans1pod Phase 1
 
-Status: plan saved. The website code has not been started.
+Status: Phase 1 is built and running locally. The lasting public address is still waiting on a Vercel login.
 
 This file is the product plan. The living notes next to it are:
 

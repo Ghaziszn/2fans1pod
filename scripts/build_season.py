@@ -17,7 +17,7 @@ from pathlib import Path
 
 import requests
 
-from scripts.compute import rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
+from scripts.compute import ats_records, cfp_ranking_label, points_per_game, rank_values, record_without, slugify, strength_of_schedule, update_elo, win_pct
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data" / "raw"
@@ -25,7 +25,9 @@ PUBLIC = ROOT / "public" / "data"
 LOGOS = ROOT / "public" / "logos"
 
 CONFERENCE_NAMES = {
+    "American Athletic": "American",
     "American Conference": "American",
+    "Mid-American": "MAC",
     "Atlantic Coast Conference": "ACC",
     "Big 12 Conference": "Big 12",
     "Big Ten Conference": "Big Ten",
@@ -171,6 +173,7 @@ def fetch_espn(fmt: dict) -> dict:
                 title = f"{event.get('name', '')} {notes}".lower()
                 odds = (comp.get("odds") or [None])[0] or {}
                 spread = odds.get("details") if isinstance(odds, dict) else None
+                home_spread = as_float(odds.get("spread")) if isinstance(odds, dict) else None
                 home_id = id_by_espn.get(home_espn, f"ext-{home_espn}")
                 away_id = id_by_espn.get(away_espn, f"ext-{away_espn}")
                 home_team = next((team for team in teams if team["id"] == home_id), None)
@@ -183,8 +186,8 @@ def fetch_espn(fmt: dict) -> dict:
                         "startDate": event.get("date") or "",
                         "homeId": home_id,
                         "awayId": away_id,
-                        "homeName": home_team["school"] if home_team else home["team"].get("displayName") or home["team"].get("location") or "Away",
-                        "awayName": away_team["school"] if away_team else away["team"].get("displayName") or away["team"].get("location") or "Home",
+                        "homeName": home_team["school"] if home_team else home["team"].get("displayName") or home["team"].get("location") or "Home",
+                        "awayName": away_team["school"] if away_team else away["team"].get("displayName") or away["team"].get("location") or "Away",
                         "homePoints": points(home),
                         "awayPoints": points(away),
                         "completed": completed,
@@ -193,6 +196,7 @@ def fetch_espn(fmt: dict) -> dict:
                         "neutralSite": bool(comp.get("neutralSite")),
                         "venue": (comp.get("venue") or {}).get("fullName"),
                         "spread": spread,
+                        "homeSpread": home_spread,
                         "homeFbs": home_id in id_by_espn.values(),
                         "awayFbs": away_id in id_by_espn.values(),
                     }
@@ -207,6 +211,8 @@ def fetch_espn(fmt: dict) -> dict:
         seen_games.add(game["id"])
         deduped.append(game)
     games = deduped
+    fill_closing_lines(games)
+    fill_box_scores(games)
 
     rankings = get_json(
         "https://site.api.espn.com/apis/site/v2/sports/football/college-football/rankings",
@@ -284,6 +290,128 @@ def cfbstats_name(school: str) -> str:
     return CFBSTATS_NAMES.get(school, school)
 
 
+def as_float(value) -> float | None:
+    try:
+        if value is None or value == "":
+            return None
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def fill_closing_lines(games: list[dict]) -> None:
+    """Finished games keep their closing line on the game summary, not the weekly scoreboard."""
+    folder = RAW / "espn-summary"
+    folder.mkdir(parents=True, exist_ok=True)
+    needed = [
+        game
+        for game in games
+        if game.get("completed") and game.get("homeSpread") is None and game.get("homePoints") is not None
+    ]
+    print(f"Closing lines for {len(needed)} finished games.")
+    for index, game in enumerate(needed, start=1):
+        cache = folder / f"{game['id']}.json"
+        try:
+            if cache.exists():
+                payload = json.loads(cache.read_text())
+            else:
+                response = requests.get(
+                    "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary",
+                    params={"event": game["id"]},
+                    timeout=20,
+                )
+                payload = response.json() if response.status_code == 200 else {}
+                cache.write_text(json.dumps({"pickcenter": payload.get("pickcenter") or []}))
+                payload = json.loads(cache.read_text())
+                time.sleep(0.2)
+        except (requests.RequestException, json.JSONDecodeError):
+            continue
+        pick = (payload.get("pickcenter") or [None])[0] or {}
+        if pick.get("details"):
+            game["spread"] = pick["details"]
+        game["homeSpread"] = as_float(pick.get("spread"))
+        if index % 50 == 0:
+            print(f"  lines {index}/{len(needed)}")
+
+
+def fill_box_scores(games: list[dict]) -> None:
+    """Each finished game's box score has both teams' yards. The opponent's line is the defense."""
+    folder = RAW / "espn-box"
+    folder.mkdir(parents=True, exist_ok=True)
+    needed = [game for game in games if game.get("completed") and game.get("homePoints") is not None]
+    print(f"Box scores for {len(needed)} finished games.")
+    for index, game in enumerate(needed, start=1):
+        cache = folder / f"{game['id']}.json"
+        if cache.exists():
+            continue
+        try:
+            response = requests.get(
+                "https://site.api.espn.com/apis/site/v2/sports/football/college-football/summary",
+                params={"event": game["id"]},
+                timeout=20,
+            )
+            payload = response.json() if response.status_code == 200 else {}
+        except (requests.RequestException, json.JSONDecodeError):
+            continue
+        slim = {"home": {}, "away": {}}
+        for side in (payload.get("boxscore") or {}).get("teams") or []:
+            key = "home" if side.get("homeAway") == "home" else "away"
+            named = {row.get("name"): row.get("displayValue") for row in side.get("statistics") or []}
+            slim[key] = {
+                "yards": as_float(named.get("totalYards")),
+                "pass": as_float(named.get("netPassingYards")),
+                "rush": as_float(named.get("rushingYards")),
+                "rushAtt": as_float(named.get("rushingAttempts")),
+                "third": named.get("thirdDownEff"),
+                "fourth": named.get("fourthDownEff"),
+            }
+        cache.write_text(json.dumps(slim))
+        time.sleep(0.15)
+        if index % 50 == 0:
+            print(f"  box scores {index}/{len(needed)}")
+
+
+def made_and_attempts(value) -> tuple[float, float]:
+    text = str(value or "")
+    if "-" not in text:
+        return 0.0, 0.0
+    made, attempts = text.split("-", 1)
+    return as_float(made) or 0.0, as_float(attempts) or 0.0
+
+
+def defense_allowed(games: list[dict]) -> dict[str, dict[str, float]]:
+    totals: dict[str, dict[str, float]] = {}
+
+    def add(team_id: str, line: dict | None) -> None:
+        if not line or line.get("yards") is None:
+            return
+        bucket = totals.setdefault(team_id, {"games": 0, "yards": 0, "pass": 0, "rush": 0, "rushAtt": 0, "thirdMade": 0, "thirdAtt": 0, "fourthMade": 0, "fourthAtt": 0})
+        bucket["games"] += 1
+        bucket["yards"] += line.get("yards") or 0
+        bucket["pass"] += line.get("pass") or 0
+        bucket["rush"] += line.get("rush") or 0
+        bucket["rushAtt"] += line.get("rushAtt") or 0
+        third_made, third_att = made_and_attempts(line.get("third"))
+        fourth_made, fourth_att = made_and_attempts(line.get("fourth"))
+        bucket["thirdMade"] += third_made
+        bucket["thirdAtt"] += third_att
+        bucket["fourthMade"] += fourth_made
+        bucket["fourthAtt"] += fourth_att
+
+    folder = RAW / "espn-box"
+    for game in games:
+        path = folder / f"{game['id']}.json"
+        if not game.get("completed") or not path.exists():
+            continue
+        try:
+            box = json.loads(path.read_text())
+        except json.JSONDecodeError:
+            continue
+        add(game["homeId"], box.get("away"))
+        add(game["awayId"], box.get("home"))
+    return totals
+
+
 def percent(value: float | None) -> float | None:
     if value is None:
         return None
@@ -307,10 +435,17 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         team["alternateNames"] = aliases.get(team["school"], [])
 
     results: dict[str, dict] = {team["id"]: {"wins": 0, "losses": 0, "confWins": 0, "confLosses": 0} for team in teams}
-    points_allowed: dict[str, list[int]] = {team["id"]: [] for team in teams}
+    points_scored: dict[str, list[float]] = {team["id"]: [] for team in teams}
+    points_allowed: dict[str, list[float]] = {team["id"]: [] for team in teams}
     for game in games:
         if not game["completed"] or game["homePoints"] is None or game["awayPoints"] is None:
             continue
+        if game["homeId"] in points_scored:
+            points_scored[game["homeId"]].append(game["homePoints"])
+            points_allowed[game["homeId"]].append(game["awayPoints"])
+        if game["awayId"] in points_scored:
+            points_scored[game["awayId"]].append(game["awayPoints"])
+            points_allowed[game["awayId"]].append(game["homePoints"])
         if game["homePoints"] == game["awayPoints"]:
             continue
         winner = game["homeId"] if game["homePoints"] > game["awayPoints"] else game["awayId"]
@@ -323,10 +458,6 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             results[loser]["losses"] += 1
             if game["conferenceGame"] and not game["championship"] and winner in fbs_ids:
                 results[loser]["confLosses"] += 1
-        if game["homeId"] in points_allowed:
-            points_allowed[game["homeId"]].append(game["awayPoints"])
-        if game["awayId"] in points_allowed:
-            points_allowed[game["awayId"]].append(game["homePoints"])
 
     base_elo = {team["id"]: 1500.0 for team in teams}
     elo = bundle["elo"] or update_elo(base_elo, games)
@@ -341,12 +472,14 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         redzone = json.loads(redzone_path.read_text())
 
     stat_rows: dict[str, dict] = {}
+    allowed_lines = defense_allowed(games)
     for team in teams:
         raw = bundle["stats"].get(team["id"], {})
         games_played = int(raw.get("gamesPlayed") or raw.get("teamGamesPlayed") or (results[team["id"]]["wins"] + results[team["id"]]["losses"]) or 0)
         allowed = points_allowed[team["id"]]
+        scored = points_per_game(points_scored[team["id"]])
         offense = {
-            "points": raw.get("totalPointsPerGame"),
+            "points": scored if scored is not None else raw.get("totalPointsPerGame"),
             "totalYards": raw.get("yardsPerGame") or per_game(raw.get("totalYards"), games_played),
             "passYards": raw.get("netPassingYardsPerGame") or raw.get("passingYardsPerGame"),
             "rushYards": raw.get("rushingYardsPerGame"),
@@ -362,7 +495,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         if scraped_off is not None:
             offense["redZone"] = round(float(scraped_off), 1)
         defense = {
-            "points": round(sum(allowed) / len(allowed), 1) if allowed else None,
+            "points": points_per_game(allowed),
             "totalYards": None,
             "passYards": None,
             "rushYards": None,
@@ -377,6 +510,18 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         scraped_def = redzone.get("defense", {}).get(cfbstats_name(team["school"]))
         if scraped_def is not None:
             defense["redZone"] = round(float(scraped_def), 1)
+        allowed_line = allowed_lines.get(team["id"])
+        if allowed_line and allowed_line["games"]:
+            count = allowed_line["games"]
+            defense["totalYards"] = round(allowed_line["yards"] / count, 1)
+            defense["passYards"] = round(allowed_line["pass"] / count, 1)
+            defense["rushYards"] = round(allowed_line["rush"] / count, 1)
+            if allowed_line["rushAtt"]:
+                defense["yardsPerRush"] = round(allowed_line["rush"] / allowed_line["rushAtt"], 2)
+            if allowed_line["thirdAtt"]:
+                defense["thirdDown"] = round(100 * allowed_line["thirdMade"] / allowed_line["thirdAtt"], 1)
+            if allowed_line["fourthAtt"]:
+                defense["fourthDown"] = round(100 * allowed_line["fourthMade"] / allowed_line["fourthAtt"], 1)
         stat_rows[team["id"]] = {"games": games_played, "offense": offense, "defense": defense}
 
     sos_values: dict[str, float | None] = {}
@@ -417,10 +562,20 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
         for key in defense_keys
     }
     sos_ranks = rank_values(list(sos_values.items()), True)
+    ats_by_team = dict(bundle.get("ats") or {})
+    for team_id, record in ats_records(games).items():
+        ats_by_team.setdefault(team_id, record)
+    cover_rates = []
+    for team in teams:
+        record = ats_by_team.get(team["id"]) or {"wins": 0, "losses": 0, "pushes": 0}
+        decided = record["wins"] + record["losses"]
+        cover_rates.append((team["id"], None if decided == 0 else record["wins"] / decided))
+    ats_ranks = rank_values(cover_rates, True)
 
     team_stats = {}
     for team in teams:
         rows = stat_rows[team["id"]]
+        record = ats_by_team.get(team["id"]) or {"wins": 0, "losses": 0, "pushes": 0}
         team_stats[team["id"]] = {
             "games": rows["games"],
             "wins": results[team["id"]]["wins"],
@@ -430,7 +585,12 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             "offense": {key: cell(rows["offense"].get(key), ranks_off.get(key, {}).get(team["id"])) for key in offense_keys},
             "defense": {key: cell(rows["defense"].get(key), ranks_def.get(key, {}).get(team["id"])) for key in defense_keys},
             "sos": cell(None if sos_values[team["id"]] is None else round(sos_values[team["id"]], 3), sos_ranks.get(team["id"])),
-            "ats": {"wins": 0, "losses": 0, "pushes": 0, "rank": None},
+            "ats": {
+                "wins": record["wins"],
+                "losses": record["losses"],
+                "pushes": record["pushes"],
+                "rank": ats_ranks.get(team["id"]),
+            },
         }
 
     conferences = []
@@ -458,18 +618,20 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
                 "type": "team",
                 "name": team["school"],
                 "detail": team["conference"],
-                "href": f"/teams/{team['id']}",
+                "href": f"/teams/{team['id']}/",
                 "aliases": team["alternateNames"] + [team["abbreviation"], team["mascot"]],
             }
         )
     for conference in conferences:
-        search.append({"type": "conference", "name": conference["name"], "detail": "Conference", "href": f"/conferences/{conference['id']}", "aliases": []})
+        search.append({"type": "conference", "name": conference["name"], "detail": "Conference", "href": f"/conferences/{conference['id']}/", "aliases": []})
+    search.extend(rivalry_search_rows(teams, load_json(ROOT / "config" / "rivalries.json")))
     for name, href, aliases_list in (
         ("Playoff Simulator", "/", ["playoff", "bracket", "simulate"]),
-        ("Matchup Calculator", "/matchup", ["matchup", "compare", "calculator"]),
-        ("CFP Rankings", "/rankings", ["rankings", "poll", "cfp"]),
-        ("Conferences", "/conferences", ["standings"]),
-        ("Contact", "/contact", ["email", "sponsor"]),
+        ("Schedule", "/schedule/", ["schedule", "games", "week"]),
+        ("Matchup Calculator", "/matchup/", ["matchup", "compare", "calculator"]),
+        ("CFP Rankings", "/rankings/", ["rankings", "poll", "cfp"]),
+        ("Conferences", "/conferences/", ["standings"]),
+        ("Contact", "/contact/", ["email", "sponsor"]),
     ):
         search.append({"type": "page", "name": name, "detail": "Page", "href": href, "aliases": aliases_list})
 
@@ -488,7 +650,7 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
             team["logo"] = f"/logos/{team['id']}.png"
 
     public_teams = [{key: team[key] for key in ("id", "school", "mascot", "abbreviation", "conference", "tier", "color", "alternateColor", "logo", "alternateNames")} for team in teams]
-    public_games = [{key: game[key] for key in ("id", "week", "seasonType", "startDate", "homeId", "awayId", "homeName", "awayName", "homePoints", "awayPoints", "completed", "conferenceGame", "championship", "neutralSite", "venue", "spread")} for game in games]
+    public_games = [{key: game.get(key) for key in ("id", "week", "seasonType", "startDate", "homeId", "awayId", "homeName", "awayName", "homePoints", "awayPoints", "completed", "conferenceGame", "championship", "neutralSite", "venue", "spread", "homeSpread")} for game in games]
 
     write_json(dest / "season.json", season)
     write_json(dest / "teams.json", public_teams)
@@ -498,6 +660,27 @@ def build_outputs(bundle: dict, fmt: dict, ranking: dict, aliases: dict, catalog
     write_json(dest / "team-stats.json", team_stats)
     write_json(dest / "search-index.json", search)
     print(f"Wrote {len(public_teams)} teams and {len(public_games)} games from {bundle['provider']}.")
+
+
+def rivalry_search_rows(teams: list[dict], rivalries: list[dict]) -> list[dict]:
+    """One search row per named rivalry, using the same slug as the matchup page."""
+    by_school = {team["school"].lower(): team for team in teams}
+    rows = []
+    for item in rivalries:
+        home = by_school.get(str(item.get("home", "")).lower())
+        away = by_school.get(str(item.get("away", "")).lower())
+        if not home or not away or home["id"] == away["id"]:
+            continue
+        rows.append(
+            {
+                "type": "rivalry",
+                "name": item["name"],
+                "detail": f"{home['school']} vs {away['school']}",
+                "href": f"/matchup/{home['id']}-vs-{away['id']}/",
+                "aliases": [f"{home['school']} {away['school']}", f"{away['school']} {home['school']}"],
+            }
+        )
+    return rows
 
 
 def write_json(path: Path, payload) -> None:
@@ -549,9 +732,18 @@ def fetch_cfbd(fmt: dict, key: str) -> dict:
     by_name = {team["cfbdName"]: team for team in teams}
     games = []
     for season_type in ("regular", "postseason"):
-        for raw in pull("/games", year=year, seasonType=season_type, division="fbs"):
+        # division is ignored by the current API, so the feed includes every level.
+        # Keep a game when either side is FBS. That still includes FCS opponents.
+        for raw in pull("/games", year=year, seasonType=season_type):
+            home_class = str(raw.get("homeClassification") or "").lower()
+            away_class = str(raw.get("awayClassification") or "").lower()
             home_name = raw.get("homeTeam") or raw.get("home_team")
             away_name = raw.get("awayTeam") or raw.get("away_team")
+            if home_class != "fbs" and away_class != "fbs":
+                if home_class or away_class:
+                    continue
+                if home_name not in by_name and away_name not in by_name:
+                    continue
             home = by_name.get(home_name)
             away = by_name.get(away_name)
             home_points = raw.get("homePoints", raw.get("home_points"))
@@ -575,17 +767,51 @@ def fetch_cfbd(fmt: dict, key: str) -> dict:
                     "neutralSite": bool(raw.get("neutralSite", raw.get("neutral_site"))),
                     "venue": raw.get("venue"),
                     "spread": None,
+                    "homeSpread": None,
                     "homeFbs": home is not None,
                     "awayFbs": away is not None,
                 }
             )
+    try:
+        line_rows = pull("/lines", year=year)
+    except requests.HTTPError as exc:
+        print(f"Betting lines were not available: {exc}")
+        line_rows = []
+    lines_by_id = {str(row.get("id")): row for row in line_rows}
+    for game in games:
+        chosen = None
+        for line in (lines_by_id.get(game["id"]) or {}).get("lines") or []:
+            provider = str(line.get("provider") or "").lower()
+            if "consensus" in provider:
+                chosen = line
+                break
+            chosen = chosen or line
+        if not chosen:
+            continue
+        game["spread"] = chosen.get("formattedSpread") or game["spread"]
+        game["homeSpread"] = as_float(chosen.get("spread"))
+    ats_by_id: dict[str, dict] = {}
+    try:
+        for row in pull("/teams/ats", year=year):
+            team = by_name.get(row.get("team"))
+            if not team:
+                continue
+            ats_by_id[team["id"]] = {
+                "wins": int(row.get("wins") or 0),
+                "losses": int(row.get("losses") or 0),
+                "pushes": int(row.get("pushes") or 0),
+            }
+    except requests.HTTPError as exc:
+        print(f"ATS records were not available: {exc}")
     polls = pull("/rankings", year=year, seasonType="regular")
     cfp_rows = []
     latest = None
+    poll_week = None
     for poll in polls:
         for item in poll.get("polls") or []:
             if "Playoff" in item.get("poll", "") or item.get("poll") in {"CFP", "Playoff Committee Rankings"}:
                 latest = item
+                poll_week = poll.get("week")
     if latest:
         for row in latest.get("ranks") or []:
             team = by_name.get(row.get("school"))
@@ -634,9 +860,10 @@ def fetch_cfbd(fmt: dict, key: str) -> dict:
         "games": games,
         "cfp": cfp_rows,
         "elo": elo or None,
+        "ats": ats_by_id,
         "stats": normalized,
         "week": max((game["week"] for game in games if game["completed"]), default=0),
-        "rankingLabel": "CFP committee rankings",
+        "rankingLabel": cfp_ranking_label(cfp_rows, poll_week),
     }
 
 
@@ -645,15 +872,17 @@ def main() -> None:
     ranking = load_json(ROOT / "config" / "ranking.json")
     aliases = load_json(ROOT / "config" / "aliases.json")
     catalog = load_json(ROOT / "config" / "stat-catalog.json")
-    env_file = ROOT / ".env"
-    if env_file.exists():
-        for line in env_file.read_text().splitlines():
-            if line.startswith("CFBD_API_KEY=") and not os.environ.get("CFBD_API_KEY"):
-                os.environ["CFBD_API_KEY"] = line.split("=", 1)[1].strip().strip('"').strip("'")
-    key = os.environ.get("CFBD_API_KEY", "").strip()
+    from scripts.cfbd import load_key
+
+    key = load_key()
     if key:
         print("Using College Football Data.")
         bundle = fetch_cfbd(fmt, key)
+        if bundle.get("provider") != "cfbd":
+            raise SystemExit("CFBD_API_KEY is set, but the season was not built from College Football Data.")
+        if not (RAW / "redzone.json").exists():
+            raise SystemExit("Red-zone file is missing. Run scripts/redzone.py before a College Football Data season build.")
+        fill_box_scores(bundle["games"])
     else:
         print("No CFBD_API_KEY. Using the public ESPN feed and a computed Elo rating.")
         bundle = fetch_espn(fmt)
@@ -665,9 +894,22 @@ def main() -> None:
         shutil.rmtree(staging)
     build_outputs(bundle, fmt, ranking, aliases, catalog, dest=staging)
     validate_dir(staging)
+    if bundle.get("provider") == "cfbd":
+        staged_stats = json.loads((staging / "team-stats.json").read_text())
+        defense_yards = sum(1 for row in staged_stats.values() if (row.get("defense") or {}).get("totalYards", {}).get("value") is not None)
+        red_zone = sum(1 for row in staged_stats.values() if (row.get("offense") or {}).get("redZone", {}).get("value") is not None)
+        if defense_yards < 120 or red_zone < 120:
+            raise SystemExit(f"Refusing to publish. Defensive yards filled for {defense_yards} teams and red zone for {red_zone}.")
+        print(f"Kept defensive yards for {defense_yards} teams and red zone for {red_zone}.")
     PUBLIC.mkdir(parents=True, exist_ok=True)
     for path in staging.glob("*.json"):
         shutil.copy(path, PUBLIC / path.name)
+    try:
+        from scripts.fetch_splits import refresh_splits
+
+        refresh_splits(PUBLIC / "games.json", PUBLIC / "teams.json", PUBLIC / "splits.json", ROOT / "config" / "aliases.json")
+    except Exception as exc:
+        print(f"Cleatz splits were left unchanged: {exc}")
 
 
 if __name__ == "__main__":

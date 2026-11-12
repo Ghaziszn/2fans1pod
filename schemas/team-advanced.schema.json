@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["season", "source", "teams"],
+  "properties": {
+    "season": { "type": "integer" },
+    "source": { "const": "cfbd" },
+    "teams": {
+      "type": "object",
+      "minProperties": 130,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["noGT", "withGT"],
+        "properties": {
+          "noGT": { "$ref": "#/$defs/copy" },
+          "withGT": { "$ref": "#/$defs/copy" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "copy": {
+      "type": "object",
+      "required": ["offense", "defense"],
+      "properties": {
+        "offense": { "type": "object" },
+        "defense": { "type": "object" }
+      }
+    }
+  }
+}
