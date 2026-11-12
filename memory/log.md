@@ -2,6 +2,10 @@
 
 Newest entry on top. A few lines is enough: what we decided, what we changed, what is next.
 
+## 2026-11-12 (status handoff)
+
+- Added `STATUS.md` so a new agent can see that Phase 1 is built, pull request #1 is still open, and the lasting Vercel address is still waiting on a login. The task list no longer treats advanced stats as unbuilt.
+
 ## 2026-11-08 (ranking hydration)
 
 - Reloading the homepage no longer reports a hydration error. The ranking handles can be dragged after the page is ready. Moving USC from 25th still leaves them on screen at 26th.

@@ -11,6 +11,10 @@ Ask these as we go. Do not save them up for a single quiz. When Brandon answers,
 
 - The next section in the directions is rosters, recruiting, and the transfer portal. Should that be the next build?
 
+## For the Grok bot prompt
+
+- Should that bot be allowed to edit this repo, or should it only read it? A future news bot may only open pull requests that edit `content/news/`. That path is not built yet.
+
 ## Before the shell is styled
 
 - After we open the logo together, which color should be the one accent? If the logo has several, which one feels like the show?

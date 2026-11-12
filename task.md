@@ -17,7 +17,7 @@ The full Phase 1 build is in progress. Keep going through this list.
 
 ## Later, do not build yet
 
-- [ ] Phase 2: advanced stats, multi-year recruiting, multi-year transfer portal, Coaching Power Index from the Excel file.
+- [ ] Phase 2 leftover: multi-year recruiting, multi-year transfer portal, Coaching Power Index from the Excel file. Advanced stats and the garbage-time switch already shipped with the team pages.
 - [ ] Phase 3: news feed. Bots may only open pull requests that edit `content/news/`. Scores stay in the data scripts.
 - [ ] Phase 4: your own prediction model, published as JSON.
 - [ ] Branch protection on `main`: pull requests required, force-push blocked, bypass only for the data-update Action.
